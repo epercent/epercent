@@ -1,0 +1,24 @@
+{
+  "name": "eos",
+  "version": "0.7.0",
+  "description": "EOS workspace orchestration for Core API and Mission Control.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "eos:start": "node scripts/eos-start.js",
+    "eos:stop": "node scripts/eos-stop.js",
+    "eos:status": "node scripts/eos-status.js",
+    "eos:test": "node scripts/eos-test.js",
+    "eos:build": "node scripts/eos-build.js",
+    "eos:lint": "node scripts/eos-lint.js",
+    "eos:backup": "node scripts/eos-backup.js",
+    "eos:restore": "node scripts/eos-restore.js",
+    "eos:git:status": "node scripts/eos-git-status.js",
+    "eos:release": "node scripts/eos-release.js",
+    "eos:tag": "node scripts/eos-tag.js",
+    "bootstrap": "node scripts/bootstrap.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

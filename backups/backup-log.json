@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": "2026-07-03_141352",
+    "version": "0.6.0",
+    "build": "0.6.0",
+    "archiveName": "EOS_v0.6.0_2026-07-03_141352.zip",
+    "archiveSize": 107776,
+    "checksum": "aa366cb8efa003cccba57e5b8c492e5e50c1df9682e609a8b57f2d588f6dc90d",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_142755",
+    "version": "0.6.1",
+    "build": "0.6.1",
+    "archiveName": "EOS_v0.6.1_2026-07-03_142755.zip",
+    "archiveSize": 110378,
+    "checksum": "ec0fd47629068579bfb81b1182fa07b6f686df2149b2a5e6d5260dbc8d85dfe4",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_143529",
+    "version": "0.6.2",
+    "build": "0.6.2",
+    "archiveName": "EOS_v0.6.2_2026-07-03_143529.zip",
+    "archiveSize": 114949,
+    "checksum": "9bdb56d2e1adfe01aed2dd07c050dc2d9fceb8cffad41a983fc1b97488c4afdb",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_144750",
+    "version": "0.7.0",
+    "build": "0.7.0",
+    "archiveName": "EOS_v0.7.0_2026-07-03_144750.zip",
+    "archiveSize": 122573,
+    "checksum": "579e1ca87c7f548fd568b43f71be3b19e48b8a696e1021f87926cb4ad66d8b4e",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_144931",
+    "version": "0.7.0",
+    "build": "0.7.0",
+    "archiveName": "EOS_v0.7.0_2026-07-03_144931.zip",
+    "archiveSize": 122573,
+    "checksum": "90cbd277b086c5b8345b33e9c8aabeced46ee457633cd5fdf9e1d86364844722",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_145915",
+    "version": "0.7.0",
+    "build": "0.7.0",
+    "archiveName": "EOS_v0.7.0_2026-07-03_145915.zip",
+    "archiveSize": 126402,
+    "checksum": "e27920d04cfb2ee133fafc793c4e3768df66897451a74bf1436ebd4a0e431e90",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_145928",
+    "version": "0.7.0",
+    "build": "0.7.0",
+    "archiveName": "EOS_v0.7.0_2026-07-03_145928.zip",
+    "archiveSize": 126402,
+    "checksum": "e27920d04cfb2ee133fafc793c4e3768df66897451a74bf1436ebd4a0e431e90",
+    "status": "Completed"
+  }
+]

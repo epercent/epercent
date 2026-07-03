@@ -1,0 +1,268 @@
+.dashboard-shell {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.dashboard-header {
+  align-items: flex-start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin: 0 auto 28px;
+  max-width: 1180px;
+}
+
+.eyebrow,
+.section-label {
+  color: #667085;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.dashboard-header h1 {
+  color: #111827;
+  font-size: 3rem;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+}
+
+.status-pill {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  color: #344054;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 10px;
+  min-height: 40px;
+  padding: 9px 14px;
+}
+
+.status-pill.is-operational {
+  border-color: #a6f4c5;
+  color: #067647;
+}
+
+.status-dot {
+  background: #98a2b3;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+}
+
+.status-pill.is-operational .status-dot {
+  background: #12b76a;
+  box-shadow: 0 0 0 5px rgba(18, 183, 106, 0.14);
+}
+
+.dashboard-main {
+  display: grid;
+  gap: 18px;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.status-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.status-card,
+.state-panel,
+.object-item {
+  background: #ffffff;
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.06);
+}
+
+.status-card {
+  min-height: 154px;
+  padding: 22px;
+}
+
+.status-card strong {
+  color: #111827;
+  display: block;
+  font-size: 2rem;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.status-card span {
+  color: #667085;
+  display: block;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.state-panel {
+  padding: 28px;
+}
+
+.state-panel h2 {
+  color: #111827;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.state-panel p {
+  color: #667085;
+  margin: 12px 0 0;
+}
+
+.error-panel {
+  border-color: #fecdca;
+}
+
+.error-panel .section-label {
+  color: #b42318;
+}
+
+.error-panel button {
+  background: #b42318;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  margin-top: 18px;
+  min-height: 42px;
+  padding: 10px 16px;
+}
+
+.object-section {
+  display: grid;
+  gap: 14px;
+}
+
+.section-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2px 0;
+}
+
+.section-heading h2 {
+  color: #111827;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.section-heading strong {
+  align-items: center;
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  border-radius: 999px;
+  color: #067647;
+  display: inline-flex;
+  font-size: 0.95rem;
+  min-height: 34px;
+  padding: 6px 12px;
+}
+
+.object-list {
+  display: grid;
+  gap: 12px;
+}
+
+.object-item {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(260px, 1fr) minmax(360px, 1.35fr);
+  padding: 20px;
+}
+
+.object-primary span {
+  color: #175cd3;
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.object-primary h3 {
+  color: #111827;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.object-primary p {
+  color: #667085;
+  margin: 10px 0 0;
+}
+
+.object-meta {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.object-meta div {
+  background: #f8fafc;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  min-width: 0;
+  padding: 10px;
+}
+
+.object-meta dt {
+  color: #667085;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.object-meta dd {
+  color: #111827;
+  font-weight: 700;
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 960px) {
+  .dashboard-header {
+    display: grid;
+  }
+
+  .status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .object-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-shell {
+    padding: 26px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .status-grid,
+  .object-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    min-height: 132px;
+  }
+}

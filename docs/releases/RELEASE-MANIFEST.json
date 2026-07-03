@@ -1,0 +1,46 @@
+{
+  "platform": "EOS",
+  "version": "0.7.0",
+  "build": "0.7.0",
+  "status": "Baseline Prepared",
+  "releaseName": "EOS Alpha 0.7.0 - Genesis",
+  "generatedAt": "2026-07-03T13:59:28.701Z",
+  "releaseNotes": "EOS-v0.7.0.md",
+  "releaseArtifact": "EOS-Alpha-0.7.0-Genesis.md",
+  "tagTarget": "v0.7.0",
+  "verification": {
+    "lint": "passed",
+    "build": "passed",
+    "test": "passed",
+    "backup": "passed"
+  },
+  "git": {
+    "initialized": true,
+    "branch": "main",
+    "latestCommit": "No commits yet",
+    "latestTag": "No tags",
+    "uncommittedChangeCount": 15,
+    "uncommittedChanges": [
+      "?? .gitignore",
+      "?? CHANGELOG.md",
+      "?? README.md",
+      "?? agents/",
+      "?? apps/",
+      "?? backend/",
+      "?? backups/",
+      "?? bootstrap.sh",
+      "?? docs/",
+      "?? frontend/",
+      "?? infrastructure/",
+      "?? package.json",
+      "?? scripts/",
+      "?? services/",
+      "?? tests/"
+    ]
+  },
+  "nextSteps": [
+    "Review release manifest",
+    "Create a commit",
+    "Run npm run eos:tag after a release commit exists"
+  ]
+}

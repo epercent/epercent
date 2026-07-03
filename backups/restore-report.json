@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-07-03T13:59:38.259Z",
+  "archiveName": "EOS_v0.7.0_2026-07-03_145928.zip",
+  "requestedMode": "dry-run",
+  "checksum": "e27920d04cfb2ee133fafc793c4e3768df66897451a74bf1436ebd4a0e431e90",
+  "checksumValid": true,
+  "status": "Validated",
+  "note": "Run with --confirm to restore files."
+}
