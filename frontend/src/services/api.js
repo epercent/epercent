@@ -190,3 +190,11 @@ export function fetchKnowledgeRepository(agent) {
 export function fetchKnowledgeObject(id) {
   return requestJson(`/api/knowledge-objects/${id}`)
 }
+
+export function fetchKernel() {
+  return requestJson('/api/kernel')
+}
+
+export function fetchDecisionIntelligence() {
+  return requestJson('/api/decision-intelligence')
+}

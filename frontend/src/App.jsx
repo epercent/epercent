@@ -25,6 +25,7 @@ import WorkspaceHome from './components/WorkspaceHome.jsx'
 import WorkspaceRail from './components/WorkspaceRail.jsx'
 import {
   fetchCoreStatus,
+  fetchDecisionIntelligence,
   fetchAgents,
   fetchEnterpriseObjects,
   fetchAudit,
@@ -38,6 +39,7 @@ import {
   fetchExecutiveCouncil,
   fetchExecutiveOffices,
   fetchIdentityMedia,
+  fetchKernel,
   fetchKnowledgeRepositories,
   fetchMasterMonitoring,
   fetchOnboardingAssimilation,
@@ -147,6 +149,8 @@ function App() {
   const [audit, setAudit] = useState(null)
   const [identityMedia, setIdentityMedia] = useState(null)
   const [knowledgeRepositories, setKnowledgeRepositories] = useState(null)
+  const [kernel, setKernel] = useState(null)
+  const [decisionIntelligence, setDecisionIntelligence] = useState(null)
   const [masterMonitoring, setMasterMonitoring] = useState(null)
   const [onboardingAssimilation, setOnboardingAssimilation] = useState(null)
   const [organizationIntake, setOrganizationIntake] = useState(null)
@@ -186,6 +190,8 @@ function App() {
     setAudit(null)
     setIdentityMedia(null)
     setKnowledgeRepositories(null)
+        setKernel(null)
+        setDecisionIntelligence(null)
     setMasterMonitoring(null)
     setOnboardingAssimilation(null)
     setOrganizationIntake(null)
@@ -219,6 +225,8 @@ function App() {
       fetchExecutiveOffices(),
       fetchIdentityMedia(),
       fetchKnowledgeRepositories(),
+      fetchKernel(),
+      fetchDecisionIntelligence(),
       fetchMasterMonitoring(),
       fetchOnboardingAssimilation(),
       fetchOrganizationIntake(),
@@ -247,6 +255,8 @@ function App() {
         executiveOfficesResult,
         identityMediaResult,
         repositoriesResult,
+        kernelResult,
+        decisionIntelligenceResult,
         masterMonitoringResult,
         onboardingAssimilationResult,
         organizationIntakeResult,
@@ -278,6 +288,8 @@ function App() {
         setExecutiveOffices(executiveOfficesResult)
         setIdentityMedia(identityMediaResult)
         setKnowledgeRepositories(repositoriesResult)
+        setKernel(kernelResult)
+        setDecisionIntelligence(decisionIntelligenceResult)
         setMasterMonitoring(masterMonitoringResult)
         setOnboardingAssimilation(onboardingAssimilationResult)
         setOrganizationIntake(organizationIntakeResult)
@@ -312,6 +324,8 @@ function App() {
         setExecutiveOffices(null)
         setIdentityMedia(null)
         setKnowledgeRepositories(null)
+        setKernel(null)
+        setDecisionIntelligence(null)
         setMasterMonitoring(null)
         setOnboardingAssimilation(null)
         setOrganizationIntake(null)
@@ -578,6 +592,8 @@ function App() {
         <PlatformAdministrationCenter
           adminActionsData={adminActions}
           adminData={platformAdmin}
+          decisionIntelligence={decisionIntelligence}
+          kernel={kernel}
           platformStatus={platform?.status}
           storageStatus={storageStatus}
         />
@@ -644,6 +660,8 @@ function App() {
       return (
         <FoundationView
           adminData={platformAdmin}
+          decisionIntelligence={decisionIntelligence}
+          kernel={kernel}
           mode={missionControlMode}
           pmo={pmo}
           strategicLayer={strategicLayer}

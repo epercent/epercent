@@ -34,7 +34,7 @@ if (
 const backend = spawnManagedProcess(
   'EOS Core API',
   backendDir,
-  ['run', 'dev'],
+  ['run', 'start'],
   `${runtimeDir}/backend.log`,
   {
     HOST: '127.0.0.1',

@@ -1,7 +1,7 @@
 {
   "collectionName": "profile-identities",
   "schemaVersion": "1.0.0",
-  "lastUpdated": "2026-07-04T00:31:44.279Z",
+  "lastUpdated": "2026-07-04T16:12:13.480Z",
   "recordCount": 10,
   "source": "update:profile-identities",
   "records": [
@@ -43,7 +43,7 @@
         ]
       },
       "profilePictureAssetId": "EOS-MEDIA-VERIFY-ERIC-PROFILE-PICTURE",
-      "profilePictureUrl": "/media/EOS-EXEC-ERIC-OLO_1783125104279_eric-olo-verification-profile-picture.svg"
+      "profilePictureUrl": "/media/EOS-EXEC-ERIC-OLO_1783181533479_eric-olo-verification-profile-picture.svg"
     },
     {
       "id": "EOS-PROFILE-CODEX",

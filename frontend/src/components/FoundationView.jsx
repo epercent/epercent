@@ -99,7 +99,7 @@ const viewContent = {
   },
 }
 
-function FoundationView({ mode, strategicLayer, adminData, pmo }) {
+function FoundationView({ mode, strategicLayer, adminData, pmo, kernel, decisionIntelligence }) {
   const content = viewContent[mode] ?? viewContent.workspace
 
   return (
@@ -118,6 +118,30 @@ function FoundationView({ mode, strategicLayer, adminData, pmo }) {
       </article>
 
       <div className="operations-grid">
+        <section className="operations-panel">
+          <div className="operations-panel-heading">
+            <h3>EOS Kernel</h3>
+            <strong>{executiveValue(kernel?.status, 'Unavailable')}</strong>
+          </div>
+          <div className="operations-note-list">
+            <p>Kernel version: {executiveValue(kernel?.version, '0.1')}</p>
+            <p>Subsystems: {executiveValue(kernel?.subsystems?.length, 0)}</p>
+            <p>Source: {executiveValue(kernel?.source ? 'Discovered' : null, 'Not Discovered')}</p>
+          </div>
+        </section>
+
+        <section className="operations-panel">
+          <div className="operations-panel-heading">
+            <h3>Decision Intelligence</h3>
+            <strong>{executiveValue(decisionIntelligence?.status, 'Unavailable')}</strong>
+          </div>
+          <div className="operations-note-list">
+            <p>Engine version: {executiveValue(decisionIntelligence?.version, '0.1')}</p>
+            <p>Mode: {executiveValue(decisionIntelligence?.mode, 'Not Loaded')}</p>
+            <p>Assessments: {executiveValue(decisionIntelligence?.supportedAssessments?.length, 0)}</p>
+          </div>
+        </section>
+
         <section className="operations-panel">
           <div className="operations-panel-heading">
             <h3>Current Context</h3>

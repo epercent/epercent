@@ -1,7 +1,7 @@
 {
   "collectionName": "organization-intake-records",
   "schemaVersion": "1.0.0",
-  "lastUpdated": "2026-07-04T00:31:44.295Z",
+  "lastUpdated": "2026-07-04T16:12:13.495Z",
   "recordCount": 2,
   "source": "append:organization-intake-records",
   "records": [
@@ -69,7 +69,7 @@
       "mimeType": "text/plain",
       "fileCategory": "Text",
       "repositoryMode": "Local EOS Repository",
-      "localPath": "data/repository/organization-intake/EOS Verification Enterprise_1783125104294_eos-verification-source.txt",
+      "localPath": "data/repository/organization-intake/EOS Verification Enterprise_1783181533495_eos-verification-source.txt",
       "externalRepositoryUrl": "",
       "fileSizeBytes": 123,
       "checksum": "2bc30180288ec6c6032dc63752d23adad7c0a78f11670946383305da808ec85b",
@@ -108,7 +108,7 @@
         "EOS-ORGANIZATION-INTAKE",
         "EOS-KIPR"
       ],
-      "importedAt": "2026-07-04T00:31:44.295Z",
+      "importedAt": "2026-07-04T16:12:13.495Z",
       "status": "Imported",
       "liveStatus": {
         "status": "Green",
@@ -117,7 +117,7 @@
         "healthScore": 88,
         "progress": 100,
         "summary": "Organization intake record created from Text source using Local EOS Repository.",
-        "lastActivity": "2026-07-04T00:31:44.295Z",
+        "lastActivity": "2026-07-04T16:12:13.495Z",
         "requiresAttention": false,
         "attentionLevel": "No Action Required",
         "recommendedAction": "Review extracted signals and map useful items into EOS repositories.",

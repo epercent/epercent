@@ -971,31 +971,44 @@ const expectedExecutiveOfficeActions = [
   'Prepare Executive Briefing (future capability)'
 ];
 
-const server = spawn(process.execPath, ['src/server.js'], {
-  cwd: new URL('..', import.meta.url),
-  env: {
-    ...process.env,
-    HOST: host,
-    PORT: port
-  },
-  stdio: ['ignore', 'pipe', 'pipe']
-});
-
+let server = null;
 let serverOutput = '';
+let serverExit = new Promise(() => {});
 
-server.stdout.on('data', (chunk) => {
-  serverOutput += chunk.toString();
-});
+async function isBackendAlreadyRunning() {
+  try {
+    const response = await fetch(`${baseUrl}/api/status`);
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
 
-server.stderr.on('data', (chunk) => {
-  serverOutput += chunk.toString();
-});
-
-const serverExit = new Promise((resolve) => {
-  server.on('exit', (code, signal) => {
-    resolve({ code, signal });
+if (!(await isBackendAlreadyRunning())) {
+  server = spawn(process.execPath, ['src/server.js'], {
+    cwd: new URL('..', import.meta.url),
+    env: {
+      ...process.env,
+      HOST: host,
+      PORT: port
+    },
+    stdio: ['ignore', 'pipe', 'pipe']
   });
-});
+
+  server.stdout.on('data', (chunk) => {
+    serverOutput += chunk.toString();
+  });
+
+  server.stderr.on('data', (chunk) => {
+    serverOutput += chunk.toString();
+  });
+
+  serverExit = new Promise((resolve) => {
+    server.on('exit', (code, signal) => {
+      resolve({ code, signal });
+    });
+  });
+}
 
 function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -1005,7 +1018,7 @@ async function requestJson(path) {
   const url = `${baseUrl}${path}`;
 
   for (let attempt = 0; attempt < 20; attempt += 1) {
-    if (server.exitCode !== null) {
+    if (server && server.exitCode !== null) {
       throw new Error(`Server exited before responding. Output: ${serverOutput.trim()}`);
     }
 
@@ -4067,10 +4080,14 @@ try {
     `EOS Core API checks passed: ${baseUrl}/api/status, ${baseUrl}/api/objects, ${baseUrl}/api/agents, ${baseUrl}/api/knowledge, ${baseUrl}/api/executive-council, ${baseUrl}/api/executive-actions, ${baseUrl}/api/executive-offices, ${baseUrl}/api/pmo, ${baseUrl}/api/strategy, ${baseUrl}/api/governance, ${baseUrl}/api/valuation, ${baseUrl}/api/second-balance-sheet, ${baseUrl}/api/digital-twin-assets, ${baseUrl}/api/onboarding, ${baseUrl}/api/onboarding-assimilation, ${baseUrl}/api/digital-mirrors, ${baseUrl}/api/dta-candidates, ${baseUrl}/api/data-feed-requirements, ${baseUrl}/api/human-validation, ${baseUrl}/api/storage/status, ${baseUrl}/api/storage/collections, ${baseUrl}/api/startup, ${baseUrl}/api/identity-media, ${baseUrl}/api/organization-intake, ${baseUrl}/api/repository-links, ${baseUrl}/api/audit, ${baseUrl}/api/knowledge-repositories, ${baseUrl}/api/knowledge-objects, ${baseUrl}/api/workflows, and ${baseUrl}/api/events`
   );
 } finally {
-  server.kill('SIGTERM');
+  if (server) {
+    server.kill('SIGTERM');
+  }
 }
 
-await serverExit;
+if (server) {
+  await serverExit;
+}
 
 if (serverOutput.trim()) {
   console.log(serverOutput.trim());
