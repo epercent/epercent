@@ -1,0 +1,26 @@
+{
+  "id": "EOS-KERNEL-001",
+  "name": "EOS Kernel",
+  "version": "0.1",
+  "status": "active",
+  "description": "The governing foundation of the EOS platform.",
+  "subsystems": [
+    "genome",
+    "constitution",
+    "ontology",
+    "intelligence",
+    "authority",
+    "ethics",
+    "value",
+    "evolution",
+    "runtime",
+    "portability",
+    "build",
+    "agent-contracts"
+  ],
+  "entry_documents": [
+    "README.md",
+    "EOS-KERNEL-ARCHITECTURE-001.md",
+    "KERNEL-REGISTRY.md"
+  ]
+}

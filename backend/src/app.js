@@ -26,6 +26,7 @@ import {
   startupRouter
 } from './routes/identity-intake.routes.js';
 import knowledgeRoutes from './routes/knowledge.routes.js';
+import kernelRoutes from './routes/kernel.routes.js';
 import objectsRoutes from './routes/objects.routes.js';
 import {
   dataFeedRequirementsRouter,
@@ -92,6 +93,7 @@ export function createApp() {
   app.use('/api/executive-council', executiveCouncilRoutes);
   app.use('/api/executive-offices', executiveOfficesRoutes);
   app.use('/api/identity-media', identityMediaRouter);
+  app.use('/api/kernel', kernelRoutes);
   app.use('/api/knowledge', knowledgeRoutes);
   app.use('/api/knowledge-objects', knowledgeObjectsRouter);
   app.use('/api/knowledge-repositories', repositoriesRouter);
