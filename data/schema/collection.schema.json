@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "EOS persistent collection envelope. Records are intentionally stored as JSON arrays so the storage layer can later migrate to PostgreSQL tables or document columns without changing public APIs.",
+  "requiredFields": [
+    "collectionName",
+    "schemaVersion",
+    "lastUpdated",
+    "recordCount",
+    "source",
+    "records"
+  ],
+  "recordIdentity": "Records should include id when the source data has stable identity. Singleton collections store one record with a stable id."
+}

@@ -1,0 +1,87 @@
+{
+  "collectionName": "authorization-policies",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T19:15:52.219Z",
+  "recordCount": 6,
+  "source": "seed:authorization-policies",
+  "records": [
+    {
+      "id": "EOS-POLICY-STOP-PLATFORM",
+      "actionId": "EOS-ADMIN-ACTION-STOP-PLATFORM",
+      "actionType": "Governed Platform Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": true,
+      "restoreValidationRequired": true,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Active",
+      "summary": "Stop Platform requires Chief Technology Officer approval before execution can be enabled."
+    },
+    {
+      "id": "EOS-POLICY-RESTART-PLATFORM",
+      "actionId": "EOS-ADMIN-ACTION-RESTART-PLATFORM",
+      "actionType": "Governed Platform Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": true,
+      "restoreValidationRequired": true,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Active",
+      "summary": "Restart Platform requires Chief Technology Officer approval before execution can be enabled."
+    },
+    {
+      "id": "EOS-POLICY-CLONE-ENVIRONMENT",
+      "actionId": "EOS-ADMIN-ACTION-CLONE-ENVIRONMENT",
+      "actionType": "Governed Infrastructure Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": true,
+      "restoreValidationRequired": true,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Active",
+      "summary": "Clone Environment requires Chief Technology Officer approval before execution can be enabled."
+    },
+    {
+      "id": "EOS-POLICY-SCALE-WORKERS",
+      "actionId": "EOS-ADMIN-ACTION-SCALE-WORKERS",
+      "actionType": "Governed Workforce Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": false,
+      "restoreValidationRequired": false,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Active",
+      "summary": "Scale Workers requires Chief Technology Officer approval before execution can be enabled."
+    },
+    {
+      "id": "EOS-POLICY-RESTORE-BACKUP",
+      "actionId": "EOS-ADMIN-ACTION-RESTORE-BACKUP",
+      "actionType": "Governed Resilience Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": true,
+      "restoreValidationRequired": true,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Blocked",
+      "summary": "Restore Backup requires Chief Technology Officer approval before execution can be enabled."
+    },
+    {
+      "id": "EOS-POLICY-UPGRADE-PLATFORM",
+      "actionId": "EOS-ADMIN-ACTION-UPGRADE-PLATFORM",
+      "actionType": "Governed Release Operation",
+      "requiredRole": "Chief Technology Officer",
+      "approvalRequired": true,
+      "backupRequired": true,
+      "restoreValidationRequired": true,
+      "auditRequired": true,
+      "executionEnabled": false,
+      "policyStatus": "Active",
+      "summary": "Upgrade Platform requires Chief Technology Officer approval before execution can be enabled."
+    }
+  ]
+}

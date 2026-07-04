@@ -1,0 +1,385 @@
+{
+  "collectionName": "dta-candidates",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.906Z",
+  "recordCount": 7,
+  "source": "seed:dta-candidates",
+  "records": [
+    {
+      "id": "EOS-DTA-CAND-OIL-RIG",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Offshore Rig DTA",
+      "assetType": "Operational Asset",
+      "description": "Candidate DTA representing offshore rig operations, safety status, maintenance, and production contribution.",
+      "stage": "Candidate Identified",
+      "status": "Requires Validation",
+      "sourceObjects": [
+        "Offshore Rigs",
+        "Wells",
+        "Safety Systems",
+        "Production Systems"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-OIL-PRODUCTION",
+        "EOS-FEED-OIL-SAFETY",
+        "EOS-FEED-OIL-MAINTENANCE"
+      ],
+      "missingData": [
+        "Rig equipment hierarchy",
+        "Maintenance history",
+        "Safety incident history"
+      ],
+      "humanValidationPoints": [
+        "Confirm asset ownership",
+        "Confirm asset hierarchy",
+        "Confirm data feed availability"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "valuationPotential": "High",
+      "riskScore": 62,
+      "confidenceScore": 66,
+      "recommendedAction": "Validate rig hierarchy and safety data availability.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 52,
+        "summary": "Offshore Rig DTA candidate requires asset hierarchy and safety data validation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm rig ownership, hierarchy, safety feeds, and monitoring owners.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Missing Data",
+          "Request Human Validation"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-OIL-PIPELINE",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Pipeline Network DTA",
+      "assetType": "Infrastructure Asset",
+      "description": "Candidate DTA for pipeline integrity, flow, maintenance, and risk monitoring.",
+      "stage": "Candidate Identified",
+      "status": "Requires Validation",
+      "sourceObjects": [
+        "Pipelines",
+        "Storage Facilities",
+        "Safety Systems"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-OIL-PIPELINE",
+        "EOS-FEED-OIL-SAFETY"
+      ],
+      "missingData": [
+        "Pipeline route map",
+        "Integrity inspection records",
+        "Flow telemetry"
+      ],
+      "humanValidationPoints": [
+        "Confirm asset ownership",
+        "Confirm systems list",
+        "Confirm data feed availability"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "valuationPotential": "High",
+      "riskScore": 68,
+      "confidenceScore": 64,
+      "recommendedAction": "Confirm route map, integrity data, and safety workflows.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 68,
+        "progress": 50,
+        "summary": "Pipeline Network DTA candidate has high value potential and requires integrity data validation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "High",
+        "recommendedAction": "Prioritize pipeline data quality and governance review.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Risk Map",
+          "Review Feed Requirements"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-OIL-PRODUCTION",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Production Operations DTA",
+      "assetType": "Operations Asset",
+      "description": "Candidate DTA for production planning, output, downtime, and operational efficiency.",
+      "stage": "Candidate Identified",
+      "status": "Defined",
+      "sourceObjects": [
+        "Production Systems",
+        "Wells",
+        "Commercial Systems"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-OIL-PRODUCTION",
+        "EOS-FEED-OIL-COMMERCIAL"
+      ],
+      "missingData": [
+        "Production cadence",
+        "Downtime history",
+        "Commercial lifting schedule"
+      ],
+      "humanValidationPoints": [
+        "Confirm systems list",
+        "Confirm valuation assumptions"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-MERCURY",
+        "EOS-AGENT-ATHENA"
+      ],
+      "valuationPotential": "High",
+      "riskScore": 54,
+      "confidenceScore": 70,
+      "recommendedAction": "Validate production metrics and commercial dependencies.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Defined",
+        "healthScore": 74,
+        "progress": 56,
+        "summary": "Production Operations DTA candidate is defined and awaiting production feed mapping.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm production feed requirements and commercial dependencies.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Commercial Data",
+          "Review Feed Requirements"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-OIL-STORAGE",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Storage Facility DTA",
+      "assetType": "Infrastructure Asset",
+      "description": "Candidate DTA for storage capacity, inventory, safety, and commercial availability.",
+      "stage": "Candidate Identified",
+      "status": "Defined",
+      "sourceObjects": [
+        "Storage Facilities",
+        "Commercial Systems",
+        "Safety Systems"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-OIL-STORAGE",
+        "EOS-FEED-OIL-COMMERCIAL"
+      ],
+      "missingData": [
+        "Tank inventory data",
+        "Capacity constraints",
+        "Inspection records"
+      ],
+      "humanValidationPoints": [
+        "Confirm asset hierarchy",
+        "Confirm data feed availability"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS"
+      ],
+      "valuationPotential": "Medium",
+      "riskScore": 46,
+      "confidenceScore": 62,
+      "recommendedAction": "Validate storage inventory and safety data requirements.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 72,
+        "progress": 48,
+        "summary": "Storage Facility DTA candidate is defined for future data feed mapping.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review storage data requirements after primary operations candidates.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Missing Data"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-OIL-HQ",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Enterprise Headquarters DTA",
+      "assetType": "Governance Asset",
+      "description": "Candidate DTA for enterprise governance, approvals, contracts, and decision workflows.",
+      "stage": "Candidate Identified",
+      "status": "Defined",
+      "sourceObjects": [
+        "Headquarters",
+        "Commercial Systems",
+        "Contracts",
+        "Approval Owners"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-OIL-GOVERNANCE",
+        "EOS-FEED-OIL-COMMERCIAL"
+      ],
+      "missingData": [
+        "Approval matrix",
+        "Contract metadata",
+        "Governance policies"
+      ],
+      "humanValidationPoints": [
+        "Confirm approval owners",
+        "Confirm governance requirements"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-VULCAN",
+        "EOS-AGENT-MERCURY"
+      ],
+      "valuationPotential": "Medium",
+      "riskScore": 38,
+      "confidenceScore": 60,
+      "recommendedAction": "Confirm approval owners and governance requirements.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 76,
+        "progress": 46,
+        "summary": "Enterprise Headquarters DTA candidate prepares governance and approval workflow modeling.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review governance requirements and approval owners.",
+        "availableActions": [
+          "Review Governance",
+          "Review Approval Matrix"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-EPERCENT-ENTERPRISE",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "name": "ePercent Enterprise DTA",
+      "assetType": "Reference Enterprise Asset",
+      "description": "Candidate DTA for ePercent as the first AI-native enterprise operating on EOS.",
+      "stage": "Candidate Identified",
+      "status": "Requires Governance Review",
+      "sourceObjects": [
+        "EOS Platform",
+        "Mission Control",
+        "Executive AI Workforce",
+        "KIPR"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-EPERCENT-PLATFORM",
+        "EOS-FEED-EPERCENT-KNOWLEDGE"
+      ],
+      "missingData": [
+        "Governance approval evidence",
+        "Commercial readiness evidence"
+      ],
+      "humanValidationPoints": [
+        "Confirm governance requirements",
+        "Confirm valuation assumptions"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATLAS"
+      ],
+      "valuationPotential": "Transformational",
+      "riskScore": 44,
+      "confidenceScore": 70,
+      "recommendedAction": "Validate governance and investor readiness assumptions.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 58,
+        "summary": "ePercent Enterprise DTA candidate links platform evidence to the reference enterprise strategy.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review governance, investor readiness, and Second Balance Sheet assumptions.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Investor Evidence",
+          "Review Governance"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DTA-CAND-EOS-PLATFORM",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "name": "EOS Platform DTA",
+      "assetType": "Platform Asset",
+      "description": "Candidate DTA for EOS as a platform asset, operating environment, and Digital Enterprise Headquarters foundation.",
+      "stage": "Candidate Identified",
+      "status": "Defined",
+      "sourceObjects": [
+        "Core API",
+        "Mission Control",
+        "Persistent Store",
+        "Backup Repository"
+      ],
+      "requiredDataFeeds": [
+        "EOS-FEED-EOS-STATUS",
+        "EOS-FEED-EOS-STORAGE",
+        "EOS-FEED-EOS-BACKUP"
+      ],
+      "missingData": [
+        "Release governance evidence",
+        "Cloud sync evidence",
+        "Restore validation evidence"
+      ],
+      "humanValidationPoints": [
+        "Confirm systems list",
+        "Confirm data feed availability",
+        "Confirm governance requirements"
+      ],
+      "assignedAgents": [
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "valuationPotential": "High",
+      "riskScore": 40,
+      "confidenceScore": 76,
+      "recommendedAction": "Validate release, backup, and storage evidence.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 82,
+        "progress": 62,
+        "summary": "EOS Platform DTA candidate is defined and ready for platform evidence review.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review release and backup evidence before DTA formation.",
+        "availableActions": [
+          "Review Candidate",
+          "Review Platform Feeds",
+          "Review Release Evidence"
+        ]
+      }
+    }
+  ]
+}

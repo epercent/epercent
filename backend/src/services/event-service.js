@@ -1,15 +1,17 @@
 import { EVENT_TYPES, events } from '../data/events.js';
-
-const eventRegistry = new Map(events.map((event) => [event.id, event]));
+import { findRecordById, listRecords } from './storage-service.js';
 
 export function listEvents() {
-  return Array.from(eventRegistry.values());
+  return listRecords('events', events);
 }
 
 export function getEventById(id) {
-  return eventRegistry.get(id) ?? null;
+  return findRecordById('events', id, events);
 }
 
 export function listEventTypes() {
-  return Array.from(EVENT_TYPES);
+  return listRecords(
+    'event-types',
+    EVENT_TYPES.map((type) => ({ id: type, type }))
+  ).map((record) => record.type);
 }

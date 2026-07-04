@@ -4,7 +4,17 @@ import {
   apiAgentsUrl,
   apiEventsUrl,
   apiKnowledgeUrl,
+  apiAdminActionsUrl,
+  apiAgentActivityUrl,
+  apiAgentAttentionUrl,
+  apiAgentCalendarUrl,
+  apiAgentMessagesUrl,
+  apiAuditUrl,
   apiObjectsUrl,
+  apiPlatformAdminUrl,
+  apiPlatformUrl,
+  apiStorageCollectionsUrl,
+  apiStorageStatusUrl,
   apiStatusUrl,
   apiWorkflowsUrl,
   backupStatusFile,
@@ -39,13 +49,40 @@ async function tryFileJson(file) {
   }
 }
 
-const [status, objects, agents, knowledge, workflows, events] = await Promise.all([
+const [
+  status,
+  objects,
+  agents,
+  knowledge,
+  workflows,
+  events,
+  storageStatus,
+  storageCollections,
+  platform,
+  platformAdmin,
+  adminActions,
+  agentMessages,
+  agentActivity,
+  agentAttention,
+  agentCalendar,
+  audit
+] = await Promise.all([
   tryJson(apiStatusUrl),
   tryJson(apiObjectsUrl),
   tryJson(apiAgentsUrl),
   tryJson(apiKnowledgeUrl),
   tryJson(apiWorkflowsUrl),
-  tryJson(apiEventsUrl)
+  tryJson(apiEventsUrl),
+  tryJson(apiStorageStatusUrl),
+  tryJson(apiStorageCollectionsUrl),
+  tryJson(apiPlatformUrl),
+  tryJson(apiPlatformAdminUrl),
+  tryJson(apiAdminActionsUrl),
+  tryJson(apiAgentMessagesUrl),
+  tryJson(apiAgentActivityUrl),
+  tryJson(apiAgentAttentionUrl),
+  tryJson(apiAgentCalendarUrl),
+  tryJson(apiAuditUrl)
 ]);
 const backupStatus = await tryFileJson(backupStatusFile);
 
@@ -56,12 +93,20 @@ const registeredServices = enterpriseObjects.filter((object) =>
 const capabilities = enterpriseObjects.filter((object) => object.type === 'Capability');
 const backendRunning = backendProcessRunning || apiResponding;
 const frontendRunning = frontendProcessRunning || frontendReachable;
+const latestBackupTimestamp = backupStatus?.latestBackupTimestamp ?? backupStatus?.lastBackup ?? 'Unavailable';
+const latestBackupLocalTime = backupStatus?.latestBackupLocalTime ?? 'Unavailable';
+const latestBackupStatus = backupStatus?.latestBackupStatus ?? backupStatus?.backupStatus ?? 'Unavailable';
+const latestBackupArchive = backupStatus?.latestBackupArchive ?? 'Unavailable';
+const latestBackupSize = backupStatus?.latestBackupSize ?? 0;
+const latestRestoreValidationStatus =
+  backupStatus?.latestRestoreValidationStatus ?? (backupStatus?.lastRestore ? 'Validated' : 'Not validated');
 
 const checks = [
   ['Backend', backendRunning],
   ['Frontend', frontendRunning],
   ['API', apiResponding && status?.platform === 'EOS'],
-  ['Mission Control', frontendReachable]
+  ['Mission Control', frontendReachable],
+  ['Storage', storageStatus?.storageStatus === 'Operational']
 ];
 
 console.log('EOS Status');
@@ -80,11 +125,32 @@ console.log(`Knowledge Objects: ${knowledge?.count ?? 0}`);
 console.log(`Agents: ${agents?.count ?? 0}`);
 console.log(`Workflows: ${workflows?.count ?? 0}`);
 console.log(`Events: ${events?.count ?? 0}`);
-console.log(`Last Backup: ${backupStatus?.lastBackup ?? 'Unavailable'}`);
-console.log(`Backup Status: ${backupStatus?.backupStatus ?? 'Unavailable'}`);
-console.log(`Last Restore: ${backupStatus?.lastRestore ?? 'Unavailable'}`);
+console.log(`Storage Status: ${storageStatus?.storageStatus ?? 'Unavailable'}`);
+console.log(`Storage Collections: ${storageCollections?.count ?? storageStatus?.collectionsFound?.length ?? 0}`);
+console.log(
+  `Storage Records: ${Object.values(storageStatus?.recordCounts ?? {}).reduce((total, count) => total + count, 0)}`
+);
+console.log(`Storage Snapshots: ${storageStatus?.snapshotCount ?? 0}`);
+console.log(`Storage Warnings: ${storageStatus?.warnings?.length ?? 0}`);
+console.log(`Platform Administration: ${platformAdmin?.platformStatus ?? 'Unavailable'}`);
+console.log(`Admin Actions: ${adminActions?.count ?? 0}`);
+console.log(`Governed Admin Actions: ${adminActions?.summary?.governed ?? 0}`);
+console.log(`AI Workforce Status: ${platform?.status?.status ?? 'Unavailable'}`);
+console.log(`Agent Messages: ${agentMessages?.count ?? 0}`);
+console.log(`Agent Activity: ${agentActivity?.count ?? 0}`);
+console.log(`Agent Attention: ${agentAttention?.open ?? 0} open`);
+console.log(`Agent Calendar: ${agentCalendar?.count ?? 0}`);
+console.log(`Audit Status: ${audit?.summary?.overallStatus ?? 'Unavailable'}`);
+console.log(`Alpha Readiness: ${audit?.summary?.alphaReadiness ?? 'Unavailable'}%`);
+console.log(`Beta Readiness: ${audit?.summary?.betaReadiness ?? 'Unavailable'}%`);
+console.log(`Version 1.0 Readiness: ${audit?.summary?.versionOneReadiness ?? 'Unavailable'}%`);
+console.log(`Current Priority: ${platform?.status?.recommendedAction ?? 'Review Mission Control.'}`);
+console.log(`Last Backup: ${latestBackupLocalTime} (${latestBackupTimestamp})`);
+console.log(`Backup Status: ${latestBackupStatus}`);
 console.log(`Backup Count: ${backupStatus?.backupCount ?? 0}`);
-console.log(`Next Scheduled Backup: ${backupStatus?.nextScheduledBackup ?? 'Not scheduled'}`);
+console.log(`Latest Archive: ${latestBackupArchive} (${latestBackupSize} bytes)`);
+console.log(`Backup Data Included: ${backupStatus?.latestBackupDataIncluded === false ? 'No' : 'Yes'}`);
+console.log(`Restore Validation: ${latestRestoreValidationStatus}`);
 console.log(`Backend URL: ${backendUrl}`);
 console.log(`Mission Control URL: ${frontendUrl}`);
 

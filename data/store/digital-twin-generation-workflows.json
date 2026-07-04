@@ -1,0 +1,53 @@
+{
+  "collectionName": "digital-twin-generation-workflows",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:48:40.787Z",
+  "recordCount": 1,
+  "source": "seed:digital-twin-generation-workflows",
+  "records": [
+    {
+      "id": "EOS-DTGW-001",
+      "name": "Enterprise Digital Twin Generation Workflow",
+      "owner": "Atlas",
+      "status": "Future Workflow Foundation",
+      "timezone": "UTC",
+      "lastUpdated": "2026-07-03T21:50:00.000Z",
+      "steps": [
+        "Upload enterprise documents",
+        "Analyze organization",
+        "Extract enterprise objects",
+        "Map systems and assets",
+        "Generate digital twin structure",
+        "Identify data feeds",
+        "Assign agents",
+        "Define human workflows",
+        "Connect real-time feeds",
+        "Go live"
+      ],
+      "humanApprovalPoints": [
+        "Approve document intake scope",
+        "Approve extracted enterprise object model",
+        "Approve critical system mapping",
+        "Approve governance and safety workflows",
+        "Approve go-live readiness"
+      ],
+      "liveStatus": {
+        "status": "Grey",
+        "operationalStatus": "Grey",
+        "lifecycleStatus": "Defined",
+        "healthScore": 72,
+        "progress": 24,
+        "summary": "Digital Twin generation workflow is defined as a future onboarding process.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review onboarding workflow before enabling document ingestion or automated structure generation.",
+        "availableActions": [
+          "Review Workflow",
+          "Review Approval Points",
+          "Review Data Feed Plan"
+        ]
+      }
+    }
+  ]
+}

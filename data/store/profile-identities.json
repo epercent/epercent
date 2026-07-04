@@ -1,0 +1,393 @@
+{
+  "collectionName": "profile-identities",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:31:44.279Z",
+  "recordCount": 10,
+  "source": "update:profile-identities",
+  "records": [
+    {
+      "id": "EOS-PROFILE-ERIC-OLO",
+      "ownerType": "Human Executive",
+      "ownerId": "EOS-EXEC-ERIC-OLO",
+      "displayName": "Eric Olo",
+      "role": "Founder, CEO & Chief Vision Architect",
+      "avatarAssetId": "EOS-MEDIA-5019CA9B",
+      "logoAssetId": "EOS-MEDIA-4FC378DB",
+      "organizationLogoAssetId": "EOS-MEDIA-4FC378DB",
+      "avatarUrl": "/media/EOS-EXEC-ERIC-OLO_1783118217133_img_4211.png",
+      "logoUrl": "/media/EOS-EXEC-ERIC-OLO_1783118107881_epercent-logo.jpeg",
+      "fallbackInitials": "EO",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Use local media for profile images. Use external repository links for large media libraries.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 82,
+        "progress": 36,
+        "summary": "Human executive profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload a CEO avatar and ePercent logo when approved brand assets are available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Organization Logo",
+          "Link External Repository"
+        ]
+      },
+      "profilePictureAssetId": "EOS-MEDIA-VERIFY-ERIC-PROFILE-PICTURE",
+      "profilePictureUrl": "/media/EOS-EXEC-ERIC-OLO_1783125104279_eric-olo-verification-profile-picture.svg"
+    },
+    {
+      "id": "EOS-PROFILE-CODEX",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-CODEX",
+      "displayName": "Codex",
+      "role": "Chief Engineering Officer",
+      "avatarAssetId": "EOS-MEDIA-VERIFY-CODEX-AVATAR",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "/media/EOS-AGENT-CODEX_1783118494867_codex-verification-avatar.svg",
+      "logoUrl": "",
+      "fallbackInitials": "C",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Agent avatars are stored locally unless linked to a governed brand asset repository.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Agent profile supports avatar and platform logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload approved Codex avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Agent Role Image",
+          "Link External Repository"
+        ]
+      },
+      "profilePictureAssetId": "EOS-MEDIA-VERIFY-CODEX-PROFILE-PICTURE",
+      "profilePictureUrl": "/media/EOS-AGENT-CODEX_1783118494874_codex-verification-profile-picture.svg"
+    },
+    {
+      "id": "EOS-PROFILE-ATHENA",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-ATHENA",
+      "displayName": "Athena",
+      "role": "Chief Research Officer",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "A",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Research profile media may link to external publication asset repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Research agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Athena avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Publication Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-HERMES",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-HERMES",
+      "displayName": "Hermes",
+      "role": "Chief Knowledge Officer",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "H",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Knowledge profile media may link to external knowledge vault repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Knowledge agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Hermes avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Knowledge Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-ATLAS",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-ATLAS",
+      "displayName": "Atlas",
+      "role": "Chief Enterprise Architect",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "A",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Architecture profile media may link to external architecture repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Architecture agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Atlas avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Architecture Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-CHATGPT",
+      "ownerType": "AI Executive Advisor",
+      "ownerId": "EOS-EXEC-CHATGPT",
+      "displayName": "ChatGPT",
+      "role": "Chief Technology Officer & Chief Systems Architect",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "CTO",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Executive advisor profile media may link to approved brand and governance repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "CTO advisor profile supports avatar and platform logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload CTO advisor avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Governance Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-MERCURY",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-MERCURY",
+      "displayName": "Mercury",
+      "role": "Chief Opportunity Officer",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "M",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Opportunity profile media may link to market intelligence repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Opportunity agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Mercury avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Opportunity Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-ARGUS",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-ARGUS",
+      "displayName": "Argus",
+      "role": "Chief Operations Officer",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "AR",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Operations profile media may link to telemetry and platform operations repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Operations agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Argus avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Operations Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-VULCAN",
+      "ownerType": "Agent",
+      "ownerId": "EOS-AGENT-VULCAN",
+      "displayName": "Vulcan",
+      "role": "Chief Quality Officer",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EOS-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "V",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Quality profile media may link to QA, security, performance, and compliance repositories.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 84,
+        "progress": 40,
+        "summary": "Quality agent profile supports avatar and organization logo attachment.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Upload Vulcan avatar when the executive identity pack is available.",
+        "availableActions": [
+          "Upload Avatar",
+          "Upload Role Image",
+          "Link Quality Repository"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PROFILE-EPERCENT",
+      "ownerType": "Organization",
+      "ownerId": "DTA-EPERCENT-001",
+      "displayName": "ePercent",
+      "role": "Reference Enterprise",
+      "avatarAssetId": "",
+      "logoAssetId": "EOS-MEDIA-EPERCENT-LOGO",
+      "organizationLogoAssetId": "EOS-MEDIA-EPERCENT-LOGO",
+      "avatarUrl": "",
+      "logoUrl": "",
+      "fallbackInitials": "EP",
+      "supportedMediaTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "uploadEnabled": true,
+      "externalRepositoryPolicy": "Large enterprise media and document libraries should be linked through external repository records.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 78,
+        "progress": 32,
+        "summary": "Organization profile supports company logo, media, and external repository links.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Add approved logo and link source organization repositories before full DTA onboarding.",
+        "availableActions": [
+          "Upload Company Logo",
+          "Import Organization Files",
+          "Link External Drive"
+        ]
+      }
+    }
+  ]
+}

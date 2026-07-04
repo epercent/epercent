@@ -1,0 +1,213 @@
+{
+  "collectionName": "digital-mirrors",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.905Z",
+  "recordCount": 3,
+  "source": "seed:digital-mirrors",
+  "records": [
+    {
+      "id": "EOS-DM-OIL-001",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "name": "Example Oil & Gas Enterprise Digital Mirror",
+      "industry": "Oil & Gas",
+      "description": "Structured representation of the example enterprise before governed DTA formation.",
+      "objectMap": [
+        "Headquarters",
+        "Offshore Rigs",
+        "FPSO / Ships",
+        "Pipelines",
+        "Storage Facilities",
+        "Wells"
+      ],
+      "relationshipMap": [
+        "Rigs produce through wells",
+        "Pipelines transport production",
+        "Storage facilities hold output",
+        "Headquarters governs approvals"
+      ],
+      "systemsMap": [
+        "Production Systems",
+        "Safety Systems",
+        "Commercial Systems",
+        "Maintenance Systems"
+      ],
+      "assetMap": [
+        "Rig fleet",
+        "Pipeline network",
+        "Storage estate",
+        "Enterprise headquarters"
+      ],
+      "processMap": [
+        "Production planning",
+        "Safety inspection",
+        "Maintenance scheduling",
+        "Commercial lifting"
+      ],
+      "knowledgeMap": [
+        "Asset register",
+        "Safety procedures",
+        "Production reporting",
+        "Commercial contracts"
+      ],
+      "riskMap": [
+        "Safety incident",
+        "Production downtime",
+        "Pipeline integrity",
+        "Data quality"
+      ],
+      "confidenceScore": 68,
+      "validationStatus": "Human Validation Required",
+      "recommendedNextStep": "Validate asset ownership, hierarchy, and source system availability.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 74,
+        "progress": 66,
+        "summary": "Oil and Gas Digital Mirror is structured but requires human validation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review object, relationship, system, and risk maps with the enterprise owner.",
+        "availableActions": [
+          "Review Object Map",
+          "Review Relationship Map",
+          "Request Human Validation"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DM-EPERCENT-001",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "name": "ePercent Digital Mirror",
+      "industry": "AI-Native Enterprise",
+      "description": "Digital Mirror for the reference enterprise operating EOS.",
+      "objectMap": [
+        "EOS Platform",
+        "Mission Control",
+        "Executive AI Workforce",
+        "KIPR",
+        "Second Balance Sheet"
+      ],
+      "relationshipMap": [
+        "Mission Control operates EOS",
+        "Executive agents create knowledge",
+        "KIPR preserves knowledge assets"
+      ],
+      "systemsMap": [
+        "EOS Core API",
+        "Persistent Store",
+        "Mission Control",
+        "Backup Service"
+      ],
+      "assetMap": [
+        "Platform asset",
+        "Knowledge asset portfolio",
+        "Digital Twin Asset portfolio"
+      ],
+      "processMap": [
+        "Capability delivery",
+        "Knowledge management",
+        "Backup and release"
+      ],
+      "knowledgeMap": [
+        "Genesis",
+        "Capability docs",
+        "Architecture docs",
+        "Business impact assessments"
+      ],
+      "riskMap": [
+        "Local-only persistence",
+        "Governance approval pending",
+        "Cloud sync not executed"
+      ],
+      "confidenceScore": 74,
+      "validationStatus": "Awaiting Governance Review",
+      "recommendedNextStep": "Validate governance and valuation assumptions.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 80,
+        "progress": 72,
+        "summary": "ePercent Digital Mirror is ready for governance and valuation validation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review governance, valuation, and knowledge asset assumptions.",
+        "availableActions": [
+          "Review Mirror",
+          "Review Governance",
+          "Review Valuation Assumptions"
+        ]
+      }
+    },
+    {
+      "id": "EOS-DM-EOS-001",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "name": "EOS Platform Digital Mirror",
+      "industry": "Enterprise Operating System",
+      "description": "Digital Mirror of EOS as a platform asset and operating system.",
+      "objectMap": [
+        "Core API",
+        "Mission Control",
+        "Persistent Store",
+        "Backup Repository",
+        "Release Metadata"
+      ],
+      "relationshipMap": [
+        "Core API serves Mission Control",
+        "Persistent Store backs registries",
+        "Backup Service protects data"
+      ],
+      "systemsMap": [
+        "Node API",
+        "React Mission Control",
+        "JSON Store",
+        "Backup Scripts"
+      ],
+      "assetMap": [
+        "API asset",
+        "Frontend asset",
+        "Data asset",
+        "Knowledge asset"
+      ],
+      "processMap": [
+        "Start",
+        "Status",
+        "Test",
+        "Build",
+        "Backup"
+      ],
+      "knowledgeMap": [
+        "Engineering Standard",
+        "Development Guide",
+        "Architecture docs"
+      ],
+      "riskMap": [
+        "No external database yet",
+        "No GitHub sync yet",
+        "Manual validation still required"
+      ],
+      "confidenceScore": 78,
+      "validationStatus": "Technical Review Required",
+      "recommendedNextStep": "Validate platform data feeds and release evidence.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 82,
+        "progress": 76,
+        "summary": "EOS Platform Digital Mirror is available for technical review.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review platform feed requirements and release metadata.",
+        "availableActions": [
+          "Review Platform Mirror",
+          "Review Feed Requirements"
+        ]
+      }
+    }
+  ]
+}

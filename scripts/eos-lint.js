@@ -3,12 +3,24 @@ import { spawn } from 'node:child_process';
 import { backendDir, frontendDir, rootDir, runCommand } from './eos-common.js';
 
 const rootScriptFiles = [
+  'scripts/bootstrap.js',
   'scripts/eos-backup.js',
+  'scripts/eos-backup-status-check.js',
+  'scripts/eos-audit.js',
+  'scripts/eos-build.js',
+  'scripts/eos-common.js',
+  'scripts/eos-drive-status.js',
+  'scripts/eos-drive-test.js',
+  'scripts/eos-drive-utils.js',
   'scripts/eos-git-status.js',
   'scripts/eos-git-utils.js',
   'scripts/eos-release.js',
   'scripts/eos-restore.js',
-  'scripts/eos-tag.js'
+  'scripts/eos-start.js',
+  'scripts/eos-status.js',
+  'scripts/eos-stop.js',
+  'scripts/eos-tag.js',
+  'scripts/eos-test.js'
 ];
 
 function checkScript(file) {

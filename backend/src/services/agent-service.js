@@ -1,11 +1,10 @@
 import { agents } from '../data/agents.js';
-
-const agentRegistry = new Map(agents.map((agent) => [agent.id, agent]));
+import { findRecordById, listRecords } from './storage-service.js';
 
 export function listAgents() {
-  return Array.from(agentRegistry.values());
+  return listRecords('agents', agents);
 }
 
 export function getAgentById(id) {
-  return agentRegistry.get(id) ?? null;
+  return findRecordById('agents', id, agents);
 }

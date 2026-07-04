@@ -1,0 +1,89 @@
+{
+  "collectionName": "enterprise-architecture-layers",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:48:40.787Z",
+  "recordCount": 10,
+  "source": "seed:enterprise-architecture-layers",
+  "records": [
+    {
+      "id": "EOS-VL-OPERATIONAL-SYSTEMS",
+      "name": "Operational Systems",
+      "order": 1,
+      "summary": "Enterprise source systems, production systems, safety systems, commercial systems, and human operating processes.",
+      "status": "Monitoring",
+      "color": "#20c997"
+    },
+    {
+      "id": "EOS-VL-DATA-PLATFORM",
+      "name": "Data Platform",
+      "order": 2,
+      "summary": "Structured data feeds, logs, documents, system telemetry, and integration-ready enterprise data.",
+      "status": "Foundation",
+      "color": "#38bdf8"
+    },
+    {
+      "id": "EOS-VL-MODEL-INTEGRATION",
+      "name": "Model Integration",
+      "order": 3,
+      "summary": "Enterprise models, analytical models, process models, and future AI model interfaces.",
+      "status": "Defined",
+      "color": "#818cf8"
+    },
+    {
+      "id": "EOS-VL-ENTERPRISE-ONTOLOGY",
+      "name": "Enterprise Ontology / Enterprise Objects",
+      "order": 4,
+      "summary": "Live Enterprise Objects that represent assets, systems, risks, workflows, agents, approvals, and value.",
+      "status": "Operational",
+      "color": "#22d3ee"
+    },
+    {
+      "id": "EOS-VL-WORKFLOWS",
+      "name": "Workflows",
+      "order": 5,
+      "summary": "Governed processes for monitoring, review, approval, recovery, publication, and DTA formation.",
+      "status": "Operational",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "EOS-VL-DECISION-ORCHESTRATION",
+      "name": "Decision Orchestration",
+      "order": 6,
+      "summary": "Human and agent decision points, review paths, escalation logic, and approval queues.",
+      "status": "Foundation",
+      "color": "#fb7185"
+    },
+    {
+      "id": "EOS-VL-AGENTS",
+      "name": "Agents",
+      "order": 7,
+      "summary": "Executive agents assigned to research, engineering, knowledge, architecture, operations, quality, and opportunity intelligence.",
+      "status": "Operational",
+      "color": "#a78bfa"
+    },
+    {
+      "id": "EOS-VL-GOVERNANCE",
+      "name": "Governance",
+      "order": 8,
+      "summary": "Policies, approval status, audit readiness, risk review, and executive authorization posture.",
+      "status": "Active Review",
+      "color": "#f97316"
+    },
+    {
+      "id": "EOS-VL-VALUATION",
+      "name": "Valuation",
+      "order": 9,
+      "summary": "Internal value drivers, DTA value signals, risk reduction value, and enterprise value assumptions.",
+      "status": "Internal Estimate",
+      "color": "#eab308"
+    },
+    {
+      "id": "EOS-VL-SECOND-BALANCE-SHEET",
+      "name": "Second Balance Sheet",
+      "order": 10,
+      "summary": "Digital operational assets and knowledge assets that may support future enterprise value evidence.",
+      "status": "Draft Methodology",
+      "color": "#14b8a6"
+    }
+  ]
+}

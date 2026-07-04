@@ -1,0 +1,95 @@
+{
+  "collectionName": "master-monitoring",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:48:40.783Z",
+  "recordCount": 1,
+  "source": "seed:master-monitoring",
+  "records": [
+    {
+      "id": "EOS-MASTER-MONITORING",
+      "name": "EOS Master Monitoring View",
+      "owner": "Argus",
+      "status": "Operational Foundation",
+      "visualTheme": "dark-layered-enterprise",
+      "displayTimezone": "Africa/Lagos",
+      "lastUpdated": "2026-07-03T21:50:00.000Z",
+      "onboardedEnterprises": 2,
+      "enterpriseValue": 3750000,
+      "digitalTwinAssets": 3,
+      "activeAgents": 7,
+      "dataFeeds": 8,
+      "operationalSystems": 10,
+      "alerts": 4,
+      "governanceStatus": "Active Review",
+      "humanApprovalPoints": 8,
+      "headlineMetrics": [
+        {
+          "id": "MM-ENTERPRISES",
+          "label": "Onboarded Enterprises",
+          "value": 2,
+          "unit": "enterprises"
+        },
+        {
+          "id": "MM-VALUE",
+          "label": "Enterprise Value",
+          "value": 3750000,
+          "unit": "USD"
+        },
+        {
+          "id": "MM-DTAS",
+          "label": "Digital Twin Assets",
+          "value": 3,
+          "unit": "assets"
+        },
+        {
+          "id": "MM-AGENTS",
+          "label": "Active Agents",
+          "value": 7,
+          "unit": "agents"
+        },
+        {
+          "id": "MM-FEEDS",
+          "label": "Data Feeds",
+          "value": 8,
+          "unit": "feeds"
+        },
+        {
+          "id": "MM-SYSTEMS",
+          "label": "Operational Systems",
+          "value": 10,
+          "unit": "systems"
+        },
+        {
+          "id": "MM-ALERTS",
+          "label": "Alerts",
+          "value": 4,
+          "unit": "alerts"
+        },
+        {
+          "id": "MM-APPROVALS",
+          "label": "Human Approval Points",
+          "value": 8,
+          "unit": "points"
+        }
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 84,
+        "progress": 46,
+        "summary": "Master Monitoring visual layer is operational as a simulated enterprise intelligence foundation.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review demonstration enterprise twins and approve the next DTA lifecycle management capability.",
+        "availableActions": [
+          "Open Master Monitoring",
+          "Open Enterprise Home",
+          "Review Telemetry",
+          "Review Approval Points"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "collectionName": "event-types",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:25:42.837Z",
+  "recordCount": 102,
+  "source": "seed:event-types; merged:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types; refreshed:seed:event-types",
+  "records": [
+    {
+      "id": "WORKFLOW_STARTED",
+      "type": "WORKFLOW_STARTED"
+    },
+    {
+      "id": "WORKFLOW_COMPLETED",
+      "type": "WORKFLOW_COMPLETED"
+    },
+    {
+      "id": "AGENT_STARTED",
+      "type": "AGENT_STARTED"
+    },
+    {
+      "id": "AGENT_COMPLETED",
+      "type": "AGENT_COMPLETED"
+    },
+    {
+      "id": "KNOWLEDGE_UPDATED",
+      "type": "KNOWLEDGE_UPDATED"
+    },
+    {
+      "id": "OBJECT_CREATED",
+      "type": "OBJECT_CREATED"
+    },
+    {
+      "id": "LIVE_OBJECT_STATUS_CREATED",
+      "type": "LIVE_OBJECT_STATUS_CREATED"
+    },
+    {
+      "id": "LIVE_OBJECT_STATUS_UPDATED",
+      "type": "LIVE_OBJECT_STATUS_UPDATED"
+    },
+    {
+      "id": "ATTENTION_REQUIRED",
+      "type": "ATTENTION_REQUIRED"
+    },
+    {
+      "id": "KNOWLEDGE_OBJECT_CREATED",
+      "type": "KNOWLEDGE_OBJECT_CREATED"
+    },
+    {
+      "id": "PUBLICATION_READY",
+      "type": "PUBLICATION_READY"
+    },
+    {
+      "id": "PATENT_IDENTIFIED",
+      "type": "PATENT_IDENTIFIED"
+    },
+    {
+      "id": "INVESTOR_BRIEF_READY",
+      "type": "INVESTOR_BRIEF_READY"
+    },
+    {
+      "id": "KNOWLEDGE_ASSET_VIEWED",
+      "type": "KNOWLEDGE_ASSET_VIEWED"
+    },
+    {
+      "id": "KNOWLEDGE_ASSET_STATUS_UPDATED",
+      "type": "KNOWLEDGE_ASSET_STATUS_UPDATED"
+    },
+    {
+      "id": "KNOWLEDGE_ASSET_REVIEW_REQUESTED",
+      "type": "KNOWLEDGE_ASSET_REVIEW_REQUESTED"
+    },
+    {
+      "id": "INVESTOR_BRIEF_AVAILABLE",
+      "type": "INVESTOR_BRIEF_AVAILABLE"
+    },
+    {
+      "id": "PUBLICATION_DRAFT_AVAILABLE",
+      "type": "PUBLICATION_DRAFT_AVAILABLE"
+    },
+    {
+      "id": "PROGRAM_CREATED",
+      "type": "PROGRAM_CREATED"
+    },
+    {
+      "id": "PROGRAM_UPDATED",
+      "type": "PROGRAM_UPDATED"
+    },
+    {
+      "id": "MILESTONE_COMPLETED",
+      "type": "MILESTONE_COMPLETED"
+    },
+    {
+      "id": "ROADMAP_UPDATED",
+      "type": "ROADMAP_UPDATED"
+    },
+    {
+      "id": "SPRINT_STARTED",
+      "type": "SPRINT_STARTED"
+    },
+    {
+      "id": "SPRINT_COMPLETED",
+      "type": "SPRINT_COMPLETED"
+    },
+    {
+      "id": "EXECUTIVE_COUNCIL_CREATED",
+      "type": "EXECUTIVE_COUNCIL_CREATED"
+    },
+    {
+      "id": "EXECUTIVE_PROFILE_UPDATED",
+      "type": "EXECUTIVE_PROFILE_UPDATED"
+    },
+    {
+      "id": "EXECUTIVE_ATTENTION_REQUIRED",
+      "type": "EXECUTIVE_ATTENTION_REQUIRED"
+    },
+    {
+      "id": "CEO_COCKPIT_UPDATED",
+      "type": "CEO_COCKPIT_UPDATED"
+    },
+    {
+      "id": "DIGITAL_HEADQUARTERS_CREATED",
+      "type": "DIGITAL_HEADQUARTERS_CREATED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_CREATED",
+      "type": "EXECUTIVE_ACTION_CREATED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_REVIEW_REQUESTED",
+      "type": "EXECUTIVE_ACTION_REVIEW_REQUESTED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_APPROVED",
+      "type": "EXECUTIVE_ACTION_APPROVED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_REJECTED",
+      "type": "EXECUTIVE_ACTION_REJECTED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_ESCALATED",
+      "type": "EXECUTIVE_ACTION_ESCALATED"
+    },
+    {
+      "id": "EXECUTIVE_ACTION_DEFERRED",
+      "type": "EXECUTIVE_ACTION_DEFERRED"
+    },
+    {
+      "id": "EXECUTIVE_OFFICE_OPENED",
+      "type": "EXECUTIVE_OFFICE_OPENED"
+    },
+    {
+      "id": "EXECUTIVE_BRIEFING_UPDATED",
+      "type": "EXECUTIVE_BRIEFING_UPDATED"
+    },
+    {
+      "id": "DEPARTMENT_STATUS_UPDATED",
+      "type": "DEPARTMENT_STATUS_UPDATED"
+    },
+    {
+      "id": "DESIGN_SYSTEM_CREATED",
+      "type": "DESIGN_SYSTEM_CREATED"
+    },
+    {
+      "id": "UX_AUDIT_COMPLETED",
+      "type": "UX_AUDIT_COMPLETED"
+    },
+    {
+      "id": "PRESENTATION_MODE_ENABLED",
+      "type": "PRESENTATION_MODE_ENABLED"
+    },
+    {
+      "id": "TOOLTIP_REGISTERED",
+      "type": "TOOLTIP_REGISTERED"
+    },
+    {
+      "id": "DESIGN_STANDARD_UPDATED",
+      "type": "DESIGN_STANDARD_UPDATED"
+    },
+    {
+      "id": "PERSISTENT_STORE_CREATED",
+      "type": "PERSISTENT_STORE_CREATED"
+    },
+    {
+      "id": "COLLECTION_INITIALIZED",
+      "type": "COLLECTION_INITIALIZED"
+    },
+    {
+      "id": "COLLECTION_UPDATED",
+      "type": "COLLECTION_UPDATED"
+    },
+    {
+      "id": "STORAGE_SNAPSHOT_CREATED",
+      "type": "STORAGE_SNAPSHOT_CREATED"
+    },
+    {
+      "id": "STORAGE_HEALTH_CHECK_COMPLETED",
+      "type": "STORAGE_HEALTH_CHECK_COMPLETED"
+    },
+    {
+      "id": "STRATEGY_CREATED",
+      "type": "STRATEGY_CREATED"
+    },
+    {
+      "id": "STRATEGY_APPROVAL_REQUIRED",
+      "type": "STRATEGY_APPROVAL_REQUIRED"
+    },
+    {
+      "id": "ROADMAP_ALIGNED_TO_STRATEGY",
+      "type": "ROADMAP_ALIGNED_TO_STRATEGY"
+    },
+    {
+      "id": "VALUATION_UPDATED",
+      "type": "VALUATION_UPDATED"
+    },
+    {
+      "id": "SECOND_BALANCE_SHEET_UPDATED",
+      "type": "SECOND_BALANCE_SHEET_UPDATED"
+    },
+    {
+      "id": "DTA_CREATED",
+      "type": "DTA_CREATED"
+    },
+    {
+      "id": "DTA_STATUS_UPDATED",
+      "type": "DTA_STATUS_UPDATED"
+    },
+    {
+      "id": "GOVERNANCE_REVIEW_REQUIRED",
+      "type": "GOVERNANCE_REVIEW_REQUIRED"
+    },
+    {
+      "id": "PLATFORM_ADMIN_CENTER_CREATED",
+      "type": "PLATFORM_ADMIN_CENTER_CREATED"
+    },
+    {
+      "id": "ADMIN_ACTION_REGISTERED",
+      "type": "ADMIN_ACTION_REGISTERED"
+    },
+    {
+      "id": "ADMIN_ACTION_AUTHORIZATION_REQUIRED",
+      "type": "ADMIN_ACTION_AUTHORIZATION_REQUIRED"
+    },
+    {
+      "id": "ADMIN_ACTION_COMPLETED",
+      "type": "ADMIN_ACTION_COMPLETED"
+    },
+    {
+      "id": "AGENT_MESSAGE_CREATED",
+      "type": "AGENT_MESSAGE_CREATED"
+    },
+    {
+      "id": "AGENT_MESSAGE_UPDATED",
+      "type": "AGENT_MESSAGE_UPDATED"
+    },
+    {
+      "id": "AGENT_ACTIVITY_UPDATED",
+      "type": "AGENT_ACTIVITY_UPDATED"
+    },
+    {
+      "id": "AGENT_ATTENTION_REQUIRED",
+      "type": "AGENT_ATTENTION_REQUIRED"
+    },
+    {
+      "id": "AGENT_CALENDAR_EVENT_CREATED",
+      "type": "AGENT_CALENDAR_EVENT_CREATED"
+    },
+    {
+      "id": "ACTION_GOVERNANCE_POLICY_CREATED",
+      "type": "ACTION_GOVERNANCE_POLICY_CREATED"
+    },
+    {
+      "id": "MISSION_CONTROL_NAVIGATION_REDESIGNED",
+      "type": "MISSION_CONTROL_NAVIGATION_REDESIGNED"
+    },
+    {
+      "id": "DIGITAL_HEADQUARTERS_LOBBY_CREATED",
+      "type": "DIGITAL_HEADQUARTERS_LOBBY_CREATED"
+    },
+    {
+      "id": "WORKSPACE_RAIL_CREATED",
+      "type": "WORKSPACE_RAIL_CREATED"
+    },
+    {
+      "id": "COMMAND_PALETTE_CREATED",
+      "type": "COMMAND_PALETTE_CREATED"
+    },
+    {
+      "id": "UX_NAVIGATION_AUDIT_COMPLETED",
+      "type": "UX_NAVIGATION_AUDIT_COMPLETED"
+    },
+    {
+      "id": "INVESTMENT_THESIS_UPDATED",
+      "type": "INVESTMENT_THESIS_UPDATED"
+    },
+    {
+      "id": "TECHNOLOGY_FLYWHEEL_UPDATED",
+      "type": "TECHNOLOGY_FLYWHEEL_UPDATED"
+    },
+    {
+      "id": "REVENUE_MODEL_UPDATED",
+      "type": "REVENUE_MODEL_UPDATED"
+    },
+    {
+      "id": "DTA_LIFECYCLE_UPDATED",
+      "type": "DTA_LIFECYCLE_UPDATED"
+    },
+    {
+      "id": "KIPR_UPDATED",
+      "type": "KIPR_UPDATED"
+    },
+    {
+      "id": "ENTERPRISE_PROFILE_UPDATED",
+      "type": "ENTERPRISE_PROFILE_UPDATED"
+    },
+    {
+      "id": "MASTER_MONITORING_VIEW_CREATED",
+      "type": "MASTER_MONITORING_VIEW_CREATED"
+    },
+    {
+      "id": "ENTERPRISE_VISUAL_MODEL_CREATED",
+      "type": "ENTERPRISE_VISUAL_MODEL_CREATED"
+    },
+    {
+      "id": "DIGITAL_TWIN_HOME_CREATED",
+      "type": "DIGITAL_TWIN_HOME_CREATED"
+    },
+    {
+      "id": "TELEMETRY_UPDATE_RECEIVED",
+      "type": "TELEMETRY_UPDATE_RECEIVED"
+    },
+    {
+      "id": "TIMEZONE_STANDARD_APPLIED",
+      "type": "TIMEZONE_STANDARD_APPLIED"
+    },
+    {
+      "id": "DIGITAL_TWIN_STRUCTURE_GENERATED",
+      "type": "DIGITAL_TWIN_STRUCTURE_GENERATED"
+    },
+    {
+      "id": "STARTUP_EXPERIENCE_LOADED",
+      "type": "STARTUP_EXPERIENCE_LOADED"
+    },
+    {
+      "id": "PROFILE_MEDIA_UPLOADED",
+      "type": "PROFILE_MEDIA_UPLOADED"
+    },
+    {
+      "id": "ORGANIZATION_LOGO_REGISTERED",
+      "type": "ORGANIZATION_LOGO_REGISTERED"
+    },
+    {
+      "id": "ORGANIZATION_IMPORT_RECEIVED",
+      "type": "ORGANIZATION_IMPORT_RECEIVED"
+    },
+    {
+      "id": "INTAKE_EXTRACTION_COMPLETED",
+      "type": "INTAKE_EXTRACTION_COMPLETED"
+    },
+    {
+      "id": "ORGANIZATION_REPOSITORY_LINKED",
+      "type": "ORGANIZATION_REPOSITORY_LINKED"
+    },
+    {
+      "id": "ENTERPRISE_ONBOARDING_STARTED",
+      "type": "ENTERPRISE_ONBOARDING_STARTED"
+    },
+    {
+      "id": "SOURCE_CLASSIFICATION_COMPLETED",
+      "type": "SOURCE_CLASSIFICATION_COMPLETED"
+    },
+    {
+      "id": "ENTERPRISE_OBJECTS_EXTRACTED",
+      "type": "ENTERPRISE_OBJECTS_EXTRACTED"
+    },
+    {
+      "id": "DIGITAL_MIRROR_CREATED",
+      "type": "DIGITAL_MIRROR_CREATED"
+    },
+    {
+      "id": "DTA_CANDIDATE_IDENTIFIED",
+      "type": "DTA_CANDIDATE_IDENTIFIED"
+    },
+    {
+      "id": "DATA_FEED_REQUIREMENT_CREATED",
+      "type": "DATA_FEED_REQUIREMENT_CREATED"
+    },
+    {
+      "id": "HUMAN_VALIDATION_REQUIRED",
+      "type": "HUMAN_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "DTA_FORMATION_READY",
+      "type": "DTA_FORMATION_READY"
+    },
+    {
+      "id": "PLATFORM_AUDIT_CREATED",
+      "type": "PLATFORM_AUDIT_CREATED"
+    },
+    {
+      "id": "CAPABILITY_READINESS_UPDATED",
+      "type": "CAPABILITY_READINESS_UPDATED"
+    },
+    {
+      "id": "FUNCTIONAL_GAP_IDENTIFIED",
+      "type": "FUNCTIONAL_GAP_IDENTIFIED"
+    },
+    {
+      "id": "READINESS_SCORE_UPDATED",
+      "type": "READINESS_SCORE_UPDATED"
+    },
+    {
+      "id": "AUDIT_REPORT_GENERATED",
+      "type": "AUDIT_REPORT_GENERATED"
+    }
+  ]
+}

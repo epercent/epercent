@@ -1,0 +1,1248 @@
+{
+  "collectionName": "master-roadmap",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:26:43.000Z",
+  "recordCount": 1,
+  "source": "seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap; refreshed:seed:master-roadmap",
+  "records": [
+    {
+      "id": "EOS-MASTER-ROADMAP",
+      "name": "EOS Master Roadmap",
+      "owner": "EOS PMO",
+      "vision": "Build EOS into the executive operating system for AI-native enterprises and Digital Twin Assets.",
+      "mission": "Coordinate engineering, research, commercialization, and investor readiness through a live authoritative roadmap.",
+      "strategicObjectives": [
+        "Reach Alpha with reliable engineering automation and Mission Control visibility.",
+        "Establish executive AI workforce governance.",
+        "Create the Digital Twin Asset platform foundation.",
+        "Develop Second Balance Sheet research and investor materials.",
+        "Prepare EOS for commercial launch readiness."
+      ],
+      "programs": [
+        {
+          "id": "EOS-PROG-ENGINEERING-FOUNDATION",
+          "name": "Engineering Foundation",
+          "objectives": [
+            "Stabilize workspace automation",
+            "Protect source control",
+            "Standardize verification"
+          ],
+          "milestones": [
+            "EOS-MS-ALPHA-FOUNDATION",
+            "EOS-MS-PMO-ROADMAP"
+          ],
+          "capabilities": [
+            "EOS-CAP-0008",
+            "EOS-CAP-0009",
+            "EOS-CAP-0010",
+            "EOS-CAP-0011",
+            "EOS-CAP-0012",
+            "EOS-CAP-0013",
+            "EOS-CAP-0020",
+            "EOS-CAP-0025",
+            "EOS-CAP-0031",
+            "EOS-CAP-0033",
+            "EOS-CAP-0027",
+            "EOS-CAP-0028"
+          ],
+          "progress": 91,
+          "dependencies": [
+            "EOS-CAP-0007",
+            "EOS-CAP-0014"
+          ],
+          "executiveOwner": "Codex",
+          "businessImpact": "Creates a reliable development and release foundation for EOS.",
+          "strategicObjective": "EOS-SO-001",
+          "businessPlanAlignment": "Establishes reliable platform infrastructure for the AI-native enterprise operating system.",
+          "governanceApprovalStatus": "Conditionally Approved",
+          "investorRelevance": "Shows engineering maturity, durability, and repeatable delivery discipline.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Creates durable operating records that can become valuation evidence."
+        },
+        {
+          "id": "EOS-PROG-EXECUTIVE-AI-WORKFORCE",
+          "name": "Executive AI Workforce",
+          "objectives": [
+            "Define executive agents",
+            "Assign accountability",
+            "Establish governance roles",
+            "Create executive offices",
+            "Standardize executive UX"
+          ],
+          "milestones": [
+            "EOS-MS-EXECUTIVE-LEADERSHIP",
+            "EOS-MS-EXECUTIVE-OFFICES",
+            "EOS-MS-EDS-UX-AUDIT"
+          ],
+          "capabilities": [
+            "EOS-CAP-0005",
+            "EOS-ORG-DIR-001",
+            "EOS-ORG-DIR-002",
+            "EOS-CAP-0021",
+            "EOS-CAP-0022",
+            "EOS-CAP-0023",
+            "EOS-CAP-0024",
+            "EOS-CAP-0027",
+            "EOS-CAP-0028",
+            "EOS-CAP-0029"
+          ],
+          "progress": 84,
+          "dependencies": [
+            "EOS-CAP-0005"
+          ],
+          "executiveOwner": "CTO",
+          "businessImpact": "Creates executive accountability and a leadership model for agent-owned work.",
+          "strategicObjective": "EOS-SO-001",
+          "businessPlanAlignment": "Defines the accountable leadership model for human and AI executive work.",
+          "governanceApprovalStatus": "Conditionally Approved",
+          "investorRelevance": "Demonstrates a differentiated operating model for AI-native enterprises.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Creates agent workforce assets and governance evidence."
+        },
+        {
+          "id": "EOS-PROG-AOS",
+          "name": "Agent Operating System (AOS)",
+          "objectives": [
+            "Coordinate agents",
+            "Expose agent status",
+            "Prepare executable agent workflows"
+          ],
+          "milestones": [
+            "EOS-MS-AOS-FOUNDATION"
+          ],
+          "capabilities": [
+            "EOS-CAP-0005",
+            "EOS-CAP-0007",
+            "EOS-CAP-0027"
+          ],
+          "progress": 46,
+          "dependencies": [
+            "EOS-CAP-0007",
+            "EOS-WF-AGENT-COORDINATION"
+          ],
+          "executiveOwner": "Hermes",
+          "businessImpact": "Moves EOS toward repeatable agent-operated enterprise workflows.",
+          "strategicObjective": "EOS-SO-001",
+          "businessPlanAlignment": "Prepares EOS for coordinated agent execution and governed operating workflows.",
+          "governanceApprovalStatus": "Pending Assessment",
+          "investorRelevance": "Supports the future autonomous operations narrative.",
+          "enterpriseValueContribution": "Medium",
+          "secondBalanceSheetImpact": "Creates workflow and agent activity records for future valuation."
+        },
+        {
+          "id": "EOS-PROG-ARM",
+          "name": "Agent Resource Management (ARM)",
+          "objectives": [
+            "Plan agent workloads",
+            "Track capacity",
+            "Route capability ownership"
+          ],
+          "milestones": [
+            "EOS-MS-ARM-PLANNING"
+          ],
+          "capabilities": [
+            "EOS-CAP-0005",
+            "EOS-CAP-0020",
+            "EOS-CAP-0027"
+          ],
+          "progress": 24,
+          "dependencies": [
+            "EOS-PROG-AOS",
+            "EOS-PMO"
+          ],
+          "executiveOwner": "Argus",
+          "businessImpact": "Prepares EOS for operational capacity planning and accountability.",
+          "strategicObjective": "EOS-SO-001",
+          "businessPlanAlignment": "Prepares capacity, workload, and accountability management for agent workforces.",
+          "governanceApprovalStatus": "Pending Assessment",
+          "investorRelevance": "Shows scalability path for AI workforce management.",
+          "enterpriseValueContribution": "Medium",
+          "secondBalanceSheetImpact": "Supports valuation of agent labor capacity and utilization."
+        },
+        {
+          "id": "EOS-PROG-DTAP",
+          "name": "Digital Twin Asset Platform (DTAP)",
+          "objectives": [
+            "Define Digital Twin Assets",
+            "Connect assets to Enterprise Objects",
+            "Create operational twin state"
+          ],
+          "milestones": [
+            "EOS-MS-DTAP-MODEL"
+          ],
+          "capabilities": [
+            "EOS-CAP-0014",
+            "EOS-CAP-0016",
+            "EOS-CAP-0026",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030",
+            "EOS-CAP-0032"
+          ],
+          "progress": 30,
+          "dependencies": [
+            "EOS-CAP-0014",
+            "EOS-WF-DIGITAL-TWIN-FORMATION"
+          ],
+          "executiveOwner": "Atlas",
+          "businessImpact": "Creates the platform basis for Digital Twin Asset commercialization.",
+          "strategicObjective": "EOS-SO-002",
+          "businessPlanAlignment": "Creates the foundation for Digital Twin Asset formation.",
+          "governanceApprovalStatus": "Awaiting Review",
+          "investorRelevance": "Defines a new platform asset class for enterprise value creation.",
+          "enterpriseValueContribution": "Transformational",
+          "secondBalanceSheetImpact": "Creates source assets for Second Balance Sheet recognition."
+        },
+        {
+          "id": "EOS-PROG-DTAM",
+          "name": "Digital Twin Asset Management (DTAM)",
+          "objectives": [
+            "Govern Digital Twin Assets",
+            "Track lifecycle state",
+            "Prepare portfolio management"
+          ],
+          "milestones": [
+            "EOS-MS-DTAM-GOVERNANCE"
+          ],
+          "capabilities": [
+            "EOS-CAP-0014",
+            "EOS-CAP-0020",
+            "EOS-CAP-0026",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030",
+            "EOS-CAP-0032"
+          ],
+          "progress": 18,
+          "dependencies": [
+            "EOS-PROG-DTAP"
+          ],
+          "executiveOwner": "Atlas",
+          "businessImpact": "Prepares operational governance for Digital Twin Asset portfolios.",
+          "strategicObjective": "EOS-SO-002",
+          "businessPlanAlignment": "Prepares governance and portfolio management for Digital Twin Assets.",
+          "governanceApprovalStatus": "Awaiting Review",
+          "investorRelevance": "Shows how Digital Twin Assets can be governed and scaled.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Supports lifecycle management for DTA valuation."
+        },
+        {
+          "id": "EOS-PROG-DTAX",
+          "name": "Digital Twin Asset Exchange (DTAX)",
+          "objectives": [
+            "Prepare exchange model",
+            "Define listing readiness",
+            "Connect valuation signals"
+          ],
+          "milestones": [
+            "EOS-MS-DTAX-CONCEPT"
+          ],
+          "capabilities": [
+            "EOS-CAP-0020",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030"
+          ],
+          "progress": 10,
+          "dependencies": [
+            "EOS-PROG-DTAP",
+            "EOS-PROG-DTAM",
+            "EOS-PROG-SECOND-BALANCE-SHEET"
+          ],
+          "executiveOwner": "Mercury",
+          "businessImpact": "Defines a future exchange layer for commercializing Digital Twin Assets.",
+          "strategicObjective": "EOS-SO-002",
+          "businessPlanAlignment": "Defines future commercialization and exchange readiness for Digital Twin Assets.",
+          "governanceApprovalStatus": "Not Started",
+          "investorRelevance": "Creates long-term marketplace and liquidity narrative.",
+          "enterpriseValueContribution": "Transformational",
+          "secondBalanceSheetImpact": "Potential commercialization channel for recognized DTA value."
+        },
+        {
+          "id": "EOS-PROG-SECOND-BALANCE-SHEET",
+          "name": "Second Balance Sheet",
+          "objectives": [
+            "Capture operational value",
+            "Support investor narrative",
+            "Connect valuation to live state"
+          ],
+          "milestones": [
+            "EOS-MS-SECOND-BALANCE-SHEET-THESIS"
+          ],
+          "capabilities": [
+            "EOS-CAP-0014",
+            "EOS-CAP-0015",
+            "EOS-CAP-0016",
+            "EOS-CAP-0026",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030"
+          ],
+          "progress": 38,
+          "dependencies": [
+            "EOS-AKR",
+            "RP-003"
+          ],
+          "executiveOwner": "Athena",
+          "businessImpact": "Creates a strategic valuation thesis for operational and Digital Twin Assets.",
+          "strategicObjective": "EOS-SO-003",
+          "businessPlanAlignment": "Turns operational digital assets into a structured value thesis.",
+          "governanceApprovalStatus": "Awaiting Review",
+          "investorRelevance": "Creates the core investor narrative for digital enterprise value.",
+          "enterpriseValueContribution": "Transformational",
+          "secondBalanceSheetImpact": "Primary program for Second Balance Sheet methodology."
+        },
+        {
+          "id": "EOS-PROG-OPPORTUNITY-ENGINE",
+          "name": "Opportunity Engine",
+          "objectives": [
+            "Scan markets",
+            "Track opportunities",
+            "Route executive decisions"
+          ],
+          "milestones": [
+            "EOS-MS-OPPORTUNITY-SIGNALS"
+          ],
+          "capabilities": [
+            "EOS-CAP-0007",
+            "EOS-ORG-DIR-002"
+          ],
+          "progress": 22,
+          "dependencies": [
+            "EOS-AGENT-MERCURY",
+            "EOS-WF-OPPORTUNITY-DISCOVERY"
+          ],
+          "executiveOwner": "Mercury",
+          "businessImpact": "Creates a future pipeline for market and enterprise opportunity discovery.",
+          "strategicObjective": "EOS-SO-005",
+          "businessPlanAlignment": "Creates future market and enterprise opportunity intelligence.",
+          "governanceApprovalStatus": "Pending Assessment",
+          "investorRelevance": "Shows path to deal flow, enterprise discovery, and market expansion.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Can identify future opportunity assets and DTA candidates."
+        },
+        {
+          "id": "EOS-PROG-RESEARCH-PUBLICATIONS",
+          "name": "Research & Publications",
+          "objectives": [
+            "Manage research assets",
+            "Prepare white papers",
+            "Track publication readiness"
+          ],
+          "milestones": [
+            "EOS-MS-KNOWLEDGE-ASSETS"
+          ],
+          "capabilities": [
+            "EOS-CAP-0015",
+            "EOS-CAP-0016",
+            "EOS-CAP-0029",
+            "EOS-CAP-0031"
+          ],
+          "progress": 58,
+          "dependencies": [
+            "EOS-AKR",
+            "EOS-ASSET-EXPLORER"
+          ],
+          "executiveOwner": "Athena",
+          "businessImpact": "Turns EOS research into reusable intellectual property and publication assets.",
+          "strategicObjective": "EOS-SO-003",
+          "businessPlanAlignment": "Turns EOS concepts into research, IP, publications, and market education.",
+          "governanceApprovalStatus": "Conditionally Approved",
+          "investorRelevance": "Improves thought leadership and credibility for enterprise buyers and partners.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Creates knowledge assets and IP evidence."
+        },
+        {
+          "id": "EOS-PROG-INVESTOR-READINESS",
+          "name": "Investor Readiness",
+          "objectives": [
+            "Prepare investor narrative",
+            "Track value milestones",
+            "Surface strategic roadmap"
+          ],
+          "milestones": [
+            "EOS-MS-INVESTOR-ROADMAP"
+          ],
+          "capabilities": [
+            "EOS-CAP-0016",
+            "EOS-CAP-0020",
+            "EOS-CAP-0026",
+            "EOS-CAP-0028",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030"
+          ],
+          "progress": 42,
+          "dependencies": [
+            "EOS-MASTER-ROADMAP",
+            "RP-003"
+          ],
+          "executiveOwner": "CTO",
+          "businessImpact": "Improves board, investor, and strategic partner communication.",
+          "strategicObjective": "EOS-SO-004",
+          "businessPlanAlignment": "Packages strategy, value creation, roadmap, and governance for investor conversations.",
+          "governanceApprovalStatus": "Awaiting Review",
+          "investorRelevance": "Directly supports investor, board, and strategic partner communication.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Translates digital asset metrics into investor-readable evidence."
+        },
+        {
+          "id": "EOS-PROG-COMMERCIAL-LAUNCH",
+          "name": "Commercial Launch",
+          "objectives": [
+            "Define launch readiness",
+            "Connect product value",
+            "Prepare enterprise adoption path"
+          ],
+          "milestones": [
+            "EOS-MS-COMMERCIAL-ALPHA"
+          ],
+          "capabilities": [
+            "EOS-CAP-0020",
+            "EOS-CAP-0026",
+            "EOS-CAP-0027",
+            "EOS-CAP-0028",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030"
+          ],
+          "progress": 16,
+          "dependencies": [
+            "EOS-PROG-ENGINEERING-FOUNDATION",
+            "EOS-PROG-INVESTOR-READINESS"
+          ],
+          "executiveOwner": "CTO",
+          "businessImpact": "Creates a controlled path from Alpha foundation to commercial launch.",
+          "strategicObjective": "EOS-SO-004",
+          "businessPlanAlignment": "Converts platform maturity into enterprise pilot and launch readiness.",
+          "governanceApprovalStatus": "Pending Assessment",
+          "investorRelevance": "Shows path from Alpha to commercialization.",
+          "enterpriseValueContribution": "High",
+          "secondBalanceSheetImpact": "Connects assets, governance, and valuation to commercial outcomes."
+        }
+      ],
+      "phases": [
+        {
+          "id": "EOS-PHASE-FOUNDATION",
+          "name": "Foundation",
+          "status": "In Progress",
+          "progress": 82
+        },
+        {
+          "id": "EOS-PHASE-ALPHA",
+          "name": "Alpha",
+          "status": "In Progress",
+          "progress": 58
+        },
+        {
+          "id": "EOS-PHASE-BETA",
+          "name": "Beta",
+          "status": "Defined",
+          "progress": 18
+        },
+        {
+          "id": "EOS-PHASE-RC",
+          "name": "Release Candidate",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "id": "EOS-PHASE-V1",
+          "name": "Version 1.0",
+          "status": "Not Started",
+          "progress": 0
+        }
+      ],
+      "milestones": [
+        {
+          "id": "EOS-MS-ALPHA-FOUNDATION",
+          "name": "Alpha Engineering Foundation",
+          "status": "Completed",
+          "due": "2026-07-03",
+          "linkedCapabilities": [
+            "EOS-CAP-0008",
+            "EOS-CAP-0009",
+            "EOS-CAP-0010",
+            "EOS-CAP-0011"
+          ]
+        },
+        {
+          "id": "EOS-MS-LIVE-OBJECT-LAYER",
+          "name": "Live Object Operating Layer",
+          "status": "Completed",
+          "due": "2026-07-03",
+          "linkedCapabilities": [
+            "EOS-CAP-0014",
+            "EOS-CAP-0016"
+          ]
+        },
+        {
+          "id": "EOS-MS-KNOWLEDGE-ASSETS",
+          "name": "Knowledge Asset Portfolio",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0015",
+            "EOS-CAP-0016"
+          ]
+        },
+        {
+          "id": "EOS-MS-PMO-ROADMAP",
+          "name": "PMO Master Roadmap",
+          "status": "In Progress",
+          "due": "2026-07-03",
+          "linkedCapabilities": [
+            "EOS-CAP-0020"
+          ]
+        },
+        {
+          "id": "EOS-MS-EXECUTIVE-ACTION-GOVERNANCE",
+          "name": "Executive Action Governance",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0021",
+            "EOS-CAP-0022"
+          ]
+        },
+        {
+          "id": "EOS-MS-EXECUTIVE-OFFICES",
+          "name": "Executive Office Framework",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0021",
+            "EOS-CAP-0022",
+            "EOS-CAP-0023"
+          ]
+        },
+        {
+          "id": "EOS-MS-EDS-UX-AUDIT",
+          "name": "Enterprise Design System & UX Audit",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0024"
+          ]
+        },
+        {
+          "id": "EOS-MS-PERSISTENT-DATA-STORE",
+          "name": "Persistent Data Store Foundation",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0025"
+          ]
+        },
+        {
+          "id": "EOS-MS-STRATEGY-GOVERNANCE-VALUATION",
+          "name": "Strategy Governance & Valuation Alignment",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0026"
+          ]
+        },
+        {
+          "id": "EOS-MS-AI-WORKFORCE-OPERATIONS",
+          "name": "AI Workforce Operations & Platform Administration",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0027"
+          ]
+        },
+        {
+          "id": "EOS-MS-MISSION-CONTROL-NAVIGATION-UX",
+          "name": "Mission Control Navigation & Experience",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0024",
+            "EOS-CAP-0027",
+            "EOS-CAP-0028"
+          ]
+        },
+        {
+          "id": "EOS-MS-INVESTMENT-THESIS-ALIGNMENT",
+          "name": "Investment Thesis & Strategic Narrative Alignment",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0026",
+            "EOS-CAP-0028",
+            "EOS-CAP-0029"
+          ]
+        },
+        {
+          "id": "EOS-MS-ENTERPRISE-DIGITAL-TWIN-VISUAL-LAYER",
+          "name": "Enterprise Digital Twin Visual Layer",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0026",
+            "EOS-CAP-0029",
+            "EOS-CAP-0030"
+          ]
+        },
+        {
+          "id": "EOS-MS-IDENTITY-STARTUP-INTAKE",
+          "name": "Identity Startup & Organization Intake",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0031"
+          ]
+        },
+        {
+          "id": "EOS-MS-ENTERPRISE-ONBOARDING-DTA-ASSIMILATION",
+          "name": "Enterprise Onboarding & DTA Assimilation",
+          "status": "In Progress",
+          "due": "2026-07-10",
+          "linkedCapabilities": [
+            "EOS-CAP-0032"
+          ]
+        },
+        {
+          "id": "EOS-MS-DTAP-MODEL",
+          "name": "Digital Twin Asset Model",
+          "status": "Defined",
+          "due": "2026-07-17",
+          "linkedCapabilities": [
+            "EOS-CAP-0014"
+          ]
+        },
+        {
+          "id": "EOS-MS-INVESTOR-ROADMAP",
+          "name": "Investor Roadmap Package",
+          "status": "Defined",
+          "due": "2026-07-24",
+          "linkedCapabilities": [
+            "EOS-CAP-0020"
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "EOS-CAP-0003",
+          "name": "Enterprise Object Registry",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Hermes",
+          "businessImpact": "Creates the core object registry for EOS governance.",
+          "researchImpact": "Provides the reference model for Enterprise Object identity.",
+          "investorImpact": "Shows platform structure and early operating discipline.",
+          "relatedEnterpriseObjects": [
+            "EOS-API-001",
+            "EOS-MC-001"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-ENTERPRISE-OBJECT-REGISTRY"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0005",
+          "name": "Agent Service",
+          "program": "Executive AI Workforce",
+          "phase": "Foundation",
+          "milestone": "Executive Leadership Foundation",
+          "owner": "Hermes",
+          "businessImpact": "Creates the executive agent roster and runtime metadata.",
+          "researchImpact": "Supports AI-native organization research.",
+          "investorImpact": "Demonstrates an accountable executive AI workforce model.",
+          "relatedEnterpriseObjects": [
+            "EOS-AGENT-ATHENA",
+            "EOS-AGENT-HERMES",
+            "EOS-AGENT-ATLAS"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-AGENT-SERVICE"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0006",
+          "name": "Knowledge Service",
+          "program": "Research & Publications",
+          "phase": "Foundation",
+          "milestone": "Knowledge Registry Foundation",
+          "owner": "Hermes",
+          "businessImpact": "Creates the first EOS knowledge registry.",
+          "researchImpact": "Captures Genesis and platform knowledge.",
+          "investorImpact": "Improves explainability of EOS platform assets.",
+          "relatedEnterpriseObjects": [
+            "EOS-KNOWLEDGE-GENESIS",
+            "EOS-KNOWLEDGE-CORE-API"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0007",
+          "name": "Workflow Engine",
+          "program": "Agent Operating System (AOS)",
+          "phase": "Foundation",
+          "milestone": "Workflow Foundation",
+          "owner": "Hermes",
+          "businessImpact": "Creates executable coordination structure for EOS work.",
+          "researchImpact": "Supports workflow-based enterprise operating system research.",
+          "investorImpact": "Shows EOS can coordinate repeatable operational processes.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-AGENT-COORDINATION",
+            "EOS-WF-KNOWLEDGE-UPDATE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0008",
+          "name": "Development Foundation",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Makes EOS easy to start, test, and develop.",
+          "researchImpact": "Improves reproducibility of engineering work.",
+          "investorImpact": "Shows platform maturity and developer readiness.",
+          "relatedEnterpriseObjects": [
+            "EOS-MC-001",
+            "EOS-API-001"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0009",
+          "name": "Backup & Recovery Foundation",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Protects engineering work and reduces operational risk.",
+          "researchImpact": "Preserves research artifacts and Genesis records.",
+          "investorImpact": "Improves operating discipline and continuity posture.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-BACKUP-RECOVERY"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0010",
+          "name": "Source Control & Release Management",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Creates release discipline and local tagging support.",
+          "researchImpact": "Improves traceability of platform evolution.",
+          "investorImpact": "Supports release-history confidence.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-SOURCE-CONTROL-RELEASE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0011",
+          "name": "Initial Repository Baseline",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Creates the first immutable local engineering checkpoint.",
+          "researchImpact": "Preserves the Alpha Genesis state.",
+          "investorImpact": "Shows baseline control before remote synchronization.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-INITIAL-REPOSITORY-BASELINE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0012",
+          "name": "GitHub Readiness Assessment",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Prepares EOS for controlled external repository synchronization.",
+          "researchImpact": "Improves source traceability and publication reproducibility.",
+          "investorImpact": "Shows disciplined GitHub readiness before external exposure.",
+          "relatedEnterpriseObjects": [
+            "EOS-CAP-0012",
+            "EOS-AGENT-CODEX"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0013",
+          "name": "Google Drive Backup Preparation",
+          "program": "Engineering Foundation",
+          "phase": "Foundation",
+          "milestone": "Alpha Engineering Foundation",
+          "owner": "Codex",
+          "businessImpact": "Prepares secure local framework for future cloud backup synchronization.",
+          "researchImpact": "Protects future publication and research materials.",
+          "investorImpact": "Improves operational continuity and backup confidence.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-GOOGLE-DRIVE-BACKUP-PREPARATION"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0014",
+          "name": "Live Object Status Layer",
+          "program": "Digital Twin Asset Platform (DTAP)",
+          "phase": "Alpha",
+          "milestone": "Live Object Operating Layer",
+          "owner": "Codex",
+          "businessImpact": "Turns Enterprise Objects into live operational entities.",
+          "researchImpact": "Anchors Live Enterprise Object research.",
+          "investorImpact": "Creates the operating-state foundation for enterprise value narratives.",
+          "relatedEnterpriseObjects": [
+            "EOS-WF-LIVE-OBJECT-STATUS-LAYER"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-ENTERPRISE-OBJECT-REGISTRY"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0015",
+          "name": "Agent Knowledge Repository",
+          "program": "Research & Publications",
+          "phase": "Alpha",
+          "milestone": "Knowledge Asset Portfolio",
+          "owner": "Athena",
+          "businessImpact": "Creates structured repositories for agent-owned knowledge.",
+          "researchImpact": "Creates a permanent home for publications and IP drafts.",
+          "investorImpact": "Surfaces knowledge assets as platform value.",
+          "relatedEnterpriseObjects": [
+            "EOS-AKR",
+            "RP-001",
+            "RP-002",
+            "RP-003",
+            "RP-004"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0016",
+          "name": "Mission Control Knowledge Asset Viewer",
+          "program": "Research & Publications",
+          "phase": "Alpha",
+          "milestone": "Knowledge Asset Portfolio",
+          "owner": "Codex",
+          "businessImpact": "Turns Mission Control into an asset explorer.",
+          "researchImpact": "Makes publication and IP assets inspectable.",
+          "investorImpact": "Improves investor-readiness visibility.",
+          "relatedEnterpriseObjects": [
+            "EOS-ASSET-EXPLORER",
+            "EOS-AKR"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0020",
+          "name": "EOS PMO & Master Roadmap",
+          "program": "Engineering Foundation",
+          "phase": "Alpha",
+          "milestone": "PMO Master Roadmap",
+          "owner": "CTO",
+          "businessImpact": "Creates the authoritative program management and roadmap layer.",
+          "researchImpact": "Connects research programs to platform delivery.",
+          "investorImpact": "Creates a board-ready roadmap and progress surface.",
+          "relatedEnterpriseObjects": [
+            "EOS-PMO",
+            "EOS-MASTER-ROADMAP"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS",
+            "EOS-KNOWLEDGE-MISSION-CONTROL"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0021",
+          "name": "EOS Executive Council & Digital Enterprise Headquarters",
+          "program": "Executive AI Workforce",
+          "phase": "Alpha",
+          "milestone": "Executive Leadership Foundation",
+          "owner": "Eric Olo",
+          "businessImpact": "Creates the executive headquarters layer for CEO and council visibility.",
+          "researchImpact": "Supports AI-native enterprise leadership and governance research.",
+          "investorImpact": "Demonstrates executive operating structure and leadership accountability.",
+          "relatedEnterpriseObjects": [
+            "EOS-EXECUTIVE-COUNCIL",
+            "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-MISSION-CONTROL",
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0022",
+          "name": "Executive Action & Approval Framework",
+          "program": "Executive AI Workforce",
+          "phase": "Alpha",
+          "milestone": "Executive Action Governance",
+          "owner": "Eric Olo",
+          "businessImpact": "Creates governed executive action review before operational execution is enabled.",
+          "researchImpact": "Supports human-AI governance, approval, and auditability research.",
+          "investorImpact": "Demonstrates safe action controls and executive operating discipline.",
+          "relatedEnterpriseObjects": [
+            "EOS-EXECUTIVE-ACTION-FRAMEWORK",
+            "EOS-APPROVAL-QUEUE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-MISSION-CONTROL",
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0023",
+          "name": "Executive Office Framework",
+          "program": "Executive AI Workforce",
+          "phase": "Alpha",
+          "milestone": "Executive Office Framework",
+          "owner": "Eric Olo",
+          "businessImpact": "Transforms Mission Control into a Digital Enterprise Headquarters with department-level executive offices.",
+          "researchImpact": "Supports research on AI-native executive workspaces and enterprise operating interfaces.",
+          "investorImpact": "Creates a premium investor-demonstrable command center for executive work, assets, and decisions.",
+          "relatedEnterpriseObjects": [
+            "EOS-EXECUTIVE-OFFICE-FRAMEWORK",
+            "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-MISSION-CONTROL",
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0024",
+          "name": "EOS Enterprise Design System, UX Audit & Executive Presentation Framework",
+          "program": "Executive AI Workforce",
+          "phase": "Alpha",
+          "milestone": "Enterprise Design System & UX Audit",
+          "owner": "Codex",
+          "businessImpact": "Raises Mission Control from prototype dashboard to premium executive operating platform.",
+          "researchImpact": "Supports research on AI-native executive UX, boardroom decision interfaces, and governed agent presentation layers.",
+          "investorImpact": "Creates investor-ready visual standards, presentation mode, and UX audit evidence for enterprise demonstrations.",
+          "relatedEnterpriseObjects": [
+            "EOS-ENTERPRISE-DESIGN-SYSTEM",
+            "EOS-EXECUTIVE-PRESENTATION-MODE",
+            "EOS-UX-AUDIT"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-MISSION-CONTROL",
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0025",
+          "name": "Persistent Data Store Foundation",
+          "program": "Engineering Foundation",
+          "phase": "Alpha",
+          "milestone": "Persistent Data Store Foundation",
+          "owner": "Codex",
+          "businessImpact": "Moves EOS from prototype in-memory state toward durable platform data suitable for enterprise pilots.",
+          "researchImpact": "Supports research on live enterprise memory, governed operational state, and data-backed AI-native organizations.",
+          "investorImpact": "Demonstrates that EOS platform state can persist, be backed up, and later migrate into production databases.",
+          "relatedEnterpriseObjects": [
+            "EOS-PERSISTENT-DATA-STORE",
+            "EOS-STORAGE-HEALTH"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-CORE-API",
+            "EOS-KNOWLEDGE-ENTERPRISE-OBJECT-REGISTRY"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0026",
+          "name": "Enterprise Strategy, Valuation & Governance Alignment Layer",
+          "program": "Investor Readiness",
+          "phase": "Alpha",
+          "milestone": "Strategy Governance & Valuation Alignment",
+          "owner": "Eric Olo",
+          "businessImpact": "Aligns EOS execution with approved strategy, governance, valuation, and commercial value creation.",
+          "researchImpact": "Connects Digital Twin Assets, Second Balance Sheet, and enterprise valuation into one research-ready layer.",
+          "investorImpact": "Creates a CEO Value View for strategy, governance approvals, DTA monitoring, and valuation assumptions.",
+          "relatedEnterpriseObjects": [
+            "EOS-ENTERPRISE-STRATEGY",
+            "EOS-GOVERNANCE-COUNCIL",
+            "EOS-DIGITAL-ENTERPRISE-VALUATION",
+            "EOS-SECOND-BALANCE-SHEET",
+            "EOS-DTA-MONITORING",
+            "DTA-EPERCENT-001",
+            "DTA-EOS-001"
+          ],
+          "relatedKnowledgeObjects": [
+            "RP-002",
+            "RP-003",
+            "EOS-KNOWLEDGE-GENESIS"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0027",
+          "name": "AI Workforce Operations & Platform Administration Center",
+          "program": "Executive AI Workforce",
+          "phase": "Alpha",
+          "milestone": "AI Workforce Operations & Platform Administration",
+          "owner": "Codex",
+          "businessImpact": "Creates the first integrated Digital Enterprise Headquarters operating layer for platform administration and AI workforce oversight.",
+          "researchImpact": "Supports research on AI-native executive headquarters, governed agent operations, and platform administration safety.",
+          "investorImpact": "Demonstrates that EOS can monitor agents, platform health, attention items, administration controls, and executive operations from one command layer.",
+          "relatedEnterpriseObjects": [
+            "EOS-PLATFORM-ADMINISTRATION-CENTER",
+            "EOS-AI-WORKFORCE-OPERATIONS",
+            "EOS-AGENT-COMMUNICATION-LAYER",
+            "EOS-AGENT-ACTIVITY-QUEUE",
+            "EOS-AGENT-CALENDAR",
+            "EOS-ACTION-GOVERNANCE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-GENESIS",
+            "EOS-KNOWLEDGE-MISSION-CONTROL"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0028",
+          "name": "Mission Control Navigation & Frontend Experience Redesign",
+          "program": "Commercial Launch",
+          "phase": "Alpha",
+          "milestone": "Mission Control Navigation & Experience",
+          "owner": "Codex",
+          "businessImpact": "Makes Mission Control credible as a premium Digital Enterprise Headquarters experience for executives, investors, enterprise customers, and strategic partners.",
+          "researchImpact": "Supports research on AI-native enterprise command centers, executive information hierarchy, and live enterprise object interaction models.",
+          "investorImpact": "Transforms the demonstration surface from a long technical menu into a boardroom-ready operating headquarters with value, health, attention, and workspace navigation.",
+          "relatedEnterpriseObjects": [
+            "EOS-MISSION-CONTROL-NAVIGATION",
+            "EOS-DIGITAL-HEADQUARTERS-LOBBY",
+            "EOS-COMMAND-PALETTE",
+            "EOS-WORKSPACE-RAIL",
+            "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+            "EOS-ENTERPRISE-DESIGN-SYSTEM"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KNOWLEDGE-MISSION-CONTROL",
+            "RP-001",
+            "RP-004"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0029",
+          "name": "Investment Thesis Alignment & Strategic Narrative Integration",
+          "program": "Investor Readiness",
+          "phase": "Alpha",
+          "milestone": "Investment Thesis & Strategic Narrative Alignment",
+          "owner": "Eric Olo",
+          "businessImpact": "Transforms EOS into a living representation of the ePercent / EOS strategy, commercialization roadmap, revenue model, and investor narrative.",
+          "researchImpact": "Connects KIPR, Second Balance Sheet, Digital Twin Assets, and AI-native enterprise research into a single strategic execution layer.",
+          "investorImpact": "Shows investors how thesis concepts exist inside the platform as live objects, workflows, views, and readiness assessments.",
+          "relatedEnterpriseObjects": [
+            "EOS-INVESTMENT-THESIS",
+            "EOS-TECHNOLOGY-FLYWHEEL",
+            "EOS-THREE-HORIZON-ROADMAP",
+            "EOS-REVENUE-ENGINE",
+            "EOS-DTA-LIFECYCLE",
+            "EOS-KIPR",
+            "EOS-ENTERPRISE-PROFILE",
+            "EOS-INDUSTRY-FRAMEWORK"
+          ],
+          "relatedKnowledgeObjects": [
+            "RP-001",
+            "RP-002",
+            "RP-003",
+            "RP-004"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0030",
+          "name": "Enterprise Digital Twin Visual Layer & Master Monitoring View",
+          "program": "Digital Twin Asset Platform (DTAP)",
+          "phase": "Alpha",
+          "milestone": "Enterprise Digital Twin Visual Layer",
+          "owner": "Codex",
+          "businessImpact": "Transforms Digital Twin Assets from records into executive-readable visual monitoring surfaces for enterprise demos, customer onboarding, and investor communication.",
+          "researchImpact": "Supports research on live enterprise visualization, digital twin asset monitoring, human approval points, and Second Balance Sheet evidence models.",
+          "investorImpact": "Creates a boardroom-ready visual layer showing onboarded enterprises, systems, assets, telemetry, agents, risks, approvals, and value signals.",
+          "relatedEnterpriseObjects": [
+            "EOS-MASTER-MONITORING-VIEW",
+            "EOS-ENTERPRISE-DIGITAL-TWIN-HOME",
+            "EOS-ENTERPRISE-VISUAL-MODEL",
+            "EOS-REAL-TIME-TELEMETRY-FOUNDATION",
+            "EOS-DIGITAL-TWIN-GENERATION-WORKFLOW",
+            "DTA-EPERCENT-001",
+            "DTA-OIL-001"
+          ],
+          "relatedKnowledgeObjects": [
+            "RP-001",
+            "RP-002",
+            "RP-003"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0031",
+          "name": "Identity, Startup Experience & Organization Intake Foundation",
+          "program": "Engineering Foundation",
+          "phase": "Alpha",
+          "milestone": "Identity Startup & Organization Intake",
+          "owner": "Codex",
+          "businessImpact": "Makes EOS easier to present, brand, onboard, and populate with enterprise source material.",
+          "researchImpact": "Creates a source-intake foundation for KIPR, Digital Twin Asset formation, and enterprise ontology extraction research.",
+          "investorImpact": "Shows EOS can move beyond static demos into branded executive profiles, company identity, startup polish, and organization repository onboarding.",
+          "relatedEnterpriseObjects": [
+            "EOS-STARTUP-EXPERIENCE",
+            "EOS-IDENTITY-MEDIA-REGISTRY",
+            "EOS-MEDIA-ASSET-STORE",
+            "EOS-ORGANIZATION-INTAKE",
+            "EOS-EXTERNAL-REPOSITORY-LINKS"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KIPR",
+            "EOS-ENTERPRISE-PROFILE",
+            "RP-002"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0032",
+          "name": "Enterprise Onboarding & DTA Assimilation Engine",
+          "program": "Digital Twin Asset Platform (DTAP)",
+          "phase": "Alpha",
+          "milestone": "Enterprise Onboarding & DTA Assimilation",
+          "owner": "Codex",
+          "businessImpact": "Creates a repeatable onboarding framework that can turn enterprise source structure into Digital Mirror and DTA candidate evidence.",
+          "researchImpact": "Supports research on Digital Mirror validation, DTA formation, enterprise ontology extraction, and human-governed AI-native enterprise onboarding.",
+          "investorImpact": "Shows a structured path from enterprise intake to Digital Twin Asset candidates, data readiness, validation gates, and future valuation.",
+          "relatedEnterpriseObjects": [
+            "EOS-ENTERPRISE-ONBOARDING",
+            "EOS-DTA-ASSIMILATION-ENGINE",
+            "EOS-DIGITAL-MIRROR",
+            "EOS-DTA-CANDIDATE-REGISTRY",
+            "EOS-DATA-FEED-REQUIREMENTS",
+            "EOS-HUMAN-VALIDATION-GATE"
+          ],
+          "relatedKnowledgeObjects": [
+            "RP-001",
+            "RP-002",
+            "RP-003"
+          ]
+        },
+        {
+          "id": "EOS-CAP-0033",
+          "name": "Platform Audit & Capability Readiness Center",
+          "program": "Engineering Foundation",
+          "phase": "Alpha",
+          "milestone": "Platform Audit & Readiness Governance",
+          "owner": "Codex",
+          "businessImpact": "Creates transparent platform maturity evidence, functional coverage reporting, and a prioritized build sequence for commercialization readiness.",
+          "researchImpact": "Documents capability maturity and research gaps that can support EOS Genesis, operating-system methodology papers, and platform governance research.",
+          "investorImpact": "Provides board and investor-ready evidence of what works, what remains display-only, and what must be built before Alpha, Beta, Release Candidate, and Version 1.0.",
+          "relatedEnterpriseObjects": [
+            "EOS-PLATFORM-AUDIT-CENTER",
+            "EOS-CAPABILITY-READINESS-MATRIX",
+            "EOS-FUNCTIONAL-COVERAGE-REPORT",
+            "EOS-AUDIT-READINESS-SCORE"
+          ],
+          "relatedKnowledgeObjects": [
+            "EOS-KIPR",
+            "EOS-KNOWLEDGE-GENESIS",
+            "RP-004"
+          ]
+        }
+      ],
+      "dependencies": [
+        "Live Object Status Layer",
+        "Agent Knowledge Repository",
+        "Workflow Engine",
+        "Backup & Recovery Foundation",
+        "Source Control & Release Management"
+      ],
+      "risks": [
+        {
+          "id": "EOS-RISK-PERSISTENCE",
+          "title": "In-memory registries limit production durability.",
+          "severity": "Medium",
+          "mitigation": "Introduce persistence and migration strategy."
+        },
+        {
+          "id": "EOS-RISK-ACTION-EXECUTION",
+          "title": "Mission Control actions are visible but not executable.",
+          "severity": "Medium",
+          "mitigation": "Create controlled command execution workflows."
+        },
+        {
+          "id": "EOS-RISK-SCOPE",
+          "title": "Roadmap scope can exceed engineering capacity.",
+          "severity": "High",
+          "mitigation": "Use PMO prioritization and dependency governance."
+        },
+        {
+          "id": "EOS-RISK-VALUATION-GOVERNANCE",
+          "title": "Internal valuation estimates could be misread as audited financial valuation.",
+          "severity": "High",
+          "mitigation": "Keep valuation clearly marked as internal estimate only until governance, audit, and financial review are complete."
+        }
+      ],
+      "executiveOwner": "Chief Technology Officer",
+      "businessValue": "Creates strategic delivery governance and a single source of truth for EOS execution.",
+      "researchValue": "Connects research tracks, publications, and IP themes to concrete platform delivery.",
+      "investorValue": "Provides executives and investors with a transparent roadmap, milestones, risks, and progress.",
+      "estimatedCompletion": "2026-09-30",
+      "status": "In Progress",
+      "progress": 70,
+      "health": 89,
+      "currentSprint": {
+        "id": "EOS-SPRINT-ALPHA-PMO",
+        "name": "Platform Audit & Capability Readiness Center",
+        "status": "In Progress",
+        "started": "2026-07-04",
+        "focus": "Audit functional readiness, classify capability maturity, identify placeholders and technical debt, and prioritize the next strategic build program."
+      },
+      "currentCapability": "EOS-CAP-0033",
+      "upcomingMilestones": [
+        "Identity Startup & Organization Intake",
+        "Enterprise Digital Twin Visual Layer",
+        "Investment Thesis & Strategic Narrative Alignment",
+        "Mission Control Navigation & Experience",
+        "Strategy Governance & Valuation Alignment",
+        "Knowledge Asset Portfolio",
+        "Digital Twin Asset Model",
+        "Investor Roadmap Package"
+      ],
+      "recommendedAction": "Review Platform Audit readiness and approve the Enterprise Data Ingestion & Governed Execution Foundation as the next strategic program.",
+      "availableActions": [
+        "Open Audit Center",
+        "Review Readiness Matrix",
+        "Review Technical Debt",
+        "Review Connector Program"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 89,
+        "progress": 70,
+        "summary": "Master Roadmap is tracking identity media, startup experience, organization intake, enterprise digital twin visualization, investment thesis alignment, strategy, Mission Control experience, platform operations, AI workforce operations, persistence, and capability dependencies.",
+        "lastActivity": "2026-07-03T16:40:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review organization intake and approve persistent write governance as the next data-management build sequence.",
+        "availableActions": [
+          "Open Organization Intake",
+          "Review profile identities",
+          "Review repository links",
+          "Review programs"
+        ]
+      }
+    }
+  ]
+}

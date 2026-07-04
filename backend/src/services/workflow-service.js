@@ -1,11 +1,10 @@
 import { workflows } from '../data/workflows.js';
-
-const workflowRegistry = new Map(workflows.map((workflow) => [workflow.id, workflow]));
+import { findRecordById, listRecords } from './storage-service.js';
 
 export function listWorkflows() {
-  return Array.from(workflowRegistry.values());
+  return listRecords('workflows', workflows);
 }
 
 export function getWorkflowById(id) {
-  return workflowRegistry.get(id) ?? null;
+  return findRecordById('workflows', id, workflows);
 }

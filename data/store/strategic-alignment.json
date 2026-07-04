@@ -1,0 +1,1721 @@
+{
+  "collectionName": "strategic-alignment",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:52:24.741Z",
+  "recordCount": 1,
+  "source": "seed:strategic-alignment; refreshed:seed:strategic-alignment; refreshed:seed:strategic-alignment",
+  "records": [
+    {
+      "id": "EOS-STRATEGIC-ALIGNMENT",
+      "name": "EOS Strategic Alignment Layer",
+      "capability": "EOS-CAP-0029",
+      "owner": "Eric Olo",
+      "status": "Operational Foundation",
+      "thesis": {
+        "id": "EOS-INVESTMENT-THESIS-ALIGNMENT",
+        "name": "ePercent / EOS Investment Thesis Alignment",
+        "owner": "Eric Olo",
+        "status": "In Progress",
+        "sourcePresentations": [
+          {
+            "name": "Enterprise Operating System presentation",
+            "repositoryStatus": "Source presentation not found in repository",
+            "alignmentStatus": "Mapped from existing EOS strategy records and capability scope"
+          },
+          {
+            "name": "AI Operating System presentation",
+            "repositoryStatus": "Source presentation not found in repository",
+            "alignmentStatus": "Mapped from AI Workforce, AOS, ARM, PMO, and agent registry records"
+          },
+          {
+            "name": "EOS Enterprise Operating System presentation",
+            "repositoryStatus": "Source presentation not found in repository",
+            "alignmentStatus": "Mapped from Enterprise Strategy, Mission Control, DTA, valuation, KIPR, and PMO records"
+          }
+        ],
+        "alreadyImplemented": [
+          {
+            "concept": "Enterprise Objects",
+            "evidence": "Enterprise Object Registry, Live Object Status Layer, persistent object storage, Mission Control object views.",
+            "linkedCapabilities": [
+              "EOS-CAP-0003",
+              "EOS-CAP-0014",
+              "EOS-CAP-0025"
+            ]
+          },
+          {
+            "concept": "Executive AI Workforce",
+            "evidence": "Executive Council, executive agents, Executive Offices, AI Workforce Operations, attention queue, communications, calendar.",
+            "linkedCapabilities": [
+              "EOS-CAP-0005",
+              "EOS-CAP-0021",
+              "EOS-CAP-0023",
+              "EOS-CAP-0027"
+            ]
+          },
+          {
+            "concept": "Mission Control / Digital Enterprise Headquarters",
+            "evidence": "CEO Cockpit, Digital Headquarters Lobby, workspace rail, command bar, PMO, strategy, valuation, knowledge, and platform views.",
+            "linkedCapabilities": [
+              "EOS-CAP-0021",
+              "EOS-CAP-0024",
+              "EOS-CAP-0028"
+            ]
+          },
+          {
+            "concept": "Second Balance Sheet foundation",
+            "evidence": "Second Balance Sheet metrics and Digital Enterprise Valuation foundation exist as internal estimate records.",
+            "linkedCapabilities": [
+              "EOS-CAP-0026"
+            ]
+          },
+          {
+            "concept": "Persistent platform memory",
+            "evidence": "Local JSON persistence, backup status, release metadata, and storage health are operational.",
+            "linkedCapabilities": [
+              "EOS-CAP-0025"
+            ]
+          }
+        ],
+        "partiallyImplemented": [
+          {
+            "concept": "Digital Twin Asset Platform (DTAP)",
+            "gap": "DTA monitoring exists, but lifecycle governance, templates, and enterprise formation workflows need expansion.",
+            "recommendedFutureCapability": "DTA Lifecycle Management"
+          },
+          {
+            "concept": "Digital Twin Asset Management (DTAM)",
+            "gap": "Portfolio management is represented in roadmap data but not yet operational as a management layer.",
+            "recommendedFutureCapability": "DTAM Portfolio Governance"
+          },
+          {
+            "concept": "Digital Twin Asset Exchange (DTAX)",
+            "gap": "Exchange concept exists in PMO, but listing criteria, exchange governance, and market mechanics are not implemented.",
+            "recommendedFutureCapability": "DTAX Readiness Model"
+          },
+          {
+            "concept": "KIPR",
+            "gap": "Agent Knowledge Repository exists; it now needs explicit Knowledge, IP, Patents, and Research positioning.",
+            "recommendedFutureCapability": "KIPR Publication & IP Governance"
+          },
+          {
+            "concept": "Revenue Engine",
+            "gap": "Revenue streams are modeled in this capability but not yet connected to CRM, finance, contracts, or customer workflows.",
+            "recommendedFutureCapability": "Commercial Pipeline Execution"
+          }
+        ],
+        "notYetImplemented": [
+          {
+            "concept": "Agent Marketplace",
+            "reason": "Requires agent hiring, performance, governance, packaging, and customer-facing marketplace rules."
+          },
+          {
+            "concept": "Capital Markets / Investment Banking execution",
+            "reason": "Requires legal, compliance, regulated workflows, external market data, and audited valuation controls."
+          },
+          {
+            "concept": "Enterprise Intelligence Network",
+            "reason": "Requires multi-enterprise data boundaries, tenant model, integrations, security, and governance."
+          },
+          {
+            "concept": "Customer revenue operations",
+            "reason": "Requires customer model, contracts, pricing, onboarding, billing, and support workflows."
+          }
+        ],
+        "recommendedFutureCapabilities": [
+          "DTA Lifecycle Management",
+          "Valuation Engine Expansion",
+          "KIPR Publication & IP Governance",
+          "Commercial Pipeline Execution",
+          "Persistent Write API & Governance Audit Ledger",
+          "Enterprise Integration Framework"
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "Review",
+          "healthScore": 84,
+          "progress": 63,
+          "summary": "Investment thesis alignment is active with presentation-source gaps documented and platform concepts mapped.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Medium",
+          "recommendedAction": "Add official presentation source files and approve strategic narrative language before external investor use.",
+          "availableActions": [
+            "Review alignment report",
+            "Review future capabilities",
+            "Request governance review"
+          ]
+        }
+      },
+      "technologyFlywheel": {
+        "id": "EOS-TECHNOLOGY-FLYWHEEL",
+        "name": "EOS Technology Flywheel",
+        "owner": "Atlas",
+        "status": "Operational Model",
+        "overallMaturity": 48,
+        "overallHealth": 84,
+        "steps": [
+          {
+            "id": "EOS-FLYWHEEL-01",
+            "name": "Knowledge",
+            "currentMaturity": 62,
+            "currentContribution": "Captures research, documentation, decisions, and strategic context.",
+            "currentHealth": "Healthy",
+            "dependencies": [
+              "EOS-KIPR",
+              "EOS-AKR"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-02",
+            "name": "Enterprise Memory",
+            "currentMaturity": 52,
+            "currentContribution": "Turns knowledge into persistent institutional operating memory.",
+            "currentHealth": "Building",
+            "dependencies": [
+              "EOS-PERSISTENT-DATA-STORE"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-03",
+            "name": "AI Workforce",
+            "currentMaturity": 56,
+            "currentContribution": "Agents use memory and work queues to support executive functions.",
+            "currentHealth": "Building",
+            "dependencies": [
+              "EOS-AI-WORKFORCE-OPERATIONS"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-04",
+            "name": "Enterprise Objects",
+            "currentMaturity": 72,
+            "currentContribution": "Live records create operational state across capabilities, assets, workflows, and agents.",
+            "currentHealth": "Healthy",
+            "dependencies": [
+              "EOS-MC-001"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-05",
+            "name": "Digital Twin Assets",
+            "currentMaturity": 38,
+            "currentContribution": "Operational state forms reference DTAs for ePercent and EOS.",
+            "currentHealth": "Requires Investment",
+            "dependencies": [
+              "EOS-DTA-MONITORING"
+            ],
+            "enterpriseValueContribution": "Transformational"
+          },
+          {
+            "id": "EOS-FLYWHEEL-06",
+            "name": "Operational Intelligence",
+            "currentMaturity": 34,
+            "currentContribution": "Platform signals become intelligence for decisions, risks, and opportunity scanning.",
+            "currentHealth": "Requires Investment",
+            "dependencies": [
+              "EOS-AGENT-MERCURY"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-07",
+            "name": "Enterprise Decisions",
+            "currentMaturity": 42,
+            "currentContribution": "Governed executive actions and PMO data route attention and decisions.",
+            "currentHealth": "Building",
+            "dependencies": [
+              "EOS-EXECUTIVE-ACTION-FRAMEWORK"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-08",
+            "name": "Enterprise Value",
+            "currentMaturity": 35,
+            "currentContribution": "Value drivers connect operations, knowledge, agents, DTAs, and strategy.",
+            "currentHealth": "Requires Investment",
+            "dependencies": [
+              "EOS-DIGITAL-ENTERPRISE-VALUATION"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-09",
+            "name": "Second Balance Sheet",
+            "currentMaturity": 42,
+            "currentContribution": "Digital assets become a measurable internal value framework.",
+            "currentHealth": "Building",
+            "dependencies": [
+              "EOS-SECOND-BALANCE-SHEET"
+            ],
+            "enterpriseValueContribution": "Transformational"
+          },
+          {
+            "id": "EOS-FLYWHEEL-10",
+            "name": "Investment Capacity",
+            "currentMaturity": 20,
+            "currentContribution": "Investor readiness improves when value evidence, governance, and strategy align.",
+            "currentHealth": "Requires Investment",
+            "dependencies": [
+              "EOS-INVESTMENT-THESIS"
+            ],
+            "enterpriseValueContribution": "High"
+          },
+          {
+            "id": "EOS-FLYWHEEL-11",
+            "name": "More Knowledge",
+            "currentMaturity": 58,
+            "currentContribution": "Investment and execution generate new knowledge for the next cycle.",
+            "currentHealth": "Building",
+            "dependencies": [
+              "EOS-KIPR"
+            ],
+            "enterpriseValueContribution": "High"
+          }
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "Defined",
+          "healthScore": 84,
+          "progress": 48,
+          "summary": "Technology Flywheel is modeled and visible in Mission Control, with several downstream stages still early.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Low",
+          "recommendedAction": "Prioritize DTA lifecycle and valuation expansion to strengthen downstream flywheel stages.",
+          "availableActions": [
+            "Review flywheel",
+            "Review dependencies",
+            "Review value contribution"
+          ]
+        }
+      },
+      "threeHorizonRoadmap": {
+        "id": "EOS-THREE-HORIZON-ROADMAP",
+        "name": "EOS Three-Horizon Roadmap",
+        "owner": "EOS PMO",
+        "status": "In Progress",
+        "horizons": [
+          {
+            "id": "H1",
+            "name": "Horizon 1",
+            "theme": "Foundation",
+            "progress": 64,
+            "investmentReadiness": "Alpha investor narrative forming",
+            "focusAreas": [
+              "Current Engineering",
+              "Current Commercial Readiness",
+              "Current Customers",
+              "Current DTAs",
+              "Current Revenue"
+            ],
+            "milestones": [
+              "Mission Control Alpha",
+              "Persistent Data Store",
+              "Strategic Alignment",
+              "DTA Lifecycle Foundation"
+            ],
+            "dependencies": [
+              "EOS-CAP-0025",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ]
+          },
+          {
+            "id": "H2",
+            "name": "Horizon 2",
+            "theme": "Commercial Scale",
+            "progress": 22,
+            "investmentReadiness": "Partner and pilot readiness pending",
+            "focusAreas": [
+              "Enterprise Rollout",
+              "Partner Ecosystem",
+              "Marketplace",
+              "Agent Marketplace",
+              "DTAM",
+              "Enterprise Integrations"
+            ],
+            "milestones": [
+              "Pilot Enterprise Onboarding",
+              "Agent Marketplace Concept",
+              "DTAM Governance",
+              "Integration Framework"
+            ],
+            "dependencies": [
+              "DTA Lifecycle Management",
+              "Persistent Write API",
+              "Commercial Pipeline Execution"
+            ]
+          },
+          {
+            "id": "H3",
+            "name": "Horizon 3",
+            "theme": "Digital Economy",
+            "progress": 8,
+            "investmentReadiness": "Long-range strategic option",
+            "focusAreas": [
+              "DTAX",
+              "Enterprise Exchange",
+              "Capital Markets",
+              "Industry Intelligence",
+              "Global Enterprise Network",
+              "Enterprise Intelligence Network"
+            ],
+            "milestones": [
+              "DTAX Readiness",
+              "Exchange Governance",
+              "Enterprise Intelligence Network"
+            ],
+            "dependencies": [
+              "DTAM Portfolio Governance",
+              "Valuation Assurance",
+              "Regulatory Review"
+            ]
+          }
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "In Progress",
+          "healthScore": 82,
+          "progress": 42,
+          "summary": "Three-Horizon Roadmap is modeled from foundation through commercial scale to digital economy expansion.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Low",
+          "recommendedAction": "Keep Horizon 1 focused on DTA lifecycle, valuation evidence, and commercial readiness.",
+          "availableActions": [
+            "Review horizons",
+            "Review milestones",
+            "Review investment readiness"
+          ]
+        }
+      },
+      "revenueEngine": {
+        "id": "EOS-REVENUE-ENGINE",
+        "name": "EOS Revenue Engine",
+        "owner": "Mercury",
+        "status": "Foundation",
+        "streams": [
+          {
+            "id": "EOS-REV-01",
+            "name": "Enterprise Licensing",
+            "status": "Foundation",
+            "estimatedMaturity": 38,
+            "potentialMarket": "Enterprise transformation and platform buyers",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "Commercial readiness",
+              "Enterprise onboarding"
+            ]
+          },
+          {
+            "id": "EOS-REV-02",
+            "name": "SaaS",
+            "status": "Foundation",
+            "estimatedMaturity": 38,
+            "potentialMarket": "Enterprise transformation and platform buyers",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "Commercial readiness",
+              "Enterprise onboarding"
+            ]
+          },
+          {
+            "id": "EOS-REV-03",
+            "name": "Professional Services",
+            "status": "Foundation",
+            "estimatedMaturity": 38,
+            "potentialMarket": "Enterprise transformation and platform buyers",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "Commercial readiness",
+              "Enterprise onboarding"
+            ]
+          },
+          {
+            "id": "EOS-REV-04",
+            "name": "Enterprise Onboarding",
+            "status": "Foundation",
+            "estimatedMaturity": 38,
+            "potentialMarket": "Enterprise transformation and platform buyers",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "Commercial readiness",
+              "Enterprise onboarding"
+            ]
+          },
+          {
+            "id": "EOS-REV-05",
+            "name": "Digital Twin Formation",
+            "status": "Foundation",
+            "estimatedMaturity": 38,
+            "potentialMarket": "Enterprise transformation and platform buyers",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "Commercial readiness",
+              "Enterprise onboarding"
+            ]
+          },
+          {
+            "id": "EOS-REV-06",
+            "name": "DTAP",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-07",
+            "name": "DTAM",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-08",
+            "name": "DTAX",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-09",
+            "name": "Agent Marketplace",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-10",
+            "name": "AI Workforce Services",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-11",
+            "name": "Enterprise Advisory",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-12",
+            "name": "Capital Markets",
+            "status": "Defined",
+            "estimatedMaturity": 24,
+            "potentialMarket": "Enterprise ecosystem and partner markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-13",
+            "name": "Investment Banking",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-14",
+            "name": "Asset Management",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-15",
+            "name": "Knowledge Licensing",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-16",
+            "name": "Research Licensing",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-17",
+            "name": "Training",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-18",
+            "name": "Executive Education",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          },
+          {
+            "id": "EOS-REV-19",
+            "name": "Enterprise Analytics",
+            "status": "Future Option",
+            "estimatedMaturity": 12,
+            "potentialMarket": "Regulated or future strategic markets",
+            "linkedCapabilities": [
+              "EOS-CAP-0026",
+              "EOS-CAP-0028",
+              "EOS-CAP-0029"
+            ],
+            "dependencies": [
+              "DTA lifecycle",
+              "Governance",
+              "External integrations"
+            ]
+          }
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "Defined",
+          "healthScore": 76,
+          "progress": 28,
+          "summary": "Revenue Engine is modeled with initial revenue streams but not connected to customer or finance workflows.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Medium",
+          "recommendedAction": "Prioritize commercial pipeline execution after DTA lifecycle and valuation expansion.",
+          "availableActions": [
+            "Review revenue streams",
+            "Review dependencies",
+            "Review commercial readiness"
+          ]
+        }
+      },
+      "dtaLifecycle": {
+        "id": "EOS-DTA-LIFECYCLE",
+        "name": "Digital Twin Asset Lifecycle",
+        "owner": "Atlas",
+        "status": "Defined",
+        "stages": [
+          {
+            "id": "EOS-DTA-STAGE-01",
+            "name": "Discovery",
+            "sequence": 1,
+            "futureDtax": false,
+            "governanceRequired": false,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-02",
+            "name": "Assessment",
+            "sequence": 2,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-03",
+            "name": "Digital Mirror",
+            "sequence": 3,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-04",
+            "name": "Enterprise Model",
+            "sequence": 4,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-05",
+            "name": "Digital Twin Asset",
+            "sequence": 5,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-06",
+            "name": "Monitoring",
+            "sequence": 6,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-07",
+            "name": "Optimization",
+            "sequence": 7,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": false
+          },
+          {
+            "id": "EOS-DTA-STAGE-08",
+            "name": "Valuation",
+            "sequence": 8,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": true
+          },
+          {
+            "id": "EOS-DTA-STAGE-09",
+            "name": "Commercialization",
+            "sequence": 9,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": true
+          },
+          {
+            "id": "EOS-DTA-STAGE-10",
+            "name": "Asset Management",
+            "sequence": 10,
+            "futureDtax": false,
+            "governanceRequired": true,
+            "valuationRequired": true
+          },
+          {
+            "id": "EOS-DTA-STAGE-11",
+            "name": "Exchange Listing",
+            "sequence": 11,
+            "futureDtax": true,
+            "governanceRequired": true,
+            "valuationRequired": true
+          }
+        ],
+        "assets": [
+          {
+            "id": "DTA-EPERCENT-001",
+            "name": "ePercent Enterprise Digital Twin",
+            "lifecycleStage": "Enterprise Model",
+            "progress": 38,
+            "recommendedAction": "Approve DTA formation criteria and complete Digital Mirror evidence."
+          },
+          {
+            "id": "DTA-EOS-001",
+            "name": "EOS Platform Digital Twin",
+            "lifecycleStage": "Monitoring",
+            "progress": 62,
+            "recommendedAction": "Continue strengthening live platform telemetry and valuation evidence."
+          },
+          {
+            "id": "DTA-OIL-001",
+            "name": "Example Oil & Gas Enterprise",
+            "lifecycleStage": "Digital Mirror",
+            "progress": 28,
+            "recommendedAction": "Use as a visual demonstration model until real enterprise onboarding data is approved."
+          }
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "Defined",
+          "healthScore": 78,
+          "progress": 36,
+          "summary": "DTA lifecycle is defined for Mission Control, with operational lifecycle workflows still pending.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Medium",
+          "recommendedAction": "Build DTA lifecycle management next to make lifecycle stages operational.",
+          "availableActions": [
+            "Review lifecycle",
+            "Review DTA stages",
+            "Review governance requirements"
+          ]
+        }
+      },
+      "kipr": {
+        "id": "EOS-KIPR",
+        "name": "Knowledge, Intellectual Property, Patents, and Research",
+        "owner": "Athena",
+        "status": "Foundation",
+        "areas": [
+          {
+            "id": "EOS-KIPR-AREA-01",
+            "name": "Knowledge Assets",
+            "status": "Active",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Drafting",
+            "commercialValue": "High",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-02",
+            "name": "White Papers",
+            "status": "Active",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Drafting",
+            "commercialValue": "High",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-03",
+            "name": "Academic Papers",
+            "status": "Active",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Drafting",
+            "commercialValue": "High",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-04",
+            "name": "Patents",
+            "status": "Active",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "High",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-05",
+            "name": "Research Projects",
+            "status": "Active",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "High",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-06",
+            "name": "Investor Briefs",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-07",
+            "name": "Conference Papers",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "High"
+          },
+          {
+            "id": "EOS-KIPR-AREA-08",
+            "name": "Doctoral Research",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "Medium"
+          },
+          {
+            "id": "EOS-KIPR-AREA-09",
+            "name": "Publications",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "Medium"
+          },
+          {
+            "id": "EOS-KIPR-AREA-10",
+            "name": "Commercial IP",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "Medium"
+          },
+          {
+            "id": "EOS-KIPR-AREA-11",
+            "name": "Future Books",
+            "status": "Defined",
+            "reviewCycle": "Monthly",
+            "publicationReadiness": "Pending Assessment",
+            "commercialValue": "Medium",
+            "researchValue": "High",
+            "investorRelevance": "Medium"
+          }
+        ],
+        "documents": [
+          {
+            "id": "RP-001",
+            "title": "The Live Enterprise Object Model",
+            "owner": "Athena",
+            "status": "Draft",
+            "linkedEnterpriseObjects": [
+              "EOS-MISSION-CONTROL-NAVIGATION",
+              "EOS-TECHNOLOGY-FLYWHEEL"
+            ],
+            "linkedDtas": [
+              "DTA-EOS-001"
+            ],
+            "linkedAgents": [
+              "EOS-AGENT-ATHENA"
+            ]
+          },
+          {
+            "id": "RP-002",
+            "title": "The Operational Digital Twin",
+            "owner": "Athena",
+            "status": "Draft",
+            "linkedEnterpriseObjects": [
+              "EOS-DTA-LIFECYCLE",
+              "EOS-DTA-MONITORING"
+            ],
+            "linkedDtas": [
+              "DTA-EPERCENT-001",
+              "DTA-EOS-001"
+            ],
+            "linkedAgents": [
+              "EOS-AGENT-ATHENA",
+              "EOS-AGENT-ATLAS"
+            ]
+          },
+          {
+            "id": "RP-003",
+            "title": "The Second Balance Sheet",
+            "owner": "Athena",
+            "status": "Draft",
+            "linkedEnterpriseObjects": [
+              "EOS-SECOND-BALANCE-SHEET",
+              "EOS-DIGITAL-ENTERPRISE-VALUATION"
+            ],
+            "linkedDtas": [
+              "DTA-EPERCENT-001"
+            ],
+            "linkedAgents": [
+              "EOS-AGENT-ATHENA"
+            ]
+          }
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "Building",
+          "healthScore": 83,
+          "progress": 55,
+          "summary": "KIPR extends the Agent Knowledge Repository into IP, patents, research, publications, and investor knowledge assets.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Low",
+          "recommendedAction": "Define publication review cycles and IP governance before external publication.",
+          "availableActions": [
+            "Review KIPR",
+            "Review research assets",
+            "Review patent opportunities"
+          ]
+        }
+      },
+      "enterpriseProfile": {
+        "id": "EOS-ENTERPRISE-PROFILE",
+        "company": "ePercent",
+        "role": [
+          "Developer",
+          "Owner",
+          "Operator",
+          "Reference Enterprise"
+        ],
+        "status": "Running on EOS",
+        "logoUrl": "",
+        "brandColor": "#20c997",
+        "industry": "AI-Native Enterprise",
+        "enterpriseType": "Reference Enterprise",
+        "visualTheme": "dark-teal-command",
+        "eosPlatform": "Operational Alpha",
+        "executiveAiWorkforce": "Active organizational model",
+        "enterpriseValue": 2500000,
+        "enterpriseValueBasis": "Internal EOS estimate only. Not financial advice. Not an audited valuation.",
+        "digitalTwinStatus": "Reference enterprise in formation",
+        "secondBalanceSheet": "Draft internal methodology",
+        "knowledgeAssets": 5,
+        "researchAssets": 4,
+        "commercialReadiness": "Foundation",
+        "investorReadiness": "In Progress",
+        "linkedEnterpriseObjects": [
+          "EOS-ENTERPRISE-STRATEGY",
+          "EOS-MASTER-ROADMAP",
+          "EOS-DIGITAL-ENTERPRISE-VALUATION",
+          "EOS-SECOND-BALANCE-SHEET",
+          "EOS-DTA-MONITORING",
+          "EOS-AKR",
+          "EOS-AI-WORKFORCE-OPERATIONS"
+        ],
+        "liveStatus": {
+          "status": "Amber",
+          "operationalStatus": "Amber",
+          "lifecycleStatus": "In Progress",
+          "healthScore": 82,
+          "progress": 52,
+          "summary": "ePercent is represented as the first live enterprise running on EOS.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": true,
+          "attentionLevel": "Low",
+          "recommendedAction": "Complete DTA lifecycle and commercial readiness evidence before external enterprise pilots.",
+          "availableActions": [
+            "Review enterprise profile",
+            "Review DTA status",
+            "Review commercial readiness"
+          ]
+        }
+      },
+      "industryFramework": {
+        "id": "EOS-INDUSTRY-FRAMEWORK",
+        "name": "EOS Cross Industry Framework",
+        "owner": "Mercury",
+        "status": "Defined",
+        "industries": [
+          {
+            "id": "EOS-IND-01",
+            "name": "Government",
+            "currentMaturity": "Exploratory",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Government Enterprise Digital Twin",
+              "Government Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Government operating model modernization",
+              "Government digital asset governance",
+              "Government intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-02",
+            "name": "Infrastructure",
+            "currentMaturity": "Exploratory",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Infrastructure Enterprise Digital Twin",
+              "Infrastructure Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Infrastructure operating model modernization",
+              "Infrastructure digital asset governance",
+              "Infrastructure intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-03",
+            "name": "Energy",
+            "currentMaturity": "Exploratory",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Energy Enterprise Digital Twin",
+              "Energy Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Energy operating model modernization",
+              "Energy digital asset governance",
+              "Energy intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-04",
+            "name": "Oil & Gas",
+            "currentMaturity": "Exploratory",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Oil & Gas Enterprise Digital Twin",
+              "Oil & Gas Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Oil & Gas operating model modernization",
+              "Oil & Gas digital asset governance",
+              "Oil & Gas intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-05",
+            "name": "Healthcare",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Healthcare Enterprise Digital Twin",
+              "Healthcare Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Healthcare operating model modernization",
+              "Healthcare digital asset governance",
+              "Healthcare intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-06",
+            "name": "Finance",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Enterprise Object Map",
+              "DTA Candidate Map"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Finance Enterprise Digital Twin",
+              "Finance Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Finance operating model modernization",
+              "Finance digital asset governance",
+              "Finance intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-07",
+            "name": "Banking",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Banking Enterprise Digital Twin",
+              "Banking Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Banking operating model modernization",
+              "Banking digital asset governance",
+              "Banking intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-08",
+            "name": "Insurance",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Insurance Enterprise Digital Twin",
+              "Insurance Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Insurance operating model modernization",
+              "Insurance digital asset governance",
+              "Insurance intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-09",
+            "name": "Education",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Education Enterprise Digital Twin",
+              "Education Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Education operating model modernization",
+              "Education digital asset governance",
+              "Education intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-10",
+            "name": "Universities",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Universities Enterprise Digital Twin",
+              "Universities Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Universities operating model modernization",
+              "Universities digital asset governance",
+              "Universities intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-11",
+            "name": "Manufacturing",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Manufacturing Enterprise Digital Twin",
+              "Manufacturing Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Manufacturing operating model modernization",
+              "Manufacturing digital asset governance",
+              "Manufacturing intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-12",
+            "name": "Mining",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Mining Enterprise Digital Twin",
+              "Mining Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Mining operating model modernization",
+              "Mining digital asset governance",
+              "Mining intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-13",
+            "name": "Transportation",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Transportation Enterprise Digital Twin",
+              "Transportation Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Transportation operating model modernization",
+              "Transportation digital asset governance",
+              "Transportation intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-14",
+            "name": "Telecommunications",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Telecommunications Enterprise Digital Twin",
+              "Telecommunications Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Telecommunications operating model modernization",
+              "Telecommunications digital asset governance",
+              "Telecommunications intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-15",
+            "name": "Capital Markets",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Capital Markets Enterprise Digital Twin",
+              "Capital Markets Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Capital Markets operating model modernization",
+              "Capital Markets digital asset governance",
+              "Capital Markets intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-16",
+            "name": "Sovereign Wealth Funds",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Sovereign Wealth Funds Enterprise Digital Twin",
+              "Sovereign Wealth Funds Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Sovereign Wealth Funds operating model modernization",
+              "Sovereign Wealth Funds digital asset governance",
+              "Sovereign Wealth Funds intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-17",
+            "name": "Ports",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Ports Enterprise Digital Twin",
+              "Ports Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Ports operating model modernization",
+              "Ports digital asset governance",
+              "Ports intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-18",
+            "name": "Airports",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Airports Enterprise Digital Twin",
+              "Airports Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Airports operating model modernization",
+              "Airports digital asset governance",
+              "Airports intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-19",
+            "name": "Rail",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Rail Enterprise Digital Twin",
+              "Rail Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Rail operating model modernization",
+              "Rail digital asset governance",
+              "Rail intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-20",
+            "name": "Utilities",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Utilities Enterprise Digital Twin",
+              "Utilities Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Utilities operating model modernization",
+              "Utilities digital asset governance",
+              "Utilities intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-21",
+            "name": "Real Estate",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Real Estate Enterprise Digital Twin",
+              "Real Estate Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Real Estate operating model modernization",
+              "Real Estate digital asset governance",
+              "Real Estate intelligence and valuation layer"
+            ]
+          },
+          {
+            "id": "EOS-IND-22",
+            "name": "Agriculture",
+            "currentMaturity": "Template Candidate",
+            "templates": [
+              "Opportunity Template"
+            ],
+            "enterpriseObjects": [
+              "Strategy Object",
+              "Operations Object",
+              "Knowledge Object"
+            ],
+            "potentialDtas": [
+              "Agriculture Enterprise Digital Twin",
+              "Agriculture Asset Portfolio Twin"
+            ],
+            "exampleOpportunities": [
+              "Agriculture operating model modernization",
+              "Agriculture digital asset governance",
+              "Agriculture intelligence and valuation layer"
+            ]
+          }
+        ],
+        "liveStatus": {
+          "status": "Blue",
+          "operationalStatus": "Blue",
+          "lifecycleStatus": "Defined",
+          "healthScore": 79,
+          "progress": 30,
+          "summary": "Cross Industry Framework is defined for future industry templates and opportunity scanning.",
+          "lastActivity": "2026-07-03T21:20:00.000Z",
+          "requiresAttention": false,
+          "attentionLevel": "No Action Required",
+          "recommendedAction": "Prioritize industry templates after DTA lifecycle and opportunity engine expansion.",
+          "availableActions": [
+            "Review industries",
+            "Review DTA candidates",
+            "Review opportunities"
+          ]
+        }
+      },
+      "readinessAssessments": {
+        "investor": {
+          "id": "EOS-INVESTOR-READINESS-ASSESSMENT",
+          "status": "In Progress",
+          "score": 62,
+          "strengths": [
+            "Clear strategic thesis",
+            "Live Mission Control demo",
+            "DTA and Second Balance Sheet narrative"
+          ],
+          "gaps": [
+            "Audited valuation absent",
+            "Customer traction not represented",
+            "Presentation source files missing"
+          ],
+          "recommendedAction": "Package strategic narrative, DTA lifecycle, and valuation assumptions into a governed investor update."
+        },
+        "commercial": {
+          "id": "EOS-COMMERCIAL-READINESS-ASSESSMENT",
+          "status": "Foundation",
+          "score": 44,
+          "strengths": [
+            "Platform architecture visible",
+            "Revenue streams modeled",
+            "Enterprise profile exists"
+          ],
+          "gaps": [
+            "No customer onboarding workflow",
+            "No pricing model",
+            "No contract or billing integration"
+          ],
+          "recommendedAction": "Build commercial pipeline execution and enterprise onboarding after DTA lifecycle."
+        },
+        "research": {
+          "id": "EOS-RESEARCH-READINESS-ASSESSMENT",
+          "status": "Strong Foundation",
+          "score": 70,
+          "strengths": [
+            "KIPR model",
+            "Seeded Athena research projects",
+            "Second Balance Sheet and Live Object research themes"
+          ],
+          "gaps": [
+            "Formal literature references not attached",
+            "Publication review workflow incomplete",
+            "Patent claims not drafted"
+          ],
+          "recommendedAction": "Create KIPR publication and IP governance workflow."
+        }
+      },
+      "linkedEnterpriseObjects": [
+        "EOS-ENTERPRISE-STRATEGY",
+        "EOS-MASTER-ROADMAP",
+        "EOS-DIGITAL-ENTERPRISE-VALUATION",
+        "EOS-SECOND-BALANCE-SHEET",
+        "EOS-DTA-MONITORING",
+        "EOS-AKR",
+        "EOS-AI-WORKFORCE-OPERATIONS",
+        "EOS-INVESTMENT-THESIS",
+        "EOS-TECHNOLOGY-FLYWHEEL",
+        "EOS-THREE-HORIZON-ROADMAP",
+        "EOS-REVENUE-ENGINE",
+        "EOS-DTA-LIFECYCLE",
+        "EOS-KIPR",
+        "EOS-ENTERPRISE-PROFILE",
+        "EOS-INDUSTRY-FRAMEWORK"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 84,
+        "progress": 58,
+        "summary": "Strategic alignment layer is live and connecting investment thesis concepts to EOS platform objects.",
+        "lastActivity": "2026-07-03T21:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Approve strategic narrative language and source presentation mapping before investor use.",
+        "availableActions": [
+          "Review investment thesis",
+          "Review flywheel",
+          "Review revenue engine",
+          "Review readiness"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "collectionName": "digital-twin-assets",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:49:01.742Z",
+  "recordCount": 3,
+  "source": "seed:digital-twin-assets; refreshed:seed:digital-twin-assets; refreshed:seed:digital-twin-assets",
+  "records": [
+    {
+      "id": "DTA-EPERCENT-001",
+      "name": "ePercent Enterprise Digital Twin",
+      "status": "Formation",
+      "owner": "Eric Olo",
+      "description": "ePercent as the first enterprise running on EOS and serving as the reference implementation.",
+      "assetType": "Enterprise Digital Twin",
+      "linkedEnterpriseObjects": [
+        "EOS-ENTERPRISE-STRATEGY",
+        "EOS-MASTER-ROADMAP",
+        "EOS-DIGITAL-ENTERPRISE-VALUATION"
+      ],
+      "linkedPrograms": [
+        "EOS-PROG-DTAP",
+        "EOS-PROG-SECOND-BALANCE-SHEET",
+        "EOS-PROG-COMMERCIAL-LAUNCH"
+      ],
+      "valuationStatus": "Pending Assessment",
+      "commercializationStatus": "Not Started",
+      "governanceStatus": "Awaiting Review",
+      "lifecycleStage": "Enterprise Model",
+      "lifecycleProgress": 38,
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Building",
+        "healthScore": 76,
+        "progress": 38,
+        "summary": "ePercent Enterprise Digital Twin is in formation as the EOS reference implementation.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Approve DTA formation criteria and define reference implementation scope.",
+        "availableActions": [
+          "Review DTA scope",
+          "Review governance status",
+          "Prepare valuation assumptions"
+        ]
+      }
+    },
+    {
+      "id": "DTA-EOS-001",
+      "name": "EOS Platform Digital Twin",
+      "status": "Active Monitoring",
+      "owner": "EOS PMO",
+      "description": "EOS as a live platform asset and foundation for Digital Enterprise Headquarters.",
+      "assetType": "Platform Digital Twin",
+      "linkedEnterpriseObjects": [
+        "EOS-PERSISTENT-DATA-STORE",
+        "EOS-MC-001",
+        "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS"
+      ],
+      "linkedPrograms": [
+        "EOS-PROG-DTAP",
+        "EOS-PROG-INVESTOR-READINESS"
+      ],
+      "valuationStatus": "Internal Estimate Only",
+      "commercializationStatus": "Pilot Candidate",
+      "governanceStatus": "Monitoring",
+      "lifecycleStage": "Monitoring",
+      "lifecycleProgress": 62,
+      "liveStatus": {
+        "status": "Green",
+        "operationalStatus": "Green",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 88,
+        "progress": 62,
+        "summary": "EOS Platform Digital Twin is actively monitored through live platform objects and Mission Control.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Continue strengthening data persistence, governance, and valuation evidence.",
+        "availableActions": [
+          "Review platform twin",
+          "Review storage health",
+          "Review investor readiness"
+        ]
+      }
+    },
+    {
+      "id": "DTA-OIL-001",
+      "name": "Example Oil & Gas Enterprise",
+      "status": "Demonstration Model",
+      "owner": "Atlas",
+      "description": "Seeded Oil & Gas enterprise visual twin used to demonstrate asset-heavy enterprise monitoring, data feeds, safety systems, production systems, commercial systems, and human approval points.",
+      "assetType": "Industry Demonstration Digital Twin",
+      "linkedEnterpriseObjects": [
+        "EOS-ENTERPRISE-VISUAL-MODEL",
+        "EOS-MASTER-MONITORING-VIEW",
+        "EOS-DIGITAL-TWIN-GENERATION-WORKFLOW"
+      ],
+      "linkedPrograms": [
+        "EOS-PROG-DTAP",
+        "EOS-PROG-DTAM",
+        "EOS-PROG-COMMERCIAL-LAUNCH"
+      ],
+      "valuationStatus": "Conceptual Internal Estimate",
+      "commercializationStatus": "Demonstration Candidate",
+      "governanceStatus": "Review Required",
+      "lifecycleStage": "Digital Mirror",
+      "lifecycleProgress": 28,
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 76,
+        "progress": 28,
+        "summary": "Oil & Gas Digital Twin is seeded as a simulated industry demonstration model.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Use for visual demonstration only until real enterprise onboarding data is approved.",
+        "availableActions": [
+          "Review enterprise home",
+          "Review asset map",
+          "Review data feed plan"
+        ]
+      }
+    }
+  ]
+}

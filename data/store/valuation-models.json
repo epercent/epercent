@@ -1,0 +1,57 @@
+{
+  "collectionName": "valuation-models",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T18:22:17.281Z",
+  "recordCount": 1,
+  "source": "seed:valuation-models",
+  "records": [
+    {
+      "id": "EOS-DIGITAL-ENTERPRISE-VALUATION",
+      "name": "EOS Digital Enterprise Valuation Foundation",
+      "valuationDate": "2026-07-03",
+      "currency": "USD",
+      "estimateBasis": "Internal EOS estimate only. Not financial advice. Not an audited valuation.",
+      "baseEnterpriseValue": 1000000,
+      "digitalEnterpriseValue": 2500000,
+      "secondBalanceSheetValue": 850000,
+      "knowledgeAssetValue": 250000,
+      "agentWorkforceValue": 300000,
+      "digitalTwinAssetValue": 500000,
+      "operationalEfficiencyValue": 200000,
+      "riskReductionValue": 150000,
+      "opportunityPipelineValue": 350000,
+      "valuationConfidence": "Low",
+      "valuationMethod": "Internal directional estimate combining platform maturity, knowledge assets, agent workforce design, DTA formation, operational efficiency, risk reduction, and opportunity pipeline signals.",
+      "valueDrivers": [
+        "Persistent platform data",
+        "Live Enterprise Objects",
+        "Executive AI Workforce",
+        "Digital Twin Asset formation",
+        "Research and IP pipeline",
+        "Mission Control investor demonstration readiness"
+      ],
+      "valuationNotes": [
+        "Internal EOS estimate only. Not financial advice. Not an audited valuation.",
+        "Values are placeholders for governance alignment and should not be used for securities, investment, tax, or accounting decisions.",
+        "Future capabilities must replace placeholders with approved assumptions, audit trails, and scenario modeling."
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Draft",
+        "healthScore": 74,
+        "progress": 34,
+        "summary": "Digital Enterprise Valuation model exists as an internal placeholder framework.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "High",
+        "recommendedAction": "Do not present values as audited valuation; review assumptions before investor use.",
+        "availableActions": [
+          "Review valuation assumptions",
+          "Review value drivers",
+          "Request valuation governance"
+        ]
+      }
+    }
+  ]
+}

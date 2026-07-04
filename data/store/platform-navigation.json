@@ -1,0 +1,435 @@
+{
+  "collectionName": "platform-navigation",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:23:33.539Z",
+  "recordCount": 8,
+  "source": "seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation; refreshed:seed:platform-navigation",
+  "records": [
+    {
+      "id": "nav-headquarters",
+      "domain": "Headquarters",
+      "items": [
+        {
+          "id": "cockpit",
+          "label": "CEO Cockpit",
+          "route": "cockpit",
+          "description": "Executive overview of EOS value, health, priorities, and leadership attention."
+        },
+        {
+          "id": "council",
+          "label": "Executive Council",
+          "route": "council",
+          "description": "Leadership roster, status, focus, and attention needs."
+        },
+        {
+          "id": "offices",
+          "label": "Executive Offices",
+          "route": "offices",
+          "description": "Department operating spaces for each executive."
+        }
+      ]
+    },
+    {
+      "id": "nav-enterprise",
+      "domain": "Enterprise",
+      "items": [
+        {
+          "id": "strategy",
+          "label": "Strategy",
+          "route": "strategy",
+          "description": "Enterprise strategy and governance alignment."
+        },
+        {
+          "id": "investment-thesis",
+          "label": "Investment Thesis",
+          "route": "investment-thesis",
+          "description": "Strategic alignment between EOS implementation, investment thesis, and commercialization roadmap."
+        },
+        {
+          "id": "governance",
+          "label": "Governance",
+          "route": "governance",
+          "description": "Executive approval posture and governance readiness."
+        },
+        {
+          "id": "pmo",
+          "label": "PMO",
+          "route": "programs",
+          "description": "Program Management Office operating view."
+        },
+        {
+          "id": "three-horizon-roadmap",
+          "label": "Three-Horizon Roadmap",
+          "route": "three-horizon-roadmap",
+          "description": "Foundation, commercial scale, and digital economy roadmap."
+        },
+        {
+          "id": "roadmap",
+          "label": "Roadmap",
+          "route": "roadmap",
+          "description": "Master Roadmap milestones, phases, risks, and current capability."
+        },
+        {
+          "id": "programs",
+          "label": "Programs",
+          "route": "programs",
+          "description": "Strategic programs and delivery progress."
+        }
+      ]
+    },
+    {
+      "id": "nav-enterprise-value",
+      "domain": "Enterprise Value",
+      "items": [
+        {
+          "id": "master-monitoring",
+          "label": "Master Monitoring",
+          "route": "master-monitoring",
+          "description": "Premium visual monitoring layer for onboarded enterprises, DTAs, systems, feeds, alerts, governance, and approvals."
+        },
+        {
+          "id": "onboarded-enterprises",
+          "label": "Onboarded Enterprises",
+          "route": "onboarded-enterprises",
+          "description": "Portfolio of onboarded enterprises and organizations with health, DTA readiness, feed readiness, agents, and validation status."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation",
+          "route": "valuation",
+          "description": "Internal digital enterprise value estimates, not audited valuation."
+        },
+        {
+          "id": "technology-flywheel",
+          "label": "Technology Flywheel",
+          "route": "technology-flywheel",
+          "description": "How knowledge, agents, objects, DTAs, decisions, and value reinforce each other."
+        },
+        {
+          "id": "revenue-engine",
+          "label": "Revenue Engine",
+          "route": "revenue-engine",
+          "description": "Revenue opportunities, maturity, market potential, and dependencies."
+        },
+        {
+          "id": "second-balance-sheet",
+          "label": "Second Balance Sheet",
+          "route": "second-balance-sheet",
+          "description": "Operational digital asset metrics and value thesis."
+        },
+        {
+          "id": "digital-twin-assets",
+          "label": "Digital Twin Assets",
+          "route": "digital-twin-assets",
+          "description": "Digital Twin Asset monitoring and formation status."
+        },
+        {
+          "id": "enterprise-onboarding",
+          "label": "Enterprise Onboarding",
+          "route": "enterprise-onboarding",
+          "description": "Enterprise intake, known structure, assigned agents, and onboarding progress."
+        },
+        {
+          "id": "assimilation-pipeline",
+          "label": "Assimilation Pipeline",
+          "route": "assimilation-pipeline",
+          "description": "Enterprise intake through Digital Mirror, DTA candidate, data feed, validation, and formation stages."
+        },
+        {
+          "id": "digital-mirrors",
+          "label": "Digital Mirrors",
+          "route": "digital-mirrors",
+          "description": "Pre-DTA enterprise mirrors with object, relationship, system, process, knowledge, and risk maps."
+        },
+        {
+          "id": "dta-candidates",
+          "label": "DTA Candidates",
+          "route": "dta-candidates",
+          "description": "Candidate Digital Twin Assets, missing data, validation points, value potential, and risk."
+        },
+        {
+          "id": "data-feed-requirements",
+          "label": "Feed Requirements",
+          "route": "data-feed-requirements",
+          "description": "Required fields, cadence, real-time needs, connection status, quality status, and fallback requirements."
+        },
+        {
+          "id": "human-validation",
+          "label": "Human Validation",
+          "route": "human-validation",
+          "description": "Human checklist for identity, ownership, hierarchy, systems, feed availability, DTA candidates, valuation, and governance."
+        },
+        {
+          "id": "enterprise-home",
+          "label": "Enterprise Home",
+          "route": "enterprise-home",
+          "description": "Visual home pages for onboarded enterprise Digital Twin Assets."
+        },
+        {
+          "id": "digital-twin-structure",
+          "label": "Digital Twin Structure",
+          "route": "digital-twin-structure",
+          "description": "Layered enterprise architecture and future digital twin generation process."
+        },
+        {
+          "id": "data-feeds",
+          "label": "Data Feeds",
+          "route": "data-feeds",
+          "description": "Simulated telemetry feeds with UTC timestamps and enterprise display timezone."
+        },
+        {
+          "id": "systems",
+          "label": "Systems",
+          "route": "systems",
+          "description": "Operational systems, safety systems, production systems, and commercial systems."
+        },
+        {
+          "id": "enterprise-assets",
+          "label": "Assets",
+          "route": "enterprise-assets",
+          "description": "Primary enterprise assets represented inside the visual twin model."
+        },
+        {
+          "id": "human-workflows",
+          "label": "Human Workflows",
+          "route": "human-workflows",
+          "description": "Human approval points and governance interaction model."
+        },
+        {
+          "id": "dta-lifecycle",
+          "label": "DTA Lifecycle",
+          "route": "dta-lifecycle",
+          "description": "Discovery through exchange listing lifecycle for Digital Twin Assets."
+        },
+        {
+          "id": "enterprise-profile",
+          "label": "Enterprise Profile",
+          "route": "enterprise-profile",
+          "description": "ePercent as the first live enterprise running on EOS."
+        },
+        {
+          "id": "investor-readiness",
+          "label": "Investor Readiness",
+          "route": "investor-readiness",
+          "description": "Investor readiness score, strengths, gaps, and recommended action."
+        },
+        {
+          "id": "commercial-readiness",
+          "label": "Commercial Readiness",
+          "route": "commercial-readiness",
+          "description": "Commercial readiness score, strengths, gaps, and next action."
+        },
+        {
+          "id": "investor-centre",
+          "label": "Investor Centre",
+          "route": "investor-centre",
+          "description": "Investor readiness notes and executive talking points."
+        }
+      ]
+    },
+    {
+      "id": "nav-ai-workforce",
+      "domain": "AI Workforce",
+      "items": [
+        {
+          "id": "agents",
+          "label": "Agents",
+          "route": "agents",
+          "description": "AI executive workforce roster and operating status."
+        },
+        {
+          "id": "communications",
+          "label": "Communications",
+          "route": "communications",
+          "description": "Internal agent message threads and response requirements."
+        },
+        {
+          "id": "activity",
+          "label": "Activity",
+          "route": "activity",
+          "description": "Live agent work, progress, and attention requests."
+        },
+        {
+          "id": "calendar",
+          "label": "Calendar",
+          "route": "calendar",
+          "description": "Local agent operating calendar and review events."
+        },
+        {
+          "id": "performance",
+          "label": "Performance",
+          "route": "performance",
+          "description": "Agent performance foundation and health indicators."
+        }
+      ]
+    },
+    {
+      "id": "nav-knowledge",
+      "domain": "Knowledge",
+      "items": [
+        {
+          "id": "kipr",
+          "label": "KIPR",
+          "route": "kipr",
+          "description": "Knowledge, Intellectual Property, Patents, and Research operating view."
+        },
+        {
+          "id": "knowledge-vault",
+          "label": "Knowledge Vault",
+          "route": "knowledge",
+          "description": "Agent knowledge repositories and managed knowledge assets."
+        },
+        {
+          "id": "white-papers",
+          "label": "White Papers",
+          "route": "white-papers",
+          "description": "White paper assets and publication readiness."
+        },
+        {
+          "id": "academic-papers",
+          "label": "Academic Papers",
+          "route": "academic-papers",
+          "description": "Academic research assets and publication targets."
+        },
+        {
+          "id": "patents",
+          "label": "Patents",
+          "route": "patents",
+          "description": "Patent draft opportunities and IP pipeline."
+        },
+        {
+          "id": "publications",
+          "label": "Publications",
+          "route": "publications",
+          "description": "Publication portfolio and readiness state."
+        }
+      ]
+    },
+    {
+      "id": "nav-platform",
+      "domain": "Platform",
+      "items": [
+        {
+          "id": "administration",
+          "label": "Administration",
+          "route": "administration",
+          "description": "Platform administration center and governed admin actions."
+        },
+        {
+          "id": "audit",
+          "label": "Audit",
+          "route": "audit",
+          "description": "Capability readiness, functional coverage, placeholder register, technical debt, and maturity scoring."
+        },
+        {
+          "id": "startup-experience",
+          "label": "Startup Experience",
+          "route": "startup-experience",
+          "description": "Modern EOS operating-system startup screen and boot phases."
+        },
+        {
+          "id": "identity-media",
+          "label": "Identity Media",
+          "route": "identity-media",
+          "description": "Human and agent avatars, profile images, company logos, and platform identity media."
+        },
+        {
+          "id": "organization-intake",
+          "label": "Organization Intake",
+          "route": "organization-intake",
+          "description": "Import organization files, extract useful metadata, and store repository records."
+        },
+        {
+          "id": "repository-links",
+          "label": "Repository Links",
+          "route": "repository-links",
+          "description": "External cloud-drive links for large organization repositories and media libraries."
+        },
+        {
+          "id": "storage",
+          "label": "Storage",
+          "route": "storage",
+          "description": "Persistent data store health and collection visibility."
+        },
+        {
+          "id": "backups",
+          "label": "Backups",
+          "route": "backups",
+          "description": "Backup status, archive metadata, and restore validation posture."
+        },
+        {
+          "id": "health",
+          "label": "Health",
+          "route": "health",
+          "description": "Platform health, APIs, running URLs, and warnings."
+        },
+        {
+          "id": "releases",
+          "label": "Releases",
+          "route": "releases",
+          "description": "Release version, notes, and readiness posture."
+        }
+      ]
+    },
+    {
+      "id": "nav-development",
+      "domain": "Development",
+      "items": [
+        {
+          "id": "capabilities",
+          "label": "Capabilities",
+          "route": "assets",
+          "description": "Registered capability Enterprise Objects."
+        },
+        {
+          "id": "industry-framework",
+          "label": "Industry Framework",
+          "route": "industry-framework",
+          "description": "Cross-industry DTA templates, maturity, and opportunity maps."
+        },
+        {
+          "id": "architecture",
+          "label": "Architecture",
+          "route": "architecture",
+          "description": "Architecture foundation and future architecture governance."
+        },
+        {
+          "id": "engineering",
+          "label": "Engineering",
+          "route": "engineering",
+          "description": "Engineering standards, quality gates, and build controls."
+        }
+      ]
+    },
+    {
+      "id": "nav-workspace",
+      "domain": "My Workspace",
+      "items": [
+        {
+          "id": "briefing",
+          "label": "Briefing",
+          "route": "briefing",
+          "description": "Personal executive briefing and current priority."
+        },
+        {
+          "id": "tasks",
+          "label": "Tasks",
+          "route": "tasks",
+          "description": "Future executive task queue and delegated work."
+        },
+        {
+          "id": "decisions",
+          "label": "Decisions",
+          "route": "decisions",
+          "description": "Future decision queue and approval posture."
+        },
+        {
+          "id": "notes",
+          "label": "Notes",
+          "route": "notes",
+          "description": "Future executive notes and saved operating context."
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,13 @@
-export const agents = [
+function initialsFor(name) {
+  return name
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 3)
+    .toUpperCase();
+}
+
+const agentSeed = [
   {
     id: 'EOS-AGENT-ATHENA',
     name: 'Athena',
@@ -193,3 +202,12 @@ export const agents = [
     }
   }
 ];
+
+export const agents = agentSeed.map((agent) => ({
+  avatarUrl: '',
+  avatarType: 'initials',
+  fallbackInitials: initialsFor(agent.name),
+  statusBadge: agent.status,
+  roleImage: '',
+  ...agent
+}));

@@ -1,0 +1,391 @@
+{
+  "collectionName": "enterprise-onboarding",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.905Z",
+  "recordCount": 3,
+  "source": "seed:enterprise-onboarding",
+  "records": [
+    {
+      "id": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "industry": "Oil & Gas",
+      "enterpriseType": "Asset-Intensive Enterprise",
+      "status": "In Progress",
+      "stage": "Digital Mirror Creation",
+      "owner": "EOS PMO",
+      "createdAt": "2026-07-04T00:24:00.000Z",
+      "updatedAt": "2026-07-04T00:24:00.000Z",
+      "sourceDocuments": [
+        "Enterprise overview",
+        "Asset register",
+        "Safety procedures",
+        "Production report"
+      ],
+      "sourceSystems": [
+        "Production Systems",
+        "Safety Systems",
+        "Commercial Systems",
+        "Maintenance Systems"
+      ],
+      "knownAssets": [
+        "Headquarters",
+        "Offshore Rigs",
+        "FPSO / Ships",
+        "Pipelines",
+        "Storage Facilities",
+        "Wells",
+        "Production Systems",
+        "Safety Systems",
+        "Commercial Systems"
+      ],
+      "knownProcesses": [
+        "Production planning",
+        "Safety inspection",
+        "Maintenance scheduling",
+        "Commercial lifting"
+      ],
+      "knownPeople": [
+        "Operations Director",
+        "Asset Manager",
+        "HSE Lead",
+        "Commercial Manager"
+      ],
+      "knownDepartments": [
+        "Operations",
+        "Safety",
+        "Engineering",
+        "Commercial",
+        "Finance"
+      ],
+      "knownLocations": [
+        "Headquarters",
+        "Offshore Field",
+        "Pipeline Corridor",
+        "Storage Terminal"
+      ],
+      "knownContracts": [
+        "Production sharing agreement",
+        "Pipeline operations agreement",
+        "Storage services agreement"
+      ],
+      "knownRisks": [
+        "Safety incident",
+        "Production downtime",
+        "Pipeline integrity",
+        "Data feed availability"
+      ],
+      "knownOpportunities": [
+        "Production optimization",
+        "Predictive maintenance",
+        "Safety analytics",
+        "Commercial planning"
+      ],
+      "humanValidationRequired": true,
+      "assignedAgents": [
+        {
+          "agentId": "EOS-AGENT-HERMES",
+          "agentName": "Hermes",
+          "assignment": "Knowledge capture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATLAS",
+          "agentName": "Atlas",
+          "assignment": "Enterprise structure and architecture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATHENA",
+          "agentName": "Athena",
+          "assignment": "Research and documentation"
+        },
+        {
+          "agentId": "EOS-AGENT-MERCURY",
+          "agentName": "Mercury",
+          "assignment": "Opportunity analysis"
+        },
+        {
+          "agentId": "EOS-AGENT-ARGUS",
+          "agentName": "Argus",
+          "assignment": "Monitoring requirements"
+        },
+        {
+          "agentId": "EOS-AGENT-VULCAN",
+          "agentName": "Vulcan",
+          "assignment": "Validation, QA, and compliance"
+        },
+        {
+          "agentId": "EOS-AGENT-CODEX",
+          "agentName": "Codex",
+          "assignment": "Engineering integration requirements"
+        }
+      ],
+      "linkedDigitalMirror": "EOS-DM-OIL-001",
+      "linkedDtaCandidates": [
+        "EOS-DTA-CAND-OIL-RIG",
+        "EOS-DTA-CAND-OIL-PIPELINE",
+        "EOS-DTA-CAND-OIL-PRODUCTION",
+        "EOS-DTA-CAND-OIL-STORAGE",
+        "EOS-DTA-CAND-OIL-HQ"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 78,
+        "progress": 48,
+        "summary": "Oil and Gas onboarding is ready for Digital Mirror review and DTA candidate validation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm asset hierarchy, systems list, and data feed availability.",
+        "availableActions": [
+          "Review Pipeline",
+          "Review Digital Mirror",
+          "Review Data Feeds",
+          "Complete Human Validation"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "industry": "AI-Native Enterprise",
+      "enterpriseType": "Reference Enterprise",
+      "status": "In Progress",
+      "stage": "DTA Candidate Identification",
+      "owner": "EOS PMO",
+      "createdAt": "2026-07-04T00:24:00.000Z",
+      "updatedAt": "2026-07-04T00:24:00.000Z",
+      "sourceDocuments": [
+        "EOS strategy records",
+        "Mission Control state",
+        "Capability ledger"
+      ],
+      "sourceSystems": [
+        "EOS Core API",
+        "Mission Control",
+        "KIPR",
+        "PMO",
+        "Persistent Data Store"
+      ],
+      "knownAssets": [
+        "EOS Platform",
+        "Mission Control",
+        "Executive AI Workforce",
+        "KIPR",
+        "Second Balance Sheet"
+      ],
+      "knownProcesses": [
+        "Capability development",
+        "Knowledge management",
+        "Backup and recovery",
+        "Program management"
+      ],
+      "knownPeople": [
+        "Founder CEO",
+        "CTO Advisor",
+        "Executive Agents"
+      ],
+      "knownDepartments": [
+        "Engineering",
+        "Research",
+        "Knowledge",
+        "Architecture",
+        "Operations"
+      ],
+      "knownLocations": [
+        "Digital Enterprise Headquarters"
+      ],
+      "knownContracts": [
+        "Pending commercial agreements"
+      ],
+      "knownRisks": [
+        "Restore validation pending",
+        "External source connectors not enabled"
+      ],
+      "knownOpportunities": [
+        "Reference implementation",
+        "Investor demonstration",
+        "DTA operating model evidence"
+      ],
+      "humanValidationRequired": true,
+      "assignedAgents": [
+        {
+          "agentId": "EOS-AGENT-HERMES",
+          "agentName": "Hermes",
+          "assignment": "Knowledge capture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATLAS",
+          "agentName": "Atlas",
+          "assignment": "Enterprise structure and architecture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATHENA",
+          "agentName": "Athena",
+          "assignment": "Research and documentation"
+        },
+        {
+          "agentId": "EOS-AGENT-MERCURY",
+          "agentName": "Mercury",
+          "assignment": "Opportunity analysis"
+        },
+        {
+          "agentId": "EOS-AGENT-ARGUS",
+          "agentName": "Argus",
+          "assignment": "Monitoring requirements"
+        },
+        {
+          "agentId": "EOS-AGENT-VULCAN",
+          "agentName": "Vulcan",
+          "assignment": "Validation, QA, and compliance"
+        },
+        {
+          "agentId": "EOS-AGENT-CODEX",
+          "agentName": "Codex",
+          "assignment": "Engineering integration requirements"
+        }
+      ],
+      "linkedDigitalMirror": "EOS-DM-EPERCENT-001",
+      "linkedDtaCandidates": [
+        "EOS-DTA-CAND-EPERCENT-ENTERPRISE"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 84,
+        "progress": 58,
+        "summary": "ePercent onboarding connects the live EOS implementation to the reference enterprise Digital Mirror.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Validate governance requirements and Second Balance Sheet assumptions.",
+        "availableActions": [
+          "Review Digital Mirror",
+          "Review Reference DTA",
+          "Review Governance Requirements"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "industry": "Enterprise Operating System",
+      "enterpriseType": "Platform Asset",
+      "status": "In Progress",
+      "stage": "Data Feed Requirement Mapping",
+      "owner": "Codex",
+      "createdAt": "2026-07-04T00:24:00.000Z",
+      "updatedAt": "2026-07-04T00:24:00.000Z",
+      "sourceDocuments": [
+        "Release manifest",
+        "Capability documentation",
+        "Architecture documentation"
+      ],
+      "sourceSystems": [
+        "EOS Core API",
+        "Mission Control",
+        "Persistent Store",
+        "Backup Service",
+        "Release Management"
+      ],
+      "knownAssets": [
+        "Core API",
+        "Mission Control",
+        "Persistent Store",
+        "Backup Repository",
+        "Knowledge Repository"
+      ],
+      "knownProcesses": [
+        "Build verification",
+        "Release management",
+        "Backup creation",
+        "Status reporting"
+      ],
+      "knownPeople": [
+        "Engineering Agent",
+        "Executive Council"
+      ],
+      "knownDepartments": [
+        "Engineering",
+        "Operations",
+        "Quality"
+      ],
+      "knownLocations": [
+        "Local EOS Workspace"
+      ],
+      "knownContracts": [
+        "Pending platform commercialization"
+      ],
+      "knownRisks": [
+        "Local-only persistence",
+        "No cloud synchronization yet",
+        "No connector authentication yet"
+      ],
+      "knownOpportunities": [
+        "Platform licensing",
+        "Enterprise onboarding engine",
+        "Agent workforce operations"
+      ],
+      "humanValidationRequired": true,
+      "assignedAgents": [
+        {
+          "agentId": "EOS-AGENT-HERMES",
+          "agentName": "Hermes",
+          "assignment": "Knowledge capture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATLAS",
+          "agentName": "Atlas",
+          "assignment": "Enterprise structure and architecture"
+        },
+        {
+          "agentId": "EOS-AGENT-ATHENA",
+          "agentName": "Athena",
+          "assignment": "Research and documentation"
+        },
+        {
+          "agentId": "EOS-AGENT-MERCURY",
+          "agentName": "Mercury",
+          "assignment": "Opportunity analysis"
+        },
+        {
+          "agentId": "EOS-AGENT-ARGUS",
+          "agentName": "Argus",
+          "assignment": "Monitoring requirements"
+        },
+        {
+          "agentId": "EOS-AGENT-VULCAN",
+          "agentName": "Vulcan",
+          "assignment": "Validation, QA, and compliance"
+        },
+        {
+          "agentId": "EOS-AGENT-CODEX",
+          "agentName": "Codex",
+          "assignment": "Engineering integration requirements"
+        }
+      ],
+      "linkedDigitalMirror": "EOS-DM-EOS-001",
+      "linkedDtaCandidates": [
+        "EOS-DTA-CAND-EOS-PLATFORM"
+      ],
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 86,
+        "progress": 62,
+        "summary": "EOS Platform onboarding prepares EOS itself as a platform Digital Twin Asset.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review platform feed requirements before connector implementation.",
+        "availableActions": [
+          "Review Platform Mirror",
+          "Review Feed Requirements",
+          "Review Integration Requirements"
+        ]
+      }
+    }
+  ]
+}

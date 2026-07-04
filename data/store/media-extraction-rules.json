@@ -1,0 +1,83 @@
+{
+  "collectionName": "media-extraction-rules",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T21:29:40.347Z",
+  "recordCount": 4,
+  "source": "seed:media-extraction-rules",
+  "records": [
+    {
+      "id": "EOS-EXTRACT-TEXT",
+      "category": "Text",
+      "fileTypes": [
+        "txt",
+        "md",
+        "csv",
+        "json",
+        "xml",
+        "html",
+        "log"
+      ],
+      "extractionMethod": "Plain text extraction",
+      "usefulSignals": [
+        "Text preview",
+        "word count",
+        "detected keywords",
+        "checksum",
+        "file size"
+      ]
+    },
+    {
+      "id": "EOS-EXTRACT-PDF",
+      "category": "PDF",
+      "fileTypes": [
+        "pdf"
+      ],
+      "extractionMethod": "Metadata and readable-string scan",
+      "usefulSignals": [
+        "File metadata",
+        "checksum",
+        "readable text fragments when present",
+        "source repository"
+      ]
+    },
+    {
+      "id": "EOS-EXTRACT-OFFICE",
+      "category": "Office Document",
+      "fileTypes": [
+        "doc",
+        "docx",
+        "ppt",
+        "pptx",
+        "xls",
+        "xlsx"
+      ],
+      "extractionMethod": "Metadata and readable-string scan until full Office parser is approved",
+      "usefulSignals": [
+        "Document type",
+        "checksum",
+        "file size",
+        "readable text fragments when present"
+      ]
+    },
+    {
+      "id": "EOS-EXTRACT-AUDIO",
+      "category": "Audio",
+      "fileTypes": [
+        "mp3",
+        "wav",
+        "m4a",
+        "aac",
+        "flac",
+        "ogg"
+      ],
+      "extractionMethod": "Media metadata foundation",
+      "usefulSignals": [
+        "File type",
+        "checksum",
+        "file size",
+        "source repository",
+        "transcription pending"
+      ]
+    }
+  ]
+}

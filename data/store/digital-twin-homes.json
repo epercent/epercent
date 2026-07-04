@@ -1,0 +1,127 @@
+{
+  "collectionName": "digital-twin-homes",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T21:03:49.592Z",
+  "recordCount": 2,
+  "source": "seed:digital-twin-homes; refreshed:seed:digital-twin-homes",
+  "records": [
+    {
+      "id": "DTH-EPERCENT-001",
+      "enterpriseId": "DTA-EPERCENT-001",
+      "name": "ePercent Enterprise Home",
+      "enterpriseLogo": "",
+      "enterpriseInitials": "EP",
+      "enterpriseHealth": 88,
+      "assetHealth": 84,
+      "productionMetric": "23 active EOS capability records",
+      "totalEstimatedValue": 2500000,
+      "riskScore": 42,
+      "activeAlerts": 2,
+      "systemsStatus": "Operational with review items",
+      "agentsAssigned": [
+        "Codex",
+        "Athena",
+        "Hermes",
+        "Atlas"
+      ],
+      "humanApprovalPoints": 4,
+      "timezone": "Africa/Lagos",
+      "generationWorkflowId": "EOS-DTGW-001",
+      "architectureLayerIds": [
+        "EOS-VL-OPERATIONAL-SYSTEMS",
+        "EOS-VL-DATA-PLATFORM",
+        "EOS-VL-MODEL-INTEGRATION",
+        "EOS-VL-ENTERPRISE-ONTOLOGY",
+        "EOS-VL-WORKFLOWS",
+        "EOS-VL-DECISION-ORCHESTRATION",
+        "EOS-VL-AGENTS",
+        "EOS-VL-GOVERNANCE",
+        "EOS-VL-VALUATION",
+        "EOS-VL-SECOND-BALANCE-SHEET"
+      ],
+      "telemetryIds": [
+        "TEL-EPERCENT-HEALTH",
+        "TEL-EPERCENT-VALUE",
+        "TEL-EPERCENT-APPROVALS",
+        "TEL-EPERCENT-FEEDS",
+        "TEL-EPERCENT-RISK"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 88,
+        "progress": 52,
+        "summary": "ePercent Enterprise Home is ready for executive monitoring and strategic review.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review approval points and restore validation before marking enterprise twin Green.",
+        "availableActions": [
+          "Review Enterprise Home",
+          "Review Data Feeds",
+          "Review Approval Points"
+        ]
+      }
+    },
+    {
+      "id": "DTH-OIL-001",
+      "enterpriseId": "DTA-OIL-001",
+      "name": "Example Oil & Gas Enterprise Home",
+      "enterpriseLogo": "",
+      "enterpriseInitials": "OG",
+      "enterpriseHealth": 76,
+      "assetHealth": 73,
+      "productionMetric": "124,500 barrels/day simulated output",
+      "totalEstimatedValue": 1250000,
+      "riskScore": 64,
+      "activeAlerts": 2,
+      "systemsStatus": "Simulated systems pending enterprise integration",
+      "agentsAssigned": [
+        "Atlas",
+        "Argus",
+        "Vulcan",
+        "Mercury"
+      ],
+      "humanApprovalPoints": 4,
+      "timezone": "Africa/Lagos",
+      "generationWorkflowId": "EOS-DTGW-001",
+      "architectureLayerIds": [
+        "EOS-VL-OPERATIONAL-SYSTEMS",
+        "EOS-VL-DATA-PLATFORM",
+        "EOS-VL-MODEL-INTEGRATION",
+        "EOS-VL-ENTERPRISE-ONTOLOGY",
+        "EOS-VL-WORKFLOWS",
+        "EOS-VL-DECISION-ORCHESTRATION",
+        "EOS-VL-AGENTS",
+        "EOS-VL-GOVERNANCE",
+        "EOS-VL-VALUATION",
+        "EOS-VL-SECOND-BALANCE-SHEET"
+      ],
+      "telemetryIds": [
+        "TEL-OIL-HEALTH",
+        "TEL-OIL-PRODUCTION",
+        "TEL-OIL-SAFETY",
+        "TEL-OIL-VALUE",
+        "TEL-OIL-FEEDS"
+      ],
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 76,
+        "progress": 28,
+        "summary": "Oil & Gas Enterprise Home is a demonstration visual twin for industry-specific monitoring.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Use as a visual demonstration until real enterprise onboarding begins.",
+        "availableActions": [
+          "Review Enterprise Home",
+          "Review Asset Map",
+          "Review Generation Workflow"
+        ]
+      }
+    }
+  ]
+}

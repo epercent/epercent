@@ -1,0 +1,267 @@
+{
+  "collectionName": "enterprise-visuals",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:48:40.787Z",
+  "recordCount": 2,
+  "source": "seed:enterprise-visuals",
+  "records": [
+    {
+      "id": "EVIS-EPERCENT-001",
+      "enterpriseId": "DTA-EPERCENT-001",
+      "name": "ePercent Enterprise Digital Twin",
+      "industry": "AI-Native Enterprise",
+      "enterpriseType": "Reference Enterprise",
+      "visualTheme": "dark-teal-command",
+      "logoUrl": "",
+      "brandColor": "#20c997",
+      "timezone": "Africa/Lagos",
+      "lastUpdated": "2026-07-03T21:50:00.000Z",
+      "primaryAssets": [
+        "EOS Platform",
+        "Mission Control",
+        "Executive AI Workforce",
+        "KIPR",
+        "Second Balance Sheet",
+        "Digital Twin Asset Portfolio"
+      ],
+      "systems": [
+        {
+          "id": "EP-SYS-MC",
+          "name": "Mission Control",
+          "status": "Operational",
+          "healthScore": 92
+        },
+        {
+          "id": "EP-SYS-CORE",
+          "name": "EOS Core API",
+          "status": "Operational",
+          "healthScore": 94
+        },
+        {
+          "id": "EP-SYS-KIPR",
+          "name": "KIPR",
+          "status": "Foundation",
+          "healthScore": 78
+        },
+        {
+          "id": "EP-SYS-PMO",
+          "name": "PMO / Master Roadmap",
+          "status": "Operational",
+          "healthScore": 86
+        },
+        {
+          "id": "EP-SYS-BACKUP",
+          "name": "Backup & Recovery",
+          "status": "Amber",
+          "healthScore": 82
+        }
+      ],
+      "dataFeeds": [
+        {
+          "id": "EP-FEED-STATUS",
+          "name": "EOS API Status",
+          "status": "Simulated Live",
+          "cadence": "On demand"
+        },
+        {
+          "id": "EP-FEED-STORAGE",
+          "name": "Persistent Storage Health",
+          "status": "Simulated Live",
+          "cadence": "On demand"
+        },
+        {
+          "id": "EP-FEED-BACKUP",
+          "name": "Backup Metadata",
+          "status": "Simulated Live",
+          "cadence": "On backup"
+        },
+        {
+          "id": "EP-FEED-ROADMAP",
+          "name": "PMO Roadmap State",
+          "status": "Simulated Live",
+          "cadence": "On change"
+        }
+      ],
+      "agents": [
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATLAS"
+      ],
+      "humanInteractionPoints": [
+        "Approve strategic narrative before investor use",
+        "Validate restore before operational confidence is Green",
+        "Review DTA lifecycle readiness",
+        "Approve valuation assumptions"
+      ],
+      "riskAreas": [
+        {
+          "id": "EP-RISK-RESTORE",
+          "name": "Restore validation pending",
+          "riskScore": 42,
+          "status": "Action Recommended"
+        },
+        {
+          "id": "EP-RISK-VALUATION",
+          "name": "Internal valuation assumptions unapproved",
+          "riskScore": 58,
+          "status": "Requires Review"
+        }
+      ],
+      "valuationSummary": {
+        "currency": "USD",
+        "totalEstimatedValue": 2500000,
+        "confidence": "Low",
+        "basis": "Internal EOS estimate only. Not financial advice. Not an audited valuation."
+      },
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 88,
+        "progress": 52,
+        "summary": "ePercent is represented as the first live AI-native enterprise running on EOS.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review strategic alignment, backup validation, and DTA lifecycle readiness.",
+        "availableActions": [
+          "Open Enterprise Home",
+          "Review Digital Twin Structure",
+          "Review Human Approval Points"
+        ]
+      }
+    },
+    {
+      "id": "EVIS-OIL-001",
+      "enterpriseId": "DTA-OIL-001",
+      "name": "Example Oil & Gas Enterprise",
+      "industry": "Oil & Gas",
+      "enterpriseType": "Industry Demonstration Enterprise",
+      "visualTheme": "dark-industrial-amber",
+      "logoUrl": "",
+      "brandColor": "#f59e0b",
+      "timezone": "Africa/Lagos",
+      "lastUpdated": "2026-07-03T21:50:00.000Z",
+      "primaryAssets": [
+        "Headquarters",
+        "Offshore Rigs",
+        "FPSO / Ships",
+        "Pipelines",
+        "Storage Facilities",
+        "Wells",
+        "Data Feeds",
+        "Safety Systems",
+        "Production Systems",
+        "Commercial Systems"
+      ],
+      "systems": [
+        {
+          "id": "OIL-SYS-SAFETY",
+          "name": "Safety Systems",
+          "status": "Monitoring",
+          "healthScore": 84
+        },
+        {
+          "id": "OIL-SYS-PRODUCTION",
+          "name": "Production Systems",
+          "status": "Monitoring",
+          "healthScore": 81
+        },
+        {
+          "id": "OIL-SYS-COMMERCIAL",
+          "name": "Commercial Systems",
+          "status": "Pending Integration",
+          "healthScore": 68
+        },
+        {
+          "id": "OIL-SYS-FEEDS",
+          "name": "Data Feeds",
+          "status": "Simulated",
+          "healthScore": 72
+        },
+        {
+          "id": "OIL-SYS-GOVERNANCE",
+          "name": "Governance Control Points",
+          "status": "Review Required",
+          "healthScore": 76
+        }
+      ],
+      "dataFeeds": [
+        {
+          "id": "OIL-FEED-PRODUCTION",
+          "name": "Production Output",
+          "status": "Simulated",
+          "cadence": "15 minutes"
+        },
+        {
+          "id": "OIL-FEED-SAFETY",
+          "name": "Safety Events",
+          "status": "Simulated",
+          "cadence": "5 minutes"
+        },
+        {
+          "id": "OIL-FEED-PIPELINE",
+          "name": "Pipeline Pressure",
+          "status": "Simulated",
+          "cadence": "1 minute"
+        },
+        {
+          "id": "OIL-FEED-COMMERCIAL",
+          "name": "Commercial Output",
+          "status": "Simulated",
+          "cadence": "Daily"
+        }
+      ],
+      "agents": [
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN",
+        "EOS-AGENT-MERCURY"
+      ],
+      "humanInteractionPoints": [
+        "Approve safety escalation workflow",
+        "Review production anomaly alerts",
+        "Approve asset valuation assumptions",
+        "Review commercial readiness score"
+      ],
+      "riskAreas": [
+        {
+          "id": "OIL-RISK-SAFETY",
+          "name": "Safety workflow requires enterprise validation",
+          "riskScore": 64,
+          "status": "Requires Review"
+        },
+        {
+          "id": "OIL-RISK-FEEDS",
+          "name": "Data feeds are simulated only",
+          "riskScore": 52,
+          "status": "Pending Integration"
+        }
+      ],
+      "valuationSummary": {
+        "currency": "USD",
+        "totalEstimatedValue": 1250000,
+        "confidence": "Conceptual",
+        "basis": "Internal EOS estimate only. Not financial advice. Not an audited valuation."
+      },
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 76,
+        "progress": 28,
+        "summary": "Oil & Gas enterprise visual model is seeded as an industry demonstration twin.",
+        "lastActivity": "2026-07-03T21:50:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Use as a demonstration model until real enterprise onboarding data is approved.",
+        "availableActions": [
+          "Open Enterprise Home",
+          "Review Asset Map",
+          "Review Data Feed Plan"
+        ]
+      }
+    }
+  ]
+}

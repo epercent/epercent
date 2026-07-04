@@ -1,0 +1,43 @@
+{
+  "collectionName": "digital-enterprise-headquarters",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T17:44:07.248Z",
+  "recordCount": 1,
+  "source": "seed:digital-enterprise-headquarters",
+  "records": [
+    {
+      "id": "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+      "name": "EOS Digital Enterprise Headquarters",
+      "owner": "Eric Olo",
+      "status": "Operational",
+      "purpose": "Provide the executive operating surface for the AI-native enterprise.",
+      "currentViews": [
+        "CEO Cockpit",
+        "Executive Council",
+        "Executive Action Governance",
+        "Executive Offices",
+        "PMO View",
+        "Portfolio Mode",
+        "Operational Mode"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Building",
+        "healthScore": 84,
+        "progress": 41,
+        "summary": "Digital Enterprise Headquarters foundation is active in Mission Control.",
+        "lastActivity": "2026-07-03T17:05:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Use action governance to review approvals while execution remains disabled.",
+        "availableActions": [
+          "Open Headquarters",
+          "Review Council",
+          "Review actions",
+          "Open PMO View"
+        ]
+      }
+    }
+  ]
+}

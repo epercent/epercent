@@ -1,0 +1,732 @@
+{
+  "collectionName": "assimilation-pipelines",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.905Z",
+  "recordCount": 3,
+  "source": "seed:assimilation-pipelines",
+  "records": [
+    {
+      "id": "EOS-PIPE-OIL-001",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "status": "Running",
+      "currentStage": "Digital Mirror Creation",
+      "progress": 58,
+      "stages": [
+        {
+          "stageId": "STAGE-01",
+          "name": "Enterprise Intake",
+          "description": "Enterprise Intake stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Enterprise name",
+            "Industry",
+            "Known assets",
+            "Known systems"
+          ],
+          "outputs": [
+            "Initial enterprise profile"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Confirm source scope before classification."
+        },
+        {
+          "stageId": "STAGE-02",
+          "name": "Source Classification",
+          "description": "Source Classification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Source documents",
+            "Source systems",
+            "Repository links"
+          ],
+          "outputs": [
+            "Classified source inventory"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Unlinked external repositories may delay extraction"
+          ],
+          "recommendedAction": "Classify remaining source material before extraction."
+        },
+        {
+          "stageId": "STAGE-03",
+          "name": "Enterprise Object Extraction",
+          "description": "Enterprise Object Extraction stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Classified sources"
+          ],
+          "outputs": [
+            "Candidate Enterprise Objects"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Extraction is currently structured and seeded, not AI-generated"
+          ],
+          "recommendedAction": "Validate extracted object candidates with enterprise owners."
+        },
+        {
+          "stageId": "STAGE-04",
+          "name": "Relationship Mapping",
+          "description": "Relationship Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Candidate Enterprise Objects",
+            "Known relationships"
+          ],
+          "outputs": [
+            "Relationship map"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review asset, system, process, and people relationships."
+        },
+        {
+          "stageId": "STAGE-05",
+          "name": "Digital Mirror Creation",
+          "description": "Digital Mirror Creation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "In Progress",
+          "progress": 66,
+          "requiredInputs": [
+            "Object map",
+            "Relationship map",
+            "Systems map"
+          ],
+          "outputs": [
+            "Digital Mirror"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [
+            "Mirror confidence requires human validation"
+          ],
+          "recommendedAction": "Review the Digital Mirror and confirm missing relationships."
+        },
+        {
+          "stageId": "STAGE-06",
+          "name": "DTA Candidate Identification",
+          "description": "DTA Candidate Identification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Pending Assessment",
+          "progress": 35,
+          "requiredInputs": [
+            "Digital Mirror",
+            "Value drivers",
+            "Operational assets"
+          ],
+          "outputs": [
+            "DTA candidate list"
+          ],
+          "ownerAgent": "EOS-AGENT-MERCURY",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Prioritize DTA candidates by value potential and data readiness."
+        },
+        {
+          "stageId": "STAGE-07",
+          "name": "Data Feed Requirement Mapping",
+          "description": "Data Feed Requirement Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Pending Assessment",
+          "progress": 30,
+          "requiredInputs": [
+            "DTA candidates",
+            "System inventory"
+          ],
+          "outputs": [
+            "Data feed requirements"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Real-time feeds are not connected yet"
+          ],
+          "recommendedAction": "Confirm required fields, cadence, quality, and fallback owners."
+        },
+        {
+          "stageId": "STAGE-08",
+          "name": "Agent Assignment",
+          "description": "Agent Assignment stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Defined",
+          "progress": 72,
+          "requiredInputs": [
+            "DTA candidates",
+            "Workflow scope"
+          ],
+          "outputs": [
+            "Agent assignment plan"
+          ],
+          "ownerAgent": "EOS-AGENT-CODEX",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review assigned agents and integration responsibilities."
+        },
+        {
+          "stageId": "STAGE-09",
+          "name": "Human Validation",
+          "description": "Human Validation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Awaiting Review",
+          "progress": 35,
+          "requiredInputs": [
+            "Validation checklist",
+            "Approval owners"
+          ],
+          "outputs": [
+            "Validated enterprise structure"
+          ],
+          "ownerAgent": "EOS-AGENT-VULCAN",
+          "humanApprovalRequired": true,
+          "risks": [
+            "DTA formation is blocked until validation is complete"
+          ],
+          "recommendedAction": "Complete the human validation checklist."
+        },
+        {
+          "stageId": "STAGE-10",
+          "name": "DTA Formation",
+          "description": "DTA Formation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Validated structure",
+            "Approved DTA candidates"
+          ],
+          "outputs": [
+            "Governed Digital Twin Assets"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [],
+          "recommendedAction": "Prepare formation package after validation."
+        },
+        {
+          "stageId": "STAGE-11",
+          "name": "Monitoring & Valuation",
+          "description": "Monitoring & Valuation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Formed DTA",
+            "Data feeds",
+            "Valuation assumptions"
+          ],
+          "outputs": [
+            "Monitoring and valuation readiness"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Enable monitoring and valuation only after DTA formation."
+        }
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 82,
+        "progress": 58,
+        "summary": "Example Oil & Gas Enterprise onboarding pipeline is structured and awaiting human validation before DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review Digital Mirror confidence, DTA candidates, feed requirements, and validation gates.",
+        "availableActions": [
+          "Review Pipeline",
+          "Review Digital Mirror",
+          "Review DTA Candidates",
+          "Review Human Validation"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PIPE-EPERCENT-001",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "status": "Running",
+      "currentStage": "Human Validation",
+      "progress": 61,
+      "stages": [
+        {
+          "stageId": "STAGE-01",
+          "name": "Enterprise Intake",
+          "description": "Enterprise Intake stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Enterprise name",
+            "Industry",
+            "Known assets",
+            "Known systems"
+          ],
+          "outputs": [
+            "Initial enterprise profile"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Confirm source scope before classification."
+        },
+        {
+          "stageId": "STAGE-02",
+          "name": "Source Classification",
+          "description": "Source Classification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Source documents",
+            "Source systems",
+            "Repository links"
+          ],
+          "outputs": [
+            "Classified source inventory"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Unlinked external repositories may delay extraction"
+          ],
+          "recommendedAction": "Classify remaining source material before extraction."
+        },
+        {
+          "stageId": "STAGE-03",
+          "name": "Enterprise Object Extraction",
+          "description": "Enterprise Object Extraction stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Classified sources"
+          ],
+          "outputs": [
+            "Candidate Enterprise Objects"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Extraction is currently structured and seeded, not AI-generated"
+          ],
+          "recommendedAction": "Validate extracted object candidates with enterprise owners."
+        },
+        {
+          "stageId": "STAGE-04",
+          "name": "Relationship Mapping",
+          "description": "Relationship Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Candidate Enterprise Objects",
+            "Known relationships"
+          ],
+          "outputs": [
+            "Relationship map"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review asset, system, process, and people relationships."
+        },
+        {
+          "stageId": "STAGE-05",
+          "name": "Digital Mirror Creation",
+          "description": "Digital Mirror Creation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Object map",
+            "Relationship map",
+            "Systems map"
+          ],
+          "outputs": [
+            "Digital Mirror"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [
+            "Mirror confidence requires human validation"
+          ],
+          "recommendedAction": "Review the Digital Mirror and confirm missing relationships."
+        },
+        {
+          "stageId": "STAGE-06",
+          "name": "DTA Candidate Identification",
+          "description": "DTA Candidate Identification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Pending Assessment",
+          "progress": 35,
+          "requiredInputs": [
+            "Digital Mirror",
+            "Value drivers",
+            "Operational assets"
+          ],
+          "outputs": [
+            "DTA candidate list"
+          ],
+          "ownerAgent": "EOS-AGENT-MERCURY",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Prioritize DTA candidates by value potential and data readiness."
+        },
+        {
+          "stageId": "STAGE-07",
+          "name": "Data Feed Requirement Mapping",
+          "description": "Data Feed Requirement Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Pending Assessment",
+          "progress": 30,
+          "requiredInputs": [
+            "DTA candidates",
+            "System inventory"
+          ],
+          "outputs": [
+            "Data feed requirements"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Real-time feeds are not connected yet"
+          ],
+          "recommendedAction": "Confirm required fields, cadence, quality, and fallback owners."
+        },
+        {
+          "stageId": "STAGE-08",
+          "name": "Agent Assignment",
+          "description": "Agent Assignment stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Defined",
+          "progress": 72,
+          "requiredInputs": [
+            "DTA candidates",
+            "Workflow scope"
+          ],
+          "outputs": [
+            "Agent assignment plan"
+          ],
+          "ownerAgent": "EOS-AGENT-CODEX",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review assigned agents and integration responsibilities."
+        },
+        {
+          "stageId": "STAGE-09",
+          "name": "Human Validation",
+          "description": "Human Validation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Awaiting Review",
+          "progress": 35,
+          "requiredInputs": [
+            "Validation checklist",
+            "Approval owners"
+          ],
+          "outputs": [
+            "Validated enterprise structure"
+          ],
+          "ownerAgent": "EOS-AGENT-VULCAN",
+          "humanApprovalRequired": true,
+          "risks": [
+            "DTA formation is blocked until validation is complete"
+          ],
+          "recommendedAction": "Complete the human validation checklist."
+        },
+        {
+          "stageId": "STAGE-10",
+          "name": "DTA Formation",
+          "description": "DTA Formation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Validated structure",
+            "Approved DTA candidates"
+          ],
+          "outputs": [
+            "Governed Digital Twin Assets"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [],
+          "recommendedAction": "Prepare formation package after validation."
+        },
+        {
+          "stageId": "STAGE-11",
+          "name": "Monitoring & Valuation",
+          "description": "Monitoring & Valuation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Formed DTA",
+            "Data feeds",
+            "Valuation assumptions"
+          ],
+          "outputs": [
+            "Monitoring and valuation readiness"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Enable monitoring and valuation only after DTA formation."
+        }
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 82,
+        "progress": 61,
+        "summary": "ePercent onboarding pipeline is structured and awaiting human validation before DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review Digital Mirror confidence, DTA candidates, feed requirements, and validation gates.",
+        "availableActions": [
+          "Review Pipeline",
+          "Review Digital Mirror",
+          "Review DTA Candidates",
+          "Review Human Validation"
+        ]
+      }
+    },
+    {
+      "id": "EOS-PIPE-EOS-001",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "status": "Running",
+      "currentStage": "Human Validation",
+      "progress": 67,
+      "stages": [
+        {
+          "stageId": "STAGE-01",
+          "name": "Enterprise Intake",
+          "description": "Enterprise Intake stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Enterprise name",
+            "Industry",
+            "Known assets",
+            "Known systems"
+          ],
+          "outputs": [
+            "Initial enterprise profile"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Confirm source scope before classification."
+        },
+        {
+          "stageId": "STAGE-02",
+          "name": "Source Classification",
+          "description": "Source Classification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Source documents",
+            "Source systems",
+            "Repository links"
+          ],
+          "outputs": [
+            "Classified source inventory"
+          ],
+          "ownerAgent": "EOS-AGENT-HERMES",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Unlinked external repositories may delay extraction"
+          ],
+          "recommendedAction": "Classify remaining source material before extraction."
+        },
+        {
+          "stageId": "STAGE-03",
+          "name": "Enterprise Object Extraction",
+          "description": "Enterprise Object Extraction stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Classified sources"
+          ],
+          "outputs": [
+            "Candidate Enterprise Objects"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Extraction is currently structured and seeded, not AI-generated"
+          ],
+          "recommendedAction": "Validate extracted object candidates with enterprise owners."
+        },
+        {
+          "stageId": "STAGE-04",
+          "name": "Relationship Mapping",
+          "description": "Relationship Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Candidate Enterprise Objects",
+            "Known relationships"
+          ],
+          "outputs": [
+            "Relationship map"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review asset, system, process, and people relationships."
+        },
+        {
+          "stageId": "STAGE-05",
+          "name": "Digital Mirror Creation",
+          "description": "Digital Mirror Creation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Object map",
+            "Relationship map",
+            "Systems map"
+          ],
+          "outputs": [
+            "Digital Mirror"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [
+            "Mirror confidence requires human validation"
+          ],
+          "recommendedAction": "Review the Digital Mirror and confirm missing relationships."
+        },
+        {
+          "stageId": "STAGE-06",
+          "name": "DTA Candidate Identification",
+          "description": "DTA Candidate Identification stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Completed",
+          "progress": 100,
+          "requiredInputs": [
+            "Digital Mirror",
+            "Value drivers",
+            "Operational assets"
+          ],
+          "outputs": [
+            "DTA candidate list"
+          ],
+          "ownerAgent": "EOS-AGENT-MERCURY",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Prioritize DTA candidates by value potential and data readiness."
+        },
+        {
+          "stageId": "STAGE-07",
+          "name": "Data Feed Requirement Mapping",
+          "description": "Data Feed Requirement Mapping stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Pending Assessment",
+          "progress": 30,
+          "requiredInputs": [
+            "DTA candidates",
+            "System inventory"
+          ],
+          "outputs": [
+            "Data feed requirements"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [
+            "Real-time feeds are not connected yet"
+          ],
+          "recommendedAction": "Confirm required fields, cadence, quality, and fallback owners."
+        },
+        {
+          "stageId": "STAGE-08",
+          "name": "Agent Assignment",
+          "description": "Agent Assignment stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Defined",
+          "progress": 72,
+          "requiredInputs": [
+            "DTA candidates",
+            "Workflow scope"
+          ],
+          "outputs": [
+            "Agent assignment plan"
+          ],
+          "ownerAgent": "EOS-AGENT-CODEX",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Review assigned agents and integration responsibilities."
+        },
+        {
+          "stageId": "STAGE-09",
+          "name": "Human Validation",
+          "description": "Human Validation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Awaiting Review",
+          "progress": 35,
+          "requiredInputs": [
+            "Validation checklist",
+            "Approval owners"
+          ],
+          "outputs": [
+            "Validated enterprise structure"
+          ],
+          "ownerAgent": "EOS-AGENT-VULCAN",
+          "humanApprovalRequired": true,
+          "risks": [
+            "DTA formation is blocked until validation is complete"
+          ],
+          "recommendedAction": "Complete the human validation checklist."
+        },
+        {
+          "stageId": "STAGE-10",
+          "name": "DTA Formation",
+          "description": "DTA Formation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Validated structure",
+            "Approved DTA candidates"
+          ],
+          "outputs": [
+            "Governed Digital Twin Assets"
+          ],
+          "ownerAgent": "EOS-AGENT-ATLAS",
+          "humanApprovalRequired": true,
+          "risks": [],
+          "recommendedAction": "Prepare formation package after validation."
+        },
+        {
+          "stageId": "STAGE-11",
+          "name": "Monitoring & Valuation",
+          "description": "Monitoring & Valuation stage in the EOS enterprise onboarding and DTA assimilation pipeline.",
+          "status": "Not Started",
+          "progress": 0,
+          "requiredInputs": [
+            "Formed DTA",
+            "Data feeds",
+            "Valuation assumptions"
+          ],
+          "outputs": [
+            "Monitoring and valuation readiness"
+          ],
+          "ownerAgent": "EOS-AGENT-ARGUS",
+          "humanApprovalRequired": false,
+          "risks": [],
+          "recommendedAction": "Enable monitoring and valuation only after DTA formation."
+        }
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 82,
+        "progress": 67,
+        "summary": "EOS Platform onboarding pipeline is structured and awaiting human validation before DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review Digital Mirror confidence, DTA candidates, feed requirements, and validation gates.",
+        "availableActions": [
+          "Review Pipeline",
+          "Review Digital Mirror",
+          "Review DTA Candidates",
+          "Review Human Validation"
+        ]
+      }
+    }
+  ]
+}

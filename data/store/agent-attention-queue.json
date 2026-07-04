@@ -1,0 +1,69 @@
+{
+  "collectionName": "agent-attention-queue",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:01:08.153Z",
+  "recordCount": 3,
+  "source": "seed:agent-attention-queue; refreshed:seed:agent-attention-queue",
+  "records": [
+    {
+      "id": "EOS-ATTENTION-RESTORE-VALIDATION",
+      "sourceAgent": "Argus",
+      "title": "Restore validation required",
+      "reason": "Backups are current, but restore validation is still pending.",
+      "priority": "High",
+      "attentionLevel": "Medium",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "dueAt": "2026-07-04T12:00:00.000Z",
+      "estimatedReviewTime": "8 minutes",
+      "recommendedAction": "Run restore validation before enabling cloud backup synchronization.",
+      "availableActions": [
+        "Review Backup Status",
+        "Validate Restore",
+        "Request Operations Review"
+      ],
+      "linkedObject": "EOS-PLATFORM-ADMINISTRATION-CENTER",
+      "linkedWorkflow": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE"
+    },
+    {
+      "id": "EOS-ATTENTION-ACTION-GOVERNANCE",
+      "sourceAgent": "Atlas",
+      "title": "Governed admin actions require approval policy",
+      "reason": "Stop, restart, restore, upgrade, and scaling actions must remain disabled until authorization is complete.",
+      "priority": "High",
+      "attentionLevel": "High",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "dueAt": "2026-07-04T14:00:00.000Z",
+      "estimatedReviewTime": "12 minutes",
+      "recommendedAction": "Review authorization policies before enabling any destructive execution.",
+      "availableActions": [
+        "Review Policies",
+        "Review Audit Trail",
+        "Escalate To CTO"
+      ],
+      "linkedObject": "EOS-ACTION-GOVERNANCE",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION"
+    },
+    {
+      "id": "EOS-ATTENTION-ATHENA-RESEARCH",
+      "sourceAgent": "Athena",
+      "title": "Research narrative review recommended",
+      "reason": "AI Workforce Operations creates publishable framing for AI-native enterprise headquarters.",
+      "priority": "Medium",
+      "attentionLevel": "Low",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "dueAt": "2026-07-05T10:00:00.000Z",
+      "estimatedReviewTime": "10 minutes",
+      "recommendedAction": "Review research framing for investor and publication use.",
+      "availableActions": [
+        "Review Research Portfolio",
+        "Create Investor Brief",
+        "Request White Paper Outline"
+      ],
+      "linkedObject": "RP-004",
+      "linkedWorkflow": "EOS-WF-RESEARCH-PUBLICATION"
+    }
+  ]
+}

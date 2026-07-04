@@ -128,8 +128,8 @@ await writeFile(
   `${JSON.stringify(
     {
       ...backupStatus,
-      lastRestore: confirmed && report.status === 'Completed' ? report.timestamp : backupStatus.lastRestore ?? null,
-      backupStatus: backupStatus.backupStatus ?? 'Unknown'
+      latestRestoreValidationStatus: checksumValid ? 'Validated' : 'Failed',
+      lastUpdated: new Date().toISOString()
     },
     null,
     2

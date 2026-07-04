@@ -1,0 +1,23 @@
+{
+  "collectionName": "backup-status",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:31:56.066Z",
+  "recordCount": 1,
+  "source": "file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json; refreshed:file:backups/backup-status.json",
+  "records": [
+    {
+      "id": "EOS-BACKUP-STATUS",
+      "latestBackupTimestamp": "2026-07-04_013150",
+      "latestBackupLocalTime": "7/4/2026, 1:31:50 AM",
+      "latestBackupVersion": "0.25.0",
+      "latestBackupArchive": "EOS_v0.25.0_2026-07-04_013150.zip",
+      "latestBackupSize": 15567543,
+      "latestBackupChecksum": "3b7a6e853be8cfcdb795fae2ffd2b886a4a2a7b00e5917cea45e751e82931e84",
+      "latestBackupStatus": "Completed",
+      "latestBackupDataIncluded": true,
+      "latestRestoreValidationStatus": "Not validated",
+      "backupCount": 51,
+      "lastUpdated": "2026-07-04T00:31:51.346Z"
+    }
+  ]
+}

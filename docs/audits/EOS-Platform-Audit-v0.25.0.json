@@ -1,0 +1,1256 @@
+{
+  "capability": "EOS-CAP-0033",
+  "auditId": "EOS-AUDIT-READINESS-001",
+  "auditName": "EOS Platform Audit & Capability Readiness Report",
+  "auditVersion": "0.25.0",
+  "generatedAt": "2026-07-04T00:31:44.583Z",
+  "owner": "Codex",
+  "status": "Operational",
+  "summary": {
+    "overallStatus": "Operational Foundation",
+    "capabilitiesAudited": 25,
+    "fullyFunctional": 7,
+    "operationalFoundations": 13,
+    "displayOnly": 3,
+    "partial": 2,
+    "placeholders": 0,
+    "broken": 0,
+    "notStarted": 0,
+    "apiGroupsAudited": 13,
+    "frontendWorkspacesAudited": 8,
+    "enterpriseObjects": 140,
+    "agents": 7,
+    "knowledgeObjects": 4,
+    "workflows": 33,
+    "events": 124,
+    "storageCollections": 53,
+    "storageWarnings": 0,
+    "alphaReadiness": 68,
+    "betaReadiness": 42,
+    "versionOneReadiness": 16,
+    "topRisk": "EOS has broad local read and display capability, but production readiness depends on governed writes, restore validation, security, connectors, and executable workflows.",
+    "recommendedNextProgram": "Enterprise Data Ingestion & Governed Execution Foundation",
+    "recommendedNextAction": "Build Data Source Connector Framework, then AI Extraction & Enterprise Object Generation, then Persistent Write API & Governance Audit Ledger."
+  },
+  "statusTaxonomy": [
+    {
+      "status": "Fully Functional",
+      "meaning": "Implemented, exposed through API or UI, covered by automated verification, and currently usable for its intended local scope."
+    },
+    {
+      "status": "Operational Foundation",
+      "meaning": "Core model, data, API, UI, and verification exist, but production execution, external integrations, or governance depth remain incomplete."
+    },
+    {
+      "status": "Display Only",
+      "meaning": "Visible to executives, but actions are intentionally non-executable until permissions, persistence, or external systems are added."
+    },
+    {
+      "status": "Partial",
+      "meaning": "A usable foundation exists, but important workflow, extraction, persistence, UX, or verification gaps remain."
+    },
+    {
+      "status": "Placeholder",
+      "meaning": "Reserved in the product experience or data model, with no substantive operational behavior yet."
+    },
+    {
+      "status": "Broken",
+      "meaning": "A surface exists but is known to fail verification or core user flow checks."
+    },
+    {
+      "status": "Not Started",
+      "meaning": "Identified as required future work but not implemented in the platform."
+    }
+  ],
+  "capabilityReadinessMatrix": [
+    {
+      "id": "EOS-CAP-0003",
+      "name": "Enterprise Object Registry",
+      "domain": "Core",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Read registry, lookup by id, live status decoration, persistence-backed seed refresh.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible in Development / Capabilities",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for internal Alpha demonstrations",
+      "remainingWork": [
+        "Governed write API",
+        "schema validation",
+        "relationship graph tooling"
+      ],
+      "recommendedNextStep": "Add governed object creation and audit ledger before external enterprise onboarding writes."
+    },
+    {
+      "id": "EOS-CAP-0005",
+      "name": "EOS Agent Service",
+      "domain": "AI Workforce",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Seeded executive agent registry with API lookup and Mission Control display.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible in AI Workforce",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for internal Alpha demonstrations",
+      "remainingWork": [
+        "Agent execution runtime",
+        "performance ledger",
+        "hiring and cloning workflow"
+      ],
+      "recommendedNextStep": "Build Agent Performance & Rewards after temporary agent creation is defined."
+    },
+    {
+      "id": "EOS-CAP-0006",
+      "name": "Knowledge Service",
+      "domain": "Knowledge",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Seeded knowledge registry and read APIs.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible through KIPR and Knowledge Vault",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for Alpha knowledge demonstrations",
+      "remainingWork": [
+        "Knowledge ingestion workflow",
+        "source citation model",
+        "document versioning"
+      ],
+      "recommendedNextStep": "Connect organization intake outputs to KIPR records through governed writes."
+    },
+    {
+      "id": "EOS-CAP-0007",
+      "name": "Workflow Engine",
+      "domain": "Core",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Seeded workflow registry with emitted events and API lookup.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible across workflow-linked views",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready as a coordination model",
+      "remainingWork": [
+        "Executable workflow runner",
+        "workflow state transitions",
+        "approval-driven execution"
+      ],
+      "recommendedNextStep": "Add persistent write API and governance audit ledger before real workflow execution."
+    },
+    {
+      "id": "EOS-CAP-0008",
+      "name": "EOS Development Foundation",
+      "domain": "Engineering",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Root workspace scripts for start, stop, status, test, build, lint, bootstrap, and docs.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible through Platform and Development context",
+      "persistenceStatus": "Not required",
+      "verificationStatus": "Automated root scripts",
+      "executiveReadiness": "Ready for internal development",
+      "remainingWork": [
+        "Containerized setup",
+        "CI pipeline",
+        "environment profiles"
+      ],
+      "recommendedNextStep": "Add GitHub and cloud sync execution when external repositories are approved."
+    },
+    {
+      "id": "EOS-CAP-0009",
+      "name": "Backup & Recovery Foundation",
+      "domain": "Platform",
+      "functionalStatus": "Partial",
+      "implementationDepth": "Local archive creation, checksums, backup log, backup status, and restore script foundation.",
+      "backendStatus": "Implemented through scripts and status reporting",
+      "frontendStatus": "Visible through Platform Administration and Backups foundation",
+      "persistenceStatus": "Metadata persisted",
+      "verificationStatus": "Automated backup status check",
+      "executiveReadiness": "Requires restore validation before production confidence",
+      "remainingWork": [
+        "Automated restore validation",
+        "scheduled backups",
+        "cloud sync",
+        "restore drill reports"
+      ],
+      "recommendedNextStep": "Run validated restore drills before cloud backup automation."
+    },
+    {
+      "id": "EOS-CAP-0010",
+      "name": "Source Control & Release Management",
+      "domain": "Engineering",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Local Git status, release script, release manifest, notes, backup integration, and tag script.",
+      "backendStatus": "Implemented through scripts and docs",
+      "frontendStatus": "Visible through Releases foundation",
+      "persistenceStatus": "Release metadata persisted in docs",
+      "verificationStatus": "Automated release verification path",
+      "executiveReadiness": "Ready for local release discipline",
+      "remainingWork": [
+        "Remote GitHub integration",
+        "branch protection",
+        "CI release artifacts"
+      ],
+      "recommendedNextStep": "Implement GitHub / Cloud Sync Execution after restore validation confidence improves."
+    },
+    {
+      "id": "EOS-CAP-0012",
+      "name": "GitHub Readiness Assessment",
+      "domain": "Engineering",
+      "functionalStatus": "Display Only",
+      "implementationDepth": "Local readiness report and repository checklist.",
+      "backendStatus": "Documented",
+      "frontendStatus": "Represented through Development foundations",
+      "persistenceStatus": "Documented",
+      "verificationStatus": "Documentation and registry verification",
+      "executiveReadiness": "Ready for planning, not synchronization",
+      "remainingWork": [
+        "Create remote repository",
+        "add remote",
+        "push",
+        "branch protections"
+      ],
+      "recommendedNextStep": "Execute GitHub integration when approved."
+    },
+    {
+      "id": "EOS-CAP-0013",
+      "name": "Google Drive Backup Preparation",
+      "domain": "Platform",
+      "functionalStatus": "Display Only",
+      "implementationDepth": "Credential-free configuration template and readiness checks.",
+      "backendStatus": "Scripted configuration validation",
+      "frontendStatus": "Represented through backup/platform status",
+      "persistenceStatus": "Configuration template only",
+      "verificationStatus": "Automated local config test",
+      "executiveReadiness": "Ready for planning, not cloud sync",
+      "remainingWork": [
+        "OAuth authorization",
+        "folder creation",
+        "upload/download sync",
+        "encryption policy"
+      ],
+      "recommendedNextStep": "Add cloud sync only after credential governance is approved."
+    },
+    {
+      "id": "EOS-CAP-0014",
+      "name": "Live Object Status Layer",
+      "domain": "Enterprise Objects",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Live status interface applied across Enterprise Objects and surfaced in Mission Control.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible in object and portfolio displays",
+      "persistenceStatus": "Persistent through object registry",
+      "verificationStatus": "Automated live status validation",
+      "executiveReadiness": "Ready for Alpha operations",
+      "remainingWork": [
+        "Automated status update engine",
+        "threshold policies",
+        "action execution links"
+      ],
+      "recommendedNextStep": "Connect live status updates to operational events and governance actions."
+    },
+    {
+      "id": "EOS-CAP-0015",
+      "name": "Agent Knowledge Repository",
+      "domain": "Knowledge",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Agent-owned repositories, research project seeds, and Knowledge Object APIs.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible in KIPR and Knowledge Vault",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for research portfolio demonstrations",
+      "remainingWork": [
+        "Document authoring workflow",
+        "source ingestion",
+        "publication lifecycle execution"
+      ],
+      "recommendedNextStep": "Link organization intake imports to knowledge asset candidates."
+    },
+    {
+      "id": "EOS-CAP-0016",
+      "name": "Knowledge Asset Viewer & Status Refinement",
+      "domain": "Knowledge",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Knowledge asset detail view, preview content, status refinements, and display-only actions.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent through AKR collections",
+      "verificationStatus": "Automated endpoint and build checks",
+      "executiveReadiness": "Ready for investor and research demos",
+      "remainingWork": [
+        "Executable content generation actions",
+        "review workflow",
+        "document export"
+      ],
+      "recommendedNextStep": "Add governed content generation and publication review queue."
+    },
+    {
+      "id": "EOS-CAP-0020",
+      "name": "Program Management Office & Master Roadmap",
+      "domain": "Enterprise",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "PMO, Master Roadmap, programs, milestones, capability references, and Mission Control PMO view.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for roadmap governance",
+      "remainingWork": [
+        "Milestone write workflow",
+        "dependency graph execution",
+        "sprint planning persistence"
+      ],
+      "recommendedNextStep": "Add roadmap write governance and dependency health scoring."
+    },
+    {
+      "id": "EOS-CAP-0021",
+      "name": "Executive Council & Digital Enterprise Headquarters",
+      "domain": "Headquarters",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Executive Council model, CEO cockpit, executive profiles, Mission Control view.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for executive demos",
+      "remainingWork": [
+        "Real executive communications",
+        "calendar integration",
+        "decision workflow execution"
+      ],
+      "recommendedNextStep": "Connect executive approvals to persistent write and audit ledger."
+    },
+    {
+      "id": "EOS-CAP-0022",
+      "name": "Executive Action & Office Framework",
+      "domain": "Headquarters",
+      "functionalStatus": "Display Only",
+      "implementationDepth": "Governed action registry, approval status, audit trail, and executive offices.",
+      "backendStatus": "Implemented as governance records",
+      "frontendStatus": "Implemented display surfaces",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Safe for demos because execution is disabled",
+      "remainingWork": [
+        "Action decision POST APIs",
+        "authorization enforcement",
+        "real messaging and meeting execution"
+      ],
+      "recommendedNextStep": "Implement Persistent Write API & Governance Audit Ledger."
+    },
+    {
+      "id": "EOS-CAP-0024",
+      "name": "Enterprise Design System & UX Audit",
+      "domain": "UX",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Design language, presentation mode, tooltip standards, UX audit, and quality gates.",
+      "backendStatus": "Documented and registered",
+      "frontendStatus": "Implemented across Mission Control",
+      "persistenceStatus": "Not required",
+      "verificationStatus": "Lint and build verification",
+      "executiveReadiness": "Ready for boardroom demonstrations",
+      "remainingWork": [
+        "Visual regression tests",
+        "accessibility automation",
+        "component library extraction"
+      ],
+      "recommendedNextStep": "Add browser-based UX regression checks."
+    },
+    {
+      "id": "EOS-CAP-0025",
+      "name": "Persistent Data Store Foundation",
+      "domain": "Data",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "JSON file store, seed bootstrap, collection envelopes, health report, and storage APIs.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Visible in Platform / Storage",
+      "persistenceStatus": "Persistent local JSON",
+      "verificationStatus": "Automated storage collection checks",
+      "executiveReadiness": "Ready for local Alpha use",
+      "remainingWork": [
+        "Schema enforcement",
+        "transaction safety",
+        "PostgreSQL migration",
+        "backup restore validation"
+      ],
+      "recommendedNextStep": "Implement governed write API before scaling persistent updates."
+    },
+    {
+      "id": "EOS-CAP-0026",
+      "name": "Enterprise Strategy, Valuation & Governance Alignment Layer",
+      "domain": "Enterprise Value",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Strategy, governance, valuation, Second Balance Sheet, and DTA monitoring APIs and UI.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for internal investor narrative demos",
+      "remainingWork": [
+        "Audited valuation methods",
+        "governance approval workflow",
+        "financial model expansion"
+      ],
+      "recommendedNextStep": "Expand the valuation engine after DTA lifecycle management is implemented."
+    },
+    {
+      "id": "EOS-CAP-0027",
+      "name": "AI Workforce Operations & Platform Administration Center",
+      "domain": "Platform",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Platform admin, governed admin actions, local agent messages, activity, attention, and calendar.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for Digital Headquarters demonstrations",
+      "remainingWork": [
+        "Real action execution",
+        "agent messaging writes",
+        "calendar integration",
+        "authorization enforcement"
+      ],
+      "recommendedNextStep": "Implement action decisions with persistent audit controls."
+    },
+    {
+      "id": "EOS-CAP-0028",
+      "name": "Mission Control Navigation & Frontend Experience Redesign",
+      "domain": "UX",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Executive command bar, workspace rail, lobby, context navigation, breadcrumbs, and command palette foundation.",
+      "backendStatus": "Navigation metadata implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent navigation model",
+      "verificationStatus": "Automated build and endpoint checks",
+      "executiveReadiness": "Ready for demonstrations",
+      "remainingWork": [
+        "Executable command palette",
+        "saved workspace preferences",
+        "keyboard shortcut coverage"
+      ],
+      "recommendedNextStep": "Add command execution only after governed actions are enforceable."
+    },
+    {
+      "id": "EOS-CAP-0029",
+      "name": "Investment Thesis Alignment & Strategic Narrative Integration",
+      "domain": "Strategy",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Investment thesis, flywheel, revenue engine, three-horizon roadmap, KIPR, industry framework, and readiness views.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for investor narrative demos",
+      "remainingWork": [
+        "Investor data room exports",
+        "commercial funnel execution",
+        "market validation evidence"
+      ],
+      "recommendedNextStep": "Create a commercial readiness workstream tied to customer onboarding."
+    },
+    {
+      "id": "EOS-CAP-0030",
+      "name": "Enterprise Digital Twin Visual Layer & Master Monitoring View",
+      "domain": "Enterprise Value",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Dark visual monitoring layer, enterprise homes, layered architecture diagram, simulated telemetry, and timezone standard.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for visual investor demos",
+      "remainingWork": [
+        "Real telemetry connectors",
+        "3D renderer",
+        "live asset updates",
+        "alert rules"
+      ],
+      "recommendedNextStep": "Implement Data Source Connector Framework."
+    },
+    {
+      "id": "EOS-CAP-0031",
+      "name": "Identity, Startup & Organization Intake Foundation",
+      "domain": "Platform",
+      "functionalStatus": "Partial",
+      "implementationDepth": "Startup experience, identity media model, local upload foundation, organization intake, extraction metadata, and repository links.",
+      "backendStatus": "Implemented foundation",
+      "frontendStatus": "Implemented but needs upload UX hardening",
+      "persistenceStatus": "Persistent local records and media",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Useful for demos with controlled media",
+      "remainingWork": [
+        "Robust image preview validation",
+        "document parsing depth",
+        "OCR/audio extraction",
+        "cloud drive authentication"
+      ],
+      "recommendedNextStep": "Harden media loading and connect intake records to Enterprise Onboarding."
+    },
+    {
+      "id": "EOS-CAP-0032",
+      "name": "Enterprise Onboarding & DTA Assimilation Engine",
+      "domain": "Enterprise Value",
+      "functionalStatus": "Operational Foundation",
+      "implementationDepth": "Onboarding records, pipelines, Digital Mirrors, DTA candidates, feed requirements, human validation, and portfolio view.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Persistent",
+      "verificationStatus": "Automated endpoint tests",
+      "executiveReadiness": "Ready for controlled onboarding demos",
+      "remainingWork": [
+        "Real source connectors",
+        "AI extraction",
+        "validation execution",
+        "DTA formation workflow"
+      ],
+      "recommendedNextStep": "Build Data Source Connector Framework and AI extraction pipeline."
+    },
+    {
+      "id": "EOS-CAP-0033",
+      "name": "Platform Audit & Capability Readiness Center",
+      "domain": "Platform",
+      "functionalStatus": "Fully Functional",
+      "implementationDepth": "Automated audit endpoint, audit script, readiness matrix, gap register, technical debt register, and Mission Control audit view.",
+      "backendStatus": "Implemented",
+      "frontendStatus": "Implemented",
+      "persistenceStatus": "Generated audit artifact",
+      "verificationStatus": "Automated endpoint and script verification",
+      "executiveReadiness": "Ready for Alpha planning and board-level status review",
+      "remainingWork": [
+        "Browser-based functional probing",
+        "historical audit trend storage",
+        "quality gate evidence attachments"
+      ],
+      "recommendedNextStep": "Use this audit as the readiness gate for the next strategic program."
+    }
+  ],
+  "capabilityStatusCounts": {
+    "Fully Functional": 7,
+    "Operational Foundation": 13,
+    "Partial": 2,
+    "Display Only": 3
+  },
+  "apiCoverage": [
+    {
+      "group": "Core Status",
+      "endpoints": [
+        "/api/status"
+      ],
+      "status": "Fully Functional",
+      "coverage": "Returns platform, version, operational status, uptime, and active agent count.",
+      "gaps": [
+        "Version is still duplicated across several files."
+      ]
+    },
+    {
+      "group": "Enterprise Objects",
+      "endpoints": [
+        "/api/objects",
+        "/api/objects/:id"
+      ],
+      "status": "Fully Functional",
+      "coverage": "Registry list and lookup with liveStatus.",
+      "gaps": [
+        "No governed create/update/delete endpoint yet."
+      ]
+    },
+    {
+      "group": "Agents",
+      "endpoints": [
+        "/api/agents",
+        "/api/agents/:id"
+      ],
+      "status": "Fully Functional",
+      "coverage": "Executive agent registry list and lookup.",
+      "gaps": [
+        "No runtime worker execution."
+      ]
+    },
+    {
+      "group": "Knowledge and KIPR",
+      "endpoints": [
+        "/api/knowledge",
+        "/api/knowledge/:id",
+        "/api/knowledge-repositories",
+        "/api/knowledge-objects"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Knowledge objects, repositories, research projects, and asset details.",
+      "gaps": [
+        "No document authoring or publication workflow execution."
+      ]
+    },
+    {
+      "group": "Workflows and Events",
+      "endpoints": [
+        "/api/workflows",
+        "/api/workflows/:id",
+        "/api/events",
+        "/api/events/:id"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Seeded workflows and emitted event registry.",
+      "gaps": [
+        "No workflow runner or event bus yet."
+      ]
+    },
+    {
+      "group": "Storage",
+      "endpoints": [
+        "/api/storage/status",
+        "/api/storage/collections",
+        "/api/storage/collections/:name"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Persistent JSON store health, collection list, and collection detail.",
+      "gaps": [
+        "No schema enforcement or transaction model."
+      ]
+    },
+    {
+      "group": "Platform Operations",
+      "endpoints": [
+        "/api/platform",
+        "/api/platform/status",
+        "/api/platform/admin",
+        "/api/platform/navigation"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Platform status, administration, navigation, and safe action policy.",
+      "gaps": [
+        "Governed destructive actions are display-only."
+      ]
+    },
+    {
+      "group": "Strategic Layer",
+      "endpoints": [
+        "/api/strategy",
+        "/api/governance",
+        "/api/valuation",
+        "/api/second-balance-sheet",
+        "/api/digital-twin-assets"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Strategy, governance, valuation, Second Balance Sheet, and DTA monitoring.",
+      "gaps": [
+        "Financial values are internal estimates only and not audited valuation."
+      ]
+    },
+    {
+      "group": "Strategic Alignment",
+      "endpoints": [
+        "/api/strategic-alignment"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Investment thesis, flywheel, revenue, roadmap, KIPR, industry framework, and readiness data.",
+      "gaps": [
+        "Commercial pipeline execution is not implemented."
+      ]
+    },
+    {
+      "group": "Visual Twin Layer",
+      "endpoints": [
+        "/api/master-monitoring",
+        "/api/enterprise-visuals",
+        "/api/enterprise-telemetry",
+        "/api/digital-twin-home/:enterpriseId"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Master monitoring, enterprise visuals, simulated telemetry, and enterprise homes.",
+      "gaps": [
+        "No live external feeds or 3D renderer."
+      ]
+    },
+    {
+      "group": "Enterprise Onboarding",
+      "endpoints": [
+        "/api/onboarding",
+        "/api/onboarding/:id",
+        "/api/digital-mirrors",
+        "/api/dta-candidates",
+        "/api/data-feed-requirements",
+        "/api/human-validation"
+      ],
+      "status": "Operational Foundation",
+      "coverage": "Onboarding, assimilation pipeline, mirrors, candidates, feeds, and validation.",
+      "gaps": [
+        "No real upload-to-DTA extraction pipeline."
+      ]
+    },
+    {
+      "group": "Identity and Intake",
+      "endpoints": [
+        "/api/startup",
+        "/api/identity-media",
+        "/api/organization-intake",
+        "/api/repository-links"
+      ],
+      "status": "Partial",
+      "coverage": "Startup experience, media records, organization source intake, and repository links.",
+      "gaps": [
+        "Media preview/loading needs hardening; extraction is basic metadata and text scanning."
+      ]
+    },
+    {
+      "group": "Audit",
+      "endpoints": [
+        "/api/audit"
+      ],
+      "status": "Fully Functional",
+      "coverage": "Platform audit report, readiness matrix, coverage reports, technical debt, and readiness scoring.",
+      "gaps": [
+        "Historical trend storage and browser probing are future work."
+      ]
+    }
+  ],
+  "apiStatusCounts": {
+    "Fully Functional": 4,
+    "Operational Foundation": 8,
+    "Partial": 1
+  },
+  "frontendRouteCoverage": [
+    {
+      "workspace": "Headquarters",
+      "status": "Operational Foundation",
+      "routes": [
+        "cockpit",
+        "council",
+        "offices"
+      ],
+      "coverage": "CEO Cockpit, Executive Council, and Executive Offices are navigable and display executive status.",
+      "gaps": [
+        "Executive office actions are display-only."
+      ]
+    },
+    {
+      "workspace": "Enterprise",
+      "status": "Operational Foundation",
+      "routes": [
+        "strategy",
+        "investment-thesis",
+        "governance",
+        "pmo",
+        "three-horizon-roadmap",
+        "roadmap",
+        "programs"
+      ],
+      "coverage": "Strategy, investment thesis, governance, PMO, roadmap, and programs are available.",
+      "gaps": [
+        "Roadmap updates require code or future governed write APIs."
+      ]
+    },
+    {
+      "workspace": "Enterprise Value",
+      "status": "Operational Foundation",
+      "routes": [
+        "master-monitoring",
+        "onboarded-enterprises",
+        "technology-flywheel",
+        "valuation",
+        "revenue-engine",
+        "second-balance-sheet",
+        "digital-twin-assets",
+        "enterprise-onboarding",
+        "assimilation-pipeline",
+        "digital-mirrors",
+        "dta-candidates",
+        "data-feed-requirements",
+        "human-validation"
+      ],
+      "coverage": "Enterprise value, monitoring, onboarding, DTA candidates, valuation, and readiness surfaces are available.",
+      "gaps": [
+        "Real connectors, DTA lifecycle execution, and valuation expansion remain."
+      ]
+    },
+    {
+      "workspace": "AI Workforce",
+      "status": "Operational Foundation",
+      "routes": [
+        "agents",
+        "communications",
+        "activity",
+        "calendar",
+        "performance"
+      ],
+      "coverage": "Agents, local communication records, activity, attention, and calendar foundation are visible.",
+      "gaps": [
+        "Messages and calendar are not connected to external systems."
+      ]
+    },
+    {
+      "workspace": "KIPR",
+      "status": "Operational Foundation",
+      "routes": [
+        "kipr",
+        "knowledge",
+        "white-papers",
+        "academic-papers",
+        "patents",
+        "publications"
+      ],
+      "coverage": "Knowledge repository and publication asset views are available.",
+      "gaps": [
+        "Publication actions are display-only."
+      ]
+    },
+    {
+      "workspace": "Platform",
+      "status": "Operational Foundation",
+      "routes": [
+        "administration",
+        "audit",
+        "startup-experience",
+        "identity-media",
+        "organization-intake",
+        "repository-links",
+        "storage",
+        "backups",
+        "health",
+        "releases"
+      ],
+      "coverage": "Platform administration, audit, startup, identity, intake, storage, backup, health, and release views are available.",
+      "gaps": [
+        "Restore validation and executable governed admin actions remain."
+      ]
+    },
+    {
+      "workspace": "Development",
+      "status": "Operational Foundation",
+      "routes": [
+        "assets",
+        "industry-framework",
+        "architecture",
+        "engineering"
+      ],
+      "coverage": "Capability registry, architecture, industry framework, and engineering foundations are available.",
+      "gaps": [
+        "Architecture graph and automated technical debt scoring remain."
+      ]
+    },
+    {
+      "workspace": "My Workspace",
+      "status": "Placeholder",
+      "routes": [
+        "briefing",
+        "tasks",
+        "decisions",
+        "notes"
+      ],
+      "coverage": "Personal workspace routes are reserved and display foundation panels.",
+      "gaps": [
+        "No personal task, decision, or note persistence yet."
+      ]
+    }
+  ],
+  "frontendRouteStatusCounts": {
+    "Operational Foundation": 7,
+    "Placeholder": 1
+  },
+  "dataPersistenceHealth": {
+    "storageStatus": "Operational",
+    "collectionsFound": [
+      "action-governance",
+      "admin-actions",
+      "agent-activity",
+      "agent-attention-queue",
+      "agent-calendar",
+      "agent-knowledge-objects",
+      "agent-knowledge-repositories",
+      "agent-messages",
+      "agents",
+      "assimilation-pipelines",
+      "authorization-policies",
+      "backup-status",
+      "ceo-cockpit",
+      "data-feed-requirements",
+      "digital-enterprise-headquarters",
+      "digital-mirrors",
+      "digital-twin-assets",
+      "digital-twin-generation-workflows",
+      "digital-twin-homes",
+      "dta-candidates",
+      "dta-monitoring",
+      "enterprise-architecture-layers",
+      "enterprise-objects",
+      "enterprise-onboarding",
+      "enterprise-strategy",
+      "enterprise-telemetry",
+      "enterprise-visuals",
+      "event-types",
+      "events",
+      "executive-actions",
+      "executive-council",
+      "executive-office-framework",
+      "executive-offices",
+      "executive-profiles",
+      "governance-council",
+      "human-validation-items",
+      "knowledge-objects",
+      "master-monitoring",
+      "master-roadmap",
+      "media-assets",
+      "media-extraction-rules",
+      "organization-intake-records",
+      "organization-repository-links",
+      "platform-navigation",
+      "platform-operations",
+      "pmo",
+      "profile-identities",
+      "release-metadata",
+      "second-balance-sheet",
+      "startup-experience",
+      "strategic-alignment",
+      "valuation-models",
+      "workflows"
+    ],
+    "collectionsMissing": [],
+    "recordCounts": {
+      "action-governance": 14,
+      "admin-actions": 14,
+      "agent-activity": 4,
+      "agent-attention-queue": 3,
+      "agent-calendar": 7,
+      "agent-knowledge-objects": 4,
+      "agent-knowledge-repositories": 7,
+      "agent-messages": 5,
+      "agents": 7,
+      "assimilation-pipelines": 3,
+      "authorization-policies": 6,
+      "backup-status": 1,
+      "ceo-cockpit": 1,
+      "data-feed-requirements": 11,
+      "digital-enterprise-headquarters": 1,
+      "digital-mirrors": 3,
+      "digital-twin-assets": 3,
+      "digital-twin-generation-workflows": 1,
+      "digital-twin-homes": 2,
+      "dta-candidates": 7,
+      "dta-monitoring": 1,
+      "enterprise-architecture-layers": 10,
+      "enterprise-objects": 140,
+      "enterprise-onboarding": 3,
+      "enterprise-strategy": 1,
+      "enterprise-telemetry": 10,
+      "enterprise-visuals": 2,
+      "event-types": 102,
+      "events": 124,
+      "executive-actions": 72,
+      "executive-council": 1,
+      "executive-office-framework": 1,
+      "executive-offices": 9,
+      "executive-profiles": 9,
+      "governance-council": 1,
+      "human-validation-items": 27,
+      "knowledge-objects": 5,
+      "master-monitoring": 1,
+      "master-roadmap": 1,
+      "media-assets": 14,
+      "media-extraction-rules": 4,
+      "organization-intake-records": 2,
+      "organization-repository-links": 2,
+      "platform-navigation": 8,
+      "platform-operations": 1,
+      "pmo": 1,
+      "profile-identities": 10,
+      "release-metadata": 1,
+      "second-balance-sheet": 1,
+      "startup-experience": 1,
+      "strategic-alignment": 1,
+      "valuation-models": 1,
+      "workflows": 33
+    },
+    "lastUpdated": "2026-07-04T00:31:44.295Z",
+    "snapshotCount": 0,
+    "warnings": []
+  },
+  "placeholderRegister": [
+    {
+      "id": "EOS-PLACEHOLDER-ADMIN-DESTRUCTIVE-ACTIONS",
+      "area": "Platform Administration",
+      "status": "Display Only",
+      "reason": "Stop, restart, restore, clone, scale, and upgrade actions are intentionally non-executable until authorization, backup, restore validation, and audit controls mature.",
+      "recommendedCapability": "Persistent Write API & Governance Audit Ledger"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-COMMAND-PALETTE-EXECUTION",
+      "area": "Mission Control",
+      "status": "Placeholder",
+      "reason": "Command palette displays executive search and command examples but does not execute actions.",
+      "recommendedCapability": "Governed Command Execution"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-AGENT-MESSAGES-WRITE",
+      "area": "AI Workforce",
+      "status": "Display Only",
+      "reason": "Agent communication records are local seeded messages; no external chat or message send flow exists.",
+      "recommendedCapability": "Agent Communication Write Layer"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-CALENDAR-INTEGRATION",
+      "area": "AI Workforce",
+      "status": "Display Only",
+      "reason": "Agent calendar is local and seeded; no Google Calendar or scheduling integration is connected.",
+      "recommendedCapability": "Agent Calendar Integration"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-REAL-TIME-FEEDS",
+      "area": "Digital Twin Assets",
+      "status": "Operational Foundation",
+      "reason": "Telemetry exists as simulated records; live enterprise data connectors are not connected.",
+      "recommendedCapability": "Data Source Connector Framework"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-AI-EXTRACTION",
+      "area": "Enterprise Onboarding",
+      "status": "Partial",
+      "reason": "Organization intake can store records and basic metadata, but AI extraction and object generation are not implemented.",
+      "recommendedCapability": "AI Extraction & Enterprise Object Generation"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-DTA-FORMATION",
+      "area": "Digital Twin Assets",
+      "status": "Not Started",
+      "reason": "DTA candidates and Digital Mirrors exist; governed formation, approval, and promotion are not executable.",
+      "recommendedCapability": "DTA Lifecycle Management"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-VALUATION-EXPANSION",
+      "area": "Enterprise Value",
+      "status": "Operational Foundation",
+      "reason": "Valuation is an internal estimate and not audited financial valuation.",
+      "recommendedCapability": "Valuation Engine Expansion"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-RESTORE-VALIDATION",
+      "area": "Backup & Recovery",
+      "status": "Partial",
+      "reason": "Backups are generated and checksummed, but restore validation remains pending.",
+      "recommendedCapability": "Automated Restore Validation"
+    },
+    {
+      "id": "EOS-PLACEHOLDER-CLOUD-SYNC",
+      "area": "Release and Backup",
+      "status": "Not Started",
+      "reason": "GitHub and Google Drive readiness exist, but no remote repository, upload, or sync execution is enabled.",
+      "recommendedCapability": "GitHub / Cloud Sync Execution"
+    }
+  ],
+  "placeholderCounts": {
+    "Display Only": 3,
+    "Placeholder": 1,
+    "Operational Foundation": 2,
+    "Partial": 2,
+    "Not Started": 2
+  },
+  "technicalDebtRegister": [
+    {
+      "id": "EOS-TD-001",
+      "severity": "Medium",
+      "area": "Versioning",
+      "summary": "EOS version is duplicated across root package, backend package, status controller, platform operations, release metadata, and verification scripts.",
+      "recommendedAction": "Create a single build/version source module used by scripts and backend services."
+    },
+    {
+      "id": "EOS-TD-002",
+      "severity": "Medium",
+      "area": "Verification",
+      "summary": "Backend verification is comprehensive but monolithic, making capability-specific checks harder to maintain.",
+      "recommendedAction": "Split endpoint verification into capability-scoped test modules."
+    },
+    {
+      "id": "EOS-TD-003",
+      "severity": "Medium",
+      "area": "Frontend Architecture",
+      "summary": "Mission Control routing and data loading are concentrated in App.jsx.",
+      "recommendedAction": "Introduce route/view registry and per-workspace data loaders."
+    },
+    {
+      "id": "EOS-TD-004",
+      "severity": "Medium",
+      "area": "Persistence",
+      "summary": "Local JSON persistence works for Alpha but lacks schema enforcement, transactions, and concurrent write protections.",
+      "recommendedAction": "Add schema validation and prepare PostgreSQL migration path."
+    },
+    {
+      "id": "EOS-TD-005",
+      "severity": "High",
+      "area": "Security",
+      "summary": "Authentication, authorization, role enforcement, and audit ledger writes are not implemented for real operations.",
+      "recommendedAction": "Build security and governed write foundations before enabling executable actions."
+    },
+    {
+      "id": "EOS-TD-006",
+      "severity": "Medium",
+      "area": "UX Verification",
+      "summary": "Mission Control build checks pass, but there is no automated browser regression coverage for layout, upload previews, or presentation mode.",
+      "recommendedAction": "Add Playwright smoke checks for primary workspaces and media upload previews."
+    }
+  ],
+  "technicalDebtCounts": {
+    "Medium": 5,
+    "High": 1
+  },
+  "readinessScores": [
+    {
+      "stage": "Alpha",
+      "score": 68,
+      "status": "Approaching",
+      "interpretation": "EOS has a strong local platform foundation with broad backend/API coverage, persistent storage, Mission Control views, and verification discipline.",
+      "blockers": [
+        "Governed write API",
+        "restore validation",
+        "connector foundation",
+        "auth and permissions"
+      ]
+    },
+    {
+      "stage": "Beta",
+      "score": 42,
+      "status": "Foundation Active",
+      "interpretation": "Beta requires real data ingestion, executable workflows, stronger security, browser tests, and external sync.",
+      "blockers": [
+        "External connectors",
+        "AI extraction",
+        "workflow execution",
+        "role-based permissions"
+      ]
+    },
+    {
+      "stage": "Release Candidate",
+      "score": 22,
+      "status": "Early",
+      "interpretation": "Release Candidate readiness depends on production persistence, security, CI, deployments, observability, and recovery drills.",
+      "blockers": [
+        "Production database",
+        "deployment architecture",
+        "security hardening",
+        "restore validation"
+      ]
+    },
+    {
+      "stage": "Version 1.0",
+      "score": 16,
+      "status": "Strategic Foundation",
+      "interpretation": "Version 1.0 requires commercial workflows, durable tenant model, enterprise onboarding execution, and audited governance controls.",
+      "blockers": [
+        "Tenant model",
+        "commercial onboarding",
+        "enterprise SLA controls",
+        "audited valuation methodology"
+      ]
+    }
+  ],
+  "qualityGates": [
+    {
+      "gate": "Engineering",
+      "status": "Passed",
+      "evidence": "Audit endpoint, script, data model, and automated verification are implemented."
+    },
+    {
+      "gate": "Architecture",
+      "status": "Passed with Technical Debt",
+      "evidence": "Audit layer follows existing controller/service/data pattern; App.jsx and check-status remain large and should be decomposed."
+    },
+    {
+      "gate": "UX/UI",
+      "status": "Passed",
+      "evidence": "Mission Control Platform / Audit view presents scores, matrix, gaps, placeholders, and debt in executive language."
+    },
+    {
+      "gate": "Executive",
+      "status": "Passed",
+      "evidence": "Audit answers what works, what is display-only, what needs attention, and what should be built next."
+    },
+    {
+      "gate": "Investor",
+      "status": "Passed",
+      "evidence": "Readiness scores and gaps make Alpha/Beta/V1 maturity transparent for investor conversations."
+    },
+    {
+      "gate": "Commercial",
+      "status": "Passed",
+      "evidence": "Audit identifies commercialization blockers and prioritizes connector, extraction, write governance, and DTA lifecycle work."
+    },
+    {
+      "gate": "Research",
+      "status": "Passed",
+      "evidence": "Audit documents platform maturity evidence and research gaps for the EOS Genesis and future publications."
+    }
+  ],
+  "recommendedBuildSequence": [
+    {
+      "priority": 1,
+      "capability": "Data Source Connector Framework",
+      "reason": "EOS needs real enterprise source ingestion before Digital Mirrors and DTA candidates can move beyond seeded or manually structured records.",
+      "dependencies": [
+        "EOS-CAP-0031",
+        "EOS-CAP-0032",
+        "EOS-CAP-0025"
+      ],
+      "estimatedEffort": "High"
+    },
+    {
+      "priority": 2,
+      "capability": "AI Extraction & Enterprise Object Generation",
+      "reason": "Imported organization documents must become structured Enterprise Objects, relationships, risks, assets, and DTA candidates.",
+      "dependencies": [
+        "Data Source Connector Framework",
+        "EOS-KIPR",
+        "EOS-ENTERPRISE-ONBOARDING"
+      ],
+      "estimatedEffort": "High"
+    },
+    {
+      "priority": 3,
+      "capability": "Persistent Write API & Governance Audit Ledger",
+      "reason": "EOS needs safe create/update decisions, approvals, and audit history before executing real platform, workflow, or DTA operations.",
+      "dependencies": [
+        "EOS-CAP-0025",
+        "EOS-CAP-0022",
+        "EOS-CAP-0027"
+      ],
+      "estimatedEffort": "High"
+    },
+    {
+      "priority": 4,
+      "capability": "DTA Lifecycle Management",
+      "reason": "Digital Mirrors and candidates must be promotable into governed DTAs through validation, approval, monitoring, optimization, and valuation stages.",
+      "dependencies": [
+        "Human Validation Workflow Execution",
+        "Persistent Write API & Governance Audit Ledger"
+      ],
+      "estimatedEffort": "High"
+    },
+    {
+      "priority": 5,
+      "capability": "Valuation Engine Expansion",
+      "reason": "The Second Balance Sheet thesis needs stronger internal valuation models, evidence, confidence levels, and governance review.",
+      "dependencies": [
+        "DTA Lifecycle Management",
+        "Data Source Connector Framework"
+      ],
+      "estimatedEffort": "High"
+    }
+  ],
+  "auditNotes": [
+    "The audit classifies local functionality, not production fitness.",
+    "Display-only and placeholder items are intentional safety controls where execution would require permissions, persistence, security, or external integration.",
+    "No Broken items are currently registered by the audit model; browser-based probing should be added to validate UI flows such as upload preview and presentation mode."
+  ],
+  "liveStatus": {
+    "status": "Green",
+    "operationalStatus": "Green",
+    "lifecycleStatus": "Verified",
+    "healthScore": 91,
+    "progress": 100,
+    "summary": "Platform Audit & Capability Readiness Center is available for executive review and automated reporting.",
+    "lastActivity": "2026-07-04T01:20:00.000Z",
+    "requiresAttention": false,
+    "attentionLevel": "No Action Required",
+    "recommendedAction": "Use the audit center to prioritize connector, extraction, governance write, DTA lifecycle, and valuation work.",
+    "availableActions": [
+      "Open Audit Center",
+      "Run eos:audit",
+      "Review Readiness Matrix",
+      "Review Technical Debt"
+    ]
+  }
+}

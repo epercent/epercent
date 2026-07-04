@@ -1,0 +1,52 @@
+{
+  "collectionName": "startup-experience",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T21:29:40.346Z",
+  "recordCount": 1,
+  "source": "seed:startup-experience",
+  "records": [
+    {
+      "id": "EOS-STARTUP-EXPERIENCE",
+      "name": "EOS Startup Experience",
+      "owner": "Codex",
+      "status": "Operational Foundation",
+      "version": "0.23.0",
+      "defaultWorkspace": "enterprise-value",
+      "defaultRoute": "master-monitoring",
+      "theme": "Master Monitoring Executive Dark",
+      "startupMode": "Mission Control Boot",
+      "displayDurationMs": 1800,
+      "bootPhases": [
+        "Initialize EOS Core API",
+        "Load Enterprise Object Registry",
+        "Load Digital Twin Asset Layer",
+        "Load AI Workforce",
+        "Load Knowledge Repository",
+        "Open Enterprise Value"
+      ],
+      "headlineMetrics": [
+        "Enterprise Value",
+        "Digital Twin Assets",
+        "Platform Health",
+        "AI Workforce"
+      ],
+      "liveStatus": {
+        "status": "Green",
+        "operationalStatus": "Green",
+        "lifecycleStatus": "Verified",
+        "healthScore": 92,
+        "progress": 100,
+        "summary": "Mission Control startup experience is active and routes into Enterprise Value.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Use startup experience as the standard EOS operating-system entry pattern.",
+        "availableActions": [
+          "Open Mission Control",
+          "Review Startup Phases",
+          "Review Enterprise Value"
+        ]
+      }
+    }
+  ]
+}

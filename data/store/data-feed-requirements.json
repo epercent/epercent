@@ -1,0 +1,248 @@
+{
+  "collectionName": "data-feed-requirements",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.906Z",
+  "recordCount": 11,
+  "source": "seed:data-feed-requirements",
+  "records": [
+    {
+      "id": "EOS-FEED-OIL-PRODUCTION",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Production Systems",
+      "targetDta": "EOS-DTA-CAND-OIL-PRODUCTION",
+      "sourceType": "Operational System",
+      "sourceName": "Production historian",
+      "requiredFields": [
+        "wellId",
+        "timestampUtc",
+        "productionRate",
+        "downtimeMinutes",
+        "operatingStatus"
+      ],
+      "frequency": "Hourly",
+      "realTimeRequired": true,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Pending Assessment",
+      "humanFallbackRequired": true,
+      "priority": "Critical",
+      "notes": "Required before Production Operations DTA can enter monitoring."
+    },
+    {
+      "id": "EOS-FEED-OIL-SAFETY",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Safety Systems",
+      "targetDta": "EOS-DTA-CAND-OIL-RIG",
+      "sourceType": "Safety System",
+      "sourceName": "HSE incident and inspection system",
+      "requiredFields": [
+        "assetId",
+        "inspectionDate",
+        "incidentType",
+        "severity",
+        "openActions"
+      ],
+      "frequency": "Daily",
+      "realTimeRequired": false,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Pending Assessment",
+      "humanFallbackRequired": true,
+      "priority": "High",
+      "notes": "Safety evidence must be validated before asset monitoring is considered operational."
+    },
+    {
+      "id": "EOS-FEED-OIL-PIPELINE",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Pipelines",
+      "targetDta": "EOS-DTA-CAND-OIL-PIPELINE",
+      "sourceType": "Telemetry Feed",
+      "sourceName": "Pipeline integrity and flow telemetry",
+      "requiredFields": [
+        "pipelineSegmentId",
+        "timestampUtc",
+        "pressure",
+        "flowRate",
+        "integrityStatus"
+      ],
+      "frequency": "Near real time",
+      "realTimeRequired": true,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Unknown",
+      "humanFallbackRequired": true,
+      "priority": "Critical",
+      "notes": "Pipeline route and telemetry mapping require human validation."
+    },
+    {
+      "id": "EOS-FEED-OIL-STORAGE",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Storage Facilities",
+      "targetDta": "EOS-DTA-CAND-OIL-STORAGE",
+      "sourceType": "Inventory System",
+      "sourceName": "Storage inventory ledger",
+      "requiredFields": [
+        "facilityId",
+        "tankId",
+        "timestampUtc",
+        "inventoryVolume",
+        "capacity"
+      ],
+      "frequency": "Daily",
+      "realTimeRequired": false,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Pending Assessment",
+      "humanFallbackRequired": true,
+      "priority": "Medium",
+      "notes": "Inventory and capacity data required for commercial readiness."
+    },
+    {
+      "id": "EOS-FEED-OIL-COMMERCIAL",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Commercial Systems",
+      "targetDta": "EOS-DTA-CAND-OIL-HQ",
+      "sourceType": "Commercial System",
+      "sourceName": "Commercial lifting and contract system",
+      "requiredFields": [
+        "contractId",
+        "counterparty",
+        "assetId",
+        "volume",
+        "deliveryWindow"
+      ],
+      "frequency": "Daily",
+      "realTimeRequired": false,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Pending Assessment",
+      "humanFallbackRequired": true,
+      "priority": "Medium",
+      "notes": "Commercial records support enterprise value and governance review."
+    },
+    {
+      "id": "EOS-FEED-OIL-GOVERNANCE",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "targetObject": "Headquarters",
+      "targetDta": "EOS-DTA-CAND-OIL-HQ",
+      "sourceType": "Governance Record",
+      "sourceName": "Approval matrix and policy repository",
+      "requiredFields": [
+        "approvalOwner",
+        "approvalScope",
+        "policyId",
+        "effectiveDate",
+        "reviewCycle"
+      ],
+      "frequency": "On change",
+      "realTimeRequired": false,
+      "connectionStatus": "Not Connected",
+      "dataQualityStatus": "Pending Assessment",
+      "humanFallbackRequired": true,
+      "priority": "High",
+      "notes": "Human validation depends on approval owner confirmation."
+    },
+    {
+      "id": "EOS-FEED-EPERCENT-PLATFORM",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "targetObject": "EOS Platform",
+      "targetDta": "EOS-DTA-CAND-EPERCENT-ENTERPRISE",
+      "sourceType": "EOS API",
+      "sourceName": "EOS status and platform operations",
+      "requiredFields": [
+        "platformStatus",
+        "buildVersion",
+        "storageStatus",
+        "backupStatus",
+        "activeAgents"
+      ],
+      "frequency": "On demand",
+      "realTimeRequired": false,
+      "connectionStatus": "Local API Available",
+      "dataQualityStatus": "Operational",
+      "humanFallbackRequired": false,
+      "priority": "High",
+      "notes": "Uses existing EOS platform status APIs."
+    },
+    {
+      "id": "EOS-FEED-EPERCENT-KNOWLEDGE",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "targetObject": "KIPR",
+      "targetDta": "EOS-DTA-CAND-EPERCENT-ENTERPRISE",
+      "sourceType": "Knowledge Repository",
+      "sourceName": "Agent Knowledge Repository",
+      "requiredFields": [
+        "knowledgeObjectId",
+        "ownerAgent",
+        "status",
+        "publicationReady",
+        "investorReady"
+      ],
+      "frequency": "On change",
+      "realTimeRequired": false,
+      "connectionStatus": "Local API Available",
+      "dataQualityStatus": "Operational Foundation",
+      "humanFallbackRequired": false,
+      "priority": "Medium",
+      "notes": "Feeds knowledge asset readiness into the reference enterprise mirror."
+    },
+    {
+      "id": "EOS-FEED-EOS-STATUS",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "targetObject": "EOS Core API",
+      "targetDta": "EOS-DTA-CAND-EOS-PLATFORM",
+      "sourceType": "EOS API",
+      "sourceName": "Core status endpoint",
+      "requiredFields": [
+        "platform",
+        "version",
+        "status",
+        "activeAgents"
+      ],
+      "frequency": "On demand",
+      "realTimeRequired": false,
+      "connectionStatus": "Local API Available",
+      "dataQualityStatus": "Operational",
+      "humanFallbackRequired": false,
+      "priority": "High",
+      "notes": "Used for platform DTA status evidence."
+    },
+    {
+      "id": "EOS-FEED-EOS-STORAGE",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "targetObject": "Persistent Store",
+      "targetDta": "EOS-DTA-CAND-EOS-PLATFORM",
+      "sourceType": "Storage API",
+      "sourceName": "Storage health endpoint",
+      "requiredFields": [
+        "storageStatus",
+        "collectionsFound",
+        "recordCounts",
+        "warnings"
+      ],
+      "frequency": "On demand",
+      "realTimeRequired": false,
+      "connectionStatus": "Local API Available",
+      "dataQualityStatus": "Operational",
+      "humanFallbackRequired": false,
+      "priority": "High",
+      "notes": "Supports storage health evidence."
+    },
+    {
+      "id": "EOS-FEED-EOS-BACKUP",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "targetObject": "Backup Repository",
+      "targetDta": "EOS-DTA-CAND-EOS-PLATFORM",
+      "sourceType": "Backup Metadata",
+      "sourceName": "Backup status file",
+      "requiredFields": [
+        "latestBackupTimestamp",
+        "latestBackupStatus",
+        "latestBackupArchive",
+        "backupCount"
+      ],
+      "frequency": "On backup",
+      "realTimeRequired": false,
+      "connectionStatus": "Local File Available",
+      "dataQualityStatus": "Operational",
+      "humanFallbackRequired": false,
+      "priority": "Medium",
+      "notes": "Restore validation remains a separate human-controlled control."
+    }
+  ]
+}

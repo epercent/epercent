@@ -1,0 +1,24 @@
+{
+  "provider": "google-drive",
+  "enabled": false,
+  "mode": "readiness-only",
+  "networkAccessAllowed": false,
+  "authenticationAllowed": false,
+  "uploadAllowed": false,
+  "localBackupDirectory": "backups",
+  "backupMetadataFiles": [
+    "backups/backup-log.json",
+    "backups/backup-status.json"
+  ],
+  "configTemplate": "config/google-drive.example.json",
+  "expectedSyncLocations": {
+    "localArchives": "backups/*.zip",
+    "localMetadata": "backups/*.json",
+    "futureDriveFolder": "EOS/Backups"
+  },
+  "security": {
+    "credentialPolicy": "No credentials stored in repository",
+    "encryptionRecommendation": "Encrypt backup archives before cloud synchronization",
+    "checksumAlgorithm": "SHA-256"
+  }
+}

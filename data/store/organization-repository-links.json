@@ -1,0 +1,85 @@
+{
+  "collectionName": "organization-repository-links",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:31:44.290Z",
+  "recordCount": 2,
+  "source": "append:organization-repository-links",
+  "records": [
+    {
+      "id": "EOS-REPOSITORY-LINK-EXTERNAL-001",
+      "name": "External Cloud Repository Link",
+      "owner": "Hermes",
+      "provider": "External Cloud Drive",
+      "url": "",
+      "status": "Configuration Ready",
+      "storagePolicy": "Use external repository links when source data is too large for local EOS storage or must remain governed in a cloud drive.",
+      "supportedProviders": [
+        "Google Drive",
+        "OneDrive",
+        "SharePoint",
+        "Dropbox",
+        "Box",
+        "S3-compatible storage",
+        "Network drive"
+      ],
+      "maxRecommendedLocalFileSizeBytes": 8388608,
+      "syncMode": "Link Only",
+      "authenticationStatus": "Not Configured",
+      "lastValidated": "2026-07-03T22:25:00.000Z",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 76,
+        "progress": 35,
+        "summary": "External repository links are supported for large organization data sources.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Add approved cloud repository links when importing large enterprise source libraries.",
+        "availableActions": [
+          "Add Repository Link",
+          "Review Storage Policy"
+        ]
+      }
+    },
+    {
+      "id": "EOS-REPOSITORY-LINK-VERIFY",
+      "name": "EOS Verification Source Repository",
+      "owner": "Hermes",
+      "provider": "External Cloud Drive",
+      "url": "https://example.com/eos-verification-repository",
+      "status": "Linked",
+      "storagePolicy": "Use this external repository when source data exceeds local storage best-practice size or must remain governed outside EOS.",
+      "supportedProviders": [
+        "Google Drive",
+        "OneDrive",
+        "SharePoint",
+        "Dropbox",
+        "Box",
+        "S3-compatible storage",
+        "Network drive"
+      ],
+      "maxRecommendedLocalFileSizeBytes": 8388608,
+      "syncMode": "Link Only",
+      "authenticationStatus": "Not Attempted",
+      "lastValidated": "2026-07-04T00:31:44.290Z",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Defined",
+        "healthScore": 82,
+        "progress": 70,
+        "summary": "External repository link registered for organization intake.",
+        "lastActivity": "2026-07-04T00:31:44.290Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Validate repository access in a future cloud sync capability.",
+        "availableActions": [
+          "Open Repository Link",
+          "Review Storage Policy"
+        ]
+      }
+    }
+  ]
+}

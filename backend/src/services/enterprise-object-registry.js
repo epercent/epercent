@@ -1,13 +1,15 @@
 import { enterpriseObjects } from '../data/enterprise-objects.js';
-
-const registry = new Map(
-  enterpriseObjects.map((enterpriseObject) => [enterpriseObject.id, enterpriseObject])
-);
+import { withLiveStatus } from './live-object-status.js';
+import { findRecordById, listRecords } from './storage-service.js';
 
 export function listEnterpriseObjects() {
-  return Array.from(registry.values());
+  return listRecords('enterprise-objects', enterpriseObjects).map((enterpriseObject) =>
+    withLiveStatus(enterpriseObject)
+  );
 }
 
 export function getEnterpriseObjectById(id) {
-  return registry.get(id) ?? null;
+  const enterpriseObject = findRecordById('enterprise-objects', id, enterpriseObjects);
+
+  return enterpriseObject ? withLiveStatus(enterpriseObject) : null;
 }

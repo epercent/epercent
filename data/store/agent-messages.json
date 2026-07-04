@@ -1,0 +1,134 @@
+{
+  "collectionName": "agent-messages",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:01:08.152Z",
+  "recordCount": 5,
+  "source": "seed:agent-messages; refreshed:seed:agent-messages",
+  "records": [
+    {
+      "id": "EOS-MSG-CODEX-001",
+      "threadId": "EOS-THREAD-CODEX-BUILD-001",
+      "from": "Eric Olo",
+      "to": "Codex",
+      "subject": "CAP-0027 build readiness",
+      "body": "Confirm pre-build backup, status validation, and implementation readiness for the AI Workforce Operations slice.",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedAgent": "EOS-AGENT-CODEX",
+      "linkedObject": "EOS-CAP-0027",
+      "linkedWorkflow": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+      "requiresResponse": true,
+      "responseDue": "2026-07-03T21:00:00.000Z",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "Mission Control",
+          "event": "Message Created",
+          "summary": "CEO build readiness message created for Codex."
+        }
+      ]
+    },
+    {
+      "id": "EOS-MSG-CODEX-002",
+      "threadId": "EOS-THREAD-CODEX-BUILD-001",
+      "from": "Codex",
+      "to": "Eric Olo",
+      "subject": "CAP-0027 engineering controls",
+      "body": "Pre-build controls are active. Destructive platform operations will remain disabled until governance controls mature.",
+      "priority": "High",
+      "status": "Read",
+      "createdAt": "2026-07-03T20:16:00.000Z",
+      "updatedAt": "2026-07-03T20:16:00.000Z",
+      "linkedAgent": "EOS-AGENT-CODEX",
+      "linkedObject": "EOS-CAP-0027",
+      "linkedWorkflow": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+      "requiresResponse": false,
+      "responseDue": "2026-07-03T21:30:00.000Z",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "Codex",
+          "event": "Message Updated",
+          "summary": "Codex acknowledged build controls."
+        }
+      ]
+    },
+    {
+      "id": "EOS-MSG-ATHENA-001",
+      "threadId": "EOS-THREAD-ATHENA-RESEARCH-001",
+      "from": "Eric Olo",
+      "to": "Athena",
+      "subject": "Research portfolio readiness",
+      "body": "Prepare the research framing for AI Workforce Operations and Second Balance Sheet investor narrative.",
+      "priority": "Medium",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedAgent": "EOS-AGENT-ATHENA",
+      "linkedObject": "RP-004",
+      "linkedWorkflow": "EOS-WF-RESEARCH-PUBLICATION",
+      "requiresResponse": true,
+      "responseDue": "2026-07-04T10:00:00.000Z",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "Mission Control",
+          "event": "Message Created",
+          "summary": "Research readiness message created for Athena."
+        }
+      ]
+    },
+    {
+      "id": "EOS-MSG-HERMES-001",
+      "threadId": "EOS-THREAD-HERMES-KNOWLEDGE-001",
+      "from": "Eric Olo",
+      "to": "Hermes",
+      "subject": "Knowledge Vault update",
+      "body": "Prepare Genesis and Knowledge Vault updates for AI Workforce Operations and Platform Administration.",
+      "priority": "Medium",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedAgent": "EOS-AGENT-HERMES",
+      "linkedObject": "EOS-AKR",
+      "linkedWorkflow": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+      "requiresResponse": true,
+      "responseDue": "2026-07-04T11:00:00.000Z",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "Mission Control",
+          "event": "Message Created",
+          "summary": "Knowledge update message created for Hermes."
+        }
+      ]
+    },
+    {
+      "id": "EOS-MSG-ATLAS-001",
+      "threadId": "EOS-THREAD-ATLAS-ARCHITECTURE-001",
+      "from": "Eric Olo",
+      "to": "Atlas",
+      "subject": "Administration architecture review",
+      "body": "Review the action governance model before executable administration controls are introduced.",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedAgent": "EOS-AGENT-ATLAS",
+      "linkedObject": "EOS-ACTION-GOVERNANCE",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "requiresResponse": true,
+      "responseDue": "2026-07-04T09:30:00.000Z",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "Mission Control",
+          "event": "Message Created",
+          "summary": "Architecture review message created for Atlas."
+        }
+      ]
+    }
+  ]
+}

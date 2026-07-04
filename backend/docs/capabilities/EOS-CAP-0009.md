@@ -8,6 +8,24 @@ EOS-CAP-0009 introduces the first EOS backup and recovery capability.
 
 - `npm run eos:backup`
 - `npm run eos:restore`
+- `npm run eos:backup:status`
+
+## Backup Status Reporting
+
+`npm run eos:backup` updates `backups/backup-status.json` with:
+
+- `latestBackupTimestamp`
+- `latestBackupLocalTime`
+- `latestBackupVersion`
+- `latestBackupArchive`
+- `latestBackupSize`
+- `latestBackupChecksum`
+- `latestBackupStatus`
+- `latestRestoreValidationStatus`
+- `backupCount`
+- `lastUpdated`
+
+`npm run eos:restore` updates `latestRestoreValidationStatus` after checksum validation.
 
 ## Enterprise Object Registration
 

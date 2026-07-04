@@ -1,0 +1,2571 @@
+{
+  "collectionName": "workflows",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:25:54.602Z",
+  "recordCount": 33,
+  "source": "seed:workflows; merged:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows; refreshed:seed:workflows",
+  "records": [
+    {
+      "id": "EOS-WF-RESEARCH-PUBLICATION",
+      "name": "Research Publication",
+      "description": "Coordinates source collection, synthesis, drafting, and publication of EOS research outputs.",
+      "status": "Running",
+      "owner": "Athena",
+      "steps": [
+        "Collect sources",
+        "Synthesize findings",
+        "Draft publication",
+        "Publish output"
+      ],
+      "currentStep": "Synthesize findings",
+      "progress": 58,
+      "trigger": "New research brief requested",
+      "lastRun": "2026-07-03T12:10:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0007",
+        "EOS-CAP-0006",
+        "EOS-AGENT-ATHENA",
+        "EOS-KNOWLEDGE-GENESIS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-RESEARCH-PUBLICATION-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-RESEARCH-PUBLICATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:10:00.000Z",
+          "payload": {
+            "workflowName": "Research Publication",
+            "trigger": "New research brief requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-RESEARCH-PUBLICATION-AGENT-STARTED",
+          "type": "AGENT_STARTED",
+          "sourceWorkflowId": "EOS-WF-RESEARCH-PUBLICATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:10:30.000Z",
+          "payload": {
+            "agentId": "EOS-AGENT-ATHENA",
+            "currentStep": "Synthesize findings"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-KNOWLEDGE-UPDATE",
+      "name": "Knowledge Update",
+      "description": "Detects knowledge changes, updates registry records, reviews links, and publishes the new state.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Detect change",
+        "Update knowledge object",
+        "Review links",
+        "Publish registry change"
+      ],
+      "currentStep": "Review links",
+      "progress": 72,
+      "trigger": "Knowledge object changed",
+      "lastRun": "2026-07-03T12:12:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0007",
+        "EOS-CAP-0006",
+        "EOS-AGENT-HERMES",
+        "EOS-KNOWLEDGE-CORE-API"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-KNOWLEDGE-UPDATE-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-UPDATE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:12:00.000Z",
+          "payload": {
+            "workflowName": "Knowledge Update",
+            "trigger": "Knowledge object changed"
+          }
+        },
+        {
+          "id": "EOS-EVENT-KNOWLEDGE-UPDATED",
+          "type": "KNOWLEDGE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-UPDATE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:12:30.000Z",
+          "payload": {
+            "knowledgeObjectId": "EOS-KNOWLEDGE-CORE-API",
+            "currentStep": "Review links"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-AGENT-COORDINATION",
+      "name": "Agent Coordination",
+      "description": "Receives multi-agent tasks, assigns agents, coordinates handoffs, and reports execution state.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Receive task",
+        "Assign agents",
+        "Coordinate handoffs",
+        "Report completion"
+      ],
+      "currentStep": "Coordinate handoffs",
+      "progress": 64,
+      "trigger": "Multi-agent task created",
+      "lastRun": "2026-07-03T12:14:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0007",
+        "EOS-CAP-0005",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-AGENT-COORDINATION-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-AGENT-COORDINATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:14:00.000Z",
+          "payload": {
+            "workflowName": "Agent Coordination",
+            "trigger": "Multi-agent task created"
+          }
+        },
+        {
+          "id": "EOS-EVENT-AGENT-COORDINATION-COMPLETED",
+          "type": "AGENT_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-AGENT-COORDINATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:14:30.000Z",
+          "payload": {
+            "agentId": "EOS-AGENT-HERMES",
+            "handoffCount": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-OPPORTUNITY-DISCOVERY",
+      "name": "Opportunity Discovery",
+      "description": "Scans signals, scores opportunities, routes recommendations, and tracks executive decisions.",
+      "status": "Completed",
+      "owner": "Athena",
+      "steps": [
+        "Scan signals",
+        "Score opportunities",
+        "Route recommendations",
+        "Track decisions"
+      ],
+      "currentStep": "Track decisions",
+      "progress": 100,
+      "trigger": "Market signal threshold reached",
+      "lastRun": "2026-07-03T12:16:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0007",
+        "EOS-CAP-0005",
+        "EOS-AGENT-ATHENA",
+        "EOS-MC-001"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-OPPORTUNITY-DISCOVERY-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-OPPORTUNITY-DISCOVERY",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:16:00.000Z",
+          "payload": {
+            "workflowName": "Opportunity Discovery",
+            "trigger": "Market signal threshold reached"
+          }
+        },
+        {
+          "id": "EOS-EVENT-OPPORTUNITY-DISCOVERY-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-OPPORTUNITY-DISCOVERY",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:16:30.000Z",
+          "payload": {
+            "recommendationCount": 2,
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-DIGITAL-TWIN-FORMATION",
+      "name": "Digital Twin Formation",
+      "description": "Maps Enterprise Objects, creates twin models, validates relationships, and activates the twin.",
+      "status": "Running",
+      "owner": "Atlas",
+      "steps": [
+        "Map source objects",
+        "Create twin model",
+        "Validate relationships",
+        "Activate twin"
+      ],
+      "currentStep": "Create twin model",
+      "progress": 36,
+      "trigger": "Enterprise Object relationship update",
+      "lastRun": "2026-07-03T12:18:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0007",
+        "EOS-API-001",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-DIGITAL-TWIN-FORMATION-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-DIGITAL-TWIN-FORMATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:18:00.000Z",
+          "payload": {
+            "workflowName": "Digital Twin Formation",
+            "trigger": "Enterprise Object relationship update"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-TWIN-OBJECT-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-DIGITAL-TWIN-FORMATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:18:30.000Z",
+          "payload": {
+            "objectType": "Digital Twin",
+            "sourceObjectId": "EOS-API-001"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-DEVELOPMENT-FOUNDATION",
+      "name": "Development Foundation",
+      "description": "Bootstraps, starts, stops, statuses, tests, lints, and builds EOS from root workspace scripts.",
+      "status": "Completed",
+      "owner": "EOS Platform",
+      "steps": [
+        "Initialize Git",
+        "Configure workspace scripts",
+        "Create workspace folders",
+        "Verify services",
+        "Publish developer docs"
+      ],
+      "currentStep": "Publish developer docs",
+      "progress": 100,
+      "trigger": "Developer environment setup requested",
+      "lastRun": "2026-07-03T12:30:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0008",
+        "EOS-CAP-0007",
+        "EOS-API-001",
+        "EOS-MC-001"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-DEVELOPMENT-FOUNDATION-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-DEVELOPMENT-FOUNDATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:30:00.000Z",
+          "payload": {
+            "workflowName": "Development Foundation",
+            "trigger": "Developer environment setup requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DEVELOPMENT-FOUNDATION-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-DEVELOPMENT-FOUNDATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:30:30.000Z",
+          "payload": {
+            "scriptsAdded": [
+              "eos:start",
+              "eos:stop",
+              "eos:status",
+              "eos:test",
+              "eos:build",
+              "eos:lint"
+            ],
+            "bootstrapEntrypoint": "./bootstrap.sh",
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-BACKUP-RECOVERY",
+      "name": "Backup & Recovery",
+      "description": "Creates versioned EOS archives, validates checksums, records metadata, and prepares restore reports.",
+      "status": "Running",
+      "owner": "EOS Platform",
+      "steps": [
+        "Create timestamp",
+        "Archive workspace",
+        "Calculate checksum",
+        "Record metadata",
+        "Prepare restore report"
+      ],
+      "currentStep": "Record metadata",
+      "progress": 88,
+      "trigger": "Engineering backup requested",
+      "lastRun": "2026-07-03T12:45:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0009",
+        "EOS-CAP-0008",
+        "EOS-CAP-0007",
+        "EOS-API-001",
+        "EOS-MC-001"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-BACKUP-RECOVERY-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-BACKUP-RECOVERY",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:45:00.000Z",
+          "payload": {
+            "workflowName": "Backup & Recovery",
+            "trigger": "Engineering backup requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-BACKUP-ARCHIVE-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-BACKUP-RECOVERY",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:45:30.000Z",
+          "payload": {
+            "objectType": "Backup Archive",
+            "metadataFile": "backups/backup-log.json"
+          }
+        },
+        {
+          "id": "EOS-EVENT-BACKUP-RECOVERY-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-BACKUP-RECOVERY",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T12:46:00.000Z",
+          "payload": {
+            "commandsAdded": [
+              "eos:backup",
+              "eos:restore"
+            ],
+            "checksumAlgorithm": "SHA-256",
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-SOURCE-CONTROL-RELEASE",
+      "name": "Source Control & Release Management",
+      "description": "Inspects Git status, runs release verification, creates backups, updates release manifests, writes release notes, and prepares semantic tags.",
+      "status": "Running",
+      "owner": "Codex",
+      "steps": [
+        "Inspect Git state",
+        "Run release verification",
+        "Create backup",
+        "Update release manifest",
+        "Prepare semantic tag"
+      ],
+      "currentStep": "Update release manifest",
+      "progress": 82,
+      "trigger": "Release preparation requested",
+      "lastRun": "2026-07-03T14:50:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0010",
+        "EOS-CAP-0007",
+        "EOS-CAP-0008",
+        "EOS-CAP-0009",
+        "EOS-API-001",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-SOURCE-CONTROL-RELEASE-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-SOURCE-CONTROL-RELEASE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T14:50:00.000Z",
+          "payload": {
+            "workflowName": "Source Control & Release Management",
+            "trigger": "Release preparation requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-RELEASE-MANIFEST-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-SOURCE-CONTROL-RELEASE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T14:50:30.000Z",
+          "payload": {
+            "objectType": "Release Manifest",
+            "manifestFile": "docs/releases/RELEASE-MANIFEST.json"
+          }
+        },
+        {
+          "id": "EOS-EVENT-SOURCE-CONTROL-RELEASE-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-SOURCE-CONTROL-RELEASE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T14:51:00.000Z",
+          "payload": {
+            "commandsAdded": [
+              "eos:git:status",
+              "eos:release",
+              "eos:tag"
+            ],
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-INITIAL-REPOSITORY-BASELINE",
+      "name": "Initial Repository Baseline",
+      "description": "Stages the EOS source tree, creates the Alpha Genesis commit, creates the local release tag, and verifies repository cleanliness.",
+      "status": "Completed",
+      "owner": "Codex",
+      "steps": [
+        "Review repository",
+        "Stage source files",
+        "Create Genesis commit",
+        "Create local tag",
+        "Verify clean tree"
+      ],
+      "currentStep": "Verify clean tree",
+      "progress": 100,
+      "trigger": "Initial source control baseline requested",
+      "lastRun": "2026-07-03T15:05:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0011",
+        "EOS-CAP-0010",
+        "EOS-CAP-0007",
+        "EOS-CAP-0008",
+        "EOS-API-001",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-INITIAL-BASELINE-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-INITIAL-REPOSITORY-BASELINE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:05:00.000Z",
+          "payload": {
+            "workflowName": "Initial Repository Baseline",
+            "trigger": "Initial source control baseline requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-GENESIS-COMMIT-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-INITIAL-REPOSITORY-BASELINE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:05:30.000Z",
+          "payload": {
+            "objectType": "Git Commit",
+            "commitMessage": "EOS Alpha Genesis"
+          }
+        },
+        {
+          "id": "EOS-EVENT-LOCAL-RELEASE-TAG-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-INITIAL-REPOSITORY-BASELINE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:06:00.000Z",
+          "payload": {
+            "objectType": "Git Tag",
+            "tag": "v0.7.0"
+          }
+        },
+        {
+          "id": "EOS-EVENT-INITIAL-BASELINE-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-INITIAL-REPOSITORY-BASELINE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:06:30.000Z",
+          "payload": {
+            "workflowName": "Initial Repository Baseline",
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-GOOGLE-DRIVE-BACKUP-PREPARATION",
+      "name": "Google Drive Backup Preparation",
+      "description": "Validates local backup synchronization configuration, documents Google Drive readiness, and prepares future cloud backup integration without connecting to Google Drive.",
+      "status": "Completed",
+      "owner": "Codex",
+      "steps": [
+        "Create credential-free Drive template",
+        "Create local backup synchronization policy",
+        "Validate backup compatibility",
+        "Publish readiness report"
+      ],
+      "currentStep": "Publish readiness report",
+      "progress": 100,
+      "trigger": "Cloud backup readiness requested",
+      "lastRun": "2026-07-03T15:21:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0013",
+        "EOS-CAP-0009",
+        "EOS-CAP-0012",
+        "EOS-API-001",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-GOOGLE-DRIVE-PREP-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-GOOGLE-DRIVE-BACKUP-PREPARATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:20:00.000Z",
+          "payload": {
+            "workflowName": "Google Drive Backup Preparation",
+            "trigger": "Cloud backup readiness requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-GOOGLE-DRIVE-CONFIG-CREATED",
+          "type": "OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-GOOGLE-DRIVE-BACKUP-PREPARATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:20:30.000Z",
+          "payload": {
+            "objectType": "Backup Synchronization Configuration",
+            "configFiles": [
+              "config/google-drive.example.json",
+              "config/backup-sync.json"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-GOOGLE-DRIVE-PREP-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-GOOGLE-DRIVE-BACKUP-PREPARATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:21:00.000Z",
+          "payload": {
+            "commandsAdded": [
+              "eos:drive:status",
+              "eos:drive:test"
+            ],
+            "synchronizationPerformed": false,
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+      "name": "Live Object Status Layer",
+      "description": "Creates, validates, updates, and displays live Enterprise Object health, progress, attention, and action metadata.",
+      "status": "Completed",
+      "owner": "Codex",
+      "steps": [
+        "Define live status interface",
+        "Attach live status to Enterprise Objects",
+        "Validate attention rules",
+        "Display status in Mission Control",
+        "Publish live status documentation"
+      ],
+      "currentStep": "Publish live status documentation",
+      "progress": 100,
+      "trigger": "Enterprise Object action console requested",
+      "lastRun": "2026-07-03T15:37:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0014",
+        "EOS-CAP-0007",
+        "EOS-CAP-0009",
+        "EOS-API-001",
+        "EOS-MC-001",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-LIVE-STATUS-LAYER-STARTED",
+          "type": "WORKFLOW_STARTED",
+          "sourceWorkflowId": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:35:00.000Z",
+          "payload": {
+            "workflowName": "Live Object Status Layer",
+            "trigger": "Enterprise Object action console requested"
+          }
+        },
+        {
+          "id": "EOS-EVENT-LIVE-OBJECT-STATUS-CREATED",
+          "type": "LIVE_OBJECT_STATUS_CREATED",
+          "sourceWorkflowId": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:35:30.000Z",
+          "payload": {
+            "objectScope": "Enterprise Objects",
+            "statusFields": [
+              "status",
+              "healthScore",
+              "progress",
+              "summary",
+              "lastActivity",
+              "requiresAttention",
+              "attentionLevel",
+              "recommendedAction",
+              "availableActions"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-LIVE-OBJECT-STATUS-UPDATED",
+          "type": "LIVE_OBJECT_STATUS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:36:00.000Z",
+          "payload": {
+            "statusModel": "Live Object Status",
+            "updateTarget": "Mission Control object registry"
+          }
+        },
+        {
+          "id": "EOS-EVENT-BACKUP-RESTORE-ATTENTION-REQUIRED",
+          "type": "ATTENTION_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:36:30.000Z",
+          "payload": {
+            "objectIds": [
+              "EOS-CAP-0009",
+              "EOS-WF-BACKUP-RECOVERY"
+            ],
+            "attentionLevel": "Medium",
+            "recommendedAction": "Run restore validation for the latest backup."
+          }
+        },
+        {
+          "id": "EOS-EVENT-LIVE-STATUS-LAYER-COMPLETED",
+          "type": "WORKFLOW_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-LIVE-OBJECT-STATUS-LAYER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:37:00.000Z",
+          "payload": {
+            "workflowName": "Live Object Status Layer",
+            "progress": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+      "name": "Knowledge Management",
+      "description": "Creates, indexes, updates, reviews, and publishes agent-owned research and operational knowledge.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Capture agent knowledge",
+        "Index repository objects",
+        "Review publication readiness",
+        "Assess patent potential",
+        "Publish repository updates"
+      ],
+      "currentStep": "Review publication readiness",
+      "progress": 66,
+      "trigger": "Agent knowledge repository initialized",
+      "lastRun": "2026-07-03T15:47:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0015",
+        "EOS-CAP-0016",
+        "EOS-CAP-0007",
+        "EOS-AKR",
+        "EOS-ASSET-EXPLORER",
+        "RP-001",
+        "RP-002",
+        "RP-003",
+        "RP-004",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATHENA"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-AKR-KNOWLEDGE-OBJECT-CREATED",
+          "type": "KNOWLEDGE_OBJECT_CREATED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:45:00.000Z",
+          "payload": {
+            "repositoryId": "EOS-AKR",
+            "createdObjectIds": [
+              "RP-001",
+              "RP-002",
+              "RP-003",
+              "RP-004"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-AKR-KNOWLEDGE-UPDATED",
+          "type": "KNOWLEDGE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:45:30.000Z",
+          "payload": {
+            "repositoryId": "EOS-AKR",
+            "ownerAgent": "Athena",
+            "updateType": "Initial research repository seeded"
+          }
+        },
+        {
+          "id": "EOS-EVENT-AKR-PUBLICATION-READY",
+          "type": "PUBLICATION_READY",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:46:00.000Z",
+          "payload": {
+            "knowledgeObjectId": "RP-001",
+            "publicationTarget": "EOS White Paper Series"
+          }
+        },
+        {
+          "id": "EOS-EVENT-AKR-PATENT-IDENTIFIED",
+          "type": "PATENT_IDENTIFIED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:46:30.000Z",
+          "payload": {
+            "knowledgeObjectIds": [
+              "RP-002",
+              "RP-003"
+            ],
+            "reviewOwner": "Athena"
+          }
+        },
+        {
+          "id": "EOS-EVENT-AKR-INVESTOR-BRIEF-READY",
+          "type": "INVESTOR_BRIEF_READY",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T15:47:00.000Z",
+          "payload": {
+            "knowledgeObjectId": "RP-003",
+            "audience": "EOS Executive Team"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+      "name": "Knowledge Asset Viewer",
+      "description": "Surfaces Live Knowledge Objects in Mission Control, displays preview content, separates operational and lifecycle status, and prepares future asset actions.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Load agent repositories",
+        "Select knowledge asset",
+        "Display live status",
+        "Review preview content",
+        "Route future asset action"
+      ],
+      "currentStep": "Display live status",
+      "progress": 74,
+      "trigger": "Mission Control asset explorer requested",
+      "lastRun": "2026-07-03T16:10:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0016",
+        "EOS-CAP-0015",
+        "EOS-CAP-0007",
+        "EOS-MC-001",
+        "EOS-AKR",
+        "EOS-ASSET-EXPLORER",
+        "RP-001",
+        "RP-002",
+        "RP-003",
+        "RP-004",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-CODEX"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-KNOWLEDGE-ASSET-VIEWED",
+          "type": "KNOWLEDGE_ASSET_VIEWED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:10:00.000Z",
+          "payload": {
+            "assetExplorerId": "EOS-ASSET-EXPLORER",
+            "defaultKnowledgeObjectId": "RP-001"
+          }
+        },
+        {
+          "id": "EOS-EVENT-KNOWLEDGE-ASSET-STATUS-UPDATED",
+          "type": "KNOWLEDGE_ASSET_STATUS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:10:30.000Z",
+          "payload": {
+            "statusModel": "Live Knowledge Object",
+            "fieldsAdded": [
+              "operationalStatus",
+              "lifecycleStatus",
+              "previewContent"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-KNOWLEDGE-ASSET-REVIEW-REQUESTED",
+          "type": "KNOWLEDGE_ASSET_REVIEW_REQUESTED",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:11:00.000Z",
+          "payload": {
+            "knowledgeObjectIds": [
+              "RP-002",
+              "RP-003"
+            ],
+            "reviewOwner": "Athena"
+          }
+        },
+        {
+          "id": "EOS-EVENT-INVESTOR-BRIEF-AVAILABLE",
+          "type": "INVESTOR_BRIEF_AVAILABLE",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:11:30.000Z",
+          "payload": {
+            "knowledgeObjectId": "RP-003",
+            "investorReady": true
+          }
+        },
+        {
+          "id": "EOS-EVENT-PUBLICATION-DRAFT-AVAILABLE",
+          "type": "PUBLICATION_DRAFT_AVAILABLE",
+          "sourceWorkflowId": "EOS-WF-KNOWLEDGE-ASSET-VIEWER",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:12:00.000Z",
+          "payload": {
+            "knowledgeObjectId": "RP-001",
+            "publicationReady": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-PROGRAM-MANAGEMENT",
+      "name": "Program Management",
+      "description": "Creates programs, updates roadmap state, tracks milestones, starts and completes sprints, and reports PMO health.",
+      "status": "Running",
+      "owner": "CTO",
+      "steps": [
+        "Establish PMO",
+        "Publish Master Roadmap",
+        "Map programs and capabilities",
+        "Review dependencies and risks",
+        "Report executive roadmap status"
+      ],
+      "currentStep": "Review dependencies and risks",
+      "progress": 62,
+      "trigger": "EOS Master Roadmap requested",
+      "lastRun": "2026-07-03T16:40:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0020",
+        "EOS-CAP-0007",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-MC-001",
+        "EOS-API-001",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-MERCURY",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-PMO-PROGRAM-CREATED",
+          "type": "PROGRAM_CREATED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:40:00.000Z",
+          "payload": {
+            "pmoId": "EOS-PMO",
+            "programCount": 12
+          }
+        },
+        {
+          "id": "EOS-EVENT-PMO-PROGRAM-UPDATED",
+          "type": "PROGRAM_UPDATED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:40:30.000Z",
+          "payload": {
+            "roadmapId": "EOS-MASTER-ROADMAP",
+            "updatedPrograms": [
+              "Engineering Foundation",
+              "Research & Publications",
+              "Investor Readiness"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-PMO-MILESTONE-COMPLETED",
+          "type": "MILESTONE_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:41:00.000Z",
+          "payload": {
+            "milestoneId": "EOS-MS-LIVE-OBJECT-LAYER",
+            "linkedCapabilities": [
+              "EOS-CAP-0014",
+              "EOS-CAP-0016"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-PMO-ROADMAP-UPDATED",
+          "type": "ROADMAP_UPDATED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:41:30.000Z",
+          "payload": {
+            "roadmapId": "EOS-MASTER-ROADMAP",
+            "progress": 48,
+            "health": 86
+          }
+        },
+        {
+          "id": "EOS-EVENT-PMO-SPRINT-STARTED",
+          "type": "SPRINT_STARTED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:42:00.000Z",
+          "payload": {
+            "sprintId": "EOS-SPRINT-ALPHA-PMO",
+            "currentCapability": "EOS-CAP-0020"
+          }
+        },
+        {
+          "id": "EOS-EVENT-PMO-SPRINT-COMPLETED",
+          "type": "SPRINT_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-PROGRAM-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T16:42:30.000Z",
+          "payload": {
+            "sprintId": "EOS-SPRINT-ALPHA-PMO",
+            "completionScope": "PMO foundation verification"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+      "name": "Executive Council Governance",
+      "description": "Creates the Executive Council, updates executive profiles, tracks attention needs, updates the CEO cockpit, and activates the Digital Enterprise Headquarters layer.",
+      "status": "Running",
+      "owner": "Eric Olo",
+      "steps": [
+        "Create Executive Council",
+        "Register executive profiles",
+        "Update CEO cockpit",
+        "Surface attention needs",
+        "Activate headquarters view"
+      ],
+      "currentStep": "Activate headquarters view",
+      "progress": 68,
+      "trigger": "Digital Enterprise Headquarters requested",
+      "lastRun": "2026-07-03T17:05:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0021",
+        "EOS-CAP-0007",
+        "EOS-EXECUTIVE-COUNCIL",
+        "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+        "EOS-MC-001",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-MERCURY",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-EXECUTIVE-COUNCIL-CREATED",
+          "type": "EXECUTIVE_COUNCIL_CREATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:05:00.000Z",
+          "payload": {
+            "councilId": "EOS-EXECUTIVE-COUNCIL",
+            "executiveCount": 9
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-PROFILE-UPDATED",
+          "type": "EXECUTIVE_PROFILE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:05:30.000Z",
+          "payload": {
+            "profileIds": [
+              "EOS-EXEC-ERIC-OLO",
+              "EOS-EXEC-CHATGPT",
+              "EOS-AGENT-CODEX"
+            ],
+            "updateScope": "Initial Executive Council profile model"
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ATTENTION-REQUIRED",
+          "type": "EXECUTIVE_ATTENTION_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:06:00.000Z",
+          "payload": {
+            "attentionCount": 6,
+            "attentionLevel": "Low"
+          }
+        },
+        {
+          "id": "EOS-EVENT-CEO-COCKPIT-UPDATED",
+          "type": "CEO_COCKPIT_UPDATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:06:30.000Z",
+          "payload": {
+            "currentCapability": "EOS-CAP-0021",
+            "currentRoadmapPhase": "Alpha"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-HEADQUARTERS-CREATED",
+          "type": "DIGITAL_HEADQUARTERS_CREATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-COUNCIL-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:07:00.000Z",
+          "payload": {
+            "headquartersId": "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+            "missionControlView": "Executive Council"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "name": "Executive Action Governance",
+      "description": "Records executive actions, routes governance decisions, preserves audit history, and prevents execution until permissions, persistence, and audit controls are implemented.",
+      "status": "Running",
+      "owner": "Eric Olo",
+      "steps": [
+        "Record executive action",
+        "Classify risk",
+        "Route approval decision",
+        "Preserve audit trail",
+        "Keep execution disabled"
+      ],
+      "currentStep": "Route approval decision",
+      "progress": 54,
+      "trigger": "Executive action governance requested",
+      "lastRun": "2026-07-03T17:32:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0022",
+        "EOS-CAP-0007",
+        "EOS-EXECUTIVE-ACTION-FRAMEWORK",
+        "EOS-APPROVAL-QUEUE",
+        "EOS-EXECUTIVE-COUNCIL",
+        "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+        "EOS-MC-001",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+          "type": "EXECUTIVE_ACTION_CREATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:32:00.000Z",
+          "payload": {
+            "frameworkId": "EOS-EXECUTIVE-ACTION-FRAMEWORK",
+            "executionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED",
+          "type": "EXECUTIVE_ACTION_REVIEW_REQUESTED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:32:30.000Z",
+          "payload": {
+            "approvalQueueId": "EOS-APPROVAL-QUEUE",
+            "approvalStatus": "Pending"
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-APPROVED",
+          "type": "EXECUTIVE_ACTION_APPROVED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:33:00.000Z",
+          "payload": {
+            "approvalStatus": "Approved",
+            "executionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-REJECTED",
+          "type": "EXECUTIVE_ACTION_REJECTED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:33:30.000Z",
+          "payload": {
+            "approvalStatus": "Rejected",
+            "executionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED",
+          "type": "EXECUTIVE_ACTION_ESCALATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:34:00.000Z",
+          "payload": {
+            "approvalStatus": "Escalated",
+            "riskLevel": "High"
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED",
+          "type": "EXECUTIVE_ACTION_DEFERRED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:34:30.000Z",
+          "payload": {
+            "status": "Deferred",
+            "executionEnabled": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-EXECUTIVE-OFFICE-MANAGEMENT",
+      "name": "Executive Office Management",
+      "description": "Opens Executive Offices, updates executive briefings, tracks department status, and routes office navigation inside Mission Control.",
+      "status": "Running",
+      "owner": "Eric Olo",
+      "steps": [
+        "Create office framework",
+        "Register executive offices",
+        "Attach department portfolios",
+        "Update executive briefings",
+        "Route Mission Control navigation"
+      ],
+      "currentStep": "Route Mission Control navigation",
+      "progress": 61,
+      "trigger": "Executive Office Framework requested",
+      "lastRun": "2026-07-03T17:58:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0023",
+        "EOS-CAP-0007",
+        "EOS-CAP-0021",
+        "EOS-CAP-0022",
+        "EOS-EXECUTIVE-OFFICE-FRAMEWORK",
+        "EOS-EXECUTIVE-COUNCIL",
+        "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+        "EOS-EXECUTIVE-ACTION-FRAMEWORK",
+        "EOS-MC-001",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-MERCURY",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-EXECUTIVE-OFFICE-OPENED",
+          "type": "EXECUTIVE_OFFICE_OPENED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-OFFICE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:58:00.000Z",
+          "payload": {
+            "frameworkId": "EOS-EXECUTIVE-OFFICE-FRAMEWORK",
+            "officeCount": 9
+          }
+        },
+        {
+          "id": "EOS-EVENT-EXECUTIVE-BRIEFING-UPDATED",
+          "type": "EXECUTIVE_BRIEFING_UPDATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-OFFICE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:58:30.000Z",
+          "payload": {
+            "briefingScope": "Executive Office standard briefing model",
+            "currentCapability": "EOS-CAP-0023"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DEPARTMENT-STATUS-UPDATED",
+          "type": "DEPARTMENT_STATUS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-EXECUTIVE-OFFICE-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T17:59:00.000Z",
+          "payload": {
+            "departments": [
+              "Executive",
+              "Technology",
+              "Engineering",
+              "Research",
+              "Knowledge",
+              "Architecture",
+              "Opportunity",
+              "Operations",
+              "Quality"
+            ],
+            "status": "Operational"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-DESIGN-GOVERNANCE",
+      "name": "Design Governance",
+      "description": "Maintains the EOS Enterprise Design System, UX audit scoring, presentation mode, hover intelligence, executive language, and five capability quality gates.",
+      "status": "Running",
+      "owner": "EOS Engineering Department",
+      "steps": [
+        "Define EDS standards",
+        "Apply executive language",
+        "Register hover intelligence",
+        "Enable presentation mode",
+        "Complete UX audit",
+        "Enforce five quality gates"
+      ],
+      "currentStep": "Enforce five quality gates",
+      "progress": 72,
+      "trigger": "Enterprise Design System requested",
+      "lastRun": "2026-07-03T18:24:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0024",
+        "EOS-CAP-0007",
+        "EOS-CAP-0023",
+        "EOS-ENTERPRISE-DESIGN-SYSTEM",
+        "EOS-EXECUTIVE-PRESENTATION-MODE",
+        "EOS-UX-AUDIT",
+        "EOS-MC-001",
+        "EOS-DIGITAL-ENTERPRISE-HEADQUARTERS",
+        "EOS-EXECUTIVE-OFFICE-FRAMEWORK",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-DESIGN-SYSTEM-CREATED",
+          "type": "DESIGN_SYSTEM_CREATED",
+          "sourceWorkflowId": "EOS-WF-DESIGN-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:24:00.000Z",
+          "payload": {
+            "designSystemId": "EOS-ENTERPRISE-DESIGN-SYSTEM",
+            "capabilityId": "EOS-CAP-0024"
+          }
+        },
+        {
+          "id": "EOS-EVENT-UX-AUDIT-COMPLETED",
+          "type": "UX_AUDIT_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-DESIGN-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:24:30.000Z",
+          "payload": {
+            "auditId": "EOS-UX-AUDIT",
+            "screensAudited": 9
+          }
+        },
+        {
+          "id": "EOS-EVENT-PRESENTATION-MODE-ENABLED",
+          "type": "PRESENTATION_MODE_ENABLED",
+          "sourceWorkflowId": "EOS-WF-DESIGN-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:25:00.000Z",
+          "payload": {
+            "presentationModeId": "EOS-EXECUTIVE-PRESENTATION-MODE",
+            "enabledInMissionControl": true
+          }
+        },
+        {
+          "id": "EOS-EVENT-TOOLTIP-REGISTERED",
+          "type": "TOOLTIP_REGISTERED",
+          "sourceWorkflowId": "EOS-WF-DESIGN-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:25:30.000Z",
+          "payload": {
+            "registry": "EOS hover intelligence",
+            "tooltipCount": 19
+          }
+        },
+        {
+          "id": "EOS-EVENT-DESIGN-STANDARD-UPDATED",
+          "type": "DESIGN_STANDARD_UPDATED",
+          "sourceWorkflowId": "EOS-WF-DESIGN-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:26:00.000Z",
+          "payload": {
+            "qualityGates": [
+              "Engineering",
+              "Architecture",
+              "UX/UI",
+              "Executive",
+              "Investor"
+            ],
+            "version": "0.16.0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+      "name": "Persistent Data Management",
+      "description": "Initializes local JSON collections, preserves seed fallback behavior, reports storage health, and prepares EOS for future PostgreSQL migration.",
+      "status": "Running",
+      "owner": "EOS Engineering Department",
+      "steps": [
+        "Create data directories",
+        "Initialize collections from seed registries",
+        "Expose storage health endpoints",
+        "Wire read services to storage",
+        "Include data in backups",
+        "Document future database migration"
+      ],
+      "currentStep": "Document future database migration",
+      "progress": 68,
+      "trigger": "Persistent Data Store Foundation requested",
+      "lastRun": "2026-07-03T18:55:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0025",
+        "EOS-CAP-0007",
+        "EOS-PERSISTENT-DATA-STORE",
+        "EOS-STORAGE-HEALTH",
+        "EOS-API-001",
+        "EOS-MC-001",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-PERSISTENT-STORE-CREATED",
+          "type": "PERSISTENT_STORE_CREATED",
+          "sourceWorkflowId": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:55:00.000Z",
+          "payload": {
+            "storePath": "data/store",
+            "schemaVersion": "1.0.0"
+          }
+        },
+        {
+          "id": "EOS-EVENT-COLLECTION-INITIALIZED",
+          "type": "COLLECTION_INITIALIZED",
+          "sourceWorkflowId": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:55:30.000Z",
+          "payload": {
+            "collectionCount": 34,
+            "source": "seed registries"
+          }
+        },
+        {
+          "id": "EOS-EVENT-COLLECTION-UPDATED",
+          "type": "COLLECTION_UPDATED",
+          "sourceWorkflowId": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:56:00.000Z",
+          "payload": {
+            "updateMode": "merge missing records",
+            "duplicateProtection": true
+          }
+        },
+        {
+          "id": "EOS-EVENT-STORAGE-SNAPSHOT-CREATED",
+          "type": "STORAGE_SNAPSHOT_CREATED",
+          "sourceWorkflowId": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:56:30.000Z",
+          "payload": {
+            "snapshotPath": "data/snapshots",
+            "trigger": "storage service snapshot capability"
+          }
+        },
+        {
+          "id": "EOS-EVENT-STORAGE-HEALTH-CHECK-COMPLETED",
+          "type": "STORAGE_HEALTH_CHECK_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-PERSISTENT-DATA-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T18:57:00.000Z",
+          "payload": {
+            "endpoint": "/api/storage/status",
+            "status": "Operational"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+      "name": "Strategy Governance Valuation",
+      "description": "Aligns enterprise strategy, governance approvals, roadmap programs, valuation assumptions, Second Balance Sheet metrics, and Digital Twin Asset monitoring.",
+      "status": "Running",
+      "owner": "EOS Executive Office",
+      "steps": [
+        "Create enterprise strategy",
+        "Review governance approvals",
+        "Align roadmap programs",
+        "Publish internal valuation foundation",
+        "Update Second Balance Sheet metrics",
+        "Monitor Digital Twin Assets"
+      ],
+      "currentStep": "Review governance approvals",
+      "progress": 52,
+      "trigger": "Enterprise strategy and valuation alignment requested",
+      "lastRun": "2026-07-03T19:20:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0026",
+        "EOS-CAP-0007",
+        "EOS-ENTERPRISE-STRATEGY",
+        "EOS-GOVERNANCE-COUNCIL",
+        "EOS-DIGITAL-ENTERPRISE-VALUATION",
+        "EOS-SECOND-BALANCE-SHEET",
+        "EOS-DTA-MONITORING",
+        "DTA-EPERCENT-001",
+        "DTA-EOS-001",
+        "EOS-PMO",
+        "EOS-MASTER-ROADMAP",
+        "EOS-EXECUTIVE-COUNCIL",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-MERCURY"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-STRATEGY-CREATED",
+          "type": "STRATEGY_CREATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:20:00.000Z",
+          "payload": {
+            "strategyId": "EOS-ENTERPRISE-STRATEGY",
+            "capabilityId": "EOS-CAP-0026"
+          }
+        },
+        {
+          "id": "EOS-EVENT-STRATEGY-APPROVAL-REQUIRED",
+          "type": "STRATEGY_APPROVAL_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:20:30.000Z",
+          "payload": {
+            "approvalStatus": "Awaiting Review",
+            "owner": "Eric Olo"
+          }
+        },
+        {
+          "id": "EOS-EVENT-ROADMAP-ALIGNED-TO-STRATEGY",
+          "type": "ROADMAP_ALIGNED_TO_STRATEGY",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:21:00.000Z",
+          "payload": {
+            "roadmapId": "EOS-MASTER-ROADMAP",
+            "alignedProgramCount": 12
+          }
+        },
+        {
+          "id": "EOS-EVENT-VALUATION-UPDATED",
+          "type": "VALUATION_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:21:30.000Z",
+          "payload": {
+            "valuationId": "EOS-DIGITAL-ENTERPRISE-VALUATION",
+            "estimateBasis": "Internal estimate only"
+          }
+        },
+        {
+          "id": "EOS-EVENT-SECOND-BALANCE-SHEET-UPDATED",
+          "type": "SECOND_BALANCE_SHEET_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:22:00.000Z",
+          "payload": {
+            "balanceSheetId": "EOS-SECOND-BALANCE-SHEET",
+            "methodologyStatus": "Draft Internal Methodology"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DTA-EPERCENT-CREATED",
+          "type": "DTA_CREATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:22:30.000Z",
+          "payload": {
+            "assetId": "DTA-EPERCENT-001",
+            "status": "Formation"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DTA-EOS-STATUS-UPDATED",
+          "type": "DTA_STATUS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:23:00.000Z",
+          "payload": {
+            "assetId": "DTA-EOS-001",
+            "status": "Active Monitoring"
+          }
+        },
+        {
+          "id": "EOS-EVENT-GOVERNANCE-REVIEW-REQUIRED",
+          "type": "GOVERNANCE_REVIEW_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-STRATEGY-GOVERNANCE-VALUATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T19:23:30.000Z",
+          "payload": {
+            "governanceId": "EOS-GOVERNANCE-COUNCIL",
+            "openItems": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+      "name": "Platform Operations Governance",
+      "description": "Reviews platform status, backup posture, storage health, system warnings, and governed administration actions.",
+      "status": "Running",
+      "owner": "Argus",
+      "steps": [
+        "Review platform status",
+        "Review backup posture",
+        "Review storage health",
+        "Register admin actions",
+        "Apply authorization policy",
+        "Report administration readiness"
+      ],
+      "currentStep": "Apply authorization policy",
+      "progress": 62,
+      "trigger": "Platform administration center requested",
+      "lastRun": "2026-07-03T20:15:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0027",
+        "EOS-PLATFORM-ADMINISTRATION-CENTER",
+        "EOS-ACTION-GOVERNANCE",
+        "EOS-PERSISTENT-DATA-STORE",
+        "EOS-STORAGE-HEALTH",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-PLATFORM-ADMIN-CENTER-CREATED",
+          "type": "PLATFORM_ADMIN_CENTER_CREATED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:15:00.000Z",
+          "payload": {
+            "objectId": "EOS-PLATFORM-ADMINISTRATION-CENTER",
+            "capabilityId": "EOS-CAP-0027"
+          }
+        },
+        {
+          "id": "EOS-EVENT-ADMIN-ACTION-REGISTERED",
+          "type": "ADMIN_ACTION_REGISTERED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:15:30.000Z",
+          "payload": {
+            "actionCount": 14,
+            "executionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-ADMIN-ACTION-COMPLETED",
+          "type": "ADMIN_ACTION_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:16:30.000Z",
+          "payload": {
+            "actionId": "EOS-ADMIN-ACTION-RUN-BACKUP",
+            "result": "Backup metadata captured before capability implementation"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-AGENT-COMMUNICATION",
+      "name": "Agent Communication",
+      "description": "Creates local agent message threads, tracks response requirements, links messages to work, and preserves audit history.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Create message",
+        "Route to agent",
+        "Track response requirement",
+        "Link work item",
+        "Preserve audit trail"
+      ],
+      "currentStep": "Track response requirement",
+      "progress": 48,
+      "trigger": "Mission Control agent communication requested",
+      "lastRun": "2026-07-03T20:16:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0027",
+        "EOS-AGENT-COMMUNICATION-LAYER",
+        "EOS-AI-WORKFORCE-OPERATIONS",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ATHENA",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-AGENT-MESSAGE-CREATED",
+          "type": "AGENT_MESSAGE_CREATED",
+          "sourceWorkflowId": "EOS-WF-AGENT-COMMUNICATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:17:00.000Z",
+          "payload": {
+            "messageCount": 5,
+            "responseRequired": 4
+          }
+        },
+        {
+          "id": "EOS-EVENT-AGENT-MESSAGE-UPDATED",
+          "type": "AGENT_MESSAGE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-AGENT-COMMUNICATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:17:30.000Z",
+          "payload": {
+            "threadId": "EOS-THREAD-CODEX-BUILD-001",
+            "status": "Read"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-AGENT-ACTIVITY-MONITORING",
+      "name": "Agent Activity Monitoring",
+      "description": "Tracks agent work, activity status, progress, attention requests, executive review time, and recommended actions.",
+      "status": "Running",
+      "owner": "Argus",
+      "steps": [
+        "Capture activity",
+        "Score progress",
+        "Identify attention needs",
+        "Estimate review time",
+        "Report recommended action"
+      ],
+      "currentStep": "Identify attention needs",
+      "progress": 54,
+      "trigger": "AI workforce activity view requested",
+      "lastRun": "2026-07-03T20:17:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0027",
+        "EOS-AGENT-ACTIVITY-QUEUE",
+        "EOS-AI-WORKFORCE-OPERATIONS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-CODEX"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-AGENT-ACTIVITY-UPDATED",
+          "type": "AGENT_ACTIVITY_UPDATED",
+          "sourceWorkflowId": "EOS-WF-AGENT-ACTIVITY-MONITORING",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:18:00.000Z",
+          "payload": {
+            "activityCount": 4,
+            "requiringAttention": 2
+          }
+        },
+        {
+          "id": "EOS-EVENT-AGENT-ATTENTION-REQUIRED",
+          "type": "AGENT_ATTENTION_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-AGENT-ACTIVITY-MONITORING",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:18:30.000Z",
+          "payload": {
+            "attentionItemId": "EOS-ATTENTION-ACTION-GOVERNANCE",
+            "attentionLevel": "High"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-AGENT-CALENDAR-MANAGEMENT",
+      "name": "Agent Calendar Management",
+      "description": "Maintains local agent operating events, review sessions, preparation notes, and future external calendar readiness.",
+      "status": "Running",
+      "owner": "Argus",
+      "steps": [
+        "Create local event",
+        "Link workflow",
+        "Link object",
+        "Identify attendance needs",
+        "Report preparation"
+      ],
+      "currentStep": "Report preparation",
+      "progress": 44,
+      "trigger": "Agent calendar foundation requested",
+      "lastRun": "2026-07-03T20:18:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0027",
+        "EOS-AGENT-CALENDAR",
+        "EOS-AI-WORKFORCE-OPERATIONS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-AGENT-CALENDAR-EVENT-CREATED",
+          "type": "AGENT_CALENDAR_EVENT_CREATED",
+          "sourceWorkflowId": "EOS-WF-AGENT-CALENDAR-MANAGEMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:19:00.000Z",
+          "payload": {
+            "calendarEventCount": 7,
+            "requiresHumanAttendance": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-ACTION-AUTHORIZATION",
+      "name": "Action Authorization",
+      "description": "Registers governed administration actions, classifies risk, applies authorization policy, tracks approvals, and preserves audit trails while execution remains disabled.",
+      "status": "Running",
+      "owner": "Chief Technology Officer",
+      "steps": [
+        "Register action",
+        "Classify risk",
+        "Check preconditions",
+        "Apply authorization policy",
+        "Preserve audit trail"
+      ],
+      "currentStep": "Apply authorization policy",
+      "progress": 50,
+      "trigger": "Governed platform administration action requested",
+      "lastRun": "2026-07-03T20:19:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0027",
+        "EOS-ACTION-GOVERNANCE",
+        "EOS-PLATFORM-ADMINISTRATION-CENTER",
+        "EOS-EXECUTIVE-ACTION-FRAMEWORK",
+        "EOS-APPROVAL-QUEUE",
+        "EOS-GOVERNANCE-COUNCIL",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-ADMIN-ACTION-AUTHORIZATION-REQUIRED",
+          "type": "ADMIN_ACTION_AUTHORIZATION_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-ACTION-AUTHORIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:16:00.000Z",
+          "payload": {
+            "governedActionCount": 6,
+            "requiredRole": "Chief Technology Officer"
+          }
+        },
+        {
+          "id": "EOS-EVENT-ACTION-GOVERNANCE-POLICY-CREATED",
+          "type": "ACTION_GOVERNANCE_POLICY_CREATED",
+          "sourceWorkflowId": "EOS-WF-ACTION-AUTHORIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:19:30.000Z",
+          "payload": {
+            "policyCount": 6,
+            "executionEnabled": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+      "name": "Mission Control Experience Governance",
+      "description": "Governs Mission Control navigation, Digital Headquarters lobby, command palette foundation, workspace rail, context navigation, and UX audit completion.",
+      "status": "Running",
+      "owner": "Codex",
+      "steps": [
+        "Assess current navigation",
+        "Define workspace model",
+        "Implement command bar and rail",
+        "Validate executive interaction flow",
+        "Record UX audit"
+      ],
+      "currentStep": "Record UX audit",
+      "progress": 76,
+      "trigger": "Mission Control navigation redesign requested",
+      "lastRun": "2026-07-03T20:55:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0028",
+        "EOS-MISSION-CONTROL-NAVIGATION",
+        "EOS-DIGITAL-HEADQUARTERS-LOBBY",
+        "EOS-COMMAND-PALETTE",
+        "EOS-WORKSPACE-RAIL",
+        "EOS-ENTERPRISE-DESIGN-SYSTEM",
+        "EOS-UX-AUDIT",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-HERMES"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-MISSION-CONTROL-NAVIGATION-REDESIGNED",
+          "type": "MISSION_CONTROL_NAVIGATION_REDESIGNED",
+          "sourceWorkflowId": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:55:00.000Z",
+          "payload": {
+            "capabilityId": "EOS-CAP-0028",
+            "navigationModel": "Workspace-based Digital Enterprise Headquarters navigation",
+            "preservedExistingViews": true
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-HEADQUARTERS-LOBBY-CREATED",
+          "type": "DIGITAL_HEADQUARTERS_LOBBY_CREATED",
+          "sourceWorkflowId": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:55:30.000Z",
+          "payload": {
+            "objectId": "EOS-DIGITAL-HEADQUARTERS-LOBBY",
+            "workspaceCount": 8,
+            "openingExperience": "CEO briefing and workspace selection"
+          }
+        },
+        {
+          "id": "EOS-EVENT-WORKSPACE-RAIL-CREATED",
+          "type": "WORKSPACE_RAIL_CREATED",
+          "sourceWorkflowId": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:56:00.000Z",
+          "payload": {
+            "objectId": "EOS-WORKSPACE-RAIL",
+            "workspaces": [
+              "Headquarters",
+              "Enterprise",
+              "Enterprise Value",
+              "AI Workforce",
+              "Knowledge",
+              "Platform",
+              "Development",
+              "My Workspace"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-COMMAND-PALETTE-CREATED",
+          "type": "COMMAND_PALETTE_CREATED",
+          "sourceWorkflowId": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:56:30.000Z",
+          "payload": {
+            "objectId": "EOS-COMMAND-PALETTE",
+            "executionEnabled": false,
+            "suggestionCount": 5
+          }
+        },
+        {
+          "id": "EOS-EVENT-UX-NAVIGATION-AUDIT-COMPLETED",
+          "type": "UX_NAVIGATION_AUDIT_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-MISSION-CONTROL-EXPERIENCE-GOVERNANCE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T20:57:00.000Z",
+          "payload": {
+            "auditScope": "Mission Control navigation and frontend experience",
+            "beforeScore": 6.6,
+            "afterScore": 8.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-STRATEGIC-ALIGNMENT",
+      "name": "Strategic Alignment",
+      "description": "Aligns investment thesis, technology flywheel, Three-Horizon Roadmap, revenue model, DTA lifecycle, KIPR, enterprise profile, and readiness assessments with EOS execution.",
+      "status": "Running",
+      "owner": "EOS Executive Office",
+      "steps": [
+        "Review investment thesis",
+        "Map strategic concepts to platform objects",
+        "Update flywheel and roadmap",
+        "Assess revenue and readiness",
+        "Publish strategic alignment report"
+      ],
+      "currentStep": "Publish strategic alignment report",
+      "progress": 72,
+      "trigger": "Investment thesis alignment requested",
+      "lastRun": "2026-07-03T21:20:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0029",
+        "EOS-INVESTMENT-THESIS",
+        "EOS-TECHNOLOGY-FLYWHEEL",
+        "EOS-THREE-HORIZON-ROADMAP",
+        "EOS-REVENUE-ENGINE",
+        "EOS-DTA-LIFECYCLE",
+        "EOS-KIPR",
+        "EOS-ENTERPRISE-PROFILE",
+        "EOS-INDUSTRY-FRAMEWORK",
+        "EOS-ENTERPRISE-STRATEGY",
+        "EOS-MASTER-ROADMAP"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-INVESTMENT-THESIS-UPDATED",
+          "type": "INVESTMENT_THESIS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:20:00.000Z",
+          "payload": {
+            "objectId": "EOS-INVESTMENT-THESIS",
+            "alignmentSections": [
+              "Already Implemented",
+              "Partially Implemented",
+              "Not Yet Implemented",
+              "Recommended Future Capability"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-TECHNOLOGY-FLYWHEEL-UPDATED",
+          "type": "TECHNOLOGY_FLYWHEEL_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:20:30.000Z",
+          "payload": {
+            "objectId": "EOS-TECHNOLOGY-FLYWHEEL",
+            "flywheelSteps": 11,
+            "maturity": 48
+          }
+        },
+        {
+          "id": "EOS-EVENT-REVENUE-MODEL-UPDATED",
+          "type": "REVENUE_MODEL_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:21:00.000Z",
+          "payload": {
+            "objectId": "EOS-REVENUE-ENGINE",
+            "revenueStreams": 19,
+            "status": "Foundation"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DTA-LIFECYCLE-UPDATED",
+          "type": "DTA_LIFECYCLE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:21:30.000Z",
+          "payload": {
+            "objectId": "EOS-DTA-LIFECYCLE",
+            "lifecycleStages": 11,
+            "assetsMapped": [
+              "DTA-EPERCENT-001",
+              "DTA-EOS-001"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-KIPR-UPDATED",
+          "type": "KIPR_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:22:00.000Z",
+          "payload": {
+            "objectId": "EOS-KIPR",
+            "areas": 11,
+            "seededResearchProjects": [
+              "RP-001",
+              "RP-002",
+              "RP-003",
+              "RP-004"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-ENTERPRISE-PROFILE-UPDATED",
+          "type": "ENTERPRISE_PROFILE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-STRATEGIC-ALIGNMENT",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:22:30.000Z",
+          "payload": {
+            "objectId": "EOS-ENTERPRISE-PROFILE",
+            "company": "ePercent",
+            "status": "Running on EOS"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+      "name": "Enterprise Digital Twin Visualization",
+      "description": "Coordinates Master Monitoring, enterprise visual models, digital twin homes, simulated telemetry, timezone standards, and future digital twin generation workflow display.",
+      "status": "Running",
+      "owner": "EOS Engineering Department",
+      "steps": [
+        "Create Master Monitoring view",
+        "Model layered enterprise architecture",
+        "Seed enterprise visual homes",
+        "Register simulated telemetry updates",
+        "Apply timezone timestamp standard",
+        "Publish digital twin generation workflow placeholder"
+      ],
+      "currentStep": "Publish digital twin generation workflow placeholder",
+      "progress": 68,
+      "trigger": "Enterprise Digital Twin visual layer requested",
+      "lastRun": "2026-07-03T21:50:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0030",
+        "EOS-MASTER-MONITORING-VIEW",
+        "EOS-ENTERPRISE-DIGITAL-TWIN-HOME",
+        "EOS-ENTERPRISE-VISUAL-MODEL",
+        "EOS-REAL-TIME-TELEMETRY-FOUNDATION",
+        "EOS-DIGITAL-TWIN-GENERATION-WORKFLOW",
+        "DTA-EPERCENT-001",
+        "DTA-OIL-001",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-VULCAN"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-MASTER-MONITORING-VIEW-CREATED",
+          "type": "MASTER_MONITORING_VIEW_CREATED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:50:00.000Z",
+          "payload": {
+            "objectId": "EOS-MASTER-MONITORING-VIEW",
+            "onboardedEnterprises": 2,
+            "visualTheme": "dark-layered-enterprise"
+          }
+        },
+        {
+          "id": "EOS-EVENT-ENTERPRISE-VISUAL-MODEL-CREATED",
+          "type": "ENTERPRISE_VISUAL_MODEL_CREATED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:50:30.000Z",
+          "payload": {
+            "objectId": "EOS-ENTERPRISE-VISUAL-MODEL",
+            "enterprises": [
+              "DTA-EPERCENT-001",
+              "DTA-OIL-001"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-TWIN-HOME-CREATED",
+          "type": "DIGITAL_TWIN_HOME_CREATED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:51:00.000Z",
+          "payload": {
+            "objectId": "EOS-ENTERPRISE-DIGITAL-TWIN-HOME",
+            "homes": [
+              "DTA-EPERCENT-001",
+              "DTA-OIL-001"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-TELEMETRY-UPDATE-RECEIVED",
+          "type": "TELEMETRY_UPDATE_RECEIVED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:51:30.000Z",
+          "payload": {
+            "objectId": "EOS-REAL-TIME-TELEMETRY-FOUNDATION",
+            "telemetryRecords": 10,
+            "feedMode": "Simulated"
+          }
+        },
+        {
+          "id": "EOS-EVENT-TIMEZONE-STANDARD-APPLIED",
+          "type": "TIMEZONE_STANDARD_APPLIED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:52:00.000Z",
+          "payload": {
+            "standard": "Store UTC, display enterprise timezone",
+            "defaultDisplayTimezone": "Africa/Lagos"
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-TWIN-STRUCTURE-GENERATED",
+          "type": "DIGITAL_TWIN_STRUCTURE_GENERATED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-DIGITAL-TWIN-VISUALIZATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T21:52:30.000Z",
+          "payload": {
+            "objectId": "EOS-DIGITAL-TWIN-GENERATION-WORKFLOW",
+            "mode": "Placeholder",
+            "workflowSteps": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-ORGANIZATION-INTAKE",
+      "name": "Organization Intake",
+      "description": "Coordinates profile media registration, company logo handling, organization source import, metadata extraction, external repository links, and future enterprise object mapping.",
+      "status": "Running",
+      "owner": "Hermes",
+      "steps": [
+        "Register profile or organization identity",
+        "Upload avatar or logo where approved",
+        "Import organization source material",
+        "Extract useful metadata and preview text where practical",
+        "Link external cloud repository when source size exceeds local best practice",
+        "Prepare enterprise object and knowledge candidates"
+      ],
+      "currentStep": "Prepare enterprise object and knowledge candidates",
+      "progress": 52,
+      "trigger": "Organization information import requested",
+      "lastRun": "2026-07-03T22:25:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0031",
+        "EOS-IDENTITY-MEDIA-REGISTRY",
+        "EOS-MEDIA-ASSET-STORE",
+        "EOS-ORGANIZATION-INTAKE",
+        "EOS-EXTERNAL-REPOSITORY-LINKS",
+        "EOS-STARTUP-EXPERIENCE",
+        "EOS-KIPR",
+        "EOS-ENTERPRISE-PROFILE",
+        "DTA-EPERCENT-001",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-STARTUP-EXPERIENCE-LOADED",
+          "type": "STARTUP_EXPERIENCE_LOADED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:25:00.000Z",
+          "payload": {
+            "objectId": "EOS-STARTUP-EXPERIENCE",
+            "defaultWorkspace": "enterprise-value",
+            "defaultRoute": "master-monitoring"
+          }
+        },
+        {
+          "id": "EOS-EVENT-PROFILE-MEDIA-UPLOADED",
+          "type": "PROFILE_MEDIA_UPLOADED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:25:30.000Z",
+          "payload": {
+            "objectId": "EOS-IDENTITY-MEDIA-REGISTRY",
+            "supportedProfiles": [
+              "Human Executive",
+              "Agent",
+              "Organization"
+            ],
+            "executionMode": "Local upload foundation"
+          }
+        },
+        {
+          "id": "EOS-EVENT-ORGANIZATION-LOGO-REGISTERED",
+          "type": "ORGANIZATION_LOGO_REGISTERED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:26:00.000Z",
+          "payload": {
+            "objectId": "EOS-MEDIA-ASSET-STORE",
+            "supportedLogoOwners": [
+              "Company",
+              "Organization",
+              "Enterprise Profile"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-ORGANIZATION-IMPORT-RECEIVED",
+          "type": "ORGANIZATION_IMPORT_RECEIVED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:26:30.000Z",
+          "payload": {
+            "objectId": "EOS-ORGANIZATION-INTAKE",
+            "supportedSourceTypes": [
+              "PDF",
+              "Office Document",
+              "Text",
+              "Image",
+              "Audio",
+              "Video"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-INTAKE-EXTRACTION-COMPLETED",
+          "type": "INTAKE_EXTRACTION_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:27:00.000Z",
+          "payload": {
+            "objectId": "EOS-ORGANIZATION-INTAKE",
+            "extractionModes": [
+              "Plain text extraction",
+              "PDF string scan",
+              "Office string scan",
+              "Media metadata"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-ORGANIZATION-REPOSITORY-LINKED",
+          "type": "ORGANIZATION_REPOSITORY_LINKED",
+          "sourceWorkflowId": "EOS-WF-ORGANIZATION-INTAKE",
+          "status": "Emitted",
+          "emittedAt": "2026-07-03T22:27:30.000Z",
+          "payload": {
+            "objectId": "EOS-EXTERNAL-REPOSITORY-LINKS",
+            "policy": "Use external cloud-drive links for repositories exceeding local best-practice size."
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-ENTERPRISE-ONBOARDING",
+      "name": "Enterprise Onboarding",
+      "description": "Coordinates enterprise intake, source classification, known asset capture, agent assignment, and preparation for Digital Mirror creation.",
+      "status": "Running",
+      "owner": "EOS PMO",
+      "steps": [
+        "Create onboarding record",
+        "Classify sources",
+        "Capture known enterprise structure",
+        "Assign executive agents",
+        "Prepare Digital Mirror inputs"
+      ],
+      "currentStep": "Prepare Digital Mirror inputs",
+      "progress": 62,
+      "trigger": "Enterprise onboarding and DTA assimilation requested",
+      "lastRun": "2026-07-04T00:24:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0032",
+        "EOS-ENTERPRISE-ONBOARDING",
+        "EOS-DTA-ASSIMILATION-ENGINE",
+        "EOS-DIGITAL-MIRROR",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-CODEX"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-ENTERPRISE-ONBOARDING-STARTED",
+          "type": "ENTERPRISE_ONBOARDING_STARTED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-ONBOARDING",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:24:00.000Z",
+          "payload": {
+            "objectId": "EOS-ENTERPRISE-ONBOARDING",
+            "onboardingRecords": [
+              "EOS-ONB-OIL-001",
+              "EOS-ONB-EPERCENT-001",
+              "EOS-ONB-EOS-001"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-SOURCE-CLASSIFICATION-COMPLETED",
+          "type": "SOURCE_CLASSIFICATION_COMPLETED",
+          "sourceWorkflowId": "EOS-WF-ENTERPRISE-ONBOARDING",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:24:30.000Z",
+          "payload": {
+            "objectId": "EOS-DTA-ASSIMILATION-ENGINE",
+            "sourceCategories": [
+              "Documents",
+              "Systems",
+              "Assets",
+              "Processes",
+              "People",
+              "Contracts",
+              "Risks"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-DTA-ASSIMILATION",
+      "name": "DTA Assimilation",
+      "description": "Creates Digital Mirrors, identifies Digital Twin Asset candidates, maps data feed requirements, and prepares governed DTA formation packages.",
+      "status": "Running",
+      "owner": "Atlas",
+      "steps": [
+        "Extract enterprise object candidates",
+        "Map relationships",
+        "Create Digital Mirror",
+        "Identify DTA candidates",
+        "Map data feed requirements"
+      ],
+      "currentStep": "Map data feed requirements",
+      "progress": 58,
+      "trigger": "Onboarding record reached Digital Mirror stage",
+      "lastRun": "2026-07-04T00:25:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0032",
+        "EOS-DTA-ASSIMILATION-ENGINE",
+        "EOS-DIGITAL-MIRROR",
+        "EOS-DTA-CANDIDATE-REGISTRY",
+        "EOS-DATA-FEED-REQUIREMENTS",
+        "EOS-MASTER-MONITORING-VIEW",
+        "EOS-ENTERPRISE-DIGITAL-TWIN-HOME",
+        "EOS-AGENT-ATLAS",
+        "EOS-AGENT-ARGUS",
+        "EOS-AGENT-MERCURY"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-ENTERPRISE-OBJECTS-EXTRACTED",
+          "type": "ENTERPRISE_OBJECTS_EXTRACTED",
+          "sourceWorkflowId": "EOS-WF-DTA-ASSIMILATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:25:00.000Z",
+          "payload": {
+            "objectId": "EOS-DIGITAL-MIRROR",
+            "extractionMode": "Seeded structured framework",
+            "aiExtractionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-DIGITAL-MIRROR-CREATED",
+          "type": "DIGITAL_MIRROR_CREATED",
+          "sourceWorkflowId": "EOS-WF-DTA-ASSIMILATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:25:30.000Z",
+          "payload": {
+            "objectId": "EOS-DIGITAL-MIRROR",
+            "mirrors": [
+              "EOS-DM-OIL-001",
+              "EOS-DM-EPERCENT-001",
+              "EOS-DM-EOS-001"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-DTA-CANDIDATE-IDENTIFIED",
+          "type": "DTA_CANDIDATE_IDENTIFIED",
+          "sourceWorkflowId": "EOS-WF-DTA-ASSIMILATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:26:00.000Z",
+          "payload": {
+            "objectId": "EOS-DTA-CANDIDATE-REGISTRY",
+            "candidateCount": 7,
+            "oilAndGasCandidates": 5
+          }
+        },
+        {
+          "id": "EOS-EVENT-DATA-FEED-REQUIREMENT-CREATED",
+          "type": "DATA_FEED_REQUIREMENT_CREATED",
+          "sourceWorkflowId": "EOS-WF-DTA-ASSIMILATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:26:30.000Z",
+          "payload": {
+            "objectId": "EOS-DATA-FEED-REQUIREMENTS",
+            "requirementCount": 11,
+            "connectionMode": "Framework only; no external feeds connected"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-HUMAN-VALIDATION",
+      "name": "Human Validation",
+      "description": "Tracks enterprise identity, ownership, hierarchy, systems, feed availability, DTA candidates, valuation assumptions, and governance validation before DTA formation.",
+      "status": "Awaiting Review",
+      "owner": "Vulcan",
+      "steps": [
+        "Create validation checklist",
+        "Assign owners",
+        "Review evidence",
+        "Record validation status",
+        "Prepare DTA formation approval"
+      ],
+      "currentStep": "Review evidence",
+      "progress": 34,
+      "trigger": "Digital Mirror or DTA candidate requires human validation",
+      "lastRun": "2026-07-04T00:27:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0032",
+        "EOS-HUMAN-VALIDATION-GATE",
+        "EOS-DTA-CANDIDATE-REGISTRY",
+        "EOS-GOVERNANCE-COUNCIL",
+        "EOS-AGENT-VULCAN",
+        "EOS-AGENT-HERMES",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-HUMAN-VALIDATION-REQUIRED",
+          "type": "HUMAN_VALIDATION_REQUIRED",
+          "sourceWorkflowId": "EOS-WF-HUMAN-VALIDATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:27:00.000Z",
+          "payload": {
+            "objectId": "EOS-HUMAN-VALIDATION-GATE",
+            "checklistItemsPerEnterprise": 9,
+            "executionEnabled": false
+          }
+        },
+        {
+          "id": "EOS-EVENT-DTA-FORMATION-READY",
+          "type": "DTA_FORMATION_READY",
+          "sourceWorkflowId": "EOS-WF-HUMAN-VALIDATION",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T00:27:30.000Z",
+          "payload": {
+            "objectId": "EOS-DTA-ASSIMILATION-ENGINE",
+            "status": "Framework ready; formation blocked until validation is approved"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EOS-WF-PLATFORM-AUDIT-READINESS",
+      "name": "Platform Audit Readiness",
+      "description": "Generates EOS platform audits, classifies capability maturity, reports functional coverage, identifies placeholder and technical debt gaps, and recommends the next build sequence.",
+      "status": "Completed",
+      "owner": "Codex",
+      "steps": [
+        "Collect capability registry",
+        "Classify functional readiness",
+        "Audit API and frontend coverage",
+        "Assess persistence and technical debt",
+        "Score release maturity",
+        "Publish audit report"
+      ],
+      "currentStep": "Publish audit report",
+      "progress": 100,
+      "trigger": "Platform functional audit requested",
+      "lastRun": "2026-07-04T01:20:00.000Z",
+      "linkedObjects": [
+        "EOS-CAP-0033",
+        "EOS-PLATFORM-AUDIT-CENTER",
+        "EOS-CAPABILITY-READINESS-MATRIX",
+        "EOS-FUNCTIONAL-COVERAGE-REPORT",
+        "EOS-AUDIT-READINESS-SCORE",
+        "EOS-PERSISTENT-DATA-STORE",
+        "EOS-MISSION-CONTROL-NAVIGATION",
+        "EOS-AGENT-CODEX",
+        "EOS-AGENT-VULCAN",
+        "EOS-AGENT-ATLAS"
+      ],
+      "events": [
+        {
+          "id": "EOS-EVENT-PLATFORM-AUDIT-CREATED",
+          "type": "PLATFORM_AUDIT_CREATED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-AUDIT-READINESS",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T01:20:00.000Z",
+          "payload": {
+            "objectId": "EOS-PLATFORM-AUDIT-CENTER",
+            "capability": "EOS-CAP-0033",
+            "auditVersion": "0.25.0"
+          }
+        },
+        {
+          "id": "EOS-EVENT-CAPABILITY-READINESS-UPDATED",
+          "type": "CAPABILITY_READINESS_UPDATED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-AUDIT-READINESS",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T01:20:30.000Z",
+          "payload": {
+            "objectId": "EOS-CAPABILITY-READINESS-MATRIX",
+            "classificationModel": [
+              "Fully Functional",
+              "Operational Foundation",
+              "Display Only",
+              "Partial",
+              "Placeholder",
+              "Broken",
+              "Not Started"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-FUNCTIONAL-GAP-IDENTIFIED",
+          "type": "FUNCTIONAL_GAP_IDENTIFIED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-AUDIT-READINESS",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T01:21:00.000Z",
+          "payload": {
+            "objectId": "EOS-FUNCTIONAL-COVERAGE-REPORT",
+            "primaryGaps": [
+              "Governed writes",
+              "restore validation",
+              "data connectors",
+              "AI extraction",
+              "workflow execution"
+            ]
+          }
+        },
+        {
+          "id": "EOS-EVENT-READINESS-SCORE-UPDATED",
+          "type": "READINESS_SCORE_UPDATED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-AUDIT-READINESS",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T01:21:30.000Z",
+          "payload": {
+            "objectId": "EOS-AUDIT-READINESS-SCORE",
+            "alphaReadiness": 68,
+            "betaReadiness": 42,
+            "versionOneReadiness": 16
+          }
+        },
+        {
+          "id": "EOS-EVENT-AUDIT-REPORT-GENERATED",
+          "type": "AUDIT_REPORT_GENERATED",
+          "sourceWorkflowId": "EOS-WF-PLATFORM-AUDIT-READINESS",
+          "status": "Emitted",
+          "emittedAt": "2026-07-04T01:22:00.000Z",
+          "payload": {
+            "report": "docs/audits/EOS-Platform-Audit-v0.25.0.json",
+            "endpoint": "/api/audit",
+            "script": "npm run eos:audit"
+          }
+        }
+      ]
+    }
+  ]
+}

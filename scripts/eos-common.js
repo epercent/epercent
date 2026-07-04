@@ -19,6 +19,16 @@ export const apiAgentsUrl = `${backendUrl}/api/agents`;
 export const apiKnowledgeUrl = `${backendUrl}/api/knowledge`;
 export const apiWorkflowsUrl = `${backendUrl}/api/workflows`;
 export const apiEventsUrl = `${backendUrl}/api/events`;
+export const apiStorageStatusUrl = `${backendUrl}/api/storage/status`;
+export const apiStorageCollectionsUrl = `${backendUrl}/api/storage/collections`;
+export const apiPlatformUrl = `${backendUrl}/api/platform`;
+export const apiPlatformAdminUrl = `${backendUrl}/api/platform/admin`;
+export const apiAuditUrl = `${backendUrl}/api/audit`;
+export const apiAdminActionsUrl = `${backendUrl}/api/admin-actions`;
+export const apiAgentMessagesUrl = `${backendUrl}/api/agent-messages`;
+export const apiAgentActivityUrl = `${backendUrl}/api/agent-activity`;
+export const apiAgentAttentionUrl = `${backendUrl}/api/agent-attention`;
+export const apiAgentCalendarUrl = `${backendUrl}/api/agent-calendar`;
 
 export const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 

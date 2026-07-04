@@ -1,0 +1,3177 @@
+{
+  "collectionName": "executive-actions",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T17:44:07.248Z",
+  "recordCount": 72,
+  "source": "seed:executive-actions",
+  "records": [
+    {
+      "id": "EOS-ACTION-ERIC-OLO-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ERIC-OLO-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Eric Olo",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "Human Executive",
+      "sourceExecutive": "EOS-EXEC-ERIC-OLO",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Eric Olo."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CHATGPT-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "ChatGPT",
+      "requester": "Mission Control",
+      "targetObject": "EOS-EXECUTIVE-COUNCIL",
+      "targetType": "AI Executive Advisor",
+      "sourceExecutive": "EOS-EXEC-CHATGPT",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for ChatGPT."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-CODEX-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Codex",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-CODEX",
+      "targetType": "Engineering Agent",
+      "sourceExecutive": "EOS-AGENT-CODEX",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Codex."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATHENA-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Athena",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATHENA",
+      "targetType": "Research Agent",
+      "sourceExecutive": "EOS-AGENT-ATHENA",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Athena."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-HERMES-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Hermes",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-HERMES",
+      "targetType": "Knowledge Agent",
+      "sourceExecutive": "EOS-AGENT-HERMES",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Hermes."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ATLAS-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Atlas",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ATLAS",
+      "targetType": "Architecture Agent",
+      "sourceExecutive": "EOS-AGENT-ATLAS",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Atlas."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-MERCURY-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Mercury",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-MERCURY",
+      "targetType": "Opportunity Intelligence Agent",
+      "sourceExecutive": "EOS-AGENT-MERCURY",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Mercury."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-ARGUS-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Argus",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-ARGUS",
+      "targetType": "Operations Agent",
+      "sourceExecutive": "EOS-AGENT-ARGUS",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Argus."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-REQUEST-BRIEFING",
+      "label": "Request Briefing",
+      "description": "Record a governed request for an executive briefing.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Pending Review",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:32:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Request Briefing action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Request Briefing requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review briefing scope and confirm the requested audience.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-PREPARE-EXECUTIVE-REVIEW-SESSION",
+      "label": "Prepare Executive Review Session",
+      "description": "Record a governed meeting scheduling request without contacting calendars.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Deferred",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:33:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-DEFERRED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Review Session action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Review Session requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm meeting purpose, required attendees, and approval owner.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-PREPARE-EXECUTIVE-COMMUNICATION",
+      "label": "Prepare Executive Communication",
+      "description": "Record a governed message request without sending any communication.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Rejected",
+      "approvalRequired": true,
+      "approvalStatus": "Rejected",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:34:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REJECTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Communication action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Communication requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Rewrite the request with recipient, purpose, and approval context.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-REVIEW-DEPARTMENT-WORK",
+      "label": "Review Department Work",
+      "description": "Record a governed request to review work already visible inside EOS.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Approved",
+      "approvalRequired": true,
+      "approvalStatus": "Approved",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:35:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-APPROVED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Review Department Work action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Review Department Work requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Proceed with human review inside Mission Control.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-PREPARE-EXECUTIVE-ASSIGNMENT",
+      "label": "Prepare Executive Assignment",
+      "description": "Record a governed assignment request without creating or dispatching a task.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:36:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-REVIEW-REQUESTED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Prepare Executive Assignment action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Prepare Executive Assignment requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Review task owner, due date, and linked workflow before approval.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-ESCALATE-EXECUTIVE-ATTENTION-ITEM",
+      "label": "Escalate Executive Attention Item",
+      "description": "Record a governed escalation request for an executive attention item.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Awaiting Approval",
+      "approvalRequired": true,
+      "approvalStatus": "Escalated",
+      "riskLevel": "High",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:37:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED",
+        "EOS-EVENT-EXECUTIVE-ACTION-ESCALATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Escalate Executive Attention Item action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Escalate Executive Attention Item requires governance review before execution can be enabled."
+        }
+      ],
+      "availableDecisionActions": [
+        "Approve",
+        "Reject",
+        "Defer",
+        "Escalate",
+        "Request More Information"
+      ],
+      "recommendedNextStep": "Confirm escalation reason and approve routing before any execution.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-VIEW-DEPARTMENT-PORTFOLIO",
+      "label": "View Department Portfolio",
+      "description": "Record a governed portfolio view action for executive context.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Completed",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:38:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "View Department Portfolio action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "View Department Portfolio is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Use Portfolio Mode to inspect related assets.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    },
+    {
+      "id": "EOS-ACTION-VULCAN-OPEN-EXECUTIVE-OFFICE",
+      "label": "Open Executive Office",
+      "description": "Record a governed request to open an executive office view.",
+      "owner": "Vulcan",
+      "requester": "Mission Control",
+      "targetObject": "EOS-AGENT-VULCAN",
+      "targetType": "Quality, Security & Performance Agent",
+      "sourceExecutive": "EOS-AGENT-VULCAN",
+      "status": "Draft",
+      "approvalRequired": false,
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "createdAt": "2026-07-03T17:32:00.000Z",
+      "updatedAt": "2026-07-03T17:39:00.000Z",
+      "linkedWorkflow": "EOS-WF-EXECUTIVE-ACTION-GOVERNANCE",
+      "linkedEvents": [
+        "EOS-EVENT-EXECUTIVE-ACTION-CREATED"
+      ],
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "Mission Control",
+          "event": "Action Created",
+          "summary": "Open Executive Office action seeded for Vulcan."
+        },
+        {
+          "timestamp": "2026-07-03T17:32:00.000Z",
+          "actor": "EOS Executive Action Framework",
+          "event": "Execution Disabled",
+          "summary": "Open Executive Office is recorded as a non-executable governance action."
+        }
+      ],
+      "availableDecisionActions": [
+        "Archive",
+        "Review"
+      ],
+      "recommendedNextStep": "Define office scope before adding executable office workflows.",
+      "executionEnabled": false,
+      "executionStatus": "Disabled"
+    }
+  ]
+}

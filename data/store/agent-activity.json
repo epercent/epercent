@@ -1,0 +1,96 @@
+{
+  "collectionName": "agent-activity",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:01:08.152Z",
+  "recordCount": 4,
+  "source": "seed:agent-activity; refreshed:seed:agent-activity",
+  "records": [
+    {
+      "id": "EOS-ACTIVITY-CODEX-0027",
+      "agentId": "EOS-AGENT-CODEX",
+      "agentName": "Codex",
+      "activityType": "Capability Build",
+      "title": "AI Workforce Operations & Platform Administration Center",
+      "summary": "Building the Mission Control operations layer, platform administration APIs, and governed admin actions.",
+      "status": "In Progress",
+      "progress": 62,
+      "startedAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "estimatedCompletion": "2026-07-03T22:00:00.000Z",
+      "linkedCapability": "EOS-CAP-0027",
+      "linkedWorkflow": "EOS-WF-PLATFORM-OPERATIONS-GOVERNANCE",
+      "linkedObjects": [
+        "EOS-PLATFORM-ADMINISTRATION-CENTER",
+        "EOS-AI-WORKFORCE-OPERATIONS"
+      ],
+      "requiresHumanAttention": false,
+      "attentionLevel": "No Action Required",
+      "recommendedAction": "Monitor verification results after implementation."
+    },
+    {
+      "id": "EOS-ACTIVITY-ATHENA-RESEARCH",
+      "agentId": "EOS-AGENT-ATHENA",
+      "agentName": "Athena",
+      "activityType": "Research Portfolio",
+      "title": "AI-native enterprise workforce research",
+      "summary": "Preparing research framing for executive AI workforces and enterprise operating systems.",
+      "status": "In Progress",
+      "progress": 54,
+      "startedAt": "2026-07-03T19:40:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "estimatedCompletion": "2026-07-04T12:00:00.000Z",
+      "linkedCapability": "EOS-CAP-0015",
+      "linkedWorkflow": "EOS-WF-RESEARCH-PUBLICATION",
+      "linkedObjects": [
+        "RP-004",
+        "EOS-AKR"
+      ],
+      "requiresHumanAttention": true,
+      "attentionLevel": "Low",
+      "recommendedAction": "Review investor framing after the administration center is verified."
+    },
+    {
+      "id": "EOS-ACTIVITY-HERMES-KNOWLEDGE",
+      "agentId": "EOS-AGENT-HERMES",
+      "agentName": "Hermes",
+      "activityType": "Knowledge Governance",
+      "title": "Genesis and capability knowledge update",
+      "summary": "Maintaining documentation and capability record alignment for the AI Workforce Operations layer.",
+      "status": "In Progress",
+      "progress": 68,
+      "startedAt": "2026-07-03T19:50:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "estimatedCompletion": "2026-07-03T22:30:00.000Z",
+      "linkedCapability": "EOS-CAP-0027",
+      "linkedWorkflow": "EOS-WF-KNOWLEDGE-MANAGEMENT",
+      "linkedObjects": [
+        "EOS-KNOWLEDGE-GENESIS",
+        "EOS-AKR"
+      ],
+      "requiresHumanAttention": false,
+      "attentionLevel": "No Action Required",
+      "recommendedAction": "Publish documentation after verification passes."
+    },
+    {
+      "id": "EOS-ACTIVITY-ATLAS-ARCHITECTURE",
+      "agentId": "EOS-AGENT-ATLAS",
+      "agentName": "Atlas",
+      "activityType": "Architecture Review",
+      "title": "Action governance architecture review",
+      "summary": "Reviewing authorization policy boundaries for future executable administration controls.",
+      "status": "In Progress",
+      "progress": 48,
+      "startedAt": "2026-07-03T19:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "estimatedCompletion": "2026-07-04T09:00:00.000Z",
+      "linkedCapability": "EOS-CAP-0027",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedObjects": [
+        "EOS-ACTION-GOVERNANCE"
+      ],
+      "requiresHumanAttention": true,
+      "attentionLevel": "Medium",
+      "recommendedAction": "Approve architecture policy before destructive actions are enabled."
+    }
+  ]
+}

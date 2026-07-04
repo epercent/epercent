@@ -1,0 +1,43 @@
+{
+  "collectionName": "pmo",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T17:44:07.247Z",
+  "recordCount": 1,
+  "source": "seed:pmo",
+  "records": [
+    {
+      "id": "EOS-PMO",
+      "name": "EOS Program Management Office",
+      "owner": "CTO",
+      "status": "Operational",
+      "executiveOwner": "Chief Technology Officer",
+      "purpose": "Govern EOS platform evolution, align engineering with research and commercialization, and maintain the single authoritative roadmap.",
+      "responsibilities": [
+        "Program governance",
+        "Roadmap ownership",
+        "Capability sequencing",
+        "Dependency management",
+        "Executive reporting",
+        "Investor roadmap readiness"
+      ],
+      "liveStatus": {
+        "status": "Green",
+        "operationalStatus": "Green",
+        "lifecycleStatus": "Verified",
+        "healthScore": 91,
+        "progress": 82,
+        "summary": "EOS PMO is established and governing the Master Roadmap.",
+        "lastActivity": "2026-07-03T16:40:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Use PMO View as the authoritative roadmap surface for EOS capability sequencing.",
+        "availableActions": [
+          "Open PMO View",
+          "Review roadmap",
+          "Review risks",
+          "Review milestones"
+        ]
+      }
+    }
+  ]
+}

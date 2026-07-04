@@ -61,5 +61,433 @@
     "archiveSize": 126402,
     "checksum": "e27920d04cfb2ee133fafc793c4e3768df66897451a74bf1436ebd4a0e431e90",
     "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_151104",
+    "version": "0.7.1",
+    "build": "0.7.1",
+    "archiveName": "EOS_v0.7.1_2026-07-03_151104.zip",
+    "archiveSize": 131417,
+    "checksum": "c5298e04906d5003cddbb61bfe5f143daa00f9493eaf92aeb399db96f4c699aa",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_151857",
+    "version": "0.8.0",
+    "build": "0.8.0",
+    "archiveName": "EOS_v0.8.0_2026-07-03_151857.zip",
+    "archiveSize": 140263,
+    "checksum": "acbace5d848fa17ec1f70daed8845edfd0b89044d2da8401658b8a4c052337ad",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_152557",
+    "version": "0.8.1",
+    "build": "0.8.1",
+    "archiveName": "EOS_v0.8.1_2026-07-03_152557.zip",
+    "archiveSize": 142092,
+    "checksum": "ca5ab2e89db8a3a633d97b97411eb6c84c0edc6b085302c8e42acc336e53c94e",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_153631",
+    "version": "0.9.0",
+    "build": "0.9.0",
+    "archiveName": "EOS_v0.9.0_2026-07-03_153631.zip",
+    "archiveSize": 148571,
+    "checksum": "f2ea684ff4771cd3dbcac0284166337cfd986b38ef1be269b53f9936c94446e8",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_155424",
+    "version": "0.10.0",
+    "build": "0.10.0",
+    "archiveName": "EOS_v0.10.0_2026-07-03_155424.zip",
+    "archiveSize": 158194,
+    "checksum": "dbad553b624a5da537a2569fd8061dcf8409debb130d39926308dfb60e0fc644",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_162508",
+    "version": "0.11.0",
+    "build": "0.11.0",
+    "archiveName": "EOS_v0.11.0_2026-07-03_162508.zip",
+    "archiveSize": 168093,
+    "checksum": "41bed8b7015f7dddf0bf1ca30735be4cb9ea9e08d43d6ab90cd362aaf33f2976",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_164355",
+    "version": "0.12.0",
+    "build": "0.12.0",
+    "archiveName": "EOS_v0.12.0_2026-07-03_164355.zip",
+    "archiveSize": 181213,
+    "checksum": "5179d9b6ca29c2f9de3fe9fa7600f6ccdba591a37ac93f74a60f4d8ff38a558a",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_170944",
+    "version": "0.13.0",
+    "build": "0.13.0",
+    "archiveName": "EOS_v0.13.0_2026-07-03_170944.zip",
+    "archiveSize": 193082,
+    "checksum": "e224bbd31182dd56449bf8178f9889e402eea06f40e03f7d29ca038812c56591",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_172826",
+    "version": "0.14.0",
+    "build": "0.14.0",
+    "archiveName": "EOS_v0.14.0_2026-07-03_172826.zip",
+    "archiveSize": 204625,
+    "checksum": "1a7a8fc7bba17044a5010f624680f19b0e5d69eef294b91994f4d9925f409ba9",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_175112",
+    "version": "0.15.0",
+    "build": "0.15.0",
+    "archiveName": "EOS_v0.15.0_2026-07-03_175112.zip",
+    "archiveSize": 219997,
+    "checksum": "59b5236503278c02eafaced4a3ad0310a206ab813d1c12c06865976ae77624b3",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_175322",
+    "version": "0.15.0",
+    "build": "0.15.0",
+    "archiveName": "EOS_v0.15.0_2026-07-03_175322.zip",
+    "archiveSize": 220311,
+    "checksum": "cdebe33e7361797957e85796002a8ef036540cb0173572d9cd345ada8203f934",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_182854",
+    "version": "0.16.0",
+    "build": "0.16.0",
+    "archiveName": "EOS_v0.16.0_2026-07-03_182854.zip",
+    "archiveSize": 234505,
+    "checksum": "4d2f3dfced846075b4cd1bda4f43afc41f3afba2bdec6258f54c6baaec62f6d8",
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_190036",
+    "version": "0.17.0",
+    "build": "0.17.0",
+    "archiveName": "EOS_v0.17.0_2026-07-03_190036.zip",
+    "archiveSize": 307274,
+    "checksum": "e2c387d20e59f6498232c0d409c7b76eaf2ef0d3b4b7a0b0dcd4bb1360ecadd1",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_190258",
+    "version": "0.17.0",
+    "build": "0.17.0",
+    "archiveName": "EOS_v0.17.0_2026-07-03_190258.zip",
+    "archiveSize": 307468,
+    "checksum": "573773e7ede22e486dfd52c16344dcd03dc83bdc76630b8ac492377cc077fdf1",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_193312",
+    "version": "0.18.0",
+    "build": "0.18.0",
+    "archiveName": "EOS_v0.18.0_2026-07-03_193312.zip",
+    "archiveSize": 337556,
+    "checksum": "9d0a279dbac2c7c17ca244387b1d37fc161eb1caab324902271c56be644525b7",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_201146",
+    "version": "0.18.0",
+    "build": "0.18.0",
+    "archiveName": "EOS_v0.18.0_2026-07-03_201146.zip",
+    "archiveSize": 337557,
+    "checksum": "26cdb974437716da02f9b9af16fe21cedb62832ea2f456b7bf733e6fc344498b",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_202931",
+    "version": "0.19.0",
+    "build": "0.19.0",
+    "archiveName": "EOS_v0.19.0_2026-07-03_202931.zip",
+    "archiveSize": 384378,
+    "checksum": "c0e7fb7840aea60019a740825216d0cf87d06df67fc1d81bc5dc005d40fa69ae",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_205422",
+    "version": "0.19.0",
+    "build": "0.19.0",
+    "archiveName": "EOS_v0.19.0_2026-07-03_205422.zip",
+    "archiveSize": 384375,
+    "checksum": "a2939c5fac01cd1998ca4d03eaf496c282300077f806f104bcb2c5a01c0e52c7",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_210900",
+    "version": "0.20.0",
+    "build": "0.20.0",
+    "archiveName": "EOS_v0.20.0_2026-07-03_210900.zip",
+    "archiveSize": 408556,
+    "checksum": "78a6bc3cb1ee50c8dbdd2eeb24d1558bc8b075a62c7d9fdd10f91847cd85411e",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_211520",
+    "version": "0.20.0",
+    "build": "0.20.0",
+    "archiveName": "EOS_v0.20.0_2026-07-03_211520.zip",
+    "archiveSize": 408554,
+    "checksum": "27a53072393fcd6635ddfc5c38525dad48b558a501c2db20116c6d5fa4e51368",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_213144",
+    "version": "0.21.0",
+    "build": "0.21.0",
+    "archiveName": "EOS_v0.21.0_2026-07-03_213144.zip",
+    "archiveSize": 444697,
+    "checksum": "738aad853beb33f298a888b650ae21365e6b5e5ca53dba757eca4957bb3a6a89",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_213311",
+    "version": "0.21.0",
+    "build": "0.21.0",
+    "archiveName": "EOS_v0.21.0_2026-07-03_213311.zip",
+    "archiveSize": 444717,
+    "checksum": "b513296ecdbc19334a583f29b5dfcd98d9940927101980553dd967759faeab9a",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_214547",
+    "version": "0.21.0",
+    "build": "0.21.0",
+    "archiveName": "EOS_v0.21.0_2026-07-03_214547.zip",
+    "archiveSize": 444861,
+    "checksum": "1429fc658a9c48676047e77e941e8850ebbc011f78114d1aad722279bd7545bf",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_220314",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_220314.zip",
+    "archiveSize": 479596,
+    "checksum": "59cf9a9721217d4911e080bc40a495178ba7a29eb6f82c9d8d783c6466d56160",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_220446",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_220446.zip",
+    "archiveSize": 479603,
+    "checksum": "776ecdebeac617d04ef81bdcc5d5d89037e9be5440f249cd5c9c3a006075eec3",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_220623",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_220623.zip",
+    "archiveSize": 479604,
+    "checksum": "a17cbfa18ac37b1c0c7d8dee147e8fec1f82663f040eba17dc204fed8b4c2734",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_221157",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_221157.zip",
+    "archiveSize": 479603,
+    "checksum": "ee4d2d788b0f946f57846b889a7ae48c3024e2f6f05c56ef0f6d9244068dcda2",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_221600",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_221600.zip",
+    "archiveSize": 481959,
+    "checksum": "78a5bc2677b54126bd7362f83392d1142767521b921aae3d4406a510fc1a5017",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_222546",
+    "version": "0.22.0",
+    "build": "0.22.0",
+    "archiveName": "EOS_v0.22.0_2026-07-03_222546.zip",
+    "archiveSize": 481951,
+    "checksum": "9ae338935326f10799cf72a24de2c5a89c108e601e5be220413e4e34bba7729e",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_224855",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_224855.zip",
+    "archiveSize": 519947,
+    "checksum": "9adb3a4b4d224ed430af3c27a1d8fbd6a3cb93213b0cb759427c763c346c5dc2",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_232342",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_232342.zip",
+    "archiveSize": 520375,
+    "checksum": "365d00dc4f99ecc984ef79a5c2d86d119b9e4824c27adcfc0da975b40861962b",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_232553",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_232553.zip",
+    "archiveSize": 521680,
+    "checksum": "548446a70d4748fdb61f4300723b85cac1bec0d589eeeb3b98fac0f2a036f3cc",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_234140",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_234140.zip",
+    "archiveSize": 5741699,
+    "checksum": "1ec2fb5a7e30341af9136349e0b4277595b9411353d615c79f8fd074373ba579",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_235130",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_235130.zip",
+    "archiveSize": 8325637,
+    "checksum": "4fbd3ef2766c3992ec305c51719a01c98ae3c9e8a924de97bcddf1be950790ef",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-03_235523",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-03_235523.zip",
+    "archiveSize": 8325613,
+    "checksum": "1b51036a143fc4136f32d937330a356bd92b2e55abe25b278bede761b94ab951",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_000104",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-04_000104.zip",
+    "archiveSize": 10909070,
+    "checksum": "ae2e8e01761d48b6c5785bbbb43cc8795795b1d07964b7761d56abbc836b912c",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_002414",
+    "version": "0.23.0",
+    "build": "0.23.0",
+    "archiveName": "EOS_v0.23.0_2026-07-04_002414.zip",
+    "archiveSize": 15477405,
+    "checksum": "596c0470f36bb63f4119bf28e3a6d0e1bd5b2714545cc5dbac190285910c6a22",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_004038",
+    "version": "0.24.0",
+    "build": "0.24.0",
+    "archiveName": "EOS_v0.24.0_2026-07-04_004038.zip",
+    "archiveSize": 15520825,
+    "checksum": "bc98709fdb0ddeb32ed48423dd239eff846f637b78eb55c5f1047c075bf50505",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_004245",
+    "version": "0.24.0",
+    "build": "0.24.0",
+    "archiveName": "EOS_v0.24.0_2026-07-04_004245.zip",
+    "archiveSize": 15522220,
+    "checksum": "a1a0382de5a5281bd1d4a055be65ecbe9153ae8643ef17492f1cd77c1238fb02",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_004415",
+    "version": "0.24.0",
+    "build": "0.24.0",
+    "archiveName": "EOS_v0.24.0_2026-07-04_004415.zip",
+    "archiveSize": 15523592,
+    "checksum": "b772db101e3b99c40cc5500e10e2674e92617a7fafa80e1f250b8d0054b932ce",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_005245",
+    "version": "0.24.0",
+    "build": "0.24.0",
+    "archiveName": "EOS_v0.24.0_2026-07-04_005245.zip",
+    "archiveSize": 15523591,
+    "checksum": "c474675596faa89574e379c6978d5aaf97c28f2503af4eb12a417663d14048f9",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_005931",
+    "version": "0.24.1",
+    "build": "0.24.1",
+    "archiveName": "EOS_v0.24.1_2026-07-04_005931.zip",
+    "archiveSize": 15530621,
+    "checksum": "2146809c15568cc537c68db8b9d798f118e9bc9ce91c7c8c3d7336a4d4439180",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_011546",
+    "version": "0.24.1",
+    "build": "0.24.1",
+    "archiveName": "EOS_v0.24.1_2026-07-04_011546.zip",
+    "archiveSize": 15530674,
+    "checksum": "d1c4e857317a9883236c66dd05de1c714e9cde609a1efe8af4836d3ffce4aa94",
+    "dataIncluded": true,
+    "status": "Completed"
+  },
+  {
+    "timestamp": "2026-07-04_013150",
+    "version": "0.25.0",
+    "build": "0.25.0",
+    "archiveName": "EOS_v0.25.0_2026-07-04_013150.zip",
+    "archiveSize": 15567543,
+    "checksum": "3b7a6e853be8cfcdb795fae2ffd2b886a4a2a7b00e5917cea45e751e82931e84",
+    "dataIncluded": true,
+    "status": "Completed"
   }
 ]

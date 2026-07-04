@@ -1,0 +1,527 @@
+{
+  "collectionName": "action-governance",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:01:08.152Z",
+  "recordCount": 14,
+  "source": "seed:action-governance; refreshed:seed:action-governance",
+  "records": [
+    {
+      "id": "EOS-GOV-REFRESH-STATUS",
+      "actionType": "Safe Health Operation",
+      "label": "Refresh Status",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Refresh Status was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Refresh Status execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-RUN-HEALTH-CHECK",
+      "actionType": "Safe Health Operation",
+      "label": "Run Health Check",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Run Health Check was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Run Health Check execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-RUN-BACKUP",
+      "actionType": "Safe Resilience Operation",
+      "label": "Run Backup",
+      "requestedBy": "Mission Control",
+      "owner": "Engineering Lead",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Run Backup was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Run Backup execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-VALIDATE-RESTORE",
+      "actionType": "Safe Resilience Operation",
+      "label": "Validate Restore",
+      "requestedBy": "Mission Control",
+      "owner": "Engineering Lead",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Medium",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Validate Restore was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Validate Restore execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-OPEN-STORAGE-STATUS",
+      "actionType": "Safe Visibility Operation",
+      "label": "Open Storage Status",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record optional"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Open Storage Status was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Open Storage Status execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-OPEN-BACKUP-STATUS",
+      "actionType": "Safe Visibility Operation",
+      "label": "Open Backup Status",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record optional"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Open Backup Status was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Open Backup Status execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-OPEN-RELEASE-NOTES",
+      "actionType": "Safe Visibility Operation",
+      "label": "Open Release Notes",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record optional"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Open Release Notes was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Open Release Notes execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-VIEW-CONFIGURATION",
+      "actionType": "Safe Visibility Operation",
+      "label": "View Configuration",
+      "requestedBy": "Mission Control",
+      "owner": "Platform Operator",
+      "target": "EOS Platform",
+      "status": "Ready",
+      "approvalStatus": "Not Required",
+      "riskLevel": "Low",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "Safe operation policy",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "View Configuration was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "View Configuration execution mode is Executable."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-STOP-PLATFORM",
+      "actionType": "Governed Platform Operation",
+      "label": "Stop Platform",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Pending Approval",
+      "approvalStatus": "Pending",
+      "riskLevel": "High",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation required",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-STOP-PLATFORM",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Stop Platform was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Stop Platform execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-RESTART-PLATFORM",
+      "actionType": "Governed Platform Operation",
+      "label": "Restart Platform",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Pending Approval",
+      "approvalStatus": "Pending",
+      "riskLevel": "High",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation required",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-RESTART-PLATFORM",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Restart Platform was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Restart Platform execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-CLONE-ENVIRONMENT",
+      "actionType": "Governed Infrastructure Operation",
+      "label": "Clone Environment",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Pending Approval",
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation required",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-CLONE-ENVIRONMENT",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Clone Environment was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Clone Environment execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-SCALE-WORKERS",
+      "actionType": "Governed Workforce Operation",
+      "label": "Scale Workers",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Pending Approval",
+      "approvalStatus": "Pending",
+      "riskLevel": "Medium",
+      "preconditions": [
+        "Backup not required for read-only execution",
+        "Restore validation not required for this action",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-SCALE-WORKERS",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Scale Workers was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Scale Workers execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-RESTORE-BACKUP",
+      "actionType": "Governed Resilience Operation",
+      "label": "Restore Backup",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Blocked",
+      "approvalStatus": "Pending",
+      "riskLevel": "Critical",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation required",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-RESTORE-BACKUP",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Restore Backup was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Restore Backup execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    },
+    {
+      "id": "EOS-GOV-UPGRADE-PLATFORM",
+      "actionType": "Governed Release Operation",
+      "label": "Upgrade Platform",
+      "requestedBy": "Mission Control",
+      "owner": "Chief Technology Officer",
+      "target": "EOS Platform",
+      "status": "Pending Approval",
+      "approvalStatus": "Pending",
+      "riskLevel": "Critical",
+      "preconditions": [
+        "Current backup required",
+        "Restore validation required",
+        "Audit record required"
+      ],
+      "authorizationPolicy": "EOS-POLICY-UPGRADE-PLATFORM",
+      "auditTrail": [
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Action Registered",
+          "summary": "Upgrade Platform was registered in the Platform Administration Center."
+        },
+        {
+          "timestamp": "2026-07-03T20:55:00.000Z",
+          "actor": "EOS Platform",
+          "event": "Execution Guard Applied",
+          "summary": "Upgrade Platform execution mode is Governed Display Only."
+        }
+      ],
+      "createdAt": "2026-07-03T20:55:00.000Z",
+      "updatedAt": "2026-07-03T20:55:00.000Z",
+      "linkedWorkflow": "EOS-WF-ACTION-AUTHORIZATION",
+      "linkedEvents": [
+        "EOS-EVENT-ADMIN-ACTION-REGISTERED"
+      ]
+    }
+  ]
+}

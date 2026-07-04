@@ -1,0 +1,90 @@
+{
+  "collectionName": "platform-operations",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:30:12.810Z",
+  "recordCount": 1,
+  "source": "seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations; refreshed:seed:platform-operations",
+  "records": [
+    {
+      "id": "EOS-PLATFORM-OPERATIONS",
+      "name": "EOS Platform Operations",
+      "owner": "Argus",
+      "status": "Operational",
+      "currentVersion": "0.25.0",
+      "environment": "Local Development",
+      "backendStatus": "Operational",
+      "frontendStatus": "Operational",
+      "apiHealth": "Operational",
+      "storageHealth": "Operational",
+      "backupHealth": "Operational",
+      "releaseVersion": "0.25.0",
+      "gitStatus": "Local repository active; external synchronization not connected.",
+      "dataStoreStatus": "Operational",
+      "registeredServices": [
+        "EOS Core API",
+        "Mission Control"
+      ],
+      "activeApis": [
+        "/api/platform",
+        "/api/platform/status",
+        "/api/platform/admin",
+        "/api/platform/navigation",
+        "/api/audit",
+        "/api/admin-actions",
+        "/api/agent-messages",
+        "/api/agent-activity",
+        "/api/agent-attention",
+        "/api/agent-calendar",
+        "/api/strategic-alignment",
+        "/api/master-monitoring",
+        "/api/enterprise-visuals",
+        "/api/enterprise-telemetry",
+        "/api/digital-twin-home",
+        "/api/onboarding",
+        "/api/onboarding-assimilation",
+        "/api/digital-mirrors",
+        "/api/dta-candidates",
+        "/api/data-feed-requirements",
+        "/api/human-validation",
+        "/api/startup",
+        "/api/identity-media",
+        "/api/organization-intake",
+        "/api/repository-links"
+      ],
+      "runningUrls": [
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173"
+      ],
+      "systemWarnings": [
+        "Restore validation remains pending before backup confidence can be marked fully verified.",
+        "Governed administration actions are registered but execution is disabled until authorization controls mature."
+      ],
+      "recommendedAdminActions": [
+        "Run health check before every major capability build.",
+        "Create a backup before risky platform changes.",
+        "Validate restore flow before cloud synchronization.",
+        "Review platform administration action policy before enabling execution."
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Building",
+        "healthScore": 88,
+        "progress": 64,
+        "summary": "Platform operations are visible through the strategy-aligned Mission Control workspace, Platform Audit readiness center, Enterprise Onboarding foundation, DTA Assimilation pipeline, and Master Monitoring visual layer.",
+        "lastActivity": "2026-07-03T20:55:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review the Platform Audit readiness matrix and approve the next strategic build program before enabling real data-source connectors.",
+        "availableActions": [
+          "Refresh Status",
+          "Run Health Check",
+          "Run Backup",
+          "Open Audit Center",
+          "Open Master Monitoring",
+          "Open Enterprise Onboarding"
+        ]
+      }
+    }
+  ]
+}

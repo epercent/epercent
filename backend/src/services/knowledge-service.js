@@ -1,13 +1,10 @@
 import { knowledgeObjects } from '../data/knowledge.js';
-
-const knowledgeRegistry = new Map(
-  knowledgeObjects.map((knowledgeObject) => [knowledgeObject.id, knowledgeObject])
-);
+import { findRecordById, listRecords } from './storage-service.js';
 
 export function listKnowledgeObjects() {
-  return Array.from(knowledgeRegistry.values());
+  return listRecords('knowledge-objects', knowledgeObjects);
 }
 
 export function getKnowledgeObjectById(id) {
-  return knowledgeRegistry.get(id) ?? null;
+  return findRecordById('knowledge-objects', id, knowledgeObjects);
 }

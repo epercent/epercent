@@ -1,0 +1,44 @@
+{
+  "collectionName": "second-balance-sheet",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:30:26.234Z",
+  "recordCount": 1,
+  "source": "seed:second-balance-sheet; refreshed:seed:second-balance-sheet; refreshed:seed:second-balance-sheet",
+  "records": [
+    {
+      "id": "EOS-SECOND-BALANCE-SHEET",
+      "name": "EOS Second Balance Sheet Metrics",
+      "knowledgeAssets": 5,
+      "agentAssets": 7,
+      "liveEnterpriseObjects": 140,
+      "digitalTwinAssets": 3,
+      "researchAssets": 4,
+      "workflowAssets": 28,
+      "opportunityAssets": 1,
+      "governanceAssets": 8,
+      "estimatedDigitalAssetValue": 850000,
+      "currency": "USD",
+      "confidenceLevel": "Low",
+      "lastUpdated": "2026-07-03T19:20:00.000Z",
+      "methodologyStatus": "Draft Internal Methodology",
+      "estimateBasis": "Internal EOS estimate only. Not financial advice. Not an audited valuation.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Draft",
+        "healthScore": 78,
+        "progress": 42,
+        "summary": "Second Balance Sheet metrics are seeded as a draft internal operating-value framework.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review methodology before external reporting or financial interpretation.",
+        "availableActions": [
+          "Review metrics",
+          "Review methodology",
+          "Prepare research note"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "executive-office-framework",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T17:44:07.248Z",
+  "recordCount": 1,
+  "source": "seed:executive-office-framework",
+  "records": [
+    {
+      "id": "EOS-EXECUTIVE-OFFICE-FRAMEWORK",
+      "name": "EOS Executive Office Framework",
+      "owner": "Eric Olo",
+      "status": "Operational",
+      "purpose": "Transform the Executive Council into a gateway for detailed Executive Offices inside the Digital Enterprise Headquarters.",
+      "officeCount": 9,
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Building",
+        "healthScore": 87,
+        "progress": 57,
+        "summary": "Executive Office Framework is active with reusable office routing and department-specific office data.",
+        "lastActivity": "2026-07-03T17:58:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Review executive offices and prioritize persistence before editable office operations.",
+        "availableActions": [
+          "Open Executive Offices",
+          "Review CEO attention",
+          "Review department portfolios"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,792 @@
+{
+  "collectionName": "human-validation-items",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T23:28:08.906Z",
+  "recordCount": 27,
+  "source": "seed:human-validation-items",
+  "records": [
+    {
+      "id": "EOS-ONB-OIL-001-HV-01",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm enterprise identity",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm enterprise identity.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm enterprise identity is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm enterprise identity with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-02",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm asset ownership",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset ownership.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm asset ownership is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset ownership with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-03",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm asset hierarchy",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset hierarchy.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm asset hierarchy is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset hierarchy with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-04",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm systems list",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm systems list.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm systems list is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm systems list with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-05",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm data feed availability",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm data feed availability.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm data feed availability is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm data feed availability with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-06",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm approval owners",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm approval owners.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm approval owners is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm approval owners with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-07",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm DTA candidates",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm DTA candidates.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm DTA candidates is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm dta candidates with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-08",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm valuation assumptions",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm valuation assumptions.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm valuation assumptions is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm valuation assumptions with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-OIL-001-HV-09",
+      "enterpriseId": "EOS-ONB-OIL-001",
+      "enterpriseName": "Example Oil & Gas Enterprise",
+      "checklistItem": "Confirm governance requirements",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm governance requirements.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm governance requirements is required before Example Oil & Gas Enterprise can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm governance requirements with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-01",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm enterprise identity",
+      "status": "Ready for Review",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm enterprise identity.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 45,
+        "summary": "Confirm enterprise identity is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm enterprise identity with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-02",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm asset ownership",
+      "status": "Ready for Review",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset ownership.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 45,
+        "summary": "Confirm asset ownership is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset ownership with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-03",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm asset hierarchy",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset hierarchy.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm asset hierarchy is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset hierarchy with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-04",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm systems list",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm systems list.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm systems list is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm systems list with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-05",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm data feed availability",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm data feed availability.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm data feed availability is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm data feed availability with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-06",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm approval owners",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm approval owners.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm approval owners is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm approval owners with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-07",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm DTA candidates",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm DTA candidates.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm DTA candidates is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm dta candidates with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-08",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm valuation assumptions",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm valuation assumptions.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm valuation assumptions is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm valuation assumptions with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EPERCENT-001-HV-09",
+      "enterpriseId": "EOS-ONB-EPERCENT-001",
+      "enterpriseName": "ePercent",
+      "checklistItem": "Confirm governance requirements",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm governance requirements.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm governance requirements is required before ePercent can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm governance requirements with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-01",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm enterprise identity",
+      "status": "Ready for Review",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm enterprise identity.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 45,
+        "summary": "Confirm enterprise identity is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm enterprise identity with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-02",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm asset ownership",
+      "status": "Ready for Review",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset ownership.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 45,
+        "summary": "Confirm asset ownership is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset ownership with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-03",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm asset hierarchy",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm asset hierarchy.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm asset hierarchy is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm asset hierarchy with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-04",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm systems list",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm systems list.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm systems list is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm systems list with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-05",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm data feed availability",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm data feed availability.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm data feed availability is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm data feed availability with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-06",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm approval owners",
+      "status": "Pending Validation",
+      "priority": "Medium",
+      "owner": "Enterprise Owner",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Digital Mirror Creation",
+      "recommendedAction": "Review and confirm: Confirm approval owners.",
+      "liveStatus": {
+        "status": "Blue",
+        "operationalStatus": "Blue",
+        "lifecycleStatus": "Review",
+        "healthScore": 78,
+        "progress": 20,
+        "summary": "Confirm approval owners is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Confirm confirm approval owners with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-07",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm DTA candidates",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-HERMES",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm DTA candidates.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm DTA candidates is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm dta candidates with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-08",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm valuation assumptions",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-ATLAS",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm valuation assumptions.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm valuation assumptions is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm valuation assumptions with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ONB-EOS-001-HV-09",
+      "enterpriseId": "EOS-ONB-EOS-001",
+      "enterpriseName": "EOS Platform",
+      "checklistItem": "Confirm governance requirements",
+      "status": "Pending Validation",
+      "priority": "High",
+      "owner": "EOS Governance Council",
+      "assignedAgent": "EOS-AGENT-VULCAN",
+      "dueStage": "Human Validation",
+      "recommendedAction": "Review and confirm: Confirm governance requirements.",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 70,
+        "progress": 20,
+        "summary": "Confirm governance requirements is required before EOS Platform can advance to governed DTA formation.",
+        "lastActivity": "2026-07-04T00:24:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Confirm confirm governance requirements with the responsible owner.",
+        "availableActions": [
+          "Review Validation Item",
+          "Assign Owner",
+          "Record Approval Evidence"
+        ]
+      }
+    }
+  ]
+}

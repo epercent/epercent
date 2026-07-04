@@ -1,0 +1,20 @@
+{
+  "collectionName": "ceo-cockpit",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:26:29.620Z",
+  "recordCount": 1,
+  "source": "seed:ceo-cockpit; refreshed:seed:ceo-cockpit; refreshed:seed:ceo-cockpit; refreshed:seed:ceo-cockpit; refreshed:seed:ceo-cockpit; refreshed:seed:ceo-cockpit",
+  "records": [
+    {
+      "id": "EOS-CEO-COCKPIT",
+      "platformVersion": "0.25.0",
+      "platformHealth": 89,
+      "currentSprint": "Platform Audit & Capability Readiness Center",
+      "currentCapability": "EOS-CAP-0033",
+      "executiveAttentionRequired": 6,
+      "topRecommendedAction": "Review the audit readiness matrix, functional gaps, placeholder register, and recommended build sequence before the next strategic program.",
+      "activeExecutives": 9,
+      "currentRoadmapPhase": "Alpha"
+    }
+  ]
+}

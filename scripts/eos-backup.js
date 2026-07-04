@@ -9,6 +9,7 @@ import { rootDir } from './eos-common.js';
 const backupsDir = join(rootDir, 'backups');
 const backupLogFile = join(backupsDir, 'backup-log.json');
 const backupStatusFile = join(backupsDir, 'backup-status.json');
+const dataDir = join(rootDir, 'data');
 
 const excludes = [
   'node_modules/*',
@@ -70,7 +71,8 @@ function checksumFile(file) {
 await mkdir(backupsDir, { recursive: true });
 
 const packageJson = await readJson(join(rootDir, 'package.json'), { version: '0.0.0' });
-const timestamp = formatTimestamp(new Date());
+const backupDate = new Date();
+const timestamp = formatTimestamp(backupDate);
 const version = packageJson.version;
 const archiveName = `EOS_v${version}_${timestamp}.zip`;
 const archivePath = join(backupsDir, archiveName);
@@ -82,6 +84,7 @@ const metadata = {
   archiveName,
   archiveSize: 0,
   checksum: null,
+  dataIncluded: false,
   status: 'Started'
 };
 
@@ -89,8 +92,10 @@ try {
   await runZip(archivePath);
 
   const archiveStats = await stat(archivePath);
+  await stat(dataDir);
   metadata.archiveSize = archiveStats.size;
   metadata.checksum = await checksumFile(archivePath);
+  metadata.dataIncluded = true;
   metadata.status = 'Completed';
 } catch (error) {
   metadata.status = 'Failed';
@@ -101,15 +106,22 @@ const backupLog = await readJson(backupLogFile, []);
 backupLog.push(metadata);
 await writeFile(backupLogFile, `${JSON.stringify(backupLog, null, 2)}\n`);
 
+const previousBackupStatus = await readJson(backupStatusFile, {});
 await writeFile(
   backupStatusFile,
   `${JSON.stringify(
     {
-      lastBackup: metadata.timestamp,
-      backupStatus: metadata.status,
-      lastRestore: (await readJson(backupStatusFile, {})).lastRestore ?? null,
+      latestBackupTimestamp: metadata.timestamp,
+      latestBackupLocalTime: backupDate.toLocaleString(),
+      latestBackupVersion: metadata.version,
+      latestBackupArchive: metadata.archiveName,
+      latestBackupSize: metadata.archiveSize,
+      latestBackupChecksum: metadata.checksum,
+      latestBackupStatus: metadata.status,
+      latestBackupDataIncluded: metadata.dataIncluded,
+      latestRestoreValidationStatus: previousBackupStatus.latestRestoreValidationStatus ?? 'Not validated',
       backupCount: backupLog.filter((backup) => backup.status === 'Completed').length,
-      nextScheduledBackup: 'Not scheduled'
+      lastUpdated: new Date().toISOString()
     },
     null,
     2
@@ -125,3 +137,4 @@ console.log('EOS backup completed.');
 console.log(`Archive: backups/${archiveName}`);
 console.log(`Size: ${metadata.archiveSize} bytes`);
 console.log(`SHA-256: ${metadata.checksum}`);
+console.log(`Data Included: ${metadata.dataIncluded ? 'Yes' : 'No'}`);

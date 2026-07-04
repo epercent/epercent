@@ -1,0 +1,132 @@
+{
+  "collectionName": "organization-intake-records",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-04T00:31:44.295Z",
+  "recordCount": 2,
+  "source": "append:organization-intake-records",
+  "records": [
+    {
+      "id": "EOS-ORG-INTAKE-EPERCENT-001",
+      "organizationName": "ePercent",
+      "owner": "Hermes",
+      "sourceType": "Seed Record",
+      "sourceName": "ePercent Reference Enterprise",
+      "acceptedFileTypes": [
+        "PDF",
+        "Word Document",
+        "Presentation",
+        "Spreadsheet",
+        "Text",
+        "Markdown",
+        "JSON",
+        "CSV",
+        "Image",
+        "Audio",
+        "Video"
+      ],
+      "repositoryMode": "Local Metadata With External Link Support",
+      "extractionStatus": "Foundation Ready",
+      "extractedSignals": [
+        "File metadata",
+        "Text preview where practical",
+        "Checksum",
+        "Source repository",
+        "Suggested Enterprise Objects",
+        "Suggested Knowledge Objects"
+      ],
+      "linkedRepositoryId": "EOS-REPOSITORY-LINK-EXTERNAL-001",
+      "linkedEnterpriseObjects": [
+        "DTA-EPERCENT-001",
+        "EOS-ENTERPRISE-PROFILE",
+        "EOS-KIPR"
+      ],
+      "importedAt": "2026-07-03T22:25:00.000Z",
+      "status": "Ready For Import",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Defined",
+        "healthScore": 74,
+        "progress": 30,
+        "summary": "Organization intake repository is ready for local files and external cloud-drive links.",
+        "lastActivity": "2026-07-03T22:25:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Low",
+        "recommendedAction": "Import initial organization documents and link large external repositories.",
+        "availableActions": [
+          "Import Organization File",
+          "Link External Repository",
+          "Review Extracted Signals"
+        ]
+      }
+    },
+    {
+      "id": "EOS-ORG-INTAKE-VERIFY",
+      "organizationName": "EOS Verification Enterprise",
+      "owner": "Hermes",
+      "sourceType": "Text",
+      "sourceName": "eos-verification-source.txt",
+      "mimeType": "text/plain",
+      "fileCategory": "Text",
+      "repositoryMode": "Local EOS Repository",
+      "localPath": "data/repository/organization-intake/EOS Verification Enterprise_1783125104294_eos-verification-source.txt",
+      "externalRepositoryUrl": "",
+      "fileSizeBytes": 123,
+      "checksum": "2bc30180288ec6c6032dc63752d23adad7c0a78f11670946383305da808ec85b",
+      "extractionStatus": "Extracted",
+      "extractionMethod": "Plain text extraction",
+      "extractedTextPreview": "EOS verification organization intake source for enterprise object candidates, knowledge extraction, and repository mapping.",
+      "extractedSignals": [
+        "eos-verification-source",
+        "verification",
+        "intake",
+        "source",
+        "enterprise",
+        "object",
+        "candidates",
+        "knowledge",
+        "extraction",
+        "repository",
+        "mapping"
+      ],
+      "suggestedEnterpriseObjects": [
+        "Candidate object: eos-verification-source",
+        "Candidate object: verification",
+        "Candidate object: intake",
+        "Candidate object: source",
+        "Candidate object: enterprise"
+      ],
+      "suggestedKnowledgeObjects": [
+        "Candidate knowledge asset: eos-verification-source",
+        "Candidate knowledge asset: verification",
+        "Candidate knowledge asset: intake",
+        "Candidate knowledge asset: source",
+        "Candidate knowledge asset: enterprise"
+      ],
+      "linkedRepositoryId": "EOS-REPOSITORY-LINK-EXTERNAL-001",
+      "linkedEnterpriseObjects": [
+        "EOS-ORGANIZATION-INTAKE",
+        "EOS-KIPR"
+      ],
+      "importedAt": "2026-07-04T00:31:44.295Z",
+      "status": "Imported",
+      "liveStatus": {
+        "status": "Green",
+        "operationalStatus": "Green",
+        "lifecycleStatus": "Defined",
+        "healthScore": 88,
+        "progress": 100,
+        "summary": "Organization intake record created from Text source using Local EOS Repository.",
+        "lastActivity": "2026-07-04T00:31:44.295Z",
+        "requiresAttention": false,
+        "attentionLevel": "No Action Required",
+        "recommendedAction": "Review extracted signals and map useful items into EOS repositories.",
+        "availableActions": [
+          "Review Extracted Signals",
+          "Create Knowledge Object",
+          "Create Enterprise Object Candidate"
+        ]
+      }
+    }
+  ]
+}

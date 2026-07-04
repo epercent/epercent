@@ -1,0 +1,8 @@
+{
+  "driveFolderId": "REPLACE_WITH_GOOGLE_DRIVE_FOLDER_ID",
+  "oauthClientId": "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_ID",
+  "oauthClientSecret": "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_SECRET",
+  "refreshToken": "REPLACE_WITH_GOOGLE_REFRESH_TOKEN",
+  "backupFrequency": "manual",
+  "syncMode": "readiness-only"
+}

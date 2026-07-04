@@ -1,0 +1,45 @@
+{
+  "collectionName": "dta-monitoring",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T20:49:01.742Z",
+  "recordCount": 1,
+  "source": "seed:dta-monitoring; refreshed:seed:dta-monitoring",
+  "records": [
+    {
+      "id": "EOS-DTA-MONITORING",
+      "name": "Digital Twin Asset Monitoring",
+      "owner": "Atlas",
+      "status": "Operational",
+      "totalDigitalTwinAssets": 3,
+      "inFormation": 1,
+      "underReview": 1,
+      "underValuation": 0,
+      "activeMonitoring": 1,
+      "commercialized": 0,
+      "paused": 0,
+      "requiresAttention": 2,
+      "topDtaCandidates": [
+        "DTA-EPERCENT-001",
+        "DTA-EOS-001",
+        "DTA-OIL-001"
+      ],
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "In Progress",
+        "healthScore": 81,
+        "progress": 46,
+        "summary": "DTA monitoring is active with ePercent in formation, EOS under active monitoring, and Oil & Gas seeded as a demonstration twin.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Define DTA valuation criteria before commercialization.",
+        "availableActions": [
+          "Review DTA candidates",
+          "Review valuation status",
+          "Request governance review"
+        ]
+      }
+    }
+  ]
+}

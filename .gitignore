@@ -10,6 +10,8 @@ backend/.env
 frontend/.env
 .env.*
 !.env.example
+config/google-drive.json
+config/*.local.json
 npm-debug.log*
 *.log
 logs/

@@ -1,0 +1,135 @@
+{
+  "collectionName": "enterprise-strategy",
+  "schemaVersion": "1.0.0",
+  "lastUpdated": "2026-07-03T18:22:17.281Z",
+  "recordCount": 1,
+  "source": "seed:enterprise-strategy",
+  "records": [
+    {
+      "id": "EOS-ENTERPRISE-STRATEGY",
+      "name": "ePercent / EOS Enterprise Strategy",
+      "owner": "Eric Olo",
+      "status": "Awaiting Governance Review",
+      "vision": "Build ePercent and EOS into a living digital enterprise where strategy, operations, knowledge, assets, and governance are managed through live Enterprise Objects.",
+      "mission": "Use EOS as the reference implementation for an AI-native enterprise operating system that creates, governs, and commercializes Digital Twin Assets and Second Balance Sheet value.",
+      "strategicObjectives": [
+        {
+          "id": "EOS-SO-001",
+          "name": "Establish EOS as the AI-native enterprise operating system.",
+          "owner": "CEO",
+          "priority": "Critical",
+          "linkedPrograms": [
+            "EOS-PROG-ENGINEERING-FOUNDATION",
+            "EOS-PROG-EXECUTIVE-AI-WORKFORCE"
+          ]
+        },
+        {
+          "id": "EOS-SO-002",
+          "name": "Create the Digital Twin Asset platform and reference implementation.",
+          "owner": "Atlas",
+          "priority": "High",
+          "linkedPrograms": [
+            "EOS-PROG-DTAP",
+            "EOS-PROG-DTAM",
+            "EOS-PROG-DTAX"
+          ]
+        },
+        {
+          "id": "EOS-SO-003",
+          "name": "Define and commercialize the Second Balance Sheet thesis.",
+          "owner": "Athena",
+          "priority": "High",
+          "linkedPrograms": [
+            "EOS-PROG-SECOND-BALANCE-SHEET",
+            "EOS-PROG-RESEARCH-PUBLICATIONS"
+          ]
+        },
+        {
+          "id": "EOS-SO-004",
+          "name": "Convert platform progress into investor-ready enterprise value evidence.",
+          "owner": "CTO",
+          "priority": "High",
+          "linkedPrograms": [
+            "EOS-PROG-INVESTOR-READINESS",
+            "EOS-PROG-COMMERCIAL-LAUNCH"
+          ]
+        },
+        {
+          "id": "EOS-SO-005",
+          "name": "Build governed opportunity intelligence and commercialization pathways.",
+          "owner": "Mercury",
+          "priority": "Medium",
+          "linkedPrograms": [
+            "EOS-PROG-OPPORTUNITY-ENGINE",
+            "EOS-PROG-COMMERCIAL-LAUNCH"
+          ]
+        }
+      ],
+      "businessModel": {
+        "customerSegments": [
+          "Enterprise transformation leaders",
+          "Governments",
+          "Institutional investors",
+          "Strategic partners"
+        ],
+        "revenueStreams": [
+          "Platform licensing",
+          "Enterprise implementation",
+          "Digital Twin Asset services",
+          "Research and advisory"
+        ],
+        "valueProposition": "EOS connects executive governance, live operating state, knowledge assets, workflows, and valuation narratives in one governed platform.",
+        "commercializationPath": [
+          "Alpha reference implementation",
+          "Investor readiness package",
+          "Enterprise pilot",
+          "Version 1.0 launch"
+        ]
+      },
+      "approvedBy": [
+        "Eric Olo",
+        "Chief Technology Officer"
+      ],
+      "approvalStatus": "Awaiting Review",
+      "effectiveDate": "2026-07-03",
+      "reviewCycle": "Monthly",
+      "linkedPrograms": [
+        "EOS-PROG-ENGINEERING-FOUNDATION",
+        "EOS-PROG-EXECUTIVE-AI-WORKFORCE",
+        "EOS-PROG-DTAP",
+        "EOS-PROG-DTAM",
+        "EOS-PROG-DTAX",
+        "EOS-PROG-SECOND-BALANCE-SHEET",
+        "EOS-PROG-OPPORTUNITY-ENGINE",
+        "EOS-PROG-RESEARCH-PUBLICATIONS",
+        "EOS-PROG-INVESTOR-READINESS",
+        "EOS-PROG-COMMERCIAL-LAUNCH"
+      ],
+      "linkedRoadmap": "EOS-MASTER-ROADMAP",
+      "linkedGovernanceObjects": [
+        "EOS-GOVERNANCE-COUNCIL",
+        "EOS-EXECUTIVE-COUNCIL",
+        "EOS-APPROVAL-QUEUE"
+      ],
+      "linkedValuationModel": "EOS-DIGITAL-ENTERPRISE-VALUATION",
+      "linkedSecondBalanceSheet": "EOS-SECOND-BALANCE-SHEET",
+      "liveStatus": {
+        "status": "Amber",
+        "operationalStatus": "Amber",
+        "lifecycleStatus": "Review",
+        "healthScore": 86,
+        "progress": 58,
+        "summary": "Enterprise Strategy is defined and awaiting formal governance review.",
+        "lastActivity": "2026-07-03T19:20:00.000Z",
+        "requiresAttention": true,
+        "attentionLevel": "Medium",
+        "recommendedAction": "Review and approve strategic objectives before financial modeling or investment decisions.",
+        "availableActions": [
+          "Review strategy",
+          "Review roadmap alignment",
+          "Request governance review"
+        ]
+      }
+    }
+  ]
+}

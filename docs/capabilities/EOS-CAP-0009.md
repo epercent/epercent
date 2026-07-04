@@ -26,15 +26,40 @@ Each backup records:
 - `checksum`
 - `status`
 
+## Backup Status Reporting
+
+The latest backup status is recorded in `backups/backup-status.json`.
+
+The status file records:
+
+- `latestBackupTimestamp`
+- `latestBackupLocalTime`
+- `latestBackupVersion`
+- `latestBackupArchive`
+- `latestBackupSize`
+- `latestBackupChecksum`
+- `latestBackupStatus`
+- `latestRestoreValidationStatus`
+- `backupCount`
+- `lastUpdated`
+
 ## Mission Control Preparation
 
 The file `backups/backup-status.json` prepares the system for Mission Control to display:
 
 - Last Backup
 - Backup Status
-- Last Restore
 - Backup Count
-- Next Scheduled Backup
+- Latest Archive
+- Restore Validation
+
+## Verification
+
+Backup status schema verification is available through:
+
+```bash
+npm run eos:backup:status
+```
 
 ## Future Automation
 
