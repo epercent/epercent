@@ -9,6 +9,7 @@ import assignmentEngineRoutes from './routes/assignment-engine.routes.js';
 import aiProviderGatewayRoutes from './routes/ai-provider-gateway.routes.js';
 import capabilityResolverRoutes from './routes/capability-resolver.routes.js';
 import engineeringMissionOrchestratorRoutes from './routes/engineering-mission-orchestrator.routes.js';
+import providerDispatchRoutes from './routes/provider-dispatch.routes.js';
 import decisionIntelligenceRoutes from './routes/decision-intelligence.routes.js';
 import agentsRoutes from './routes/agents.routes.js';
 import {
@@ -92,6 +93,7 @@ export function createApp() {
   app.use('/api/ai-provider-gateway', aiProviderGatewayRoutes);
   app.use('/api/capability-resolver', capabilityResolverRoutes);
   app.use('/api/engineering-mission-orchestrator', engineeringMissionOrchestratorRoutes);
+  app.use('/api/provider-dispatch', providerDispatchRoutes);
   app.use('/api/decision-intelligence', decisionIntelligenceRoutes);
   app.use('/api/agents', agentsRoutes);
   app.use('/api/admin-actions', adminActionsRouter);
