@@ -5,6 +5,10 @@ import morgan from 'morgan';
 
 import auditRoutes from './routes/audit.routes.js';
 import aiDevelopmentOfficeRoutes from './routes/ai-development-office.routes.js';
+import assignmentEngineRoutes from './routes/assignment-engine.routes.js';
+import aiProviderGatewayRoutes from './routes/ai-provider-gateway.routes.js';
+import capabilityResolverRoutes from './routes/capability-resolver.routes.js';
+import engineeringMissionOrchestratorRoutes from './routes/engineering-mission-orchestrator.routes.js';
 import decisionIntelligenceRoutes from './routes/decision-intelligence.routes.js';
 import agentsRoutes from './routes/agents.routes.js';
 import {
@@ -19,6 +23,9 @@ import {
   masterMonitoringRouter
 } from './routes/enterprise-visuals.routes.js';
 import executiveActionsRoutes from './routes/executive-actions.routes.js';
+import engineeringCoordinationRoutes from './routes/engineering-coordination.routes.js';
+import engineeringLedgerRoutes from './routes/engineering-ledger.routes.js';
+import missionPackageRoutes from './routes/mission-package.routes.js';
 import executiveCouncilRoutes from './routes/executive-council.routes.js';
 import executiveOfficesRoutes from './routes/executive-offices.routes.js';
 import {
@@ -81,6 +88,10 @@ export function createApp() {
 
   app.use('/api/audit', auditRoutes);
   app.use('/api/ai-development-office', aiDevelopmentOfficeRoutes);
+  app.use('/api/assignment-engine', assignmentEngineRoutes);
+  app.use('/api/ai-provider-gateway', aiProviderGatewayRoutes);
+  app.use('/api/capability-resolver', capabilityResolverRoutes);
+  app.use('/api/engineering-mission-orchestrator', engineeringMissionOrchestratorRoutes);
   app.use('/api/decision-intelligence', decisionIntelligenceRoutes);
   app.use('/api/agents', agentsRoutes);
   app.use('/api/admin-actions', adminActionsRouter);
@@ -94,6 +105,9 @@ export function createApp() {
   app.use('/api/digital-twin-home', digitalTwinHomeRouter);
   app.use('/api/events', eventsRoutes);
   app.use('/api/executive-actions', executiveActionsRoutes);
+  app.use('/api/engineering-coordination', engineeringCoordinationRoutes);
+  app.use('/api/engineering-ledger', engineeringLedgerRoutes);
+  app.use('/api/mission-package', missionPackageRoutes);
   app.use('/api/executive-council', executiveCouncilRoutes);
   app.use('/api/executive-offices', executiveOfficesRoutes);
   app.use('/api/identity-media', identityMediaRouter);
