@@ -198,3 +198,7 @@ export function fetchKernel() {
 export function fetchDecisionIntelligence() {
   return requestJson('/api/decision-intelligence')
 }
+
+export function fetchAiDevelopmentOffice() {
+  return requestJson('/api/ai-development-office')
+}

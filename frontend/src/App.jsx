@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
 import AiWorkforceOperationsView from './components/AiWorkforceOperationsView.jsx'
+import AiDevelopmentOfficeView from './components/AiDevelopmentOfficeView.jsx'
 import AuditReadinessView from './components/AuditReadinessView.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import CeoCockpitView from './components/CeoCockpitView.jsx'
@@ -24,6 +25,7 @@ import StrategicAlignmentView from './components/StrategicAlignmentView.jsx'
 import WorkspaceHome from './components/WorkspaceHome.jsx'
 import WorkspaceRail from './components/WorkspaceRail.jsx'
 import {
+  fetchAiDevelopmentOffice,
   fetchCoreStatus,
   fetchDecisionIntelligence,
   fetchAgents,
@@ -136,6 +138,7 @@ function routeFromHash() {
 
 function App() {
   const [status, setStatus] = useState(null)
+  const [aiDevelopmentOffice, setAiDevelopmentOffice] = useState(null)
   const [agentRegistry, setAgentRegistry] = useState(null)
   const [objectRegistry, setObjectRegistry] = useState(null)
   const [executiveActions, setExecutiveActions] = useState(null)
@@ -177,6 +180,7 @@ function App() {
     setIsLoading(true)
     setError(null)
     setStatus(null)
+    setAiDevelopmentOffice(null)
     setAgentRegistry(null)
     setObjectRegistry(null)
     setExecutiveActions(null)
@@ -211,6 +215,7 @@ function App() {
     let isCurrentRequest = true
 
     Promise.allSettled([
+      fetchAiDevelopmentOffice(),
       fetchCoreStatus(),
       fetchAgents(),
       fetchEnterpriseObjects(),
@@ -242,7 +247,8 @@ function App() {
     ])
       .then((results) => {
         const [
-          statusResult,
+          aiDevelopmentOfficeResult,
+        statusResult,
           agentsResult,
           objectsResult,
           executiveActionsResult,
@@ -277,6 +283,7 @@ function App() {
           return
         }
 
+        setAiDevelopmentOffice(aiDevelopmentOfficeResult)
         setStatus(statusResult)
         setAgentRegistry(agentsResult)
         setObjectRegistry(objectsResult)
@@ -318,6 +325,7 @@ function App() {
 
         setError(requestError.message)
         setStatus(null)
+        setAiDevelopmentOffice(null)
         setAgentRegistry(null)
         setObjectRegistry(null)
         setExecutiveActions(null)
@@ -636,6 +644,10 @@ function App() {
           mode={missionControlMode}
         />
       )
+    }
+
+    if (missionControlMode === 'engineering') {
+      return <AiDevelopmentOfficeView office={aiDevelopmentOffice} />
     }
 
     if (missionControlMode === 'assets') {

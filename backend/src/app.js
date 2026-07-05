@@ -4,6 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 
 import auditRoutes from './routes/audit.routes.js';
+import aiDevelopmentOfficeRoutes from './routes/ai-development-office.routes.js';
 import decisionIntelligenceRoutes from './routes/decision-intelligence.routes.js';
 import agentsRoutes from './routes/agents.routes.js';
 import {
@@ -79,6 +80,7 @@ export function createApp() {
   }, express.static(identityMediaDir));
 
   app.use('/api/audit', auditRoutes);
+  app.use('/api/ai-development-office', aiDevelopmentOfficeRoutes);
   app.use('/api/decision-intelligence', decisionIntelligenceRoutes);
   app.use('/api/agents', agentsRoutes);
   app.use('/api/admin-actions', adminActionsRouter);
