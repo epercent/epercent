@@ -1,0 +1,30 @@
+{
+  "id": "EOS-INTELLIGENCE-REPOSITORY-001",
+  "name": "EOS Enterprise Intelligence Repository",
+  "version": "0.1",
+  "status": "foundation",
+  "ownerOffice": "Knowledge Office",
+  "governingOffice": "Enterprise Intelligence Office",
+  "purpose": "Store reusable enterprise intelligence assets that define use cases, playbooks, reference architectures, capability maps, commercial models, implementation patterns, demos, and agent DNA.",
+  "assetTypes": [
+    "use-case",
+    "industry-playbook",
+    "reference-architecture",
+    "capability-map",
+    "commercial-model",
+    "demo-scenario",
+    "implementation-pattern",
+    "agent-dna"
+  ],
+  "integrationTargets": [
+    "Enterprise Build System",
+    "Architecture Office",
+    "AI Workforce Office",
+    "Decision Intelligence Engine",
+    "Enhancement Repository",
+    "Mission Control",
+    "Enterprise Evolution Engine",
+    "Second Balance Sheet",
+    "Digital Twin Assets"
+  ]
+}

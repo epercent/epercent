@@ -3,7 +3,7 @@
   "auditId": "EOS-AUDIT-READINESS-001",
   "auditName": "EOS Platform Audit & Capability Readiness Report",
   "auditVersion": "0.25.0",
-  "generatedAt": "2026-07-04T16:12:13.828Z",
+  "generatedAt": "2026-07-04T17:52:28.773Z",
   "owner": "Codex",
   "status": "Operational",
   "summary": {
@@ -957,7 +957,7 @@
       "valuation-models": 1,
       "workflows": 33
     },
-    "lastUpdated": "2026-07-04T16:12:13.495Z",
+    "lastUpdated": "2026-07-04T17:52:28.497Z",
     "snapshotCount": 0,
     "warnings": []
   },
