@@ -210,7 +210,7 @@ function App() {
   useEffect(() => {
     let isCurrentRequest = true
 
-    Promise.all([
+    Promise.allSettled([
       fetchCoreStatus(),
       fetchAgents(),
       fetchEnterpriseObjects(),
@@ -240,36 +240,39 @@ function App() {
       fetchStorageStatus(),
       fetchStorageCollections(),
     ])
-      .then(([
-        statusResult,
-        agentsResult,
-        objectsResult,
-        executiveActionsResult,
-        adminActionsResult,
-        agentActivityResult,
-        agentAttentionResult,
-        agentCalendarResult,
-        agentMessagesResult,
-        auditResult,
-        executiveCouncilResult,
-        executiveOfficesResult,
-        identityMediaResult,
-        repositoriesResult,
-        kernelResult,
-        decisionIntelligenceResult,
-        masterMonitoringResult,
-        onboardingAssimilationResult,
-        organizationIntakeResult,
-        platformResult,
-        platformAdminResult,
-        platformNavigationResult,
-        pmoResult,
-        startupExperienceResult,
-        strategicAlignmentResult,
-        strategicLayerResult,
-        storageStatusResult,
-        storageCollectionsResult,
-      ]) => {
+      .then((results) => {
+        const [
+          statusResult,
+          agentsResult,
+          objectsResult,
+          executiveActionsResult,
+          adminActionsResult,
+          agentActivityResult,
+          agentAttentionResult,
+          agentCalendarResult,
+          agentMessagesResult,
+          auditResult,
+          executiveCouncilResult,
+          executiveOfficesResult,
+          identityMediaResult,
+          repositoriesResult,
+          kernelResult,
+          decisionIntelligenceResult,
+          masterMonitoringResult,
+          onboardingAssimilationResult,
+          organizationIntakeResult,
+          platformResult,
+          platformAdminResult,
+          platformNavigationResult,
+          pmoResult,
+          startupExperienceResult,
+          strategicAlignmentResult,
+          strategicLayerResult,
+          storageStatusResult,
+          storageCollectionsResult,
+        ] = results.map((result) => result.status === 'fulfilled' ? result.value : null)
+
+        const failedRequests = results.filter((result) => result.status === 'rejected')
         if (!isCurrentRequest) {
           return
         }
@@ -302,7 +305,11 @@ function App() {
         setStrategicLayer(strategicLayerResult)
         setStorageStatus(storageStatusResult)
         setStorageCollections(storageCollectionsResult)
-        setError(null)
+        setError(
+          failedRequests.length
+            ? `${failedRequests.length} EOS module request(s) failed. Mission Control is running in degraded mode.`
+            : null
+        )
       })
       .catch((requestError) => {
         if (!isCurrentRequest) {
