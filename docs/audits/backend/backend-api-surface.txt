@@ -1,0 +1,447 @@
+backend/src/middleware/not-found.js:export function notFound(request, response) {
+backend/src/middleware/error-handler.js:export function errorHandler(error, _request, response, _next) {
+backend/src/config/env.js:export const env = {
+backend/src/providers/provider-registry.js:export function getProvider(name = process.env.AI_PROVIDER || "OPENAI") {
+backend/src/providers/provider-registry.js:export function listProviders() {
+backend/src/controllers/executive-offices.controller.js:export function listOffices(_request, response) {
+backend/src/controllers/executive-offices.controller.js:export function getOffice(request, response) {
+backend/src/controllers/agent-knowledge-repositories.controller.js:export function listRepositories(_request, response) {
+backend/src/controllers/agent-knowledge-repositories.controller.js:export function getRepository(request, response) {
+backend/src/controllers/agent-knowledge-repositories.controller.js:export function listKnowledgeObjects(_request, response) {
+backend/src/controllers/agent-knowledge-repositories.controller.js:export function getKnowledgeObject(request, response) {
+backend/src/controllers/executive-actions.controller.js:export function listActions(_request, response) {
+backend/src/controllers/executive-actions.controller.js:export function listPendingApproval(_request, response) {
+backend/src/controllers/executive-actions.controller.js:export function getAction(request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getMasterMonitoring(_request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getEnterpriseVisuals(_request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getEnterpriseVisual(request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getEnterpriseTelemetry(_request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getEnterpriseTelemetryForEnterprise(request, response) {
+backend/src/controllers/enterprise-visuals.controller.js:export function getDigitalTwinHome(request, response) {
+backend/src/controllers/capability-resolver.controller.js:export function getCapabilityResolution(req, res) {
+backend/src/controllers/onboarding.controller.js:export function getOnboarding(_request, response) {
+backend/src/controllers/onboarding.controller.js:export function getOnboardingById(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getOnboardingPipeline(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDigitalMirrors(_request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDigitalMirror(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDtaCandidates(_request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDtaCandidate(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDataFeedRequirements(_request, response) {
+backend/src/controllers/onboarding.controller.js:export function getDataFeedRequirementsForEnterprise(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getHumanValidation(_request, response) {
+backend/src/controllers/onboarding.controller.js:export function getHumanValidationForEnterprise(request, response) {
+backend/src/controllers/onboarding.controller.js:export function getOnboardingAssimilationOverview(_request, response) {
+backend/src/controllers/ai-development-office.controller.js:export function getAiDevelopmentOfficeController(req, res) {
+backend/src/controllers/audit.controller.js:export function getAudit(_request, response) {
+backend/src/controllers/knowledge.controller.js:export function listKnowledgeRegistry(_request, response) {
+backend/src/controllers/knowledge.controller.js:export function getKnowledgeObject(request, response) {
+backend/src/controllers/engineering-ledger.controller.js:export function getEngineeringLedgerController(req, res) {
+backend/src/controllers/pmo.controller.js:export function getPmoOverview(_request, response) {
+backend/src/controllers/pmo.controller.js:export function getRoadmap(_request, response) {
+backend/src/controllers/events.controller.js:export function listEventRegistry(_request, response) {
+backend/src/controllers/events.controller.js:export function getEvent(request, response) {
+backend/src/controllers/agents.controller.js:export function listAgentRegistry(_request, response) {
+backend/src/controllers/agents.controller.js:export function getAgent(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getStartupExperience(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getIdentityMedia(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function listProfiles(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getProfile(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function listAssets(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getAsset(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function uploadMediaAsset(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getOrganizationIntake(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getOrganizationIntakeRecord(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function importOrganizationSource(request, response) {
+backend/src/controllers/identity-intake.controller.js:export function getRepositoryLinks(_request, response) {
+backend/src/controllers/identity-intake.controller.js:export function createExternalRepositoryLink(request, response) {
+backend/src/controllers/sprint-report.controller.js:export function getSprintReport(req,res){
+backend/src/controllers/engineering-coordination.controller.js:export function getEngineeringCoordinationController(req, res) {
+backend/src/controllers/kernel.controller.js:export function getKernelManifest(_request, response, next) {
+backend/src/controllers/assignment-engine.controller.js:export function getAssignmentEngineController(req, res) {
+backend/src/controllers/ai-provider-gateway.controller.js:export function getProviderGatewayController(req, res) {
+backend/src/controllers/storage.controller.js:export function getStorageStatus(_request, response) {
+backend/src/controllers/storage.controller.js:export function listStorageCollections(_request, response) {
+backend/src/controllers/storage.controller.js:export function getStorageCollection(request, response) {
+backend/src/controllers/decision-intelligence.controller.js:export function getDecisionIntelligence(_request, response) {
+backend/src/controllers/decision-intelligence.controller.js:export function createDecisionAssessment(request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getPlatform(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getPlatformStatus(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getPlatformAdmin(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getNavigation(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function listPlatformAdminActions(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getPlatformAdminAction(request, response) {
+backend/src/controllers/platform-operations.controller.js:export function listMessages(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getMessage(request, response) {
+backend/src/controllers/platform-operations.controller.js:export function getMessageThread(request, response) {
+backend/src/controllers/platform-operations.controller.js:export function listActivity(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function listAttention(_request, response) {
+backend/src/controllers/platform-operations.controller.js:export function listCalendar(_request, response) {
+backend/src/controllers/provider-dispatch.controller.js:export function dispatchMissionController(req,res){
+backend/src/controllers/ai-workforce-members.controller.js:export function listAiWorkforceMembersController(req, res) {
+backend/src/controllers/ai-workforce-members.controller.js:export function getAiWorkforceMemberController(req, res) {
+backend/src/controllers/ai-workforce-members.controller.js:export function getAiWorkforceProviderHealthController(req, res) {
+backend/src/controllers/objects.controller.js:export function listObjects(_request, response) {
+backend/src/controllers/objects.controller.js:export function getObjectById(request, response) {
+backend/src/controllers/workflows.controller.js:export function listWorkflowRegistry(_request, response) {
+backend/src/controllers/workflows.controller.js:export function getWorkflow(request, response) {
+backend/src/controllers/executive-council.controller.js:export function listExecutiveCouncil(_request, response) {
+backend/src/controllers/executive-council.controller.js:export function getExecutiveProfile(request, response) {
+backend/src/controllers/mission-package.controller.js:export function getMissionPackage(req, res) {
+backend/src/controllers/status.controller.js:export function getStatus(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getStrategy(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getGovernance(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getValuation(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getSecondBalanceSheetOverview(_request, response) {
+backend/src/controllers/strategy.controller.js:export function listDtas(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getDta(request, response) {
+backend/src/controllers/strategy.controller.js:export function getStrategicLayer(_request, response) {
+backend/src/controllers/strategy.controller.js:export function getStrategicAlignmentOverview(_request, response) {
+backend/src/controllers/engineering-mission-orchestrator.controller.js:export function getEngineeringMissionOrchestrator(req, res) {
+backend/src/data/strategic-alignment.js:export const investmentThesisAlignment = {
+backend/src/data/strategic-alignment.js:export const technologyFlywheel = {
+backend/src/data/strategic-alignment.js:export const threeHorizonRoadmap = {
+backend/src/data/strategic-alignment.js:export const revenueEngine = {
+backend/src/data/strategic-alignment.js:export const dtaLifecycle = {
+backend/src/data/strategic-alignment.js:export const kipr = {
+backend/src/data/strategic-alignment.js:export const enterpriseProfile = {
+backend/src/data/strategic-alignment.js:export const industryFramework = {
+backend/src/data/strategic-alignment.js:export const readinessAssessments = {
+backend/src/data/strategic-alignment.js:export const strategicAlignment = {
+backend/src/data/onboarding.js:export const onboardingAgents = [
+backend/src/data/onboarding.js:export const humanValidationChecklistTemplate = [
+backend/src/data/onboarding.js:export const enterpriseOnboarding = [
+backend/src/data/onboarding.js:export const assimilationPipelines = [
+backend/src/data/onboarding.js:export const digitalMirrors = [
+backend/src/data/onboarding.js:export const dtaCandidates = [
+backend/src/data/onboarding.js:export const dataFeedRequirements = [
+backend/src/data/onboarding.js:export const humanValidationItems = enterpriseOnboarding.flatMap((onboarding) =>
+backend/src/data/events.js:export const EVENT_TYPES = Object.freeze([
+backend/src/data/events.js:export const events = [
+backend/src/data/agents.js:export const agents = agentSeed.map((agent) => ({
+backend/src/data/agent-knowledge-repositories.js:export const agentKnowledgeObjects = [
+backend/src/data/agent-knowledge-repositories.js:export const agentKnowledgeRepositories = executiveAgents.map((agent) => {
+backend/src/data/strategy.js:export const strategicObjectives = [
+backend/src/data/strategy.js:export const enterpriseStrategy = {
+backend/src/data/strategy.js:export const governanceCouncil = {
+backend/src/data/strategy.js:export const digitalEnterpriseValuation = {
+backend/src/data/strategy.js:export const secondBalanceSheet = {
+backend/src/data/strategy.js:export const dtaMonitoring = {
+backend/src/data/strategy.js:export const digitalTwinAssets = [
+backend/src/data/executive-offices.js:export const officeTimestamp = '2026-07-03T17:58:00.000Z';
+backend/src/data/executive-offices.js:export const executiveOffices = executiveProfiles.map(officeForProfile);
+backend/src/data/executive-offices.js:export const executiveOfficeFramework = {
+backend/src/data/ai-providers.js:export const aiProviders = [
+backend/src/data/pmo.js:export const eosPmo = {
+backend/src/data/pmo.js:export const masterRoadmap = {
+backend/src/data/platform-operations.js:export const platformOperations = {
+backend/src/data/platform-operations.js:export const platformNavigation = [
+backend/src/data/platform-operations.js:export const adminActions = [
+backend/src/data/platform-operations.js:export const authorizationPolicies = adminActions
+backend/src/data/platform-operations.js:export const actionGovernanceRecords = adminActions.map((action) => ({
+backend/src/data/platform-operations.js:export const agentMessages = [
+backend/src/data/platform-operations.js:export const agentActivity = [
+backend/src/data/platform-operations.js:export const agentAttentionQueue = [
+backend/src/data/platform-operations.js:export const agentCalendar = [
+backend/src/data/enterprise-visuals.js:export const enterpriseArchitectureLayers = [
+backend/src/data/enterprise-visuals.js:export const digitalTwinGenerationWorkflows = [
+backend/src/data/enterprise-visuals.js:export const enterpriseVisuals = [
+backend/src/data/enterprise-visuals.js:export const enterpriseTelemetry = [
+backend/src/data/enterprise-visuals.js:export const digitalTwinHomes = [
+backend/src/data/enterprise-visuals.js:export const masterMonitoring = {
+backend/src/data/audit.js:export const auditStatusTaxonomy = [
+backend/src/data/audit.js:export const capabilityReadinessMatrix = [
+backend/src/data/audit.js:export const apiCoverage = [
+backend/src/data/audit.js:export const frontendRouteCoverage = [
+backend/src/data/audit.js:export const placeholderRegister = [
+backend/src/data/audit.js:export const technicalDebtRegister = [
+backend/src/data/audit.js:export const readinessScores = [
+backend/src/data/audit.js:export const recommendedBuildSequence = [
+backend/src/data/audit.js:export const auditQualityGates = [
+backend/src/data/audit.js:export const auditLiveStatus = liveStatus({
+backend/src/data/enterprise-objects.js:export const enterpriseObjects = [
+backend/src/data/engineering-ledger.js:export const engineeringLedger = [
+backend/src/data/executive-actions.js:export const ACTION_SAFETY_NOTICE =
+backend/src/data/executive-actions.js:export const actionTimestamp = '2026-07-03T17:32:00.000Z';
+backend/src/data/executive-actions.js:export const executiveActions = executiveProfiles.flatMap((profile) =>
+backend/src/data/executive-actions.js:export const executiveActionFramework = {
+backend/src/data/executive-actions.js:export const approvalQueue = {
+backend/src/data/knowledge.js:export const knowledgeObjects = [
+backend/src/data/ai-workforce-members.js:export const aiWorkforceMembers = [
+backend/src/data/ai-development-office.js:export const aiDevelopmentOffice = {
+backend/src/data/engineering-assignments.js:export const engineeringAssignments = [
+backend/src/data/workflows.js:export const workflows = [
+backend/src/data/identity-intake.js:export const startupExperience = {
+backend/src/data/identity-intake.js:export const profileIdentities = [
+backend/src/data/identity-intake.js:export const mediaAssets = [
+backend/src/data/identity-intake.js:export const organizationRepositoryLinks = [
+backend/src/data/identity-intake.js:export const mediaExtractionRules = [
+backend/src/data/identity-intake.js:export const organizationIntakeRecords = [
+backend/src/data/enterprise-build-missions.js:export const enterpriseBuildMissions = [
+backend/src/data/executive-council.js:export const executiveProfiles = executiveProfileSeed.map((profile) => ({
+backend/src/data/executive-council.js:export const ceoCockpit = {
+backend/src/data/executive-council.js:export const executiveCouncil = {
+backend/src/data/executive-council.js:export const digitalEnterpriseHeadquarters = {
+backend/src/routes/agents.routes.js:router.get('/', listAgentRegistry);
+backend/src/routes/agents.routes.js:router.get('/:id', getAgent);
+backend/src/routes/kernel.routes.js:router.get('/', getKernelManifest);
+backend/src/routes/enterprise-visuals.routes.js:export const masterMonitoringRouter = Router();
+backend/src/routes/enterprise-visuals.routes.js:export const enterpriseTelemetryRouter = Router();
+backend/src/routes/enterprise-visuals.routes.js:export const enterpriseVisualsRouter = Router();
+backend/src/routes/enterprise-visuals.routes.js:export const digitalTwinHomeRouter = Router();
+backend/src/routes/executive-offices.routes.js:router.get('/', listOffices);
+backend/src/routes/executive-offices.routes.js:router.get('/:id', getOffice);
+backend/src/routes/provider-dispatch.routes.js:router.post('/',dispatchMissionController)
+backend/src/routes/onboarding.routes.js:export const onboardingRouter = Router();
+backend/src/routes/onboarding.routes.js:export const digitalMirrorsRouter = Router();
+backend/src/routes/onboarding.routes.js:export const dtaCandidatesRouter = Router();
+backend/src/routes/onboarding.routes.js:export const dataFeedRequirementsRouter = Router();
+backend/src/routes/onboarding.routes.js:export const humanValidationRouter = Router();
+backend/src/routes/onboarding.routes.js:export const onboardingAssimilationRouter = Router();
+backend/src/routes/strategy.routes.js:export const strategyRouter = Router();
+backend/src/routes/strategy.routes.js:export const governanceRouter = Router();
+backend/src/routes/strategy.routes.js:export const valuationRouter = Router();
+backend/src/routes/strategy.routes.js:export const secondBalanceSheetRouter = Router();
+backend/src/routes/strategy.routes.js:export const digitalTwinAssetsRouter = Router();
+backend/src/routes/strategy.routes.js:export const strategicLayerRouter = Router();
+backend/src/routes/strategy.routes.js:export const strategicAlignmentRouter = Router();
+backend/src/routes/knowledge.routes.js:router.get('/', listKnowledgeRegistry);
+backend/src/routes/knowledge.routes.js:router.get('/:id', getKnowledgeObject);
+backend/src/routes/status.routes.js:router.get('/', getStatus);
+backend/src/routes/events.routes.js:router.get('/', listEventRegistry);
+backend/src/routes/events.routes.js:router.get('/:id', getEvent);
+backend/src/routes/storage.routes.js:router.get('/status', getStorageStatus);
+backend/src/routes/storage.routes.js:router.get('/collections', listStorageCollections);
+backend/src/routes/storage.routes.js:router.get('/collections/:name', getStorageCollection);
+backend/src/routes/ai-development-office.routes.js:router.get('/', getAiDevelopmentOfficeController)
+backend/src/routes/ai-provider-gateway.routes.js:router.get('/', getProviderGatewayController)
+backend/src/routes/engineering-coordination.routes.js:router.get('/', getEngineeringCoordinationController)
+backend/src/routes/decision-intelligence.routes.js:router.get('/', getDecisionIntelligence);
+backend/src/routes/decision-intelligence.routes.js:router.post('/assess', createDecisionAssessment);
+backend/src/routes/assignment-engine.routes.js:router.get('/', getAssignmentEngineController)
+backend/src/routes/engineering-mission-orchestrator.routes.js:router.get('/', getEngineeringMissionOrchestrator)
+backend/src/routes/engineering-ledger.routes.js:router.get('/', getEngineeringLedgerController)
+backend/src/routes/executive-council.routes.js:router.get('/', listExecutiveCouncil);
+backend/src/routes/executive-council.routes.js:router.get('/:id', getExecutiveProfile);
+backend/src/routes/identity-intake.routes.js:export const startupRouter = Router();
+backend/src/routes/identity-intake.routes.js:export const identityMediaRouter = Router();
+backend/src/routes/identity-intake.routes.js:export const organizationIntakeRouter = Router();
+backend/src/routes/identity-intake.routes.js:export const repositoryLinksRouter = Router();
+backend/src/routes/pmo.routes.js:router.get('/', getPmoOverview);
+backend/src/routes/pmo.routes.js:router.get('/master-roadmap', getRoadmap);
+backend/src/routes/executive-actions.routes.js:router.get('/', listActions);
+backend/src/routes/executive-actions.routes.js:router.get('/pending-approval', listPendingApproval);
+backend/src/routes/executive-actions.routes.js:router.get('/:id', getAction);
+backend/src/routes/workflows.routes.js:router.get('/', listWorkflowRegistry);
+backend/src/routes/workflows.routes.js:router.get('/:id', getWorkflow);
+backend/src/routes/platform-operations.routes.js:export const platformRouter = Router();
+backend/src/routes/platform-operations.routes.js:export const adminActionsRouter = Router();
+backend/src/routes/platform-operations.routes.js:export const agentMessagesRouter = Router();
+backend/src/routes/platform-operations.routes.js:export const agentActivityRouter = Router();
+backend/src/routes/platform-operations.routes.js:export const agentAttentionRouter = Router();
+backend/src/routes/platform-operations.routes.js:export const agentCalendarRouter = Router();
+backend/src/routes/audit.routes.js:router.get('/', getAudit);
+backend/src/routes/mission-package.routes.js:router.get('/', getMissionPackage)
+backend/src/routes/ai-workforce-members.routes.js:router.get('/', listAiWorkforceMembersController)
+backend/src/routes/ai-workforce-members.routes.js:router.get('/health', getAiWorkforceProviderHealthController)
+backend/src/routes/ai-workforce-members.routes.js:router.get('/:id', getAiWorkforceMemberController)
+backend/src/routes/objects.routes.js:router.get('/', listObjects);
+backend/src/routes/objects.routes.js:router.get('/:id', getObjectById);
+backend/src/routes/capability-resolver.routes.js:router.get('/', getCapabilityResolution)
+backend/src/routes/sprint-report.routes.js:router.get('/',getSprintReport)
+backend/src/app.js:export function createApp() {
+backend/src/app.js:  app.use(helmet());
+backend/src/app.js:  app.use(cors());
+backend/src/app.js:  app.use(express.json({ limit: '25mb' }));
+backend/src/app.js:  app.use(morgan('combined'));
+backend/src/app.js:  app.use('/media', (_request, response, next) => {
+backend/src/app.js:  app.use('/api/audit', auditRoutes);
+backend/src/app.js:  app.use('/api/ai-development-office', aiDevelopmentOfficeRoutes);
+backend/src/app.js:  app.use('/api/assignment-engine', assignmentEngineRoutes);
+backend/src/app.js:  app.use('/api/ai-provider-gateway', aiProviderGatewayRoutes);
+backend/src/app.js:  app.use('/api/ai-workforce-members', aiWorkforceMembersRoutes);
+backend/src/app.js:  app.use('/api/capability-resolver', capabilityResolverRoutes);
+backend/src/app.js:  app.use('/api/engineering-mission-orchestrator', engineeringMissionOrchestratorRoutes);
+backend/src/app.js:  app.use('/api/provider-dispatch', providerDispatchRoutes);
+backend/src/app.js:  app.use('/api/sprint-report', sprintReportRoutes);
+backend/src/app.js:  app.use('/api/decision-intelligence', decisionIntelligenceRoutes);
+backend/src/app.js:  app.use('/api/agents', agentsRoutes);
+backend/src/app.js:  app.use('/api/admin-actions', adminActionsRouter);
+backend/src/app.js:  app.use('/api/agent-activity', agentActivityRouter);
+backend/src/app.js:  app.use('/api/agent-attention', agentAttentionRouter);
+backend/src/app.js:  app.use('/api/agent-calendar', agentCalendarRouter);
+backend/src/app.js:  app.use('/api/agent-messages', agentMessagesRouter);
+backend/src/app.js:  app.use('/api/master-monitoring', masterMonitoringRouter);
+backend/src/app.js:  app.use('/api/enterprise-visuals', enterpriseVisualsRouter);
+backend/src/app.js:  app.use('/api/enterprise-telemetry', enterpriseTelemetryRouter);
+backend/src/app.js:  app.use('/api/digital-twin-home', digitalTwinHomeRouter);
+backend/src/app.js:  app.use('/api/events', eventsRoutes);
+backend/src/app.js:  app.use('/api/executive-actions', executiveActionsRoutes);
+backend/src/app.js:  app.use('/api/engineering-coordination', engineeringCoordinationRoutes);
+backend/src/app.js:  app.use('/api/engineering-ledger', engineeringLedgerRoutes);
+backend/src/app.js:  app.use('/api/mission-package', missionPackageRoutes);
+backend/src/app.js:  app.use('/api/executive-council', executiveCouncilRoutes);
+backend/src/app.js:  app.use('/api/executive-offices', executiveOfficesRoutes);
+backend/src/app.js:  app.use('/api/identity-media', identityMediaRouter);
+backend/src/app.js:  app.use('/api/kernel', kernelRoutes);
+backend/src/app.js:  app.use('/api/knowledge', knowledgeRoutes);
+backend/src/app.js:  app.use('/api/knowledge-objects', knowledgeObjectsRouter);
+backend/src/app.js:  app.use('/api/knowledge-repositories', repositoriesRouter);
+backend/src/app.js:  app.use('/api/onboarding', onboardingRouter);
+backend/src/app.js:  app.use('/api/onboarding-assimilation', onboardingAssimilationRouter);
+backend/src/app.js:  app.use('/api/digital-mirrors', digitalMirrorsRouter);
+backend/src/app.js:  app.use('/api/dta-candidates', dtaCandidatesRouter);
+backend/src/app.js:  app.use('/api/data-feed-requirements', dataFeedRequirementsRouter);
+backend/src/app.js:  app.use('/api/human-validation', humanValidationRouter);
+backend/src/app.js:  app.use('/api/pmo', pmoRoutes);
+backend/src/app.js:  app.use('/api/platform', platformRouter);
+backend/src/app.js:  app.use('/api/organization-intake', organizationIntakeRouter);
+backend/src/app.js:  app.use('/api/repository-links', repositoryLinksRouter);
+backend/src/app.js:  app.use('/api/strategy', strategyRouter);
+backend/src/app.js:  app.use('/api/governance', governanceRouter);
+backend/src/app.js:  app.use('/api/valuation', valuationRouter);
+backend/src/app.js:  app.use('/api/second-balance-sheet', secondBalanceSheetRouter);
+backend/src/app.js:  app.use('/api/digital-twin-assets', digitalTwinAssetsRouter);
+backend/src/app.js:  app.use('/api/strategic-layer', strategicLayerRouter);
+backend/src/app.js:  app.use('/api/strategic-alignment', strategicAlignmentRouter);
+backend/src/app.js:  app.use('/api/startup', startupRouter);
+backend/src/app.js:  app.use('/api/status', statusRoutes);
+backend/src/app.js:  app.use('/api/storage', storageRoutes);
+backend/src/app.js:  app.use('/api/objects', objectsRoutes);
+backend/src/app.js:  app.use('/api/workflows', workflowsRoutes);
+backend/src/app.js:  app.use(notFound);
+backend/src/app.js:  app.use(errorHandler);
+backend/src/services/agent-service.js:export function listAgents() {
+backend/src/services/agent-service.js:export function getAgentById(id) {
+backend/src/services/assignment-engine-service.js:export function getAssignmentEngine() {
+backend/src/services/provider-dispatch-service.js:export function dispatchMission() {
+backend/src/services/enterprise-visual-service.js:export function getMasterMonitoring() {
+backend/src/services/enterprise-visual-service.js:export function listEnterpriseVisuals() {
+backend/src/services/enterprise-visual-service.js:export function getEnterpriseVisualById(id) {
+backend/src/services/enterprise-visual-service.js:export function listEnterpriseTelemetry() {
+backend/src/services/enterprise-visual-service.js:export function listEnterpriseTelemetryByEnterpriseId(enterpriseId) {
+backend/src/services/enterprise-visual-service.js:export function listDigitalTwinHomes() {
+backend/src/services/enterprise-visual-service.js:export function getDigitalTwinHomeByEnterpriseId(enterpriseId) {
+backend/src/services/enterprise-visual-service.js:export function listDigitalTwinGenerationWorkflows() {
+backend/src/services/enterprise-visual-service.js:export function getDigitalTwinGenerationWorkflowById(id) {
+backend/src/services/enterprise-visual-service.js:export function listEnterpriseArchitectureLayers() {
+backend/src/services/enterprise-visual-service.js:export function getMasterMonitoringOverview() {
+backend/src/services/sprint-report-service.js:export function getLatestSprintReport() {
+backend/src/services/executive-office-service.js:export function getExecutiveOfficeFramework() {
+backend/src/services/executive-office-service.js:export function listExecutiveOffices() {
+backend/src/services/executive-office-service.js:export function getExecutiveOfficeById(id) {
+backend/src/services/ai-development-office-service.js:export function getAiDevelopmentOffice() {
+backend/src/services/knowledge-service.js:export function listKnowledgeObjects() {
+backend/src/services/knowledge-service.js:export function getKnowledgeObjectById(id) {
+backend/src/services/platform-operations-service.js:export function getPlatformOperations() {
+backend/src/services/platform-operations-service.js:export function getPlatformNavigation() {
+backend/src/services/platform-operations-service.js:export function listAdminActions() {
+backend/src/services/platform-operations-service.js:export function getAdminActionById(id) {
+backend/src/services/platform-operations-service.js:export function listAuthorizationPolicies() {
+backend/src/services/platform-operations-service.js:export function listActionGovernanceRecords() {
+backend/src/services/platform-operations-service.js:export function listAgentMessages() {
+backend/src/services/platform-operations-service.js:export function getAgentMessageById(id) {
+backend/src/services/platform-operations-service.js:export function listAgentMessagesByThread(threadId) {
+backend/src/services/platform-operations-service.js:export function listAgentActivity() {
+backend/src/services/platform-operations-service.js:export function listAgentAttention() {
+backend/src/services/platform-operations-service.js:export function listAgentCalendar() {
+backend/src/services/platform-operations-service.js:export function getPlatformAdminCenter() {
+backend/src/services/platform-operations-service.js:export function getPlatformStatusSummary() {
+backend/src/services/platform-operations-service.js:export function getPlatformOverview() {
+backend/src/services/decision-intelligence-service.js:export function assessDecision(request = {}) {
+backend/src/services/decision-intelligence-service.js:export function getDecisionIntelligenceStatus() {
+backend/src/services/event-service.js:export function listEvents() {
+backend/src/services/event-service.js:export function getEventById(id) {
+backend/src/services/event-service.js:export function listEventTypes() {
+backend/src/services/engineering-mission-orchestrator-service.js:export function orchestrateEngineeringMission() {
+backend/src/services/ai-provider-gateway-service.js:export function getProviderGateway() {
+backend/src/services/engineering-ledger-service.js:export function getEngineeringLedger() {
+backend/src/services/strategy-service.js:export function getEnterpriseStrategy() {
+backend/src/services/strategy-service.js:export function getGovernanceCouncil() {
+backend/src/services/strategy-service.js:export function getDigitalEnterpriseValuation() {
+backend/src/services/strategy-service.js:export function getSecondBalanceSheet() {
+backend/src/services/strategy-service.js:export function getDtaMonitoring() {
+backend/src/services/strategy-service.js:export function listDigitalTwinAssets() {
+backend/src/services/strategy-service.js:export function getDigitalTwinAssetById(id) {
+backend/src/services/strategy-service.js:export function getStrategicAlignment() {
+backend/src/services/strategy-service.js:export function getRoadmapAlignment() {
+backend/src/services/strategy-service.js:export function getStrategyLayerSummary() {
+backend/src/services/live-object-status.js:export function withLiveStatus(enterpriseObject) {
+backend/src/services/engineering-coordination-service.js:export function getEngineeringCoordinationOverview() {
+backend/src/services/executive-council-service.js:export function getExecutiveCouncil() {
+backend/src/services/executive-council-service.js:export function getDigitalEnterpriseHeadquarters() {
+backend/src/services/executive-council-service.js:export function getCeoCockpit() {
+backend/src/services/executive-council-service.js:export function listExecutiveProfiles() {
+backend/src/services/executive-council-service.js:export function getExecutiveProfileById(id) {
+backend/src/services/enterprise-object-registry.js:export function listEnterpriseObjects() {
+backend/src/services/enterprise-object-registry.js:export function getEnterpriseObjectById(id) {
+backend/src/services/agent-knowledge-repository-service.js:export function listKnowledgeRepositories() {
+backend/src/services/agent-knowledge-repository-service.js:export function getKnowledgeRepositoryByAgent(agent) {
+backend/src/services/agent-knowledge-repository-service.js:export function listAgentKnowledgeObjects() {
+backend/src/services/agent-knowledge-repository-service.js:export function getAgentKnowledgeObjectById(id) {
+backend/src/services/mission-package-service.js:export function generateMissionPackage(assignmentId = "ENG-ASSIGN-0001") {
+backend/src/services/storage-service.js:export const dataDir = join(rootDir, 'data');
+backend/src/services/storage-service.js:export const storeDir = join(dataDir, 'store');
+backend/src/services/storage-service.js:export const snapshotsDir = join(dataDir, 'snapshots');
+backend/src/services/storage-service.js:export const schemaDir = join(dataDir, 'schema');
+backend/src/services/storage-service.js:export const storageSchemaVersion = '1.0.0';
+backend/src/services/storage-service.js:export function validateCollectionExists(collectionName) {
+backend/src/services/storage-service.js:export function readCollection(collectionName, fallbackRecords = [], source = `seed:${collectionName}`) {
+backend/src/services/storage-service.js:export function writeCollection(collectionName, records, source = `manual:${collectionName}`) {
+backend/src/services/storage-service.js:export function initializeCollection({
+backend/src/services/storage-service.js:export function listRecords(collectionName, fallbackRecords = [], source = `seed:${collectionName}`) {
+backend/src/services/storage-service.js:export function findRecordById(collectionName, id, fallbackRecords = [], source = `seed:${collectionName}`) {
+backend/src/services/storage-service.js:export function updateRecord(collectionName, id, updater, fallbackRecords = [], source = `seed:${collectionName}`) {
+backend/src/services/storage-service.js:export function listCollectionSummaries() {
+backend/src/services/storage-service.js:export function createSnapshot(reason = 'manual') {
+backend/src/services/storage-service.js:export function getStorageHealthReport(expectedCollections = []) {
+backend/src/services/storage-service.js:export function readCollectionByName(collectionName) {
+backend/src/services/storage-service.js:export function getCollectionEnvelope(collectionName) {
+backend/src/services/executive-action-service.js:export function listExecutiveActions() {
+backend/src/services/executive-action-service.js:export function getExecutiveActionById(id) {
+backend/src/services/executive-action-service.js:export function listPendingApprovalActions() {
+backend/src/services/executive-action-service.js:export function getExecutiveActionFramework() {
+backend/src/services/executive-action-service.js:export function getApprovalQueue() {
+backend/src/services/executive-action-service.js:export function getActionSummary() {
+backend/src/services/executive-action-service.js:export function getActionSafetyNotice() {
+backend/src/services/capability-resolver-service.js:export function resolveMissionCapability() {
+backend/src/services/storage-bootstrap.js:export const expectedStorageCollections = [
+backend/src/services/storage-bootstrap.js:export function bootstrapStorage() {
+backend/src/services/workflow-service.js:export function listWorkflows() {
+backend/src/services/workflow-service.js:export function getWorkflowById(id) {
+backend/src/services/identity-intake-service.js:export const identityMediaDir = join(dataDir, 'repository', 'media');
+backend/src/services/identity-intake-service.js:export const organizationIntakeDir = join(dataDir, 'repository', 'organization-intake');
+backend/src/services/identity-intake-service.js:export function ensureIdentityRepositoryDirectories() {
+backend/src/services/identity-intake-service.js:export function listStartupExperience() {
+backend/src/services/identity-intake-service.js:export function listProfileIdentities() {
+backend/src/services/identity-intake-service.js:export function getProfileIdentityById(id) {
+backend/src/services/identity-intake-service.js:export function listMediaAssets() {
+backend/src/services/identity-intake-service.js:export function getMediaAssetById(id) {
+backend/src/services/identity-intake-service.js:export function listOrganizationIntakeRecords() {
+backend/src/services/identity-intake-service.js:export function getOrganizationIntakeRecordById(id) {
+backend/src/services/identity-intake-service.js:export function listRepositoryLinks() {
+backend/src/services/identity-intake-service.js:export function listMediaExtractionRules() {
+backend/src/services/identity-intake-service.js:export function getIdentityMediaOverview() {
+backend/src/services/identity-intake-service.js:export function createMediaAsset(payload = {}) {
+backend/src/services/identity-intake-service.js:export function createRepositoryLink(payload = {}) {
+backend/src/services/identity-intake-service.js:export function createOrganizationIntakeRecord(payload = {}) {
+backend/src/services/identity-intake-service.js:export function getOrganizationIntakeOverview() {
+backend/src/services/ai-workforce-member-service.js:export function listAiWorkforceMembers() {
+backend/src/services/ai-workforce-member-service.js:export function getAiWorkforceMemberById(id) {
+backend/src/services/ai-workforce-member-service.js:export function getAiWorkforceProviderHealth() {
+backend/src/services/pmo-service.js:export function getPmo() {
+backend/src/services/pmo-service.js:export function getMasterRoadmap() {
+backend/src/services/pmo-service.js:export function listPrograms() {
+backend/src/services/audit-service.js:export function getAuditReport() {
+backend/src/services/onboarding-service.js:export function listEnterpriseOnboarding() {
+backend/src/services/onboarding-service.js:export function getEnterpriseOnboardingById(id) {
+backend/src/services/onboarding-service.js:export function listAssimilationPipelines() {
+backend/src/services/onboarding-service.js:export function getAssimilationPipelineByOnboardingId(id) {
+backend/src/services/onboarding-service.js:export function listDigitalMirrors() {
+backend/src/services/onboarding-service.js:export function getDigitalMirrorById(id) {
+backend/src/services/onboarding-service.js:export function listDtaCandidates() {
+backend/src/services/onboarding-service.js:export function getDtaCandidateById(id) {
+backend/src/services/onboarding-service.js:export function listDataFeedRequirements() {
+backend/src/services/onboarding-service.js:export function listDataFeedRequirementsByEnterpriseId(enterpriseId) {
+backend/src/services/onboarding-service.js:export function listHumanValidationItems() {
+backend/src/services/onboarding-service.js:export function listHumanValidationItemsByEnterpriseId(enterpriseId) {
+backend/src/services/onboarding-service.js:export function getOnboardingOverview() {

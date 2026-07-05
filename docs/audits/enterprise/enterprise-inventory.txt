@@ -1,0 +1,710 @@
+# Executive Offices
+backend/src/controllers/executive-offices.controller.js:} from '../services/executive-office-service.js';
+backend/src/controllers/executive-offices.controller.js:  const offices = listExecutiveOffices();
+backend/src/controllers/executive-offices.controller.js:    count: offices.length,
+backend/src/controllers/executive-offices.controller.js:    offices
+backend/src/controllers/executive-offices.controller.js:  const office = getExecutiveOfficeById(request.params.id);
+backend/src/controllers/executive-offices.controller.js:  if (!office) {
+backend/src/controllers/executive-offices.controller.js:      error: 'Executive office not found',
+backend/src/controllers/executive-offices.controller.js:  return response.status(200).json(office);
+backend/src/controllers/ai-development-office.controller.js:import { getAiDevelopmentOffice } from '../services/ai-development-office-service.js'
+backend/src/data/strategic-alignment.js:      evidence: 'Executive Council, executive agents, Executive Offices, AI Workforce Operations, attention queue, communications, calendar.',
+backend/src/data/events.js:      officeCount: 9
+backend/src/data/events.js:      briefingScope: 'Executive Office standard briefing model',
+backend/src/data/executive-offices.js:export const officeTimestamp = '2026-07-03T17:58:00.000Z';
+backend/src/data/executive-offices.js:    lastActivity: officeTimestamp,
+backend/src/data/executive-offices.js:function officeIdFor(profile) {
+backend/src/data/executive-offices.js:const officeBlueprints = {
+backend/src/data/executive-offices.js:    briefing: 'Founder office focused on enterprise vision, investor narrative, strategic sequencing, and CEO decisions.',
+backend/src/data/executive-offices.js:    todaysSummary: 'EOS has active executive visibility, governed actions, roadmap control, and emerging office infrastructure.',
+backend/src/data/executive-offices.js:    briefing: 'CTO office focused on systems strategy, technical sequencing, capability design, and architecture governance.',
+backend/src/data/executive-offices.js:    briefing: 'Engineering office responsible for implementation, code quality, build health, release readiness, and automation.',
+backend/src/data/executive-offices.js:    projects: ['Mission Control offices', 'EOS Core API registry expansion', 'Automated verification'],
+backend/src/data/executive-offices.js:    briefing: 'Research office managing publications, investor briefs, patents, white papers, and the EOS research pipeline.',
+backend/src/data/executive-offices.js:    briefing: 'Knowledge office governing Genesis, Enterprise Objects, documentation, institutional memory, and cross references.',
+backend/src/data/executive-offices.js:    briefing: 'Architecture office managing capability maps, dependency graphs, Enterprise Objects, and platform architecture.',
+backend/src/data/executive-offices.js:    briefing: 'Opportunity office preparing market intelligence, enterprise opportunities, and Digital Twin Asset commercialization paths.',
+backend/src/data/executive-offices.js:    briefing: 'Operations office monitoring platform health, workflow queues, telemetry needs, and availability.',
+backend/src/data/executive-offices.js:    briefing: 'Quality office managing testing, security, performance, compliance, and release quality gates.',
+backend/src/data/executive-offices.js:function officeForProfile(profile) {
+backend/src/data/executive-offices.js:  const blueprint = officeBlueprints[profile.id];
+backend/src/data/executive-offices.js:    id: officeIdFor(profile),
+backend/src/data/executive-offices.js:      { timestamp: officeTimestamp, activity: 'Executive Office opened for Mission Control routing.' },
+backend/src/data/executive-offices.js:      summary: 'Messaging is not implemented. No messages are sent from Executive Offices.'
+backend/src/data/executive-offices.js:      summary: 'Meeting scheduling is not implemented. No calendar events are created from Executive Offices.'
+backend/src/data/executive-offices.js:      summary: `${profile.name} office is available in Mission Control with portfolio, briefing, approvals, and placeholders.`,
+backend/src/data/executive-offices.js:export const executiveOffices = executiveProfiles.map(officeForProfile);
+backend/src/data/executive-offices.js:  name: 'EOS Executive Office Framework',
+backend/src/data/executive-offices.js:    'Transform the Executive Council into a gateway for detailed Executive Offices inside the Digital Enterprise Headquarters.',
+backend/src/data/executive-offices.js:  officeCount: executiveOffices.length,
+backend/src/data/executive-offices.js:    summary: 'Executive Office Framework is active with reusable office routing and department-specific office data.',
+backend/src/data/executive-offices.js:    recommendedAction: 'Review executive offices and prioritize persistence before editable office operations.',
+backend/src/data/executive-offices.js:    availableActions: ['Open Executive Offices', 'Review CEO attention', 'Review department portfolios']
+backend/src/data/pmo.js:      'Create executive offices',
+backend/src/data/pmo.js:    name: 'Executive Office Framework',
+backend/src/data/pmo.js:    name: 'Executive Office Framework',
+backend/src/data/pmo.js:    milestone: 'Executive Office Framework',
+backend/src/data/pmo.js:    businessImpact: 'Transforms Mission Control into a Digital Enterprise Headquarters with department-level executive offices.',
+backend/src/data/platform-operations.js:      { id: 'offices', label: 'Executive Offices', route: 'offices', description: 'Department operating spaces for each executive.' }
+backend/src/data/audit.js:    implementationDepth: 'Governed action registry, approval status, audit trail, and executive offices.',
+backend/src/data/audit.js:    routes: ['cockpit', 'council', 'offices'],
+backend/src/data/audit.js:    coverage: 'CEO Cockpit, Executive Council, and Executive Offices are navigable and display executive status.',
+backend/src/data/audit.js:    gaps: ['Executive office actions are display-only.']
+backend/src/data/enterprise-objects.js:    name: 'Executive Office Framework',
+backend/src/data/enterprise-objects.js:      'Capability that transforms the Executive Council into reusable Executive Offices with department portfolios, briefings, KPIs, approvals, knowledge, workflows, and placeholders for meetings and communications.',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:      'EOS strategic program management office responsible for roadmap governance, capability sequencing, dependencies, milestones, risks, and executive reporting.',
+backend/src/data/enterprise-objects.js:    name: 'EOS Executive Office Framework',
+backend/src/data/enterprise-objects.js:      'Mission Control framework for opening executive offices with department portfolios, briefings, KPIs, live objects, knowledge assets, approvals, placeholders, and executive-specific widgets.',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:    name: 'Executive Office Management',
+backend/src/data/enterprise-objects.js:      'Workflow for opening Executive Offices, updating executive briefings, tracking department status, and routing Mission Control office navigation.',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-objects.js:    owner: 'EOS Executive Office',
+backend/src/data/executive-actions.js:    label: 'Open Executive Office',
+backend/src/data/executive-actions.js:    description: 'Record a governed request to open an executive office view.',
+backend/src/data/executive-actions.js:    recommendedNextStep: 'Define office scope before adding executable office workflows.',
+backend/src/data/ai-development-office.js:  office: {
+backend/src/data/ai-development-office.js:      outcome: 'Establish first EOS office responsible for building EOS itself.',
+backend/src/data/workflows.js:    name: 'Executive Office Management',
+backend/src/data/workflows.js:      'Opens Executive Offices, updates executive briefings, tracks department status, and routes office navigation inside Mission Control.',
+backend/src/data/workflows.js:      'Create office framework',
+backend/src/data/workflows.js:      'Register executive offices',
+backend/src/data/workflows.js:    trigger: 'Executive Office Framework requested',
+backend/src/data/workflows.js:    owner: 'EOS Executive Office',
+backend/src/data/workflows.js:    owner: 'EOS Executive Office',
+backend/src/data/enterprise-build-missions.js:    office: "AI Development Office",
+backend/src/data/executive-council.js:  'Open Executive Office',
+backend/src/data/executive-council.js:    'Executive Offices',
+backend/src/routes/executive-offices.routes.js:} from '../controllers/executive-offices.controller.js';
+backend/src/routes/ai-development-office.routes.js:import { getAiDevelopmentOfficeController } from '../controllers/ai-development-office.controller.js'
+backend/src/app.js:import aiDevelopmentOfficeRoutes from './routes/ai-development-office.routes.js';
+backend/src/app.js:import executiveOfficesRoutes from './routes/executive-offices.routes.js';
+backend/src/app.js:  app.use('/api/ai-development-office', aiDevelopmentOfficeRoutes);
+backend/src/app.js:  app.use('/api/executive-offices', executiveOfficesRoutes);
+backend/src/services/executive-office-service.js:} from '../data/executive-offices.js';
+backend/src/services/executive-office-service.js:  return listRecords('executive-office-framework', [executiveOfficeFramework])[0] ?? executiveOfficeFramework;
+backend/src/services/executive-office-service.js:  return listRecords('executive-offices', executiveOffices);
+backend/src/services/executive-office-service.js:      (office) =>
+backend/src/services/executive-office-service.js:        office.id.toLowerCase() === requestedId ||
+backend/src/services/executive-office-service.js:        office.executiveId.toLowerCase() === requestedId ||
+backend/src/services/executive-office-service.js:        office.executiveName.toLowerCase() === requestedId
+backend/src/services/ai-development-office-service.js:import { aiDevelopmentOffice } from '../data/ai-development-office.js'
+backend/src/services/live-object-status.js:    summary: 'Executive Office Framework is active with reusable office routing and department-specific office views.',
+backend/src/services/live-object-status.js:    recommendedAction: 'Review executive offices and prioritize persistence before editable office operations.',
+backend/src/services/live-object-status.js:    availableActions: ['Open Executive Offices', 'Review CEO attention', 'Review department portfolios']
+backend/src/services/engineering-coordination-service.js:import { getAiDevelopmentOffice } from './ai-development-office-service.js'
+backend/src/services/engineering-coordination-service.js:  const office = getAiDevelopmentOffice()
+backend/src/services/engineering-coordination-service.js:      activeBuildTasks: office.metrics.activeBuildTasks,
+backend/src/services/engineering-coordination-service.js:      office,
+backend/src/services/storage-bootstrap.js:} from '../data/executive-offices.js';
+backend/src/services/storage-bootstrap.js:  'executive-office-framework',
+backend/src/services/storage-bootstrap.js:  'executive-offices',
+backend/src/services/storage-bootstrap.js:      collectionName: 'executive-office-framework',
+backend/src/services/storage-bootstrap.js:      source: 'seed:executive-office-framework'
+backend/src/services/storage-bootstrap.js:      collectionName: 'executive-offices',
+backend/src/services/storage-bootstrap.js:      source: 'seed:executive-offices'
+frontend/src/navigation/missionControlWorkspaces.js:    description: 'CEO cockpit, Executive Council, and Executive Offices.',
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['cockpit', 'council', 'offices'],
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'offices',
+frontend/src/navigation/missionControlWorkspaces.js:        label: 'Executive Offices',
+frontend/src/navigation/missionControlWorkspaces.js:        route: 'offices',
+frontend/src/navigation/missionControlWorkspaces.js:        description: 'Department offices for portfolio, KPIs, knowledge, approvals, and briefings.'
+frontend/src/App.css:.office-metric-grid,
+frontend/src/App.css:.office-widget-grid,
+frontend/src/App.css:.office-placeholder-grid {
+frontend/src/App.css:.office-panel > span,
+frontend/src/App.css:.office-widget-grid article > span,
+frontend/src/App.css:.office-placeholder > span,
+frontend/src/App.css:.office-briefing span,
+frontend/src/App.css:.office-metric-grid span {
+frontend/src/App.css:.office-metric-grid strong,
+frontend/src/App.css:.office-placeholder strong {
+frontend/src/App.css:.office-placeholder p,
+frontend/src/App.css:.office-briefing p {
+frontend/src/App.css:.office-open-button {
+frontend/src/App.css:.office-layout {
+frontend/src/App.css:.office-directory,
+frontend/src/App.css:.office-detail,
+frontend/src/App.css:.office-panel,
+frontend/src/App.css:.office-widget-grid article,
+frontend/src/App.css:.office-placeholder,
+frontend/src/App.css:.office-metric-grid article {
+frontend/src/App.css:.office-directory {
+frontend/src/App.css:.office-directory button {
+frontend/src/App.css:.office-directory button.is-active {
+frontend/src/App.css:.office-directory strong,
+frontend/src/App.css:.office-directory span {
+frontend/src/App.css:.office-directory strong {
+frontend/src/App.css:.office-directory span {
+frontend/src/App.css:.office-detail {
+frontend/src/App.css:.office-hero {
+frontend/src/App.css:.office-hero h2 {
+frontend/src/App.css:.office-hero p {
+frontend/src/App.css:.office-hero dl {
+frontend/src/App.css:.office-hero dl div {
+frontend/src/App.css:.office-hero dt {
+frontend/src/App.css:.office-hero dd {
+frontend/src/App.css:.office-briefing {
+frontend/src/App.css:.office-briefing div {
+frontend/src/App.css:.office-metric-grid {
+frontend/src/App.css:.office-metric-grid article,
+frontend/src/App.css:.office-widget-grid article,
+frontend/src/App.css:.office-placeholder {
+frontend/src/App.css:.office-metric-grid small {
+frontend/src/App.css:.office-grid {
+frontend/src/App.css:.office-panel {
+frontend/src/App.css:.office-chip-list {
+frontend/src/App.css:.office-chip-list small {
+frontend/src/App.css:.office-widget-grid {
+frontend/src/App.css:.office-placeholder-grid {
+frontend/src/App.css:.office-action-bar {
+frontend/src/App.css:.office-action-bar button {
+frontend/src/App.css:.office-executive-brief {
+frontend/src/App.css:.office-executive-brief h3 {
+frontend/src/App.css:.office-executive-brief strong {
+frontend/src/App.css:.office-executive-brief h3 {
+frontend/src/App.css:.office-chip-list small,
+frontend/src/App.css:.office-action-bar button,
+frontend/src/App.css:.dashboard-shell.is-presentation-mode .office-hero h2 {
+frontend/src/App.css:.dashboard-shell.is-presentation-mode .office-placeholder-grid,
+frontend/src/App.css:  .office-layout,
+frontend/src/App.css:  .office-hero,
+frontend/src/App.css:  .office-briefing,
+frontend/src/App.css:  .office-metric-grid,
+frontend/src/App.css:  .office-grid,
+frontend/src/App.css:  .office-widget-grid,
+frontend/src/App.css:  .office-placeholder-grid,
+frontend/src/App.css:  .office-hero dl {
+frontend/src/components/ExecutiveCouncilView.jsx:      <button className="office-open-button" onClick={() => onOpenOffice(profile.id)} type="button">
+frontend/src/components/ExecutiveCouncilView.jsx:        Open Executive Office
+frontend/src/components/CeoCockpitView.jsx:  officesData,
+frontend/src/components/CeoCockpitView.jsx:  const officeFramework = officesData?.framework
+frontend/src/components/CeoCockpitView.jsx:          description="Executive Offices provide the detailed workspaces behind the Executive Council."
+frontend/src/components/CeoCockpitView.jsx:          label="Executive Offices"
+frontend/src/components/CeoCockpitView.jsx:          value={officesData?.count ?? 0}
+frontend/src/components/CeoCockpitView.jsx:          <strong>{executiveValue(officeFramework?.liveStatus?.lifecycleStatus, 'Building')}</strong>
+frontend/src/components/CeoCockpitView.jsx:          <p>{executiveValue(officeFramework?.liveStatus?.summary, 'Framework status is being assessed.')}</p>
+frontend/src/components/MissionControlModeToggle.jsx:  { id: 'offices', label: 'Executive Offices' },
+frontend/src/components/ExecutiveOfficeView.jsx:    <section className="office-panel">
+frontend/src/components/ExecutiveOfficeView.jsx:      <div className="office-chip-list">
+frontend/src/components/ExecutiveOfficeView.jsx:    <article className="office-placeholder">
+frontend/src/components/ExecutiveOfficeView.jsx:function ExecutiveOfficeView({ officesData, selectedOfficeId, onSelectOffice }) {
+frontend/src/components/ExecutiveOfficeView.jsx:  const offices = officesData?.offices ?? []
+frontend/src/components/ExecutiveOfficeView.jsx:  const selectedOffice = offices.find(
+frontend/src/components/ExecutiveOfficeView.jsx:    (office) => office.id === selectedOfficeId || office.executiveId === selectedOfficeId
+frontend/src/components/ExecutiveOfficeView.jsx:  ) ?? offices[0]
+frontend/src/components/ExecutiveOfficeView.jsx:        <p className="section-label">Executive Offices</p>
+frontend/src/components/ExecutiveOfficeView.jsx:        <h2>Executive Offices Awaiting Live Signal</h2>
+frontend/src/components/ExecutiveOfficeView.jsx:    <section className="office-layout">
+frontend/src/components/ExecutiveOfficeView.jsx:      <aside className="office-directory" aria-label="Executive Office directory">
+frontend/src/components/ExecutiveOfficeView.jsx:        <p className="section-label">Executive Offices</p>
+frontend/src/components/ExecutiveOfficeView.jsx:        {offices.map((office) => (
+frontend/src/components/ExecutiveOfficeView.jsx:            className={office.id === selectedOffice.id ? 'is-active' : ''}
+frontend/src/components/ExecutiveOfficeView.jsx:            key={office.id}
+frontend/src/components/ExecutiveOfficeView.jsx:            onClick={() => onSelectOffice(office.id)}
+frontend/src/components/ExecutiveOfficeView.jsx:            <strong>{office.executiveName}</strong>
+frontend/src/components/ExecutiveOfficeView.jsx:            <span>{office.department}</span>
+frontend/src/components/ExecutiveOfficeView.jsx:      <article className="office-detail">
+frontend/src/components/ExecutiveOfficeView.jsx:        <header className="office-hero">
+frontend/src/components/ExecutiveOfficeView.jsx:            <p className="section-label">Executive Office</p>
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-briefing">
+frontend/src/components/ExecutiveOfficeView.jsx:          <div className="office-executive-brief">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-metric-grid">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-grid">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-widget-grid">
+frontend/src/components/ExecutiveOfficeView.jsx:              <div className="office-chip-list">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-grid">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-placeholder-grid">
+frontend/src/components/ExecutiveOfficeView.jsx:        <section className="office-action-bar">
+frontend/src/components/AiDevelopmentOfficeView.jsx:export default function AiDevelopmentOfficeView({ office }) {
+frontend/src/components/AiDevelopmentOfficeView.jsx:  const metrics = office?.metrics ?? {}
+frontend/src/components/AiDevelopmentOfficeView.jsx:  const agents = office?.agents ?? []
+frontend/src/components/AiDevelopmentOfficeView.jsx:  const buildTasks = office?.buildTasks ?? []
+frontend/src/components/AiDevelopmentOfficeView.jsx:          <h1>{office?.office?.name ?? 'AI Development Office'}</h1>
+frontend/src/components/AiDevelopmentOfficeView.jsx:          <p>{office?.office?.purpose ?? 'Manage AI-assisted EOS software engineering.'}</p>
+frontend/src/App.jsx:  'offices',
+frontend/src/App.jsx:      if (route.startsWith('executive-offices/')) {
+frontend/src/App.jsx:        const executiveId = decodeURIComponent(route.replace('executive-offices/', ''))
+frontend/src/App.jsx:        setMissionControlMode('offices')
+frontend/src/App.jsx:    setMissionControlMode('offices')
+frontend/src/App.jsx:    window.location.hash = `#/executive-offices/${encodeURIComponent(executiveId)}`
+frontend/src/App.jsx:          officesData={executiveOffices}
+frontend/src/App.jsx:    if (missionControlMode === 'offices') {
+frontend/src/App.jsx:          officesData={executiveOffices}
+frontend/src/App.jsx:      return <AiDevelopmentOfficeView office={aiDevelopmentOffice} />
+frontend/src/App.jsx:        officesData={executiveOffices}
+frontend/src/design-system/eosDesignSystem.js:  if (normalizedAction.includes('open office')) {
+frontend/src/design-system/eosDesignSystem.js:    return 'Open Executive Office'
+frontend/src/services/api.js:  return requestJson('/api/executive-offices')
+frontend/src/services/api.js:  return requestJson('/api/ai-development-office')
+
+# Executive Agents
+backend/src/data/strategic-alignment.js:    ['Operational Intelligence', 34, 'Platform signals become intelligence for decisions, risks, and opportunity scanning.', 'High', ['EOS-AGENT-MERCURY']],
+backend/src/data/strategic-alignment.js:      linkedAgents: ['EOS-AGENT-ATHENA']
+backend/src/data/strategic-alignment.js:      linkedAgents: ['EOS-AGENT-ATHENA', 'EOS-AGENT-ATLAS']
+backend/src/data/strategic-alignment.js:      linkedAgents: ['EOS-AGENT-ATHENA']
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-HERMES', agentName: 'Hermes', assignment: 'Knowledge capture' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-ATLAS', agentName: 'Atlas', assignment: 'Enterprise structure and architecture' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-ATHENA', agentName: 'Athena', assignment: 'Research and documentation' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-MERCURY', agentName: 'Mercury', assignment: 'Opportunity analysis' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-ARGUS', agentName: 'Argus', assignment: 'Monitoring requirements' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-VULCAN', agentName: 'Vulcan', assignment: 'Validation, QA, and compliance' },
+backend/src/data/onboarding.js:  { agentId: 'EOS-AGENT-CODEX', agentName: 'Codex', assignment: 'Engineering integration requirements' }
+backend/src/data/onboarding.js:  ownerAgent = 'EOS-AGENT-ATLAS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-HERMES',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-HERMES',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ATLAS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ATLAS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ATLAS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-MERCURY',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ARGUS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-CODEX',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-VULCAN',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ATLAS',
+backend/src/data/onboarding.js:      ownerAgent: 'EOS-AGENT-ARGUS',
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-ATLAS', 'EOS-AGENT-ARGUS', 'EOS-AGENT-VULCAN'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-ATLAS', 'EOS-AGENT-ARGUS', 'EOS-AGENT-VULCAN'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-ARGUS', 'EOS-AGENT-MERCURY', 'EOS-AGENT-ATHENA'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-ATLAS', 'EOS-AGENT-ARGUS'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-HERMES', 'EOS-AGENT-VULCAN', 'EOS-AGENT-MERCURY'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-ATHENA', 'EOS-AGENT-HERMES', 'EOS-AGENT-ATLAS'],
+backend/src/data/onboarding.js:    assignedAgents: ['EOS-AGENT-CODEX', 'EOS-AGENT-ARGUS', 'EOS-AGENT-VULCAN'],
+backend/src/data/onboarding.js:    assignedAgent: ['EOS-AGENT-HERMES', 'EOS-AGENT-ATLAS', 'EOS-AGENT-VULCAN'][index % 3],
+backend/src/data/events.js:      agentId: 'EOS-AGENT-ATHENA',
+backend/src/data/events.js:      agentId: 'EOS-AGENT-HERMES',
+backend/src/data/events.js:      profileIds: ['EOS-EXEC-ERIC-OLO', 'EOS-EXEC-CHATGPT', 'EOS-AGENT-CODEX'],
+backend/src/data/agents.js:    id: 'EOS-AGENT-ATHENA',
+backend/src/data/agents.js:    id: 'EOS-AGENT-HERMES',
+backend/src/data/agents.js:    id: 'EOS-AGENT-ATLAS',
+backend/src/data/agents.js:    id: 'EOS-AGENT-CODEX',
+backend/src/data/agents.js:    id: 'EOS-AGENT-MERCURY',
+backend/src/data/agents.js:    id: 'EOS-AGENT-ARGUS',
+backend/src/data/agents.js:    id: 'EOS-AGENT-VULCAN',
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-CODEX', name: 'Codex', role: 'Chief Engineering Officer' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-ATHENA', name: 'Athena', role: 'Chief Research Officer' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-HERMES', name: 'Hermes', role: 'Chief Knowledge Officer' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-ATLAS', name: 'Atlas', role: 'Chief Enterprise Architect' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-MERCURY', name: 'Mercury', role: 'Chief Opportunity Officer' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-ARGUS', name: 'Argus', role: 'Chief Operations Officer' },
+backend/src/data/agent-knowledge-repositories.js:  { id: 'EOS-AGENT-VULCAN', name: 'Vulcan', role: 'Chief Quality Officer' }
+backend/src/data/agent-knowledge-repositories.js:    relatedEnterpriseObjects: ['EOS-EXEC-LEADERSHIP-TEAM', 'EOS-AGENT-ATHENA'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-CODEX': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-CODEX', 'EOS-API-001', 'EOS-MC-001'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-ATHENA': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-ATHENA', 'EOS-AKR', 'RP-001', 'RP-002', 'RP-003', 'RP-004'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-HERMES': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-HERMES', 'EOS-KNOWLEDGE-GENESIS', 'EOS-AKR'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-ATLAS': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-ATLAS', 'EOS-MASTER-ROADMAP', 'EOS-WF-DIGITAL-TWIN-FORMATION'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-MERCURY': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-MERCURY', 'EOS-WF-OPPORTUNITY-DISCOVERY'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-ARGUS': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-ARGUS', 'EOS-PMO', 'EOS-MASTER-ROADMAP'],
+backend/src/data/executive-offices.js:  'EOS-AGENT-VULCAN': {
+backend/src/data/executive-offices.js:    objects: ['EOS-AGENT-VULCAN', 'EOS-EXECUTIVE-ACTION-FRAMEWORK'],
+backend/src/data/executive-offices.js:    permanentAgents: profile.id.startsWith('EOS-AGENT-') ? [profile.id] : ['EOS-AGENT-CODEX', 'EOS-AGENT-HERMES', 'EOS-AGENT-ATHENA'],
+backend/src/data/pmo.js:    dependencies: ['EOS-AGENT-MERCURY', 'EOS-WF-OPPORTUNITY-DISCOVERY'],
+backend/src/data/pmo.js:    relatedEnterpriseObjects: ['EOS-AGENT-ATHENA', 'EOS-AGENT-HERMES', 'EOS-AGENT-ATLAS'],
+backend/src/data/pmo.js:    relatedEnterpriseObjects: ['EOS-CAP-0012', 'EOS-AGENT-CODEX'],
+backend/src/data/pmo.js:      'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/pmo.js:      'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/pmo.js:      'EOS-AGENT-CALENDAR',
+backend/src/data/platform-operations.js:    linkedAgent: 'EOS-AGENT-CODEX',
+backend/src/data/platform-operations.js:    linkedAgent: 'EOS-AGENT-CODEX',
+backend/src/data/platform-operations.js:    linkedAgent: 'EOS-AGENT-ATHENA',
+backend/src/data/platform-operations.js:    linkedAgent: 'EOS-AGENT-HERMES',
+backend/src/data/platform-operations.js:    linkedAgent: 'EOS-AGENT-ATLAS',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-CODEX',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-ATHENA',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-HERMES',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-ATLAS',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-CODEX',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-ATHENA',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-HERMES',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-ATLAS',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-MERCURY',
+backend/src/data/platform-operations.js:    linkedObject: 'EOS-AGENT-MERCURY',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-ARGUS',
+backend/src/data/platform-operations.js:    agentId: 'EOS-AGENT-VULCAN',
+backend/src/data/enterprise-visuals.js:    agents: ['EOS-AGENT-CODEX', 'EOS-AGENT-ATHENA', 'EOS-AGENT-HERMES', 'EOS-AGENT-ATLAS'],
+backend/src/data/enterprise-visuals.js:    agents: ['EOS-AGENT-ATLAS', 'EOS-AGENT-ARGUS', 'EOS-AGENT-VULCAN', 'EOS-AGENT-MERCURY'],
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CALENDAR',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CALENDAR',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CALENDAR',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:    description: 'Organizational directive establishing Codex as EOS-AGENT-CODEX, Chief Engineering Officer, reporting to the Chief Technology Officer.',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CALENDAR',
+backend/src/data/enterprise-objects.js:    id: 'EOS-AGENT-COMMUNICATION-LAYER',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:    id: 'EOS-AGENT-ACTIVITY-QUEUE',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX'
+backend/src/data/enterprise-objects.js:    id: 'EOS-AGENT-CALENDAR',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-VULCAN'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-CODEX',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA',
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-HERMES'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-MERCURY'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ARGUS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATLAS'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA'
+backend/src/data/enterprise-objects.js:      'EOS-AGENT-ATHENA'
+backend/src/data/enterprise-objects.js:    linkedObjects: ['EOS-CAP-0007', 'EOS-CAP-0006', 'EOS-AGENT-ATHENA', 'EOS-KNOWLEDGE-GENESIS']
+backend/src/data/enterprise-objects.js:    linkedObjects: ['EOS-CAP-0007', 'EOS-CAP-0005', 'EOS-AGENT-ATHENA', 'EOS-MC-001']
+
+# Mission Control Workspaces
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'headquarters',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'cockpit',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'council',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'offices',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'enterprise',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'strategy',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'investment-thesis',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'governance',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'pmo',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'three-horizon-roadmap',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'roadmap',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'programs',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'enterprise-value',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'master-monitoring',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'onboarded-enterprises',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'technology-flywheel',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'valuation',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'revenue-engine',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'second-balance-sheet',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'dta-lifecycle',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'enterprise-profile',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'investor-readiness',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'commercial-readiness',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'digital-twin-assets',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'enterprise-onboarding',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'assimilation-pipeline',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'digital-mirrors',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'dta-candidates',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'data-feed-requirements',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'human-validation',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'enterprise-home',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'digital-twin-structure',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'data-feeds',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'systems',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'enterprise-assets',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'human-workflows',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'investor-centre',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'ai-workforce',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'agents',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'communications',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'activity',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'calendar',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'performance',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'ai-workforce-admin',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'knowledge',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'kipr',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'knowledge',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'white-papers',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'academic-papers',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'patents',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'publications',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'platform',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'administration',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'audit',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'startup-experience',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'identity-media',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'organization-intake',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'repository-links',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'storage',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'backups',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'health',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'releases',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'development',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'assets',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'industry-framework',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'architecture',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'engineering',
+frontend/src/navigation/missionControlWorkspaces.js:    id: 'my-workspace',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'briefing',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'tasks',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'decisions',
+frontend/src/navigation/missionControlWorkspaces.js:        id: 'notes',
+
+# Enterprise APIs
+backend/src/app.js:  app.use('/api/audit', auditRoutes);
+backend/src/app.js:  app.use('/api/ai-development-office', aiDevelopmentOfficeRoutes);
+backend/src/app.js:  app.use('/api/assignment-engine', assignmentEngineRoutes);
+backend/src/app.js:  app.use('/api/ai-provider-gateway', aiProviderGatewayRoutes);
+backend/src/app.js:  app.use('/api/ai-workforce-members', aiWorkforceMembersRoutes);
+backend/src/app.js:  app.use('/api/capability-resolver', capabilityResolverRoutes);
+backend/src/app.js:  app.use('/api/engineering-mission-orchestrator', engineeringMissionOrchestratorRoutes);
+backend/src/app.js:  app.use('/api/provider-dispatch', providerDispatchRoutes);
+backend/src/app.js:  app.use('/api/sprint-report', sprintReportRoutes);
+backend/src/app.js:  app.use('/api/decision-intelligence', decisionIntelligenceRoutes);
+backend/src/app.js:  app.use('/api/agents', agentsRoutes);
+backend/src/app.js:  app.use('/api/admin-actions', adminActionsRouter);
+backend/src/app.js:  app.use('/api/agent-activity', agentActivityRouter);
+backend/src/app.js:  app.use('/api/agent-attention', agentAttentionRouter);
+backend/src/app.js:  app.use('/api/agent-calendar', agentCalendarRouter);
+backend/src/app.js:  app.use('/api/agent-messages', agentMessagesRouter);
+backend/src/app.js:  app.use('/api/master-monitoring', masterMonitoringRouter);
+backend/src/app.js:  app.use('/api/enterprise-visuals', enterpriseVisualsRouter);
+backend/src/app.js:  app.use('/api/enterprise-telemetry', enterpriseTelemetryRouter);
+backend/src/app.js:  app.use('/api/digital-twin-home', digitalTwinHomeRouter);
+backend/src/app.js:  app.use('/api/events', eventsRoutes);
+backend/src/app.js:  app.use('/api/executive-actions', executiveActionsRoutes);
+backend/src/app.js:  app.use('/api/engineering-coordination', engineeringCoordinationRoutes);
+backend/src/app.js:  app.use('/api/engineering-ledger', engineeringLedgerRoutes);
+backend/src/app.js:  app.use('/api/mission-package', missionPackageRoutes);
+backend/src/app.js:  app.use('/api/executive-council', executiveCouncilRoutes);
+backend/src/app.js:  app.use('/api/executive-offices', executiveOfficesRoutes);
+backend/src/app.js:  app.use('/api/identity-media', identityMediaRouter);
+backend/src/app.js:  app.use('/api/kernel', kernelRoutes);
+backend/src/app.js:  app.use('/api/knowledge', knowledgeRoutes);
+backend/src/app.js:  app.use('/api/knowledge-objects', knowledgeObjectsRouter);
+backend/src/app.js:  app.use('/api/knowledge-repositories', repositoriesRouter);
+backend/src/app.js:  app.use('/api/onboarding', onboardingRouter);
+backend/src/app.js:  app.use('/api/onboarding-assimilation', onboardingAssimilationRouter);
+backend/src/app.js:  app.use('/api/digital-mirrors', digitalMirrorsRouter);
+backend/src/app.js:  app.use('/api/dta-candidates', dtaCandidatesRouter);
+backend/src/app.js:  app.use('/api/data-feed-requirements', dataFeedRequirementsRouter);
+backend/src/app.js:  app.use('/api/human-validation', humanValidationRouter);
+backend/src/app.js:  app.use('/api/pmo', pmoRoutes);
+backend/src/app.js:  app.use('/api/platform', platformRouter);
+backend/src/app.js:  app.use('/api/organization-intake', organizationIntakeRouter);
+backend/src/app.js:  app.use('/api/repository-links', repositoryLinksRouter);
+backend/src/app.js:  app.use('/api/strategy', strategyRouter);
+backend/src/app.js:  app.use('/api/governance', governanceRouter);
+backend/src/app.js:  app.use('/api/valuation', valuationRouter);
+backend/src/app.js:  app.use('/api/second-balance-sheet', secondBalanceSheetRouter);
+backend/src/app.js:  app.use('/api/digital-twin-assets', digitalTwinAssetsRouter);
+backend/src/app.js:  app.use('/api/strategic-layer', strategicLayerRouter);
+backend/src/app.js:  app.use('/api/strategic-alignment', strategicAlignmentRouter);
+backend/src/app.js:  app.use('/api/startup', startupRouter);
+backend/src/app.js:  app.use('/api/status', statusRoutes);
+backend/src/app.js:  app.use('/api/storage', storageRoutes);
+backend/src/app.js:  app.use('/api/objects', objectsRoutes);
+backend/src/app.js:  app.use('/api/workflows', workflowsRoutes);
+
+# AI Development Components
+backend/src/controllers/ai-development-office.controller.js
+backend/src/controllers/ai-provider-gateway.controller.js
+backend/src/controllers/assignment-engine.controller.js
+backend/src/controllers/engineering-coordination.controller.js
+backend/src/controllers/engineering-ledger.controller.js
+backend/src/controllers/engineering-mission-orchestrator.controller.js
+backend/src/controllers/mission-package.controller.js
+backend/src/controllers/provider-dispatch.controller.js
+backend/src/data/ai-development-office.js
+backend/src/data/ai-providers.js
+backend/src/data/engineering-assignments.js
+backend/src/data/engineering-ledger.js
+backend/src/data/enterprise-build-missions.js
+backend/src/providers
+backend/src/providers/ai-provider-interface.js
+backend/src/providers/openai-provider.js
+backend/src/providers/provider-registry.js
+backend/src/routes/ai-development-office.routes.js
+backend/src/routes/ai-provider-gateway.routes.js
+backend/src/routes/assignment-engine.routes.js
+backend/src/routes/engineering-coordination.routes.js
+backend/src/routes/engineering-ledger.routes.js
+backend/src/routes/engineering-mission-orchestrator.routes.js
+backend/src/routes/mission-package.routes.js
+backend/src/routes/provider-dispatch.routes.js
+backend/src/services/ai-development-office-service.js
+backend/src/services/ai-provider-gateway-service.js
+backend/src/services/assignment-engine-service.js
+backend/src/services/engineering-coordination-service.js
+backend/src/services/engineering-ledger-service.js
+backend/src/services/engineering-mission-orchestrator-service.js
+backend/src/services/mission-package-service.js
+backend/src/services/provider-dispatch-service.js

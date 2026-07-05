@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
 import AiWorkforceOperationsView from './components/AiWorkforceOperationsView.jsx'
+import AiWorkforceAdministrationView from './components/AiWorkforceAdministrationView.jsx'
 import AiDevelopmentOfficeView from './components/AiDevelopmentOfficeView.jsx'
 import AuditReadinessView from './components/AuditReadinessView.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
@@ -68,6 +69,7 @@ const missionControlRoutes = new Set([
   'assets',
   'administration',
   'agents',
+  'ai-workforce-admin',
   'architecture',
   'audit',
   'backups',
@@ -631,6 +633,10 @@ function App() {
           startupData={startupExperience}
         />
       )
+    }
+
+    if (missionControlMode === 'ai-workforce-admin') {
+      return <AiWorkforceAdministrationView />
     }
 
     if (['communications', 'activity', 'calendar', 'performance', 'agents'].includes(missionControlMode)) {

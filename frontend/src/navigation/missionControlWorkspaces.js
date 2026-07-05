@@ -264,7 +264,7 @@ const workspaceDefinitionsBase = [
     marker: 'AI',
     description: 'Agents, communications, activity, calendar, and performance.',
     defaultRoute: 'agents',
-    routes: ['agents', 'communications', 'activity', 'calendar', 'performance'],
+    routes: ['agents', 'communications', 'activity', 'calendar', 'performance', 'ai-workforce-admin'],
     items: [
       {
         id: 'agents',
@@ -295,6 +295,12 @@ const workspaceDefinitionsBase = [
         label: 'Performance',
         route: 'performance',
         description: 'Agent performance indicators and workforce operating posture.'
+      },
+      {
+        id: 'ai-workforce-admin',
+        label: 'AI Workforce Admin',
+        route: 'ai-workforce-admin',
+        description: 'Configure AI providers, models, health checks, and dispatch readiness.'
       }
     ]
   },

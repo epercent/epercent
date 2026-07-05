@@ -1,0 +1,22 @@
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['cockpit', 'council', 'offices'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['strategy', 'investment-thesis', 'governance', 'pmo', 'three-horizon-roadmap', 'roadmap', 'programs'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: [
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['agents', 'communications', 'activity', 'calendar', 'performance', 'ai-workforce-admin'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['kipr', 'knowledge', 'white-papers', 'academic-papers', 'patents', 'publications'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['administration', 'audit', 'startup-experience', 'identity-media', 'organization-intake', 'repository-links', 'storage', 'backups', 'health', 'releases'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['assets', 'industry-framework', 'architecture', 'engineering'],
+frontend/src/navigation/missionControlWorkspaces.js:    routes: ['workspace', 'briefing', 'tasks', 'decisions', 'notes'],
+frontend/src/App.jsx:  const activeWorkspace = missionControlMode === 'lobby' ? null : workspaceForRoute(missionControlMode)
+frontend/src/App.jsx:  const activeWorkspaceItem = missionControlMode === 'lobby' ? null : itemForRoute(missionControlMode)
+frontend/src/App.jsx:    if (missionControlMode === 'lobby') {
+frontend/src/App.jsx:    if (missionControlMode === 'cockpit') {
+frontend/src/App.jsx:    if (missionControlMode === 'council') {
+frontend/src/App.jsx:    if (missionControlMode === 'offices') {
+frontend/src/App.jsx:    if (missionControlMode === 'kipr') {
+frontend/src/App.jsx:    if (missionControlMode === 'strategy') {
+frontend/src/App.jsx:    if (missionControlMode === 'onboarded-enterprises') {
+frontend/src/App.jsx:    if (missionControlMode === 'administration') {
+frontend/src/App.jsx:    if (missionControlMode === 'audit') {
+frontend/src/App.jsx:    if (missionControlMode === 'ai-workforce-admin') {
+frontend/src/App.jsx:    if (missionControlMode === 'engineering') {
+frontend/src/App.jsx:    if (missionControlMode === 'assets') {

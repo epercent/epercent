@@ -202,3 +202,15 @@ export function fetchDecisionIntelligence() {
 export function fetchAiDevelopmentOffice() {
   return requestJson('/api/ai-development-office')
 }
+
+export function fetchAiWorkforceMembers() {
+  return requestJson('/api/ai-workforce-members')
+}
+
+export function fetchAiWorkforceProviderHealth() {
+  return requestJson('/api/ai-workforce-members/health')
+}
+
+export function fetchSprintReport() {
+  return requestJson('/api/sprint-report')
+}
