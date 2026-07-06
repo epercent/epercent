@@ -40,6 +40,7 @@ import {
   startupRouter
 } from './routes/identity-intake.routes.js';
 import knowledgeRoutes from './routes/knowledge.routes.js';
+import enterpriseKnowledgeObjectsRoutes from './routes/enterprise-knowledge-objects.routes.js';
 import kernelRoutes from './routes/kernel.routes.js';
 import objectsRoutes from './routes/objects.routes.js';
 import {
@@ -123,6 +124,7 @@ export function createApp() {
   app.use('/api/identity-media', identityMediaRouter);
   app.use('/api/kernel', kernelRoutes);
   app.use('/api/knowledge', knowledgeRoutes);
+  app.use('/api/enterprise-knowledge-objects', enterpriseKnowledgeObjectsRoutes);
   app.use('/api/knowledge-objects', knowledgeObjectsRouter);
   app.use('/api/knowledge-repositories', repositoriesRouter);
   app.use('/api/onboarding', onboardingRouter);

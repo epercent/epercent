@@ -1,0 +1,46 @@
+{
+  "knowledgeObjectId": "EKO-ARCH-0001",
+  "title": "EOS Core System Architecture",
+  "type": "Enterprise Architecture",
+  "version": "0.1",
+  "status": "Draft",
+
+  "ownerOffice": "Architecture Office",
+  "governingOffice": "Knowledge Office",
+
+  "classification": "Core",
+
+  "summary": "Defines the core architecture of the Enterprise Operating System (EOS).",
+
+  "relationships": [
+    "EOS Kernel",
+    "Runtime Engine Framework",
+    "Mission Control",
+    "AI Development Office",
+    "Enterprise Command Interface",
+    "Enterprise Objects"
+  ],
+
+  "runtimeAvailability": [
+    "Mission Control",
+    "Athena",
+    "Hermes",
+    "Atlas",
+    "Codex",
+    "Autonomous Execution Engine"
+  ],
+
+  "content": {
+    "kernel": "Enterprise Operating System Kernel",
+    "runtimeFramework": "Runtime Engine Framework",
+    "interfaces": [
+      "Mission Control",
+      "Enterprise Command Interface",
+      "Enterprise Integration Interface"
+    ]
+  },
+
+  "approval": {
+    "status": "Pending"
+  }
+}
