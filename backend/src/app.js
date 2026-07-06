@@ -30,6 +30,7 @@ import engineeringCoordinationRoutes from './routes/engineering-coordination.rou
 import engineeringLedgerRoutes from './routes/engineering-ledger.routes.js';
 import missionPackageRoutes from './routes/mission-package.routes.js';
 import missionGeneratorRoutes from './routes/mission-generator.routes.js';
+import missionQueueRoutes from './routes/mission-queue.routes.js';
 import executiveCouncilRoutes from './routes/executive-council.routes.js';
 import executiveOfficesRoutes from './routes/executive-offices.routes.js';
 import {
@@ -116,6 +117,7 @@ export function createApp() {
   app.use('/api/engineering-ledger', engineeringLedgerRoutes);
   app.use('/api/mission-package', missionPackageRoutes);
   app.use('/api/mission-generator', missionGeneratorRoutes);
+  app.use('/api/mission-queue', missionQueueRoutes);
   app.use('/api/executive-council', executiveCouncilRoutes);
   app.use('/api/executive-offices', executiveOfficesRoutes);
   app.use('/api/identity-media', identityMediaRouter);
