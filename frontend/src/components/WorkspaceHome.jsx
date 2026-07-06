@@ -22,7 +22,8 @@ function WorkspaceHome({
   onOpenWorkspace,
   roadmap,
   status,
-  workspaces
+  workspaces,
+  missionControlRuntime
 }) {
   const totalAttention = Object.values(attentionByWorkspace).reduce((sum, value) => sum + value, 0)
 
@@ -59,6 +60,34 @@ function WorkspaceHome({
           </div>
         </dl>
       </div>
+
+      {missionControlRuntime && (
+        <div className="headquarters-lobby">
+          <div>
+            <p className="section-label">Mission Control Runtime</p>
+            <h2>{missionControlRuntime.enterprise?.name ?? 'Enterprise Discovery'}</h2>
+            <p>{missionControlRuntime.digitalIntelligenceProfile?.intelligenceSummary}</p>
+          </div>
+          <dl>
+            <div>
+              <dt>Discovery Status</dt>
+              <dd>{missionControlRuntime.discoveryStatus?.status ?? 'Pending'}</dd>
+            </div>
+            <div>
+              <dt>Confidence</dt>
+              <dd>{missionControlRuntime.discoveryStatus?.confidenceScore ?? 0}%</dd>
+            </div>
+            <div>
+              <dt>Current Workspace</dt>
+              <dd>{missionControlRuntime.currentWorkspace ?? 'enterprise-value'}</dd>
+            </div>
+            <div>
+              <dt>Recommended Actions</dt>
+              <dd>{missionControlRuntime.recommendedActions?.length ?? 0}</dd>
+            </div>
+          </dl>
+        </div>
+      )}
 
       <div className="workspace-home-heading">
         <div>

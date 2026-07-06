@@ -211,6 +211,11 @@ export function fetchAiWorkforceProviderHealth() {
   return requestJson('/api/ai-workforce-members/health')
 }
 
+
+export function fetchMissionControlRuntime(payload) {
+  return sendJson('/api/enterprise-discovery', payload)
+}
+
 export function fetchSprintReport() {
   return requestJson('/api/sprint-report')
 }

@@ -2,6 +2,7 @@ import { getOnboardingOverview } from './onboarding-service.js'
 import { listEnterpriseKnowledgeObjects } from './enterprise-knowledge-object-service.js'
 import { listWorkflows } from './workflow-service.js'
 import { getMissionQueue } from './mission-queue-service.js'
+import { buildMissionControlRuntime } from './mission-control-runtime-service.js'
 
 function classifySource(source) {
   if (!source) return 'Unknown'
@@ -57,14 +58,19 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
     ]
   }
 
+  const missionControlRuntime = buildMissionControlRuntime({
+    profile
+  })
+
   return {
     orchestrator: {
       id: 'EOS-ENTERPRISE-DISCOVERY-ORCHESTRATOR',
-      version: '0.1.0',
-      status: 'OPERATIONAL_FOUNDATION'
+      version: '0.2.0',
+      status: 'MISSION_CONTROL_READY'
     },
     input: { source, entityType, name },
     profile,
+    missionControlRuntime,
     nextStage: 'Mission Control'
   }
 }

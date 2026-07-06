@@ -45,6 +45,7 @@ import {
   fetchKernel,
   fetchKnowledgeRepositories,
   fetchMasterMonitoring,
+  fetchMissionControlRuntime,
   fetchOnboardingAssimilation,
   fetchOrganizationIntake,
   fetchPlatform,
@@ -157,6 +158,7 @@ function App() {
   const [kernel, setKernel] = useState(null)
   const [decisionIntelligence, setDecisionIntelligence] = useState(null)
   const [masterMonitoring, setMasterMonitoring] = useState(null)
+  const [missionControlRuntime, setMissionControlRuntime] = useState(null)
   const [onboardingAssimilation, setOnboardingAssimilation] = useState(null)
   const [organizationIntake, setOrganizationIntake] = useState(null)
   const [platform, setPlatform] = useState(null)
@@ -199,6 +201,7 @@ function App() {
         setKernel(null)
         setDecisionIntelligence(null)
     setMasterMonitoring(null)
+    setMissionControlRuntime(null)
     setOnboardingAssimilation(null)
     setOrganizationIntake(null)
     setPlatform(null)
@@ -235,6 +238,11 @@ function App() {
       fetchKernel(),
       fetchDecisionIntelligence(),
       fetchMasterMonitoring(),
+      fetchMissionControlRuntime({
+        source: 'https://epercent.ai',
+        entityType: 'Enterprise',
+        name: 'ePercent'
+      }),
       fetchOnboardingAssimilation(),
       fetchOrganizationIntake(),
       fetchPlatform(),
@@ -267,6 +275,7 @@ function App() {
           kernelResult,
           decisionIntelligenceResult,
           masterMonitoringResult,
+          missionControlRuntimeResult,
           onboardingAssimilationResult,
           organizationIntakeResult,
           platformResult,
@@ -303,6 +312,8 @@ function App() {
         setKernel(kernelResult)
         setDecisionIntelligence(decisionIntelligenceResult)
         setMasterMonitoring(masterMonitoringResult)
+        setMissionControlRuntime(missionControlRuntimeResult)
+        console.log('Mission Control Runtime', missionControlRuntimeResult)
         setOnboardingAssimilation(onboardingAssimilationResult)
         setOrganizationIntake(organizationIntakeResult)
         setPlatform(platformResult)
@@ -344,6 +355,7 @@ function App() {
         setKernel(null)
         setDecisionIntelligence(null)
         setMasterMonitoring(null)
+    setMissionControlRuntime(null)
         setOnboardingAssimilation(null)
         setOrganizationIntake(null)
         setPlatform(null)
@@ -513,6 +525,7 @@ function App() {
           roadmap={pmo?.masterRoadmap}
           status={status}
           workspaces={workspaceDefinitions}
+          missionControlRuntime={missionControlRuntime?.missionControlRuntime}
         />
       )
     }
