@@ -1,0 +1,53 @@
+#!/bin/bash
+
+EOS_ROOT="/Users/ericolo/EOS/EOS/EOS"
+API_BASE="http://localhost:3000"
+
+case "$1" in
+  status)
+    echo "=================================================="
+    echo "EOS ENTERPRISE OPERATING SYSTEM"
+    echo "=================================================="
+    curl -s "$API_BASE/api/mission-queue" | jq -r '
+"Mission Queue      : \(.queueStatus)
+Ready For Dispatch : \(.readyForDispatch)
+In Progress        : \(.inProgress)
+Awaiting Approval  : \(.awaitingApproval)
+Completed          : \(.completed)"
+'
+    ;;
+
+  missions)
+    "$EOS_ROOT/scripts/terminal/eos-missions.sh"
+    ;;
+
+  providers)
+    "$EOS_ROOT/scripts/terminal/eos-providers.sh"
+    ;;
+
+  workforce)
+    "$EOS_ROOT/scripts/terminal/eos-workforce.sh"
+    ;;
+
+  dispatch-test)
+    "$EOS_ROOT/scripts/terminal/eos-dispatch-test.sh"
+    ;;
+
+  help|"")
+    echo "EOS Enterprise Command Interface"
+    echo
+    echo "Usage:"
+    echo "  eos status"
+    echo "  eos missions"
+    echo "  eos providers"
+    echo "  eos workforce"
+    echo "  eos dispatch-test"
+    echo "  eos help"
+    ;;
+
+  *)
+    echo "Unknown EOS command: $1"
+    echo "Run: eos help"
+    exit 1
+    ;;
+esac
