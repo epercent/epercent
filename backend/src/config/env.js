@@ -7,5 +7,8 @@ if (Number.isNaN(port)) {
 export const env = {
   host: process.env.HOST ?? '0.0.0.0',
   nodeEnv: process.env.NODE_ENV ?? 'development',
-  port
+  port,
+  aiProvider: process.env.AI_PROVIDER ?? 'OPENAI',
+  openaiApiKey: process.env.OPENAI_API_KEY ?? '',
+  openaiModel: process.env.OPENAI_MODEL ?? 'gpt-5.5'
 };

@@ -1,22 +1,14 @@
 import { generateMissionPackage } from './mission-package-service.js'
 import { getProvider } from '../providers/provider-registry.js'
 
-export function dispatchMission() {
+export async function dispatchMission() {
+  const provider = getProvider()
+  const mission = generateMissionPackage().missionPackage
+  const result = await provider.submitMission(mission)
 
-    const provider = getProvider()
-
-    const mission = generateMissionPackage().missionPackage
-
-    const result = provider.submitMission(mission)
-
-    return {
-
-        dispatchStatus: "DISPATCH_INITIATED",
-
-        provider: provider.name,
-
-        result
-
-    }
-
+  return {
+    dispatchStatus: result.dispatched ? 'DISPATCH_COMPLETED' : 'DISPATCH_FAILED',
+    provider: provider.name,
+    result
+  }
 }
