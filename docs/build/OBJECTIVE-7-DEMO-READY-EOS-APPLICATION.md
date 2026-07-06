@@ -57,3 +57,17 @@ A user enters an enterprise website and EOS returns a complete demo-ready Missio
 ## Definition of Done
 
 Objective 7 is complete only when the demo flow works in the browser and is committed.
+
+Implementation Sequence
+
+1. Enterprise Discovery
+2. Digital Intelligence Profile
+3. Opportunity Assessment
+4. AI Workforce Recommendation
+5. Digital Twin Placeholder
+6. Second Balance Sheet Signal
+7. Mission Control Dashboard
+
+Each stage produces an enterprise object.
+
+Mission Control displays every object.
