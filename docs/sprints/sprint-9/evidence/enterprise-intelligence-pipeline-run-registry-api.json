@@ -1,0 +1,20 @@
+{
+    "module": "Enterprise Intelligence Pipeline Run Registry",
+    "status": "Operational",
+    "count": 1,
+    "runs": [
+        {
+            "file": "20260707-154527-epercent-pipeline-run-registry-test-pipeline-run.json",
+            "runtimeId": "EIP-RUN-1783439126532",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:45:26.532Z",
+            "completedAt": "2026-07-07T15:45:27.981Z",
+            "enterprise": "ePercent Pipeline Run Registry Test",
+            "source": "https://epercent.ai",
+            "stageCount": 7,
+            "completedStages": 7,
+            "governanceStatus": "Awaiting Review",
+            "discoveryEvidence": "20260707-154527-epercent-pipeline-run-registry-test.json"
+        }
+    ]
+}
