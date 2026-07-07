@@ -139,7 +139,14 @@ const missionControlRoutes = new Set([
 ])
 
 function routeFromHash() {
-  return window.location.hash.replace(/^#\/?/, '')
+  const route = window.location.hash.replace(/^#\/?/, '')
+
+  if (!route) {
+    window.location.hash = '#/lobby'
+    return 'lobby'
+  }
+
+  return route
 }
 
 function App() {

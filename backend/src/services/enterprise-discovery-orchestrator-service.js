@@ -7,6 +7,7 @@ import { buildOpportunityAssessment } from './opportunity-assessment-service.js'
 import { buildAiWorkforceRecommendation } from './ai-workforce-recommendation-service.js'
 import { buildDigitalTwinPlaceholder } from './digital-twin-placeholder-service.js'
 import { buildSecondBalanceSheetSignal } from './second-balance-sheet-signal-service.js'
+import { discoverWebsite } from './website-discovery-service.js'
 
 function classifySource(source) {
   if (!source) return 'Unknown'
@@ -16,8 +17,9 @@ function classifySource(source) {
   return 'Manual'
 }
 
-export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name = 'Unknown Entity' } = {}) {
+export async function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name = 'Unknown Entity' } = {}) {
   const sourceType = classifySource(source)
+  const websiteDiscovery = sourceType === 'Website' ? await discoverWebsite(source) : null
   const onboarding = getOnboardingOverview()
   const knowledge = listEnterpriseKnowledgeObjects()
   const workflows = listWorkflows()
@@ -31,8 +33,11 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
     source,
     sourceType,
     status: 'Generated',
-    confidenceScore: source ? 62 : 25,
-    intelligenceSummary: `${name} has an initial Digital Intelligence Profile generated from ${sourceType} discovery.`,
+    confidenceScore: websiteDiscovery?.confidenceScore ?? (source ? 62 : 25),
+    websiteDiscovery,
+    intelligenceSummary: websiteDiscovery?.title
+      ? `${name} has an initial Digital Intelligence Profile generated from live website discovery: ${websiteDiscovery.title}.`
+      : `${name} has an initial Digital Intelligence Profile generated from ${sourceType} discovery.`,
     discoveredSignals: [
       'Identity signal',
       'Knowledge signal',
@@ -69,6 +74,7 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
 
   const missionControlRuntime = buildMissionControlRuntime({
     profile,
+    websiteDiscovery,
     opportunityAssessment,
     aiWorkforceRecommendation,
     digitalTwinPlaceholder,
@@ -83,6 +89,7 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
     },
     input: { source, entityType, name },
     profile,
+    websiteDiscovery,
     opportunityAssessment,
     aiWorkforceRecommendation,
     digitalTwinPlaceholder,
