@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { getEnterpriseIntelligencePipeline } from './enterprise-intelligence-pipeline-service.js'
 import { runEnterpriseDiscovery } from './enterprise-discovery-orchestrator-service.js'
+import { createEnterpriseMission } from './enterprise-mission-registry-service.js'
 
 function slugify(value) {
   return String(value || 'pipeline-run')
@@ -106,11 +107,39 @@ export async function runEnterpriseIntelligencePipeline(input = {}) {
     input
   })
 
+  const generatedMissions = [
+    createEnterpriseMission({
+      enterprise: discovery.profile.name,
+      missionType: discovery.opportunityAssessment.nextRecommendedMission,
+      priority: 'High',
+      assignedOffice: 'Architecture Office',
+      assignedAgent: 'Atlas',
+      governanceStatus: 'Awaiting Review'
+    }),
+    createEnterpriseMission({
+      enterprise: discovery.profile.name,
+      missionType: 'Validate enterprise identity and supporting evidence',
+      priority: 'High',
+      assignedOffice: 'Knowledge Office',
+      assignedAgent: 'Hermes',
+      governanceStatus: 'Awaiting Review'
+    }),
+    createEnterpriseMission({
+      enterprise: discovery.profile.name,
+      missionType: 'Prepare AI Workforce execution plan',
+      priority: 'Medium',
+      assignedOffice: 'Engineering Office',
+      assignedAgent: 'Codex',
+      governanceStatus: 'Awaiting Review'
+    })
+  ]
+
   return {
     runtime,
     pipeline,
     stageResults,
     pipelineRunRecord,
+    generatedMissions,
     discovery
   }
 }
