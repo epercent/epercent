@@ -1,0 +1,655 @@
+{
+    "runtime": {
+        "id": "EIP-RUN-1783437655175",
+        "status": "Completed",
+        "startedAt": "2026-07-07T15:20:54.063Z",
+        "completedAt": "2026-07-07T15:20:55.175Z"
+    },
+    "pipeline": {
+        "id": "EOS-ENTERPRISE-INTELLIGENCE-PIPELINE",
+        "version": "0.1.0",
+        "status": "Sprint 9 Foundation",
+        "stageCount": 7,
+        "stages": [
+            {
+                "id": "EIP-STAGE-001",
+                "name": "Discover",
+                "status": "Active",
+                "purpose": "Capture enterprise input and source intelligence."
+            },
+            {
+                "id": "EIP-STAGE-002",
+                "name": "Understand",
+                "status": "Active",
+                "purpose": "Generate the Digital Intelligence Profile."
+            },
+            {
+                "id": "EIP-STAGE-003",
+                "name": "Assess",
+                "status": "Active",
+                "purpose": "Generate opportunity and readiness assessment."
+            },
+            {
+                "id": "EIP-STAGE-004",
+                "name": "Recommend",
+                "status": "Active",
+                "purpose": "Recommend AI workforce, offices, and next missions."
+            },
+            {
+                "id": "EIP-STAGE-005",
+                "name": "Twin",
+                "status": "Foundation",
+                "purpose": "Initialize Digital Twin foundation object."
+            },
+            {
+                "id": "EIP-STAGE-006",
+                "name": "Value",
+                "status": "Foundation",
+                "purpose": "Generate Second Balance Sheet signal."
+            },
+            {
+                "id": "EIP-STAGE-007",
+                "name": "Govern",
+                "status": "Foundation",
+                "purpose": "Capture approval, evidence, and audit status."
+            }
+        ]
+    },
+    "stageResults": [
+        {
+            "id": "EIP-STAGE-001",
+            "name": "Discover",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:54.063Z",
+            "completedAt": "2026-07-07T15:20:54.063Z"
+        },
+        {
+            "id": "EIP-STAGE-002",
+            "name": "Understand",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        },
+        {
+            "id": "EIP-STAGE-003",
+            "name": "Assess",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        },
+        {
+            "id": "EIP-STAGE-004",
+            "name": "Recommend",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        },
+        {
+            "id": "EIP-STAGE-005",
+            "name": "Twin",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        },
+        {
+            "id": "EIP-STAGE-006",
+            "name": "Value",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        },
+        {
+            "id": "EIP-STAGE-007",
+            "name": "Govern",
+            "status": "Completed",
+            "startedAt": "2026-07-07T15:20:55.175Z",
+            "completedAt": "2026-07-07T15:20:55.175Z"
+        }
+    ],
+    "discovery": {
+        "orchestrator": {
+            "id": "EOS-ENTERPRISE-DISCOVERY-ORCHESTRATOR",
+            "version": "0.2.0",
+            "status": "MISSION_CONTROL_READY"
+        },
+        "input": {
+            "source": "https://epercent.ai",
+            "entityType": "Enterprise",
+            "name": "ePercent Pipeline Runtime Verification"
+        },
+        "profile": {
+            "id": "DIP-1783437655173",
+            "type": "Digital Intelligence Profile",
+            "entityType": "Enterprise",
+            "name": "ePercent Pipeline Runtime Verification",
+            "source": "https://epercent.ai",
+            "sourceType": "Website",
+            "status": "Generated",
+            "confidenceScore": 45,
+            "websiteDiscovery": {
+                "source": "https://epercent.ai",
+                "sourceType": "Website",
+                "status": "Discovered",
+                "title": "",
+                "description": "",
+                "headings": [],
+                "navigationLinks": [],
+                "internalLinks": [],
+                "contactSignals": [],
+                "emailSignals": [],
+                "socialLinks": [],
+                "technologySignals": [],
+                "industryKeywords": [],
+                "confidenceScore": 45,
+                "warnings": []
+            },
+            "intelligenceSummary": "ePercent Pipeline Runtime Verification has an initial Digital Intelligence Profile generated from Website discovery.",
+            "discoveredSignals": [
+                "Identity signal",
+                "Knowledge signal",
+                "Onboarding signal",
+                "Workflow signal",
+                "Mission readiness signal"
+            ],
+            "reusablePlatformCapabilities": {
+                "onboardingRecords": 3,
+                "knowledgeObjects": 1,
+                "workflows": 33,
+                "queuedMissions": 5
+            },
+            "missingInformation": [
+                "Verified financial statements",
+                "Leadership profile",
+                "Products and services",
+                "Operating locations",
+                "Connected enterprise systems"
+            ],
+            "recommendedNextActions": [
+                "Validate identity",
+                "Upload supporting documents",
+                "Connect approved data sources",
+                "Generate initial Mission Control view",
+                "Recommend AI Workforce actions"
+            ]
+        },
+        "websiteDiscovery": {
+            "source": "https://epercent.ai",
+            "sourceType": "Website",
+            "status": "Discovered",
+            "title": "",
+            "description": "",
+            "headings": [],
+            "navigationLinks": [],
+            "internalLinks": [],
+            "contactSignals": [],
+            "emailSignals": [],
+            "socialLinks": [],
+            "technologySignals": [],
+            "industryKeywords": [],
+            "confidenceScore": 45,
+            "warnings": []
+        },
+        "opportunityAssessment": {
+            "id": "OA-1783437655174",
+            "status": "Generated",
+            "enterprise": "ePercent Pipeline Runtime Verification",
+            "enterpriseIntelligenceScore": 62,
+            "aiReadiness": {
+                "score": 58,
+                "level": "Moderate"
+            },
+            "commercializationPotential": {
+                "score": 81,
+                "level": "High"
+            },
+            "digitalTwinPotential": {
+                "score": 76,
+                "status": "Recommended"
+            },
+            "opportunities": [
+                {
+                    "title": "Digital Twin Creation",
+                    "priority": "High"
+                },
+                {
+                    "title": "Enterprise Knowledge Consolidation",
+                    "priority": "High"
+                },
+                {
+                    "title": "AI Workforce Deployment",
+                    "priority": "Medium"
+                },
+                {
+                    "title": "Second Balance Sheet",
+                    "priority": "Strategic"
+                }
+            ],
+            "nextRecommendedMission": "Generate Initial Digital Twin"
+        },
+        "aiWorkforceRecommendation": {
+            "id": "AWR-1783437655174",
+            "status": "Generated",
+            "enterprise": "ePercent Pipeline Runtime Verification",
+            "recommendedOffices": [
+                {
+                    "office": "Architecture Office",
+                    "priority": "High",
+                    "mission": "Map enterprise structure and define initial Digital Twin architecture."
+                },
+                {
+                    "office": "Knowledge Office",
+                    "priority": "High",
+                    "mission": "Organize discovered intelligence into reusable enterprise knowledge."
+                },
+                {
+                    "office": "Engineering Office",
+                    "priority": "Medium",
+                    "mission": "Prepare integrations, data pipelines, and automation workflows."
+                },
+                {
+                    "office": "Commercialization Office",
+                    "priority": "Strategic",
+                    "mission": "Identify monetizable Digital Twin Asset opportunities."
+                }
+            ],
+            "recommendedAgents": [
+                "Atlas \u2014 Enterprise Architecture",
+                "Hermes \u2014 Knowledge Structuring",
+                "Athena \u2014 Research and Intelligence",
+                "Codex \u2014 Engineering Automation",
+                "Mercury \u2014 Opportunity Development"
+            ],
+            "firstMission": "Generate Initial Digital Twin",
+            "governance": {
+                "approvalRequired": true,
+                "status": "Awaiting Human Approval"
+            }
+        },
+        "digitalTwinPlaceholder": {
+            "id": "DTP-1783437655174",
+            "status": "Initialized",
+            "enterprise": "ePercent Pipeline Runtime Verification",
+            "twinType": "Enterprise Digital Twin",
+            "maturity": "Foundation",
+            "layers": [
+                {
+                    "name": "Identity Layer",
+                    "status": "Started"
+                },
+                {
+                    "name": "Knowledge Layer",
+                    "status": "Started"
+                },
+                {
+                    "name": "Process Layer",
+                    "status": "Pending Data"
+                },
+                {
+                    "name": "System Layer",
+                    "status": "Pending Connection"
+                },
+                {
+                    "name": "Asset Layer",
+                    "status": "Pending Validation"
+                },
+                {
+                    "name": "Value Layer",
+                    "status": "Pending Assessment"
+                }
+            ],
+            "buildReadiness": {
+                "score": 76,
+                "status": "Recommended"
+            },
+            "assignedWorkforce": [
+                "Atlas \u2014 Enterprise Architecture",
+                "Hermes \u2014 Knowledge Structuring",
+                "Athena \u2014 Research and Intelligence",
+                "Codex \u2014 Engineering Automation",
+                "Mercury \u2014 Opportunity Development"
+            ],
+            "nextAction": "Approve Digital Twin foundation build mission"
+        },
+        "secondBalanceSheetSignal": {
+            "id": "SBS-1783437655174",
+            "status": "Signal Generated",
+            "enterprise": "ePercent Pipeline Runtime Verification",
+            "potentialAssetClass": "Enterprise Digital Twin Asset",
+            "estimatedReadiness": {
+                "score": 71,
+                "level": "Emerging"
+            },
+            "valueDrivers": [
+                "Enterprise Knowledge",
+                "Business Processes",
+                "AI Workforce",
+                "Digital Twin",
+                "Enterprise Data"
+            ],
+            "strategicSignals": [
+                "Potential Digital Twin Asset",
+                "Potential Enterprise Knowledge Asset",
+                "Potential AI Operating Model",
+                "Potential Commercialization Pipeline"
+            ],
+            "recommendedNextPhase": "Enterprise Digital Twin Generation",
+            "governance": {
+                "approvalRequired": true,
+                "status": "Awaiting Executive Review"
+            }
+        },
+        "discoveryEvidenceReport": {
+            "fileName": "20260707-152055-epercent-pipeline-runtime-verification.json",
+            "filePath": "/Users/ericolo/EOS/EOS/EOS/eos/evidence/discovery/20260707-152055-epercent-pipeline-runtime-verification.json",
+            "status": "Evidence Report Created"
+        },
+        "missionControlRuntime": {
+            "runtime": {
+                "id": "EOS-MISSION-CONTROL-RUNTIME",
+                "version": "0.1.0",
+                "status": "ACTIVE"
+            },
+            "enterprise": {
+                "name": "ePercent Pipeline Runtime Verification",
+                "entityType": "Enterprise",
+                "source": "https://epercent.ai",
+                "sourceType": "Website"
+            },
+            "digitalIntelligenceProfile": {
+                "id": "DIP-1783437655173",
+                "status": "Generated",
+                "confidenceScore": 45,
+                "intelligenceSummary": "ePercent Pipeline Runtime Verification has an initial Digital Intelligence Profile generated from Website discovery.",
+                "discoveredSignals": [
+                    "Identity signal",
+                    "Knowledge signal",
+                    "Onboarding signal",
+                    "Workflow signal",
+                    "Mission readiness signal"
+                ],
+                "missingInformation": [
+                    "Verified financial statements",
+                    "Leadership profile",
+                    "Products and services",
+                    "Operating locations",
+                    "Connected enterprise systems"
+                ]
+            },
+            "discoveryStatus": {
+                "status": "Generated",
+                "confidenceScore": 45
+            },
+            "aiWorkforceStatus": {
+                "status": "Recommended",
+                "recommendedActions": [
+                    "Validate identity",
+                    "Upload supporting documents",
+                    "Connect approved data sources",
+                    "Generate initial Mission Control view",
+                    "Recommend AI Workforce actions"
+                ],
+                "recommendedOffices": [
+                    {
+                        "office": "Architecture Office",
+                        "priority": "High",
+                        "mission": "Map enterprise structure and define initial Digital Twin architecture."
+                    },
+                    {
+                        "office": "Knowledge Office",
+                        "priority": "High",
+                        "mission": "Organize discovered intelligence into reusable enterprise knowledge."
+                    },
+                    {
+                        "office": "Engineering Office",
+                        "priority": "Medium",
+                        "mission": "Prepare integrations, data pipelines, and automation workflows."
+                    },
+                    {
+                        "office": "Commercialization Office",
+                        "priority": "Strategic",
+                        "mission": "Identify monetizable Digital Twin Asset opportunities."
+                    }
+                ],
+                "recommendedAgents": [
+                    "Atlas \u2014 Enterprise Architecture",
+                    "Hermes \u2014 Knowledge Structuring",
+                    "Athena \u2014 Research and Intelligence",
+                    "Codex \u2014 Engineering Automation",
+                    "Mercury \u2014 Opportunity Development"
+                ],
+                "firstMission": "Generate Initial Digital Twin"
+            },
+            "digitalTwinStatus": {
+                "status": "Initialized",
+                "twinType": "Enterprise Digital Twin",
+                "maturity": "Foundation",
+                "buildReadiness": {
+                    "score": 76,
+                    "status": "Recommended"
+                },
+                "layers": [
+                    {
+                        "name": "Identity Layer",
+                        "status": "Started"
+                    },
+                    {
+                        "name": "Knowledge Layer",
+                        "status": "Started"
+                    },
+                    {
+                        "name": "Process Layer",
+                        "status": "Pending Data"
+                    },
+                    {
+                        "name": "System Layer",
+                        "status": "Pending Connection"
+                    },
+                    {
+                        "name": "Asset Layer",
+                        "status": "Pending Validation"
+                    },
+                    {
+                        "name": "Value Layer",
+                        "status": "Pending Assessment"
+                    }
+                ]
+            },
+            "valueIntelligenceStatus": {
+                "status": "Generated",
+                "enterpriseIntelligenceScore": 62,
+                "aiReadiness": {
+                    "score": 58,
+                    "level": "Moderate"
+                },
+                "commercializationPotential": {
+                    "score": 81,
+                    "level": "High"
+                }
+            },
+            "secondBalanceSheetStatus": {
+                "status": "Signal Generated",
+                "readiness": {
+                    "score": 71,
+                    "level": "Emerging"
+                },
+                "assetClass": "Enterprise Digital Twin Asset",
+                "valueDrivers": [
+                    "Enterprise Knowledge",
+                    "Business Processes",
+                    "AI Workforce",
+                    "Digital Twin",
+                    "Enterprise Data"
+                ],
+                "strategicSignals": [
+                    "Potential Digital Twin Asset",
+                    "Potential Enterprise Knowledge Asset",
+                    "Potential AI Operating Model",
+                    "Potential Commercialization Pipeline"
+                ]
+            },
+            "opportunityAssessment": {
+                "id": "OA-1783437655174",
+                "status": "Generated",
+                "enterprise": "ePercent Pipeline Runtime Verification",
+                "enterpriseIntelligenceScore": 62,
+                "aiReadiness": {
+                    "score": 58,
+                    "level": "Moderate"
+                },
+                "commercializationPotential": {
+                    "score": 81,
+                    "level": "High"
+                },
+                "digitalTwinPotential": {
+                    "score": 76,
+                    "status": "Recommended"
+                },
+                "opportunities": [
+                    {
+                        "title": "Digital Twin Creation",
+                        "priority": "High"
+                    },
+                    {
+                        "title": "Enterprise Knowledge Consolidation",
+                        "priority": "High"
+                    },
+                    {
+                        "title": "AI Workforce Deployment",
+                        "priority": "Medium"
+                    },
+                    {
+                        "title": "Second Balance Sheet",
+                        "priority": "Strategic"
+                    }
+                ],
+                "nextRecommendedMission": "Generate Initial Digital Twin"
+            },
+            "aiWorkforceRecommendation": {
+                "id": "AWR-1783437655174",
+                "status": "Generated",
+                "enterprise": "ePercent Pipeline Runtime Verification",
+                "recommendedOffices": [
+                    {
+                        "office": "Architecture Office",
+                        "priority": "High",
+                        "mission": "Map enterprise structure and define initial Digital Twin architecture."
+                    },
+                    {
+                        "office": "Knowledge Office",
+                        "priority": "High",
+                        "mission": "Organize discovered intelligence into reusable enterprise knowledge."
+                    },
+                    {
+                        "office": "Engineering Office",
+                        "priority": "Medium",
+                        "mission": "Prepare integrations, data pipelines, and automation workflows."
+                    },
+                    {
+                        "office": "Commercialization Office",
+                        "priority": "Strategic",
+                        "mission": "Identify monetizable Digital Twin Asset opportunities."
+                    }
+                ],
+                "recommendedAgents": [
+                    "Atlas \u2014 Enterprise Architecture",
+                    "Hermes \u2014 Knowledge Structuring",
+                    "Athena \u2014 Research and Intelligence",
+                    "Codex \u2014 Engineering Automation",
+                    "Mercury \u2014 Opportunity Development"
+                ],
+                "firstMission": "Generate Initial Digital Twin",
+                "governance": {
+                    "approvalRequired": true,
+                    "status": "Awaiting Human Approval"
+                }
+            },
+            "digitalTwinPlaceholder": {
+                "id": "DTP-1783437655174",
+                "status": "Initialized",
+                "enterprise": "ePercent Pipeline Runtime Verification",
+                "twinType": "Enterprise Digital Twin",
+                "maturity": "Foundation",
+                "layers": [
+                    {
+                        "name": "Identity Layer",
+                        "status": "Started"
+                    },
+                    {
+                        "name": "Knowledge Layer",
+                        "status": "Started"
+                    },
+                    {
+                        "name": "Process Layer",
+                        "status": "Pending Data"
+                    },
+                    {
+                        "name": "System Layer",
+                        "status": "Pending Connection"
+                    },
+                    {
+                        "name": "Asset Layer",
+                        "status": "Pending Validation"
+                    },
+                    {
+                        "name": "Value Layer",
+                        "status": "Pending Assessment"
+                    }
+                ],
+                "buildReadiness": {
+                    "score": 76,
+                    "status": "Recommended"
+                },
+                "assignedWorkforce": [
+                    "Atlas \u2014 Enterprise Architecture",
+                    "Hermes \u2014 Knowledge Structuring",
+                    "Athena \u2014 Research and Intelligence",
+                    "Codex \u2014 Engineering Automation",
+                    "Mercury \u2014 Opportunity Development"
+                ],
+                "nextAction": "Approve Digital Twin foundation build mission"
+            },
+            "secondBalanceSheetSignal": {
+                "id": "SBS-1783437655174",
+                "status": "Signal Generated",
+                "enterprise": "ePercent Pipeline Runtime Verification",
+                "potentialAssetClass": "Enterprise Digital Twin Asset",
+                "estimatedReadiness": {
+                    "score": 71,
+                    "level": "Emerging"
+                },
+                "valueDrivers": [
+                    "Enterprise Knowledge",
+                    "Business Processes",
+                    "AI Workforce",
+                    "Digital Twin",
+                    "Enterprise Data"
+                ],
+                "strategicSignals": [
+                    "Potential Digital Twin Asset",
+                    "Potential Enterprise Knowledge Asset",
+                    "Potential AI Operating Model",
+                    "Potential Commercialization Pipeline"
+                ],
+                "recommendedNextPhase": "Enterprise Digital Twin Generation",
+                "governance": {
+                    "approvalRequired": true,
+                    "status": "Awaiting Executive Review"
+                }
+            },
+            "governanceStatus": {
+                "approvalRequired": true,
+                "status": "Awaiting Review"
+            },
+            "recommendedActions": [
+                "Validate identity",
+                "Upload supporting documents",
+                "Connect approved data sources",
+                "Generate initial Mission Control view",
+                "Recommend AI Workforce actions"
+            ],
+            "currentWorkspace": "enterprise-value",
+            "nextStage": "Mission Control"
+        },
+        "nextStage": "Mission Control"
+    }
+}

@@ -1,0 +1,86 @@
+{
+  "enterprise": {
+    "name": "ePercent",
+    "website": "https://epercent.ai",
+    "industry": "",
+    "country": "",
+    "discovered_at": "2026-07-07T14:35:24.234Z"
+  },
+  "discovery": {
+    "summary": "ePercent has an initial Digital Intelligence Profile generated from Website discovery.",
+    "capabilities": [
+      "Identity signal",
+      "Knowledge signal",
+      "Onboarding signal",
+      "Workflow signal",
+      "Mission readiness signal"
+    ],
+    "opportunities": [
+      {
+        "title": "Digital Twin Creation",
+        "priority": "High"
+      },
+      {
+        "title": "Enterprise Knowledge Consolidation",
+        "priority": "High"
+      },
+      {
+        "title": "AI Workforce Deployment",
+        "priority": "Medium"
+      },
+      {
+        "title": "Second Balance Sheet",
+        "priority": "Strategic"
+      }
+    ],
+    "risks": [],
+    "recommended_ai_workforce": [
+      "Atlas — Enterprise Architecture",
+      "Hermes — Knowledge Structuring",
+      "Athena — Research and Intelligence",
+      "Codex — Engineering Automation",
+      "Mercury — Opportunity Development"
+    ],
+    "digital_twin_status": "Initialized",
+    "second_balance_sheet_signal": {
+      "id": "SBS-1783434924234",
+      "status": "Signal Generated",
+      "enterprise": "ePercent",
+      "potentialAssetClass": "Enterprise Digital Twin Asset",
+      "estimatedReadiness": {
+        "score": 71,
+        "level": "Emerging"
+      },
+      "valueDrivers": [
+        "Enterprise Knowledge",
+        "Business Processes",
+        "AI Workforce",
+        "Digital Twin",
+        "Enterprise Data"
+      ],
+      "strategicSignals": [
+        "Potential Digital Twin Asset",
+        "Potential Enterprise Knowledge Asset",
+        "Potential AI Operating Model",
+        "Potential Commercialization Pipeline"
+      ],
+      "recommendedNextPhase": "Enterprise Digital Twin Generation",
+      "governance": {
+        "approvalRequired": true,
+        "status": "Awaiting Executive Review"
+      }
+    }
+  },
+  "evidence": {
+    "sources": [
+      "https://epercent.ai"
+    ],
+    "confidence": 45,
+    "generated_by": "Enterprise Discovery Orchestrator"
+  },
+  "runtime": {
+    "profile_id": "DIP-1783434924234",
+    "source_type": "Website",
+    "entity_type": "Enterprise"
+  }
+}
