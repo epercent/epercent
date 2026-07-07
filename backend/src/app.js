@@ -46,6 +46,7 @@ import enterpriseDiscoveryRegistryRoutes from './routes/enterprise-discovery-reg
 import enterpriseIntelligencePipelineRoutes from './routes/enterprise-intelligence-pipeline.routes.js';
 import enterpriseIntelligencePipelineRuntimeRoutes from './routes/enterprise-intelligence-pipeline-runtime.routes.js';
 import enterpriseIntelligencePipelineRunRegistryRoutes from './routes/enterprise-intelligence-pipeline-run-registry.routes.js';
+import enterpriseMissionRegistryRoutes from './routes/enterprise-mission-registry.routes.js';
 import kernelRoutes from './routes/kernel.routes.js';
 import objectsRoutes from './routes/objects.routes.js';
 import {
@@ -135,6 +136,7 @@ export function createApp() {
   app.use('/api/enterprise-intelligence-pipeline', enterpriseIntelligencePipelineRoutes);
   app.use('/api/enterprise-intelligence-pipeline-runtime', enterpriseIntelligencePipelineRuntimeRoutes);
   app.use('/api/enterprise-intelligence-pipeline-run-registry', enterpriseIntelligencePipelineRunRegistryRoutes);
+  app.use('/api/enterprise-mission-registry', enterpriseMissionRegistryRoutes);
   app.use('/api/knowledge-objects', knowledgeObjectsRouter);
   app.use('/api/knowledge-repositories', repositoriesRouter);
   app.use('/api/onboarding', onboardingRouter);
