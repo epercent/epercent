@@ -38,7 +38,7 @@ export function createEnterpriseMission({
     createdAt
   }
 
-  const fileName = `${stamp}-${slug(enterprise)}-mission.json`
+  const fileName = `${stamp}-${slug(enterprise)}-${slug(missionType)}-${mission.id}-mission.json`
 
   fs.writeFileSync(
     path.join(registryDir, fileName),
