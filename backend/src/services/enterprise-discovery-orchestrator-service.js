@@ -8,6 +8,72 @@ import { buildAiWorkforceRecommendation } from './ai-workforce-recommendation-se
 import { buildDigitalTwinPlaceholder } from './digital-twin-placeholder-service.js'
 import { buildSecondBalanceSheetSignal } from './second-balance-sheet-signal-service.js'
 import { discoverWebsite } from './website-discovery-service.js'
+import fs from 'fs'
+import path from 'path'
+
+
+function slugify(value) {
+  return String(value || 'unknown-enterprise')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80)
+}
+
+function createDiscoveryEvidenceReport({
+  profile,
+  websiteDiscovery,
+  opportunityAssessment,
+  aiWorkforceRecommendation,
+  digitalTwinPlaceholder,
+  secondBalanceSheetSignal
+}) {
+  const discoveredAt = new Date().toISOString()
+  const timestamp = discoveredAt.replace(/[-:]/g, '').replace(/\..+$/, '').replace('T', '-')
+  const enterpriseSlug = slugify(profile.name)
+  const evidenceDir = path.resolve(process.cwd(), 'eos/evidence/discovery')
+  const fileName = `${timestamp}-${enterpriseSlug}.json`
+  const filePath = path.join(evidenceDir, fileName)
+
+  fs.mkdirSync(evidenceDir, { recursive: true })
+
+  const report = {
+    enterprise: {
+      name: profile.name,
+      website: profile.sourceType === 'Website' ? profile.source : '',
+      industry: websiteDiscovery?.industry || '',
+      country: '',
+      discovered_at: discoveredAt
+    },
+    discovery: {
+      summary: profile.intelligenceSummary,
+      capabilities: profile.discoveredSignals,
+      opportunities: opportunityAssessment?.opportunities || [],
+      risks: opportunityAssessment?.risks || [],
+      recommended_ai_workforce: aiWorkforceRecommendation?.recommendedAgents || aiWorkforceRecommendation?.agents || [],
+      digital_twin_status: digitalTwinPlaceholder?.status || 'placeholder',
+      second_balance_sheet_signal: secondBalanceSheetSignal || {}
+    },
+    evidence: {
+      sources: profile.source ? [profile.source] : [],
+      confidence: profile.confidenceScore,
+      generated_by: 'Enterprise Discovery Orchestrator'
+    },
+    runtime: {
+      profile_id: profile.id,
+      source_type: profile.sourceType,
+      entity_type: profile.entityType
+    }
+  }
+
+  fs.writeFileSync(filePath, JSON.stringify(report, null, 2))
+
+  return {
+    fileName,
+    filePath,
+    status: 'Evidence Report Created'
+  }
+}
 
 function classifySource(source) {
   if (!source) return 'Unknown'
@@ -72,6 +138,15 @@ export async function runEnterpriseDiscovery({ source, entityType = 'Enterprise'
   const digitalTwinPlaceholder = buildDigitalTwinPlaceholder(profile, opportunityAssessment, aiWorkforceRecommendation)
   const secondBalanceSheetSignal = buildSecondBalanceSheetSignal(profile, opportunityAssessment, digitalTwinPlaceholder)
 
+  const discoveryEvidenceReport = createDiscoveryEvidenceReport({
+    profile,
+    websiteDiscovery,
+    opportunityAssessment,
+    aiWorkforceRecommendation,
+    digitalTwinPlaceholder,
+    secondBalanceSheetSignal
+  })
+
   const missionControlRuntime = buildMissionControlRuntime({
     profile,
     websiteDiscovery,
@@ -94,6 +169,7 @@ export async function runEnterpriseDiscovery({ source, entityType = 'Enterprise'
     aiWorkforceRecommendation,
     digitalTwinPlaceholder,
     secondBalanceSheetSignal,
+    discoveryEvidenceReport,
     missionControlRuntime,
     nextStage: 'Mission Control'
   }
