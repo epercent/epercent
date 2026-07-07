@@ -1,0 +1,23 @@
+{
+  "enterprise": {
+    "name": "",
+    "website": "",
+    "industry": "",
+    "country": "",
+    "discovered_at": ""
+  },
+  "discovery": {
+    "summary": "",
+    "capabilities": [],
+    "opportunities": [],
+    "risks": [],
+    "recommended_ai_workforce": [],
+    "digital_twin_status": "placeholder",
+    "second_balance_sheet_signal": {}
+  },
+  "evidence": {
+    "sources": [],
+    "confidence": 0,
+    "generated_by": "Enterprise Discovery Orchestrator"
+  }
+}
