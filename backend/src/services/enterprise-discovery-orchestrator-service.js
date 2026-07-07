@@ -31,7 +31,7 @@ function createDiscoveryEvidenceReport({
   const discoveredAt = new Date().toISOString()
   const timestamp = discoveredAt.replace(/[-:]/g, '').replace(/\..+$/, '').replace('T', '-')
   const enterpriseSlug = slugify(profile.name)
-  const evidenceDir = path.resolve(process.cwd(), 'eos/evidence/discovery')
+  const evidenceDir = path.resolve(process.cwd(), '../eos/evidence/discovery')
   const fileName = `${timestamp}-${enterpriseSlug}.json`
   const filePath = path.join(evidenceDir, fileName)
 
