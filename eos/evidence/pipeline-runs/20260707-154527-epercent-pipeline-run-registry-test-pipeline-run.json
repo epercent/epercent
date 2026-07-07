@@ -1,0 +1,86 @@
+{
+  "runtime": {
+    "id": "EIP-RUN-1783439126532",
+    "status": "Completed",
+    "startedAt": "2026-07-07T15:45:26.532Z",
+    "completedAt": "2026-07-07T15:45:27.981Z"
+  },
+  "input": {
+    "source": "https://epercent.ai",
+    "entityType": "Enterprise",
+    "name": "ePercent Pipeline Run Registry Test"
+  },
+  "enterprise": {
+    "name": "ePercent Pipeline Run Registry Test",
+    "source": "https://epercent.ai",
+    "entityType": "Enterprise"
+  },
+  "pipeline": {
+    "id": "EOS-ENTERPRISE-INTELLIGENCE-PIPELINE",
+    "version": "0.1.0",
+    "status": "Sprint 9 Foundation",
+    "stageCount": 7
+  },
+  "stageResults": [
+    {
+      "id": "EIP-STAGE-001",
+      "name": "Discover",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:26.532Z",
+      "completedAt": "2026-07-07T15:45:26.532Z"
+    },
+    {
+      "id": "EIP-STAGE-002",
+      "name": "Understand",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    },
+    {
+      "id": "EIP-STAGE-003",
+      "name": "Assess",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    },
+    {
+      "id": "EIP-STAGE-004",
+      "name": "Recommend",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    },
+    {
+      "id": "EIP-STAGE-005",
+      "name": "Twin",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    },
+    {
+      "id": "EIP-STAGE-006",
+      "name": "Value",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    },
+    {
+      "id": "EIP-STAGE-007",
+      "name": "Govern",
+      "status": "Completed",
+      "startedAt": "2026-07-07T15:45:27.981Z",
+      "completedAt": "2026-07-07T15:45:27.981Z"
+    }
+  ],
+  "linkedEvidence": {
+    "discoveryEvidenceReport": {
+      "fileName": "20260707-154527-epercent-pipeline-run-registry-test.json",
+      "filePath": "/Users/ericolo/EOS/EOS/EOS/eos/evidence/discovery/20260707-154527-epercent-pipeline-run-registry-test.json",
+      "status": "Evidence Report Created"
+    }
+  },
+  "governance": {
+    "status": "Awaiting Review",
+    "approvalRequired": true
+  }
+}
