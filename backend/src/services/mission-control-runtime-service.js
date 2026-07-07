@@ -1,5 +1,9 @@
 export function buildMissionControlRuntime(discoveryResult) {
   const profile = discoveryResult?.profile ?? {}
+  const opportunityAssessment = discoveryResult?.opportunityAssessment ?? null
+  const aiWorkforceRecommendation = discoveryResult?.aiWorkforceRecommendation ?? null
+  const digitalTwinPlaceholder = discoveryResult?.digitalTwinPlaceholder ?? null
+  const secondBalanceSheetSignal = discoveryResult?.secondBalanceSheetSignal ?? null
 
   return {
     runtime: {
@@ -30,16 +34,43 @@ export function buildMissionControlRuntime(discoveryResult) {
     },
 
     aiWorkforceStatus: {
-      recommendedActions: profile.recommendedNextActions ?? []
+      status: aiWorkforceRecommendation ? 'Recommended' : 'Pending',
+      recommendedActions: profile.recommendedNextActions ?? [],
+      recommendedOffices: aiWorkforceRecommendation?.recommendedOffices ?? [],
+      recommendedAgents: aiWorkforceRecommendation?.recommendedAgents ?? [],
+      firstMission: aiWorkforceRecommendation?.firstMission ?? null
     },
 
     digitalTwinStatus: {
-      status: 'Pending'
+      status: digitalTwinPlaceholder?.status ?? 'Pending',
+      twinType: digitalTwinPlaceholder?.twinType ?? 'Enterprise Digital Twin',
+      maturity: digitalTwinPlaceholder?.maturity ?? 'Pending',
+      buildReadiness: digitalTwinPlaceholder?.buildReadiness ?? null,
+      layers: digitalTwinPlaceholder?.layers ?? []
     },
 
     valueIntelligenceStatus: {
-      status: 'Pending'
+      status: opportunityAssessment ? 'Generated' : 'Pending',
+      enterpriseIntelligenceScore: opportunityAssessment?.enterpriseIntelligenceScore ?? 0,
+      aiReadiness: opportunityAssessment?.aiReadiness ?? null,
+      commercializationPotential: opportunityAssessment?.commercializationPotential ?? null
     },
+
+    secondBalanceSheetStatus: {
+      status: secondBalanceSheetSignal?.status ?? 'Pending',
+      readiness: secondBalanceSheetSignal?.estimatedReadiness ?? null,
+      assetClass: secondBalanceSheetSignal?.potentialAssetClass ?? null,
+      valueDrivers: secondBalanceSheetSignal?.valueDrivers ?? [],
+      strategicSignals: secondBalanceSheetSignal?.strategicSignals ?? []
+    },
+
+    opportunityAssessment,
+
+    aiWorkforceRecommendation,
+
+    digitalTwinPlaceholder,
+
+    secondBalanceSheetSignal,
 
     governanceStatus: {
       approvalRequired: true,

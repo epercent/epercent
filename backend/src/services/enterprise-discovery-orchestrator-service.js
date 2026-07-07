@@ -3,6 +3,10 @@ import { listEnterpriseKnowledgeObjects } from './enterprise-knowledge-object-se
 import { listWorkflows } from './workflow-service.js'
 import { getMissionQueue } from './mission-queue-service.js'
 import { buildMissionControlRuntime } from './mission-control-runtime-service.js'
+import { buildOpportunityAssessment } from './opportunity-assessment-service.js'
+import { buildAiWorkforceRecommendation } from './ai-workforce-recommendation-service.js'
+import { buildDigitalTwinPlaceholder } from './digital-twin-placeholder-service.js'
+import { buildSecondBalanceSheetSignal } from './second-balance-sheet-signal-service.js'
 
 function classifySource(source) {
   if (!source) return 'Unknown'
@@ -58,8 +62,17 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
     ]
   }
 
+  const opportunityAssessment = buildOpportunityAssessment(profile)
+  const aiWorkforceRecommendation = buildAiWorkforceRecommendation(profile, opportunityAssessment)
+  const digitalTwinPlaceholder = buildDigitalTwinPlaceholder(profile, opportunityAssessment, aiWorkforceRecommendation)
+  const secondBalanceSheetSignal = buildSecondBalanceSheetSignal(profile, opportunityAssessment, digitalTwinPlaceholder)
+
   const missionControlRuntime = buildMissionControlRuntime({
-    profile
+    profile,
+    opportunityAssessment,
+    aiWorkforceRecommendation,
+    digitalTwinPlaceholder,
+    secondBalanceSheetSignal
   })
 
   return {
@@ -70,6 +83,10 @@ export function runEnterpriseDiscovery({ source, entityType = 'Enterprise', name
     },
     input: { source, entityType, name },
     profile,
+    opportunityAssessment,
+    aiWorkforceRecommendation,
+    digitalTwinPlaceholder,
+    secondBalanceSheetSignal,
     missionControlRuntime,
     nextStage: 'Mission Control'
   }

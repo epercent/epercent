@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import './App.css'
+import EnterpriseControlShell from './enterprise-control/EnterpriseControlShell.jsx'
 
 import AiWorkforceOperationsView from './components/AiWorkforceOperationsView.jsx'
 import AiWorkforceAdministrationView from './components/AiWorkforceAdministrationView.jsx'
@@ -12,6 +13,8 @@ import ExecutiveCommandBar from './components/ExecutiveCommandBar.jsx'
 import ExecutiveCouncilView from './components/ExecutiveCouncilView.jsx'
 import ExecutiveOfficeView from './components/ExecutiveOfficeView.jsx'
 import EosStartupScreen from './components/EosStartupScreen.jsx'
+import EnterpriseIntelligenceRuntimePanel from './components/EnterpriseIntelligenceRuntimePanel.jsx'
+import EnterpriseIntelligenceLanding from './components/EnterpriseIntelligenceLanding.jsx'
 import FoundationView from './components/FoundationView.jsx'
 import IdentityIntakeView from './components/IdentityIntakeView.jsx'
 import KnowledgeRepositoryPanel from './components/KnowledgeRepositoryPanel.jsx'
@@ -175,7 +178,7 @@ function App() {
   const [error, setError] = useState(null)
   const [requestVersion, setRequestVersion] = useState(0)
   const [missionControlMode, setMissionControlMode] = useState(
-    workspaceDefinitions[0]?.defaultRoute ?? 'master-monitoring'
+    'lobby'
   )
   const [isPresentationMode, setIsPresentationMode] = useState(false)
   const [selectedOfficeId, setSelectedOfficeId] = useState('EOS-EXEC-ERIC-OLO')
@@ -517,15 +520,9 @@ function App() {
   function renderMissionControlView() {
     if (missionControlMode === 'lobby') {
       return (
-        <WorkspaceHome
-          attentionByWorkspace={attentionByWorkspace}
-          metrics={commandMetrics}
-          metricsByWorkspace={metricsByWorkspace}
-          onOpenWorkspace={openWorkspace}
-          roadmap={pmo?.masterRoadmap}
-          status={status}
-          workspaces={workspaceDefinitions}
-          missionControlRuntime={missionControlRuntime?.missionControlRuntime}
+        <EnterpriseControlShell
+          runtimeEnvelope={missionControlRuntime}
+          onOpenMissionControl={() => setMissionControlMode('master-monitoring')}
         />
       )
     }
@@ -776,7 +773,8 @@ function App() {
               />
             ) : null}
 
-            {renderMissionControlView()}
+            <EnterpriseIntelligenceRuntimePanel runtimeEnvelope={missionControlRuntime} />
+          {renderMissionControlView()}
           </>
         )}
         </main>
