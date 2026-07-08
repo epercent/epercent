@@ -4765,3 +4765,58 @@ button:focus-visible,
     min-height: 132px;
   }
 }
+
+.startup-step {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: eosStartupStep 0.55s ease forwards, eosStartupStatus 2.2s ease forwards;
+}
+
+.startup-step em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f97316;
+}
+
+.startup-step span {
+  color: #ef4444;
+}
+
+.startup-step:nth-child(n + 3) span {
+  color: #f59e0b;
+}
+
+.startup-step:nth-last-child(-n + 2) span {
+  color: #34d399;
+}
+
+.startup-step:last-child {
+  border-color: rgba(52, 211, 153, 0.42);
+  box-shadow: 0 0 30px rgba(52, 211, 153, 0.12);
+}
+
+.startup-step:last-child em {
+  color: #34d399;
+}
+
+@keyframes eosStartupStep {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes eosStartupStatus {
+  0% {
+    border-color: rgba(239, 68, 68, 0.45);
+  }
+  50% {
+    border-color: rgba(249, 115, 22, 0.45);
+  }
+  100% {
+    border-color: rgba(52, 211, 153, 0.45);
+  }
+}
