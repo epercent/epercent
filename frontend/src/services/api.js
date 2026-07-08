@@ -216,6 +216,11 @@ export function fetchMissionControlRuntime(payload) {
   return sendJson('/api/enterprise-discovery', payload)
 }
 
+
+export function fetchEnterpriseControlSummary() {
+  return requestJson('/api/enterprise-control-summary')
+}
+
 export function fetchSprintReport() {
   return requestJson('/api/sprint-report')
 }

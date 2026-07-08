@@ -183,6 +183,8 @@ function App() {
   const [showStartup, setShowStartup] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [isDiscoveringEnterprise, setIsDiscoveringEnterprise] = useState(false)
+  const [enterpriseDiscoveryError, setEnterpriseDiscoveryError] = useState(null)
   const [requestVersion, setRequestVersion] = useState(0)
   const [missionControlMode, setMissionControlMode] = useState(
     'lobby'
@@ -528,12 +530,38 @@ function App() {
     setRequestVersion((currentVersion) => currentVersion + 1)
   }, [])
 
+  async function handleDiscoverEnterprise(source) {
+    setIsDiscoveringEnterprise(true)
+    setEnterpriseDiscoveryError(null)
+
+    try {
+      const normalizedSource = source.startsWith('http')
+        ? source
+        : `https://${source}`
+
+      const discovered = await fetchMissionControlRuntime({
+        source: normalizedSource,
+        entityType: 'Enterprise',
+        name: new URL(normalizedSource).hostname.replace(/^www\./, '')
+      })
+
+      setMissionControlRuntime(discovered)
+    } catch (discoverError) {
+      setEnterpriseDiscoveryError(discoverError.message)
+    } finally {
+      setIsDiscoveringEnterprise(false)
+    }
+  }
+
   function renderMissionControlView() {
     if (missionControlMode === 'lobby') {
       return (
         <EnterpriseControlShell
           runtimeEnvelope={missionControlRuntime}
           onOpenMissionControl={() => setMissionControlMode('master-monitoring')}
+          onDiscoverEnterprise={handleDiscoverEnterprise}
+          isDiscovering={isDiscoveringEnterprise}
+          discoveryError={enterpriseDiscoveryError}
         />
       )
     }
@@ -730,6 +758,10 @@ function App() {
 
   if (showStartup) {
     return <EosStartupScreen startupData={startupExperience} />
+  }
+
+  if (!isLoading && !error && missionControlMode === 'lobby') {
+    return renderMissionControlView()
   }
 
   return (

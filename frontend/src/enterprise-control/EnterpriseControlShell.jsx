@@ -10,7 +10,13 @@ function MetricCard({ label, value, detail }) {
   )
 }
 
-function EnterpriseControlShell({ runtimeEnvelope, onOpenMissionControl }) {
+function EnterpriseControlShell({
+  runtimeEnvelope,
+  onOpenMissionControl,
+  onDiscoverEnterprise,
+  isDiscovering,
+  discoveryError
+}) {
   const runtime = runtimeEnvelope?.missionControlRuntime
   const profile = runtimeEnvelope?.profile
   const opportunity = runtimeEnvelope?.opportunityAssessment
@@ -33,6 +39,45 @@ function EnterpriseControlShell({ runtimeEnvelope, onOpenMissionControl }) {
         <button className="ec-primary-button" onClick={onOpenMissionControl}>
           Open Mission Control
         </button>
+      </section>
+
+
+      <section className="ec-panel ec-discovery-panel">
+        <p className="ec-label">Discover Enterprise</p>
+        <h2>Start the Enterprise Intelligence Journey</h2>
+        <form
+          className="ec-discovery-form"
+          onSubmit={(event) => {
+            event.preventDefault()
+            const formData = new FormData(event.currentTarget)
+            const source = formData.get('enterpriseSource')
+            if (source) {
+              onDiscoverEnterprise?.(String(source))
+            }
+          }}
+        >
+          <input
+            name="enterpriseSource"
+            placeholder="Enter website or enterprise source, e.g. https://epercent.ai"
+            defaultValue={runtime?.enterprise?.source ?? 'https://epercent.ai'}
+          />
+          <button className="ec-primary-button" disabled={isDiscovering} type="submit">
+            {isDiscovering ? 'Discovering...' : 'Discover Enterprise'}
+          </button>
+        </form>
+
+        {isDiscovering && (
+          <div className="ec-discovery-progress">
+            <span>Discovering</span>
+            <span>Building DIP</span>
+            <span>Assessing Opportunities</span>
+            <span>AI Workforce</span>
+            <span>Digital Twin</span>
+            <span>Second Balance Sheet</span>
+          </div>
+        )}
+
+        {discoveryError && <p className="ec-error">{discoveryError}</p>}
       </section>
 
       <section className="ec-grid">
