@@ -1,0 +1,75 @@
+platform:
+  name: EOS Enterprise Operating System
+  sprint: 8
+  architectureStatus: Frozen
+  lastUpdated: 2026-07-08
+
+capabilities:
+
+  - id: EOS-CAP-001
+    name: Enterprise Discovery
+    owner: Knowledge Office
+    status: In Progress
+    completion: 50
+    demoReady: false
+    commercialReady: false
+    mission: ADM-0011
+
+  - id: EOS-CAP-002
+    name: Mission Control Runtime
+    owner: Engineering Office
+    status: Operational
+    completion: 100
+    demoReady: true
+    commercialReady: false
+
+  - id: EOS-CAP-003
+    name: Enterprise Control
+    owner: Product Office
+    status: In Progress
+    completion: 70
+    demoReady: true
+    commercialReady: false
+    mission: ADM-0013
+
+  - id: EOS-CAP-004
+    name: Opportunity Assessment
+    owner: Intelligence Office
+    status: Operational
+    completion: 80
+
+  - id: EOS-CAP-005
+    name: AI Workforce Recommendation
+    owner: AI Workforce Office
+    status: Operational
+    completion: 80
+
+  - id: EOS-CAP-006
+    name: Digital Twin Placeholder
+    owner: Digital Twin Office
+    status: Operational
+    completion: 60
+
+  - id: EOS-CAP-007
+    name: Second Balance Sheet Signal
+    owner: Valuation Office
+    status: Operational
+    completion: 60
+
+  - id: EOS-CAP-008
+    name: Website Discovery
+    owner: Discovery Office
+    status: Operational
+    completion: 60
+
+  - id: EOS-CAP-009
+    name: Engineering Office
+    owner: Governance Office
+    status: Operational
+    completion: 100
+
+  - id: EOS-CAP-010
+    name: Development Intelligence
+    owner: Architecture Office
+    status: Foundation
+    completion: 20
