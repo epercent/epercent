@@ -15,3 +15,7 @@ export function getEngineeringMission() {
     source: "Engineering Intelligence Hub"
   }
 }
+
+export function orchestrateEngineeringMission() {
+  return getEngineeringMission()
+}

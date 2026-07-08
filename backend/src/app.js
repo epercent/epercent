@@ -29,6 +29,7 @@ import executiveActionsRoutes from './routes/executive-actions.routes.js';
 import engineeringCoordinationRoutes from './routes/engineering-coordination.routes.js';
 import enterpriseControlSummaryRoutes from './routes/enterprise-control-summary.routes.js';
 import developmentIntelligenceRoutes from './routes/development-intelligence.routes.js';
+import autonomousMissionLoopRoutes from './routes/autonomous-mission-loop.routes.js';
 import engineeringLedgerRoutes from './routes/engineering-ledger.routes.js';
 import missionPackageRoutes from './routes/mission-package.routes.js';
 import missionGeneratorRoutes from './routes/mission-generator.routes.js';
@@ -125,6 +126,7 @@ export function createApp() {
   app.use('/api/engineering-coordination', engineeringCoordinationRoutes);
   app.use('/api/enterprise-control-summary', enterpriseControlSummaryRoutes);
   app.use('/api/development-intelligence', developmentIntelligenceRoutes);
+  app.use('/api/autonomous-mission-loop', autonomousMissionLoopRoutes);
   app.use('/api/engineering-ledger', engineeringLedgerRoutes);
   app.use('/api/mission-package', missionPackageRoutes);
   app.use('/api/mission-generator', missionGeneratorRoutes);
