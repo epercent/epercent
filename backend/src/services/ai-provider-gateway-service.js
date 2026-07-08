@@ -1,14 +1,12 @@
-import { aiProviders } from '../data/ai-providers.js'
-
-export function getProviderGateway() {
+export function executeMission(provider, missionPackage) {
   return {
-    gateway: {
-      id: "EOS-AI-PROVIDER-GATEWAY",
-      version: "0.1.0",
-      status: "Operational",
-      routingStrategy: "Capability First"
-    },
-
-    providers: aiProviders
+    executionId: `EXEC-${Date.now()}`,
+    provider,
+    missionId: missionPackage.id,
+    status: "Ready",
+    executionMode: "Human Approved",
+    autonomousReady: false,
+    submittedAt: new Date().toISOString(),
+    nextStep: "Provider Adapter Execution"
   }
 }
