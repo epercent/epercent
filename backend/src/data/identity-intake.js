@@ -28,15 +28,16 @@ function makeLiveStatus({
 
 export const startupExperience = {
   id: 'EOS-STARTUP-EXPERIENCE',
-  name: 'Welcome to EOS',
+  name: 'Enterprise Operating System',
+  welcomeMessage: 'Welcome to EOS',
   owner: 'Codex',
   status: 'Operational Foundation',
   version: '0.23.0',
   defaultWorkspace: 'enterprise-value',
   defaultRoute: 'master-monitoring',
-  theme: 'Preparing Enterprise Control',
+  theme: 'Preparing your Enterprise Intelligence environment',
   startupMode: 'Mission Control Boot',
-  displayDurationMs: 7000,
+  displayDurationMs: 18000,
   bootPhases: [
     'Initialize EOS Core API',
     'Load Enterprise Object Registry',

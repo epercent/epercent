@@ -394,7 +394,7 @@ function App() {
   useEffect(() => {
     const startupTimer = window.setTimeout(() => {
       setShowStartup(false)
-    }, startupExperience?.startupExperience?.displayDurationMs ?? 7000)
+    }, startupExperience?.startupExperience?.displayDurationMs ?? 18000)
 
     return () => {
       window.clearTimeout(startupTimer)

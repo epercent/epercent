@@ -1,39 +1,91 @@
+import { useEffect, useMemo, useState } from 'react'
+
+const DEFAULT_PHASES = [
+  'Authenticating session',
+  'Initializing EOS Core API',
+  'Loading Enterprise Object Registry',
+  'Opening Knowledge Vault',
+  'Bringing AI Workforce online',
+  'Preparing Digital Twin Engine',
+  'Initializing Second Balance Sheet',
+  'Launching Enterprise Control'
+]
+
+function phaseState(index, activeIndex) {
+  if (index < activeIndex) return 'complete'
+  if (index === activeIndex) return 'active'
+  return 'pending'
+}
+
 function EosStartupScreen({ startupData }) {
   const startup = startupData?.startupExperience
-  const phases = startup?.bootPhases ?? [
-    'Initialize EOS Core API',
-    'Load Enterprise Object Registry',
-    'Load Digital Twin Asset Layer',
-    'Load AI Workforce',
-    'Load Knowledge Repository',
-    'Launch Enterprise Control'
-  ]
+
+  const phases = useMemo(
+    () => startup?.bootPhases?.length ? startup.bootPhases : DEFAULT_PHASES,
+    [startup?.bootPhases]
+  )
+
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveIndex((current) => {
+        if (current >= phases.length - 1) {
+          window.clearInterval(interval)
+          return current
+        }
+
+        return current + 1
+      })
+    }, 2000)
+
+    return () => window.clearInterval(interval)
+  }, [phases.length])
+
+  const isLaunching = activeIndex >= phases.length - 1
 
   return (
-    <section className="eos-startup-screen" aria-live="polite">
-      <div className="startup-orb" aria-hidden="true">
+    <section className="eos-startup-screen eos-startup-v2" aria-live="polite">
+      <div className="startup-orb startup-orb-v2" aria-hidden="true">
         <span />
       </div>
 
       <div className="startup-copy">
-        <p>Welcome to EOS</p>
+        <p>{startup?.welcomeMessage ?? 'Welcome to EOS'}</p>
         <h1>{startup?.name ?? 'Enterprise Operating System'}</h1>
-        <strong>{startup?.theme ?? 'Preparing your Enterprise Control environment'}</strong>
+        <strong>
+          {isLaunching
+            ? 'Launching Enterprise Control...'
+            : startup?.theme ?? 'Preparing your Enterprise Intelligence environment'}
+        </strong>
       </div>
 
-      <ol>
-        {phases.map((phase, index) => (
-          <li
-            className={`startup-step startup-step-${index + 1}`}
-            key={phase}
-            style={{ animationDelay: `${index * 0.65}s` }}
-          >
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <strong>{phase}</strong>
-            <em>{index === phases.length - 1 ? 'Launching' : 'Verifying'}</em>
-          </li>
-        ))}
+      <ol className="startup-sequence-list">
+        {phases.map((phase, index) => {
+          const state = phaseState(index, activeIndex)
+
+          return (
+            <li className={`startup-sequence-step ${state}`} key={phase}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{phase}</strong>
+              <em>
+                {state === 'complete'
+                  ? 'Operational'
+                  : state === 'active'
+                    ? 'Loading'
+                    : 'Waiting'}
+              </em>
+            </li>
+          )
+        })}
       </ol>
+
+      <div className="startup-progress-track">
+        <div
+          className="startup-progress-fill"
+          style={{ width: `${((activeIndex + 1) / phases.length) * 100}%` }}
+        />
+      </div>
     </section>
   )
 }
