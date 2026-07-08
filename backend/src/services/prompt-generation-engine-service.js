@@ -28,3 +28,7 @@ Do not modify unrelated files.
     nextStep: "Send to Provider Adapter"
   }
 }
+
+export function generatePrompt(missionPackage) {
+  return generateProviderPrompt(missionPackage)
+}
