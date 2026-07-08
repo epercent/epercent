@@ -15,7 +15,8 @@ function EnterpriseControlShell({
   onOpenMissionControl,
   onDiscoverEnterprise,
   isDiscovering,
-  discoveryError
+  discoveryError,
+  autonomousMissionLoop
 }) {
   const runtime = runtimeEnvelope?.missionControlRuntime
   const profile = runtimeEnvelope?.profile
@@ -169,7 +170,27 @@ function EnterpriseControlShell({
 
           <div>
             <strong>Next Mission</strong>
-            <p>Enterprise Journey Runtime</p>
+            <p>{autonomousMissionLoop?.nextStep ?? 'Enterprise Journey Runtime'}</p>
+          </div>
+
+          <div>
+            <strong>Autonomous Loop</strong>
+            <p>{autonomousMissionLoop?.status ?? 'Pending'}</p>
+          </div>
+
+          <div>
+            <strong>Provider</strong>
+            <p>{autonomousMissionLoop?.dispatch?.provider ?? 'Pending'}</p>
+          </div>
+
+          <div>
+            <strong>Validation</strong>
+            <p>{autonomousMissionLoop?.validation?.status ?? 'Pending'}</p>
+          </div>
+
+          <div>
+            <strong>Governance</strong>
+            <p>{autonomousMissionLoop?.approval?.status ?? 'Pending'}</p>
           </div>
         </div>
       </section>

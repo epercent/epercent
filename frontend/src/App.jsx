@@ -30,6 +30,7 @@ import WorkspaceHome from './components/WorkspaceHome.jsx'
 import WorkspaceRail from './components/WorkspaceRail.jsx'
 import {
   fetchAiDevelopmentOffice,
+  fetchAutonomousMissionLoop,
   fetchCoreStatus,
   fetchDecisionIntelligence,
   fetchAgents,
@@ -185,6 +186,7 @@ function App() {
   const [error, setError] = useState(null)
   const [isDiscoveringEnterprise, setIsDiscoveringEnterprise] = useState(false)
   const [enterpriseDiscoveryError, setEnterpriseDiscoveryError] = useState(null)
+  const [autonomousMissionLoop, setAutonomousMissionLoop] = useState(null)
   const [requestVersion, setRequestVersion] = useState(0)
   const [missionControlMode, setMissionControlMode] = useState(
     'lobby'
@@ -233,6 +235,7 @@ function App() {
 
     Promise.allSettled([
       fetchAiDevelopmentOffice(),
+      fetchAutonomousMissionLoop(),
       fetchCoreStatus(),
       fetchAgents(),
       fetchEnterpriseObjects(),
@@ -270,6 +273,7 @@ function App() {
       .then((results) => {
         const [
           aiDevelopmentOfficeResult,
+          autonomousMissionLoopResult,
         statusResult,
           agentsResult,
           objectsResult,
@@ -307,6 +311,7 @@ function App() {
         }
 
         setAiDevelopmentOffice(aiDevelopmentOfficeResult)
+        setAutonomousMissionLoop(autonomousMissionLoopResult)
         setStatus(statusResult)
         setAgentRegistry(agentsResult)
         setObjectRegistry(objectsResult)
@@ -351,6 +356,7 @@ function App() {
         setError(requestError.message)
         setStatus(null)
         setAiDevelopmentOffice(null)
+        setAutonomousMissionLoop(null)
         setAgentRegistry(null)
         setObjectRegistry(null)
         setExecutiveActions(null)
@@ -562,6 +568,7 @@ function App() {
           onDiscoverEnterprise={handleDiscoverEnterprise}
           isDiscovering={isDiscoveringEnterprise}
           discoveryError={enterpriseDiscoveryError}
+          autonomousMissionLoop={autonomousMissionLoop}
         />
       )
     }

@@ -221,6 +221,11 @@ export function fetchEnterpriseControlSummary() {
   return requestJson('/api/enterprise-control-summary')
 }
 
+
+export function fetchAutonomousMissionLoop() {
+  return requestJson('/api/autonomous-mission-loop')
+}
+
 export function fetchSprintReport() {
   return requestJson('/api/sprint-report')
 }
