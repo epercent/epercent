@@ -37,14 +37,14 @@ export const startupExperience = {
   defaultRoute: 'master-monitoring',
   theme: 'Preparing your Enterprise Intelligence environment',
   startupMode: 'Mission Control Boot',
-  displayDurationMs: 18000,
+  displayDurationMs: 22000,
   bootPhases: [
     'Initialize EOS Core API',
     'Load Enterprise Object Registry',
     'Load Digital Twin Asset Layer',
     'Load AI Workforce',
     'Load Knowledge Repository',
-    'Open Enterprise Value'
+    'Launching Enterprise Control'
   ],
   headlineMetrics: ['Enterprise Value', 'Digital Twin Assets', 'Platform Health', 'AI Workforce'],
   liveStatus: makeLiveStatus({

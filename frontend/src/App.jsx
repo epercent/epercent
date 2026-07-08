@@ -392,9 +392,13 @@ function App() {
   }, [requestVersion])
 
   useEffect(() => {
+    const configuredDuration = startupExperience?.startupExperience?.displayDurationMs ?? 22000
+    const minimumStartupDuration = 22000
+    const startupDuration = Math.max(configuredDuration, minimumStartupDuration)
+
     const startupTimer = window.setTimeout(() => {
       setShowStartup(false)
-    }, startupExperience?.startupExperience?.displayDurationMs ?? 18000)
+    }, startupDuration)
 
     return () => {
       window.clearTimeout(startupTimer)

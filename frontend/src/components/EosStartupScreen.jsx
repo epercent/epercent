@@ -20,14 +20,23 @@ function phaseState(index, activeIndex) {
 function EosStartupScreen({ startupData }) {
   const startup = startupData?.startupExperience
 
-  const phases = useMemo(
-    () => startup?.bootPhases?.length ? startup.bootPhases : DEFAULT_PHASES,
-    [startup?.bootPhases]
-  )
+  const configuredPhases = startup?.bootPhases?.length
+    ? startup.bootPhases
+    : DEFAULT_PHASES
+
+  const phases = useMemo(() => {
+    const basePhases = configuredPhases.filter(
+      (phase) => !/open enterprise value/i.test(phase)
+    )
+
+    return [...basePhases, 'Launching Enterprise Control']
+  }, [configuredPhases])
 
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
+    setActiveIndex(0)
+
     const interval = window.setInterval(() => {
       setActiveIndex((current) => {
         if (current >= phases.length - 1) {
@@ -37,11 +46,12 @@ function EosStartupScreen({ startupData }) {
 
         return current + 1
       })
-    }, 2000)
+    }, 2600)
 
     return () => window.clearInterval(interval)
   }, [phases.length])
 
+  const visiblePhases = phases.slice(0, activeIndex + 1)
   const isLaunching = activeIndex >= phases.length - 1
 
   return (
@@ -61,7 +71,7 @@ function EosStartupScreen({ startupData }) {
       </div>
 
       <ol className="startup-sequence-list">
-        {phases.map((phase, index) => {
+        {visiblePhases.map((phase, index) => {
           const state = phaseState(index, activeIndex)
 
           return (
