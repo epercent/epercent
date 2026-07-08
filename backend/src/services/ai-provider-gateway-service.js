@@ -10,3 +10,14 @@ export function executeMission(provider, missionPackage) {
     nextStep: "Provider Adapter Execution"
   }
 }
+
+export function getProviderGateway() {
+  return {
+    id: 'EOS-AI-PROVIDER-GATEWAY',
+    status: 'Operational',
+    defaultProvider: 'Codex',
+    providers: ['Codex', 'OpenAI', 'Claude', 'Gemini', 'Local Agent'],
+    mode: 'Human Approved',
+    autonomousReady: false
+  }
+}
