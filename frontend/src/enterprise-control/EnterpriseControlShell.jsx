@@ -138,6 +138,43 @@ function EnterpriseControlShell({
       </section>
 
       <section className="ec-panel">
+        <p className="ec-label">Development Intelligence</p>
+        <h2>EOS Engineering Status</h2>
+
+        <div className="ec-development-grid">
+          <div>
+            <strong>Current Sprint</strong>
+            <p>Sprint 9</p>
+          </div>
+
+          <div>
+            <strong>Current Mission</strong>
+            <p>ADM-0021</p>
+          </div>
+
+          <div>
+            <strong>Platform Completion</strong>
+            <p>38%</p>
+          </div>
+
+          <div>
+            <strong>Demo Readiness</strong>
+            <p>42%</p>
+          </div>
+
+          <div>
+            <strong>Autonomous Development</strong>
+            <p>18%</p>
+          </div>
+
+          <div>
+            <strong>Next Mission</strong>
+            <p>Enterprise Journey Runtime</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="ec-panel">
         <p className="ec-label">Enterprise Journey</p>
         <div className="ec-journey">
           {[
