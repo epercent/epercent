@@ -392,8 +392,8 @@ function App() {
   }, [requestVersion])
 
   useEffect(() => {
-    const configuredDuration = startupExperience?.startupExperience?.displayDurationMs ?? 22000
-    const minimumStartupDuration = 22000
+    const configuredDuration = startupExperience?.startupExperience?.displayDurationMs ?? 24500
+    const minimumStartupDuration = 24500
     const startupDuration = Math.max(configuredDuration, minimumStartupDuration)
 
     const startupTimer = window.setTimeout(() => {

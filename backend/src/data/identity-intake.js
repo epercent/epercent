@@ -37,7 +37,7 @@ export const startupExperience = {
   defaultRoute: 'master-monitoring',
   theme: 'Preparing your Enterprise Intelligence environment',
   startupMode: 'Mission Control Boot',
-  displayDurationMs: 22000,
+  displayDurationMs: 24500,
   bootPhases: [
     'Initialize EOS Core API',
     'Load Enterprise Object Registry',
