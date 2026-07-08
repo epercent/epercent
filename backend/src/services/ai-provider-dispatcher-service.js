@@ -1,10 +1,15 @@
+import { executeMission } from './ai-provider-gateway-service.js'
+
 export function dispatchMission(missionPackage) {
+  const provider = missionPackage?.execution?.provider ?? 'Codex'
+  const execution = executeMission(provider, missionPackage)
+
   return {
     dispatchId: `DISPATCH-${Date.now()}`,
     dispatchedAt: new Date().toISOString(),
 
-    provider: "Codex",
-    providerStatus: "Available",
+    provider: execution.provider,
+    providerStatus: 'Available',
 
     missionId: missionPackage.id,
     objective: missionPackage.mission.objective,
@@ -13,13 +18,15 @@ export function dispatchMission(missionPackage) {
     assignedOffice: missionPackage.mission.assignedOffice,
 
     execution: {
-      state: "Queued",
+      executionId: execution.executionId,
+      state: 'Queued',
       autonomousMode: missionPackage.execution.autonomousReady,
-      approval: missionPackage.execution.mode
+      approval: missionPackage.execution.mode,
+      gatewayStatus: execution.status
     },
 
-    nextStep: "Submit mission to AI provider",
+    nextStep: execution.nextStep,
 
-    status: "Ready"
+    status: 'Ready'
   }
 }
