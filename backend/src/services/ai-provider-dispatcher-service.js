@@ -22,7 +22,8 @@ export function dispatchMission(missionPackage) {
       state: 'Queued',
       autonomousMode: missionPackage.execution.autonomousReady,
       approval: missionPackage.execution.mode,
-      gatewayStatus: execution.status
+      gatewayStatus: execution.status,
+      runtime: execution.runtime
     },
 
     nextStep: execution.nextStep,
