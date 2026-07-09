@@ -1,13 +1,25 @@
+import { executeProvider as executeProviderRuntime } from './provider-execution-runtime-service.js'
+
 export function executeMission(provider, missionPackage) {
+  const runtime = executeProviderRuntime({
+    adapterId: `GATEWAY-${Date.now()}`,
+    provider,
+    missionId: missionPackage.id,
+    executionMode: missionPackage.execution?.mode ?? 'Human Approved',
+    autonomousReady: missionPackage.execution?.autonomousReady ?? false,
+    prompt: missionPackage.prompt ?? { promptId: `PROMPT-${Date.now()}` }
+  })
+
   return {
     executionId: `EXEC-${Date.now()}`,
     provider,
     missionId: missionPackage.id,
-    status: "Ready",
-    executionMode: "Human Approved",
-    autonomousReady: false,
+    status: runtime.status,
+    executionMode: runtime.executionMode,
+    autonomousReady: runtime.autonomousReady,
     submittedAt: new Date().toISOString(),
-    nextStep: "Provider Adapter Execution"
+    runtime,
+    nextStep: runtime.nextStep
   }
 }
 
