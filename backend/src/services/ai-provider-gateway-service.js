@@ -1,3 +1,4 @@
+import { executeOpenAiPrompt } from './openai-provider-client-service.js'
 import { executeProvider as executeProviderRuntime } from './provider-execution-runtime-service.js'
 
 export function executeMission(provider, missionPackage) {
@@ -31,5 +32,26 @@ export function getProviderGateway() {
     providers: ['Codex', 'OpenAI', 'Claude', 'Gemini', 'Local Agent'],
     mode: 'Human Approved',
     autonomousReady: false
+  }
+}
+
+
+export async function executeLiveMission(provider, missionPackage) {
+  const promptPayload = missionPackage?.prompt ?? {
+    missionId: missionPackage?.id ?? null,
+    prompt: missionPackage?.mission?.objective ?? ''
+  }
+
+  if (provider === 'OpenAI' || provider === 'Codex') {
+    return executeOpenAiPrompt(promptPayload)
+  }
+
+  return {
+    provider,
+    status: 'Provider Not Implemented',
+    success: false,
+    missionId: missionPackage?.id ?? null,
+    error: `Provider ${provider} is not implemented yet`,
+    nextStep: 'Add provider client'
   }
 }
