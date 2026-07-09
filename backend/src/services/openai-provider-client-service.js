@@ -50,7 +50,11 @@ export async function executeOpenAiPrompt(promptPayload) {
       responseId: data.id ?? null,
       outputText:
         data.output_text ??
-        data.output?.[0]?.content?.[0]?.text ??
+        data.output
+          ?.find((item) => item.type === 'message')
+          ?.content
+          ?.find((content) => content.type === 'output_text')
+          ?.text ??
         '',
       rawStatus: data.status ?? null,
       nextStep: 'Create provider response'
