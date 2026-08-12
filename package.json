@@ -20,7 +20,9 @@
     "eos:git:status": "node scripts/eos-git-status.js",
     "eos:release": "node scripts/eos-release.js",
     "eos:tag": "node scripts/eos-tag.js",
-    "bootstrap": "node scripts/bootstrap.js"
+    "bootstrap": "node scripts/bootstrap.js",
+    "eos:environment:validate": "node scripts/runtime/eos-environment-validate.js",
+    "eos:environment:test": "node tests/runtime-environment-validation.test.js"
   },
   "engines": {
     "node": ">=20"

@@ -70,6 +70,7 @@ import {
   platformRouter
 } from './routes/platform-operations.routes.js';
 import statusRoutes from './routes/status.routes.js';
+import runtimeEnvironmentValidationRoutes from './routes/runtime-environment-validation.routes.js';
 import storageRoutes from './routes/storage.routes.js';
 import {
   digitalTwinAssetsRouter,
@@ -164,6 +165,7 @@ export function createApp() {
   app.use('/api/strategic-alignment', strategicAlignmentRouter);
   app.use('/api/startup', startupRouter);
   app.use('/api/status', statusRoutes);
+  app.use('/api/runtime/environment-validation', runtimeEnvironmentValidationRoutes);
   app.use('/api/storage', storageRoutes);
   app.use('/api/objects', objectsRoutes);
   app.use('/api/workflows', workflowsRoutes);

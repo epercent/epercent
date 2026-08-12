@@ -23,3 +23,7 @@ temp/
 .cache/
 .vite/
 .DS_Store
+
+# EOS generated runtime state
+/runtime/eos-runtime-status.json
+/runtime/validation/latest-environment-validation-report.json
