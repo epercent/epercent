@@ -37,7 +37,7 @@ const backend = spawnManagedProcess(
   ['run', 'start'],
   `${runtimeDir}/backend.log`,
   {
-    HOST: '127.0.0.1',
+    HOST: '0.0.0.0',
     PORT: '3000'
   }
 );
@@ -45,7 +45,7 @@ const backend = spawnManagedProcess(
 const frontend = spawnManagedProcess(
   'Mission Control',
   frontendDir,
-  ['run', 'dev', '--', '--host', '127.0.0.1', '--port', '5173', '--strictPort'],
+  ['run', 'dev', '--', '--host', '0.0.0.0', '--port', '5173', '--strictPort'],
   `${runtimeDir}/frontend.log`
 );
 

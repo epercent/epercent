@@ -1,0 +1,54 @@
+{
+  "runtime": "EOS Runtime Manager v2",
+  "objective": "10.x.2",
+  "checked_at": "2026-08-12T15:47:35Z",
+  "eos_root": "/Users/ericolo/EOS/EOS/EOS",
+  "healthy": true,
+  "platform_status": "Operational",
+  "version": "0.25.0",
+  "checks": {
+    "backend": true,
+    "frontend": true,
+    "api": true,
+    "missionControl": true,
+    "storage": true
+  },
+  "processes": {
+    "backendProcess": true,
+    "frontendProcess": true
+  },
+  "storage": {
+    "status": "Operational",
+    "collections": 53,
+    "records": 704,
+    "snapshots": 0,
+    "warnings": 0
+  },
+  "backup": {
+    "timestamp": "2026-07-04_013150",
+    "localTime": "7/4/2026, 1:31:50 AM",
+    "status": "Completed",
+    "count": 51,
+    "archive": "EOS_v0.25.0_2026-07-04_013150.zip",
+    "archiveSize": 15567543,
+    "dataIncluded": true,
+    "restoreValidated": false,
+    "restoreValidationStatus": "Not validated"
+  },
+  "tailscale": {
+    "ip": "100.127.136.55",
+    "available": true
+  },
+  "access": {
+    "backend_local": "http://127.0.0.1:3000",
+    "mission_control_local": "http://127.0.0.1:5173",
+    "backend_remote": "http://100.127.136.55:3000",
+    "mission_control_remote": "http://100.127.136.55:5173"
+  },
+  "host": {
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "git": "122 uncommitted changes",
+    "docker": "running"
+  }
+}
