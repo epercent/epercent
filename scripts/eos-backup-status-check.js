@@ -11,7 +11,10 @@ const requiredFields = [
   'latestBackupChecksum',
   'latestBackupStatus',
   'latestBackupDataIncluded',
+  'latestIntegrityValidationStatus',
   'latestRestoreValidationStatus',
+  'latestRestoreValidationArchive',
+  'latestRestoreValidationTimestamp',
   'backupCount',
   'lastUpdated'
 ];
@@ -38,8 +41,22 @@ assert(/^[a-f0-9]{64}$/u.test(backupStatus.latestBackupChecksum), 'latestBackupC
 assert(['Completed', 'Failed'].includes(backupStatus.latestBackupStatus), 'latestBackupStatus must be Completed or Failed');
 assert(typeof backupStatus.latestBackupDataIncluded === 'boolean', 'latestBackupDataIncluded must be a boolean');
 assert(
+  ['Validated', 'Failed'].includes(backupStatus.latestIntegrityValidationStatus),
+  'latestIntegrityValidationStatus must be Validated or Failed'
+);
+assert(
   ['Not validated', 'Validated', 'Failed'].includes(backupStatus.latestRestoreValidationStatus),
   'latestRestoreValidationStatus must be Not validated, Validated, or Failed'
+);
+assert(
+  backupStatus.latestRestoreValidationArchive === null ||
+    typeof backupStatus.latestRestoreValidationArchive === 'string',
+  'latestRestoreValidationArchive must be null or a string'
+);
+assert(
+  backupStatus.latestRestoreValidationTimestamp === null ||
+    typeof backupStatus.latestRestoreValidationTimestamp === 'string',
+  'latestRestoreValidationTimestamp must be null or a string'
 );
 assert(Number.isInteger(backupStatus.backupCount), 'backupCount must be an integer');
 assert(typeof backupStatus.lastUpdated === 'string', 'lastUpdated must be a string');

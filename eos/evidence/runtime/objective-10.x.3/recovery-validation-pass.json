@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-08-12T18:11:58.783Z",
+  "archiveName": "EOS_v0.25.0_2026-07-04_013150.zip",
+  "archivePath": "backups/EOS_v0.25.0_2026-07-04_013150.zip",
+  "requestedMode": "isolated-restore-validation",
+  "checksum": "3b7a6e853be8cfcdb795fae2ffd2b886a4a2a7b00e5917cea45e751e82931e84",
+  "checksumValid": true,
+  "status": "Restore Validated",
+  "recoveryWorkspace": "/var/folders/cz/44txcqrd375gbb34j1vzx5mm0000gn/T/eos-recovery-validation-ItUHj4",
+  "restoreValidation": {
+    "status": "PASS",
+    "totalChecks": 11,
+    "passedChecks": 11,
+    "failedChecks": 0,
+    "checks": [
+      {
+        "type": "file",
+        "path": "package.json",
+        "status": "PASS"
+      },
+      {
+        "type": "file",
+        "path": "README.md",
+        "status": "PASS"
+      },
+      {
+        "type": "file",
+        "path": "backend/package.json",
+        "status": "PASS"
+      },
+      {
+        "type": "file",
+        "path": "backend/src/app.js",
+        "status": "PASS"
+      },
+      {
+        "type": "file",
+        "path": "backend/src/server.js",
+        "status": "PASS"
+      },
+      {
+        "type": "directory",
+        "path": "backend",
+        "status": "PASS"
+      },
+      {
+        "type": "directory",
+        "path": "frontend",
+        "status": "PASS"
+      },
+      {
+        "type": "directory",
+        "path": "data",
+        "status": "PASS"
+      },
+      {
+        "type": "directory",
+        "path": "scripts",
+        "status": "PASS"
+      },
+      {
+        "type": "package",
+        "path": "package.json",
+        "status": "PASS",
+        "details": {
+          "name": "eos",
+          "version": "0.25.0"
+        }
+      },
+      {
+        "type": "data",
+        "path": "data",
+        "status": "PASS"
+      }
+    ],
+    "package": {
+      "name": "eos",
+      "version": "0.25.0"
+    }
+  }
+}

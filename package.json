@@ -23,7 +23,8 @@
     "bootstrap": "node scripts/bootstrap.js",
     "eos:environment:validate": "node scripts/runtime/eos-environment-validate.js",
     "eos:environment:test": "node tests/runtime-environment-validation.test.js",
-    "eos:runtime:test": "node tests/runtime-managed-startup.test.js"
+    "eos:runtime:test": "node tests/runtime-managed-startup.test.js",
+    "eos:restore:test": "node tests/restore-validation.test.js"
   },
   "engines": {
     "node": ">=20"
