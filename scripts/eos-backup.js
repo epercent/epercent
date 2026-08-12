@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { spawn } from 'node:child_process';
 
 import { rootDir } from './eos-common.js';
+import { runGit } from './eos-git-utils.js';
 
 const backupsDir = join(rootDir, 'backups');
 const backupLogFile = join(backupsDir, 'backup-log.json');
@@ -19,6 +20,7 @@ const excludes = [
   '.git/*',
   '.eos/*',
   'backups/*',
+  'runtime/*',
   'coverage/*',
   '*.log',
   '.DS_Store'
@@ -40,7 +42,14 @@ async function readJson(file, fallback) {
 
 function runZip(archivePath) {
   return new Promise((resolve, reject) => {
-    const args = ['-r', '-q', archivePath, '.', ...excludes.flatMap((pattern) => ['-x', pattern])];
+    const args = [
+      '-r',
+      '-q',
+      archivePath,
+      '.',
+      ...excludes.flatMap((pattern) => ['-x', pattern])
+    ];
+
     const child = spawn('zip', args, {
       cwd: rootDir,
       stdio: 'inherit'
@@ -68,14 +77,43 @@ function checksumFile(file) {
   });
 }
 
+async function getGitProvenance() {
+  const branchResult = await runGit(['branch', '--show-current']);
+  const commitResult = await runGit(['rev-parse', 'HEAD']);
+  const statusResult = await runGit(['status', '--porcelain']);
+
+  return {
+    branch:
+      branchResult.code === 0 && branchResult.stdout
+        ? branchResult.stdout
+        : 'unknown',
+    commit:
+      commitResult.code === 0 && commitResult.stdout
+        ? commitResult.stdout
+        : null,
+    clean:
+      statusResult.code === 0 &&
+      statusResult.stdout.trim().length === 0,
+    changedEntries:
+      statusResult.code === 0 && statusResult.stdout
+        ? statusResult.stdout.split('\n').filter(Boolean).length
+        : null
+  };
+}
+
 await mkdir(backupsDir, { recursive: true });
 
-const packageJson = await readJson(join(rootDir, 'package.json'), { version: '0.0.0' });
+const packageJson = await readJson(
+  join(rootDir, 'package.json'),
+  { version: '0.0.0' }
+);
+
 const backupDate = new Date();
 const timestamp = formatTimestamp(backupDate);
 const version = packageJson.version;
 const archiveName = `EOS_v${version}_${timestamp}.zip`;
 const archivePath = join(backupsDir, archiveName);
+const git = await getGitProvenance();
 
 const metadata = {
   timestamp,
@@ -85,6 +123,8 @@ const metadata = {
   archiveSize: 0,
   checksum: null,
   dataIncluded: false,
+  git,
+  recoveryEligibility: git.clean ? 'Pending Validation' : 'Ineligible - Dirty Working Tree',
   status: 'Started'
 };
 
@@ -93,6 +133,7 @@ try {
 
   const archiveStats = await stat(archivePath);
   await stat(dataDir);
+
   metadata.archiveSize = archiveStats.size;
   metadata.checksum = await checksumFile(archivePath);
   metadata.dataIncluded = true;
@@ -104,9 +145,14 @@ try {
 
 const backupLog = await readJson(backupLogFile, []);
 backupLog.push(metadata);
-await writeFile(backupLogFile, `${JSON.stringify(backupLog, null, 2)}\n`);
+
+await writeFile(
+  backupLogFile,
+  `${JSON.stringify(backupLog, null, 2)}\n`
+);
 
 const previousBackupStatus = await readJson(backupStatusFile, {});
+
 await writeFile(
   backupStatusFile,
   `${JSON.stringify(
@@ -119,8 +165,20 @@ await writeFile(
       latestBackupChecksum: metadata.checksum,
       latestBackupStatus: metadata.status,
       latestBackupDataIncluded: metadata.dataIncluded,
-      latestRestoreValidationStatus: previousBackupStatus.latestRestoreValidationStatus ?? 'Not validated',
-      backupCount: backupLog.filter((backup) => backup.status === 'Completed').length,
+      latestBackupGitBranch: metadata.git.branch,
+      latestBackupGitCommit: metadata.git.commit,
+      latestBackupGitClean: metadata.git.clean,
+      latestBackupGitChangedEntries: metadata.git.changedEntries,
+      latestBackupRecoveryEligibility: metadata.recoveryEligibility,
+      latestIntegrityValidationStatus: 'Not validated',
+      latestRestoreValidationStatus: 'Not validated',
+      latestRestoreValidationArchive: null,
+      latestRestoreValidationTimestamp: null,
+      backupCount: backupLog.filter(
+        (backup) => backup.status === 'Completed'
+      ).length,
+      previousRestoreValidationStatus:
+        previousBackupStatus.latestRestoreValidationStatus ?? null,
       lastUpdated: new Date().toISOString()
     },
     null,
@@ -138,3 +196,7 @@ console.log(`Archive: backups/${archiveName}`);
 console.log(`Size: ${metadata.archiveSize} bytes`);
 console.log(`SHA-256: ${metadata.checksum}`);
 console.log(`Data Included: ${metadata.dataIncluded ? 'Yes' : 'No'}`);
+console.log(`Git Branch: ${metadata.git.branch}`);
+console.log(`Git Commit: ${metadata.git.commit ?? 'Unavailable'}`);
+console.log(`Git Clean: ${metadata.git.clean ? 'Yes' : 'No'}`);
+console.log(`Recovery Eligibility: ${metadata.recoveryEligibility}`);

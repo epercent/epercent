@@ -1,0 +1,7 @@
+{
+  "registry": "EOS Known-Good Recovery Point Registry",
+  "version": "1",
+  "objective": "10.x.4",
+  "updatedAt": null,
+  "recoveryPoints": []
+}

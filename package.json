@@ -24,7 +24,18 @@
     "eos:environment:validate": "node scripts/runtime/eos-environment-validate.js",
     "eos:environment:test": "node tests/runtime-environment-validation.test.js",
     "eos:runtime:test": "node tests/runtime-managed-startup.test.js",
-    "eos:restore:test": "node tests/restore-validation.test.js"
+    "eos:restore:test": "node tests/restore-validation.test.js",
+    "eos:recovery:register": "node scripts/runtime/eos-recovery-point-register.js",
+    "eos:recovery:test": "node tests/recovery-point-registry.test.js",
+    "eos:recovery:eligibility:test": "node tests/recovery-eligibility.test.js",
+    "eos:recovery:manager": "node scripts/runtime/eos-recovery-manager.js",
+    "eos:recovery:manager:test": "node tests/recovery-manager.test.js",
+    "eos:recovery:execute": "node scripts/runtime/eos-recovery-executor.js",
+    "eos:recovery:executor:test": "node tests/recovery-executor.test.js",
+    "eos:recovery:authorize": "node scripts/runtime/eos-recovery-authorization.js",
+    "eos:recovery:authorization:test": "node tests/recovery-authorization.test.js",
+    "eos:recovery:promote": "node scripts/runtime/eos-recovery-promoter.js",
+    "eos:recovery:promoter:test": "node tests/recovery-promoter.test.js"
   },
   "engines": {
     "node": ">=20"
