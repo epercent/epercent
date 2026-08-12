@@ -7,7 +7,10 @@
   "latestBackupChecksum": "3b7a6e853be8cfcdb795fae2ffd2b886a4a2a7b00e5917cea45e751e82931e84",
   "latestBackupStatus": "Completed",
   "latestBackupDataIncluded": true,
-  "latestRestoreValidationStatus": "Not validated",
+  "latestRestoreValidationStatus": "Validated",
   "backupCount": 51,
-  "lastUpdated": "2026-07-04T00:31:51.346Z"
+  "lastUpdated": "2026-08-12T18:17:13.937Z",
+  "latestIntegrityValidationStatus": "Validated",
+  "latestRestoreValidationArchive": "EOS_v0.25.0_2026-07-04_013150.zip",
+  "latestRestoreValidationTimestamp": "2026-08-12T18:17:13.835Z"
 }
