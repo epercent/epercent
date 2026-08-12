@@ -45,8 +45,6 @@ function EosStartupScreen({ startupData }) {
   useEffect(() => {
     if (stage !== 'boot') return undefined
 
-    setActiveIndex(0)
-
     const interval = window.setInterval(() => {
       setActiveIndex((current) => {
         if (current >= phases.length - 1) {
