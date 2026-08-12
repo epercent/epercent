@@ -1,28 +1,29 @@
 {
   "collectionName": "startup-experience",
   "schemaVersion": "1.0.0",
-  "lastUpdated": "2026-07-03T21:29:40.346Z",
+  "lastUpdated": "2026-07-08T17:18:48.757Z",
   "recordCount": 1,
-  "source": "seed:startup-experience",
+  "source": "seed:startup-experience; refreshed:seed:startup-experience",
   "records": [
     {
       "id": "EOS-STARTUP-EXPERIENCE",
-      "name": "EOS Startup Experience",
+      "name": "Enterprise Operating System",
+      "welcomeMessage": "Welcome to EOS",
       "owner": "Codex",
       "status": "Operational Foundation",
       "version": "0.23.0",
       "defaultWorkspace": "enterprise-value",
       "defaultRoute": "master-monitoring",
-      "theme": "Master Monitoring Executive Dark",
+      "theme": "Preparing your Enterprise Intelligence environment",
       "startupMode": "Mission Control Boot",
-      "displayDurationMs": 1800,
+      "displayDurationMs": 24500,
       "bootPhases": [
         "Initialize EOS Core API",
         "Load Enterprise Object Registry",
         "Load Digital Twin Asset Layer",
         "Load AI Workforce",
         "Load Knowledge Repository",
-        "Open Enterprise Value"
+        "Launching Enterprise Control"
       ],
       "headlineMetrics": [
         "Enterprise Value",
