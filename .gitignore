@@ -27,3 +27,18 @@ temp/
 # EOS generated runtime state
 /runtime/eos-runtime-status.json
 /runtime/validation/latest-environment-validation-report.json
+
+# EOS ephemeral recovery runtime
+/runtime/recovery/latest-*.json
+
+# EOS generated discovery and pipeline execution evidence
+/eos/evidence/discovery/*.json
+/eos/evidence/pipeline-runs/*.json
+
+# EOS autonomous engineering execution workspaces/evidence
+/backend/eos/engineering-workspaces/
+/backend/eos/evidence/
+
+# EOS generated verification assets
+/data/repository/media/*verification*
+/data/repository/organization-intake/*Verification Enterprise*
