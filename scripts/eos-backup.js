@@ -21,6 +21,7 @@ const excludes = [
   '.eos/*',
   'backups/*',
   'runtime/*',
+  'eos-platform/*',
   'coverage/*',
   '*.log',
   '.DS_Store'
