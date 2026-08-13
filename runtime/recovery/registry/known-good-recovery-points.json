@@ -2,6 +2,30 @@
   "registry": "EOS Known-Good Recovery Point Registry",
   "version": "1",
   "objective": "10.x.4",
-  "updatedAt": null,
-  "recoveryPoints": []
+  "updatedAt": "2026-08-13T15:30:44.226Z",
+  "recoveryPoints": [
+    {
+      "id": "EOS-RP-1786635044225",
+      "registeredAt": "2026-08-13T15:30:44.225Z",
+      "archive": "EOS_v0.25.0_2026-08-13_162808.zip",
+      "backupTimestamp": "2026-08-13_162808",
+      "eosVersion": "0.25.0",
+      "git": {
+        "branch": "main",
+        "commit": "b6e0a0cd86cb54f3aef614f686b349c418c194aa",
+        "clean": true
+      },
+      "checksum": "374fb1310681735c708c44fc988c6ecbc690de59768d16993755c3f64a685fe2",
+      "integrityValidation": "Validated",
+      "restoreValidation": "Validated",
+      "restoreValidationTimestamp": "2026-08-13T15:28:30.673Z",
+      "eligibility": {
+        "eligible": true,
+        "status": "Known Good Eligible",
+        "reasons": []
+      },
+      "eligible": true,
+      "status": "Known Good"
+    }
+  ]
 }

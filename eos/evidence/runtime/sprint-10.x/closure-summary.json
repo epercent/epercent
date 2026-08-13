@@ -1,0 +1,38 @@
+{
+  "sprint": "10.x",
+  "name": "EOS Continuity, Recovery & Runtime Resilience",
+  "status": "VERIFIED_FOR_CLOSURE",
+  "objectives": {
+    "10.x.1": "CLOSED",
+    "10.x.2": "CLOSED",
+    "10.x.3": "CLOSED",
+    "10.x.4": "CLOSED"
+  },
+  "knownGoodRecoveryPoint": {
+    "id": "EOS-RP-1786635044225",
+    "archive": "EOS_v0.25.0_2026-08-13_162808.zip",
+    "version": "0.25.0",
+    "branch": "main",
+    "commit": "b6e0a0cd86cb54f3aef614f686b349c418c194aa",
+    "clean": true,
+    "checksum": "374fb1310681735c708c44fc988c6ecbc690de59768d16993755c3f64a685fe2",
+    "integrityValidation": "Validated",
+    "restoreValidation": "Validated",
+    "status": "Known Good"
+  },
+  "submodule": {
+    "path": "eos-platform",
+    "commit": "433a75b588bab15bce7c808226ae8fec3af9d0c0"
+  },
+  "capabilities": {
+    "environmentValidation": true,
+    "managedStartup": true,
+    "restoreValidation": true,
+    "knownGoodRecoveryRegistry": true,
+    "recoveryDecisioning": true,
+    "isolatedRecoveryCandidate": true,
+    "governedAuthorization": true,
+    "transactionalPromotion": true,
+    "automaticRollback": true
+  }
+}

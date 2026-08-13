@@ -6,19 +6,28 @@ import {
   evaluateRecoveryEligibility
 } from './eos-recovery-eligibility.js';
 
-const backupStatusFile = join(
-  rootDir,
-  'backups',
-  'backup-status.json'
-);
+function getOptionValue(option) {
+  const index = process.argv.indexOf(option);
+  return index >= 0 ? process.argv[index + 1] : null;
+}
 
-const registryFile = join(
-  rootDir,
-  'runtime',
-  'recovery',
-  'registry',
-  'known-good-recovery-points.json'
-);
+const backupStatusFile =
+  getOptionValue('--backup-status-file') ??
+  join(
+    rootDir,
+    'backups',
+    'backup-status.json'
+  );
+
+const registryFile =
+  getOptionValue('--registry-file') ??
+  join(
+    rootDir,
+    'runtime',
+    'recovery',
+    'registry',
+    'known-good-recovery-points.json'
+  );
 
 async function readJson(file, fallback) {
   try {
@@ -139,6 +148,14 @@ registry.updatedAt =
 
 registry.recoveryPoints.push(
   recoveryPoint
+);
+
+backupStatus.latestBackupRecoveryEligibility = 'Known Good';
+backupStatus.lastUpdated = new Date().toISOString();
+
+await writeFile(
+  backupStatusFile,
+  `${JSON.stringify(backupStatus, null, 2)}\n`
 );
 
 await mkdir(
