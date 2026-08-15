@@ -1,0 +1,27 @@
+{
+  "objective": "10.5.1",
+  "name": "Real AI Provider Connection",
+  "status": "VERIFIED",
+  "provider": {
+    "id": "AI-PROVIDER-OPENAI-CODEX",
+    "name": "OpenAI Codex",
+    "liveConnectionVerified": true,
+    "responsesApiVerified": true
+  },
+  "verification": {
+    "providerRegistry": "PASS",
+    "providerSuccessNormalization": "PASS",
+    "providerHttpFailureNormalization": "PASS",
+    "providerRuntimeFailureNormalization": "PASS",
+    "dispatchIntegration": "PASS",
+    "invalidMissionRejection": "PASS",
+    "aiWorkforceHealth": "PASS",
+    "liveProviderConnectivity": "PASS",
+    "backendBuild": "PASS",
+    "fullRegression": "PASS"
+  },
+  "governance": {
+    "liveProviderTestOptIn": true,
+    "repositoryModificationAuthorizedByLiveTest": false
+  }
+}

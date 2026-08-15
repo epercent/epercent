@@ -1,6 +1,22 @@
 import { AIProviderInterface } from './ai-provider-interface.js'
 import { env } from '../config/env.js'
 
+function extractOutputText(result) {
+  if (typeof result?.output_text === 'string') {
+    return result.output_text
+  }
+
+  if (!Array.isArray(result?.output)) {
+    return ''
+  }
+
+  return result.output
+    .flatMap((item) => Array.isArray(item?.content) ? item.content : [])
+    .filter((content) => content?.type === 'output_text' && typeof content?.text === 'string')
+    .map((content) => content.text)
+    .join('\n')
+}
+
 export class OpenAIProvider extends AIProviderInterface {
   get id() {
     return 'AI-PROVIDER-OPENAI-CODEX'
@@ -12,7 +28,11 @@ export class OpenAIProvider extends AIProviderInterface {
 
   health() {
     return {
-      status: env.openaiApiKey ? 'Available' : 'Missing API Key'
+      providerId: this.id,
+      provider: this.name,
+      configured: Boolean(env.openaiApiKey),
+      status: env.openaiApiKey ? 'Available' : 'Configuration Required',
+      model: env.openaiModel
     }
   }
 
@@ -31,6 +51,9 @@ export class OpenAIProvider extends AIProviderInterface {
       return {
         dispatched: false,
         provider: this.name,
+        providerId: this.id,
+        model: env.openaiModel,
+        status: 'Configuration Required',
         reason: 'OPENAI_API_KEY missing',
         missionPackage
       }
@@ -50,52 +73,67 @@ Return:
 
 Mission:
 ${JSON.stringify(missionPackage, null, 2)}
-`
+`.trim()
 
-    const response = await fetch(
-      'https://api.openai.com/v1/responses',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${env.openaiApiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+    try {
+      const response = await fetch(
+        'https://api.openai.com/v1/responses',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${env.openaiApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: env.openaiModel,
+            input: prompt
+          })
+        }
+      )
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        return {
+          dispatched: false,
+          provider: this.name,
+          providerId: this.id,
           model: env.openaiModel,
-          input: prompt
-        })
+          status: 'Provider Error',
+          reason: result?.error?.message ?? `OpenAI returned HTTP ${response.status}`,
+          httpStatus: response.status,
+          missionPackage
+        }
       }
-    )
 
-    const result = await response.json()
-
-    if (!response.ok) {
+      return {
+        dispatched: true,
+        provider: this.name,
+        providerId: this.id,
+        model: env.openaiModel,
+        status: 'Completed',
+        responseId: result?.id ?? null,
+        rawStatus: result?.status ?? null,
+        artifact: extractOutputText(result),
+        missionPackage
+      }
+    } catch (error) {
       return {
         dispatched: false,
         provider: this.name,
-        reason: result.error?.message ?? 'OpenAI request failed',
+        providerId: this.id,
+        model: env.openaiModel,
+        status: 'Runtime Error',
+        reason: error instanceof Error ? error.message : String(error),
         missionPackage
       }
-    }
-
-    return {
-      dispatched: true,
-      provider: this.name,
-      model: env.openaiModel,
-      responseId: result.id,
-      artifact:
-        result.output_text ??
-        result.output?.map((item) =>
-          item.content?.map((content) => content.text).join('\n')
-        ).join('\n') ??
-        JSON.stringify(result, null, 2),
-      missionPackage
     }
   }
 
   missionStatus() {
     return {
-      status: 'Provider execution available'
+      provider: this.name,
+      status: env.openaiApiKey ? 'Provider execution available' : 'Configuration Required'
     }
   }
 
