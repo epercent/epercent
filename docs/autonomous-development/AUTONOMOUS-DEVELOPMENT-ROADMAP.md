@@ -1,12 +1,19 @@
 # EOS Autonomous Development Roadmap
 
 ## Purpose
-Define the master programme for transitioning EOS from human-assisted development to governed autonomous engineering.
+
+Define the master programme for transitioning EOS from human-assisted
+development to governed autonomous engineering and, ultimately, a
+self-improving Enterprise Operating System.
 
 ## North Star
-EOS should continuously create and manage an AI workforce that builds, tests, secures, documents, deploys, and improves EOS under human governance.
+
+EOS should continuously create and manage an AI workforce that builds,
+tests, secures, documents, deploys, operates, and improves EOS under human
+governance.
 
 ## Current State
+
 EOS has established:
 
 - AI Development Office
@@ -18,63 +25,160 @@ EOS has established:
 - Capability Resolver
 - Engineering Mission Orchestrator
 - Provider Dispatch Pipeline
-- AI Workforce Administration prototype
+- AI Workforce Administration
+- Real OpenAI engineering provider execution
+- Structured Engineering Package generation
+- Governed engineering workspaces
+- Independent autonomous verification
+- Human governance approval boundary
+- Governed repository promotion
+- Governed autonomous Git commit
+- Mission completion
+- Next mission generation
+- Closed-loop autonomous engineering orchestration
+- Machine-readable self-build runtime evidence
 
-## Target State
-EOS can:
+## Verified Current Capability
 
-1. Convert approved enhancements into engineering missions.
-2. Assign missions to AI workforce members.
-3. Dispatch missions to AI providers.
-4. Receive implementation artifacts.
-5. Route artifacts for review and testing.
-6. Request human approval at governance gates.
-7. Commit approved changes.
-8. Update Mission Control and Engineering Ledger automatically.
-9. Learn from completed missions.
+EOS can execute the following governed engineering lifecycle:
+
+1. Receive an engineering mission.
+2. Dispatch the mission to a real AI engineering provider.
+3. Receive a structured Engineering Package.
+4. Materialize the package inside an isolated governed workspace.
+5. Validate workspace-safe verification policy.
+6. Independently verify the generated implementation.
+7. Stop at an explicit human governance boundary.
+8. Resume the exact verified transaction after approval.
+9. Promote exactly the approved source scope.
+10. Commit exactly the governed promoted scope.
+11. Complete the engineering mission.
+12. Generate the next mission.
+13. Persist a machine-readable audit trail.
+
+Automatic Git push remains disabled.
+
+The verified architectural statement is:
+
+> EOS can self-build under governance.
 
 ## Programme Phases
 
 ### Phase 1 — Audit and Self-Understanding
-- Mission 001: Frontend Audit
-- Mission 002: Backend Audit
-- Mission 003: Enterprise Architecture Audit
 
-### Phase 2 — Mission Control 2.0 Specification
-- Define workspace hierarchy
-- Define office standards
-- Define navigation model
-- Define dashboard model
-- Define operational workflows
-- Define provider onboarding flows
+Status: ESTABLISHED
 
-### Phase 3 — Autonomous Engineering Execution
-- Generate implementation missions
-- Assign to AI workforce members
-- Dispatch through provider gateway
-- Receive artifacts
-- Submit for human approval
+Foundation missions included:
+
+- Frontend Audit
+- Backend Audit
+- Enterprise Architecture Audit
+
+### Phase 2 — Mission Control and Engineering Coordination
+
+Status: ESTABLISHED
+
+Capabilities include:
+
+- workspace hierarchy
+- office standards
+- mission coordination
+- AI workforce assignment
+- provider onboarding
+- mission package generation
+- provider dispatch
+- engineering ledger foundations
+
+### Phase 3 — Governed Autonomous Engineering Execution
+
+Status: VERIFIED
+
+Delivered through Sprint 10.5.
+
+Capabilities include:
+
+- real AI provider execution
+- structured code change packages
+- governed workspace isolation
+- autonomous verification
+- human approval gates
+- exact-package resume
+- governed repository promotion
+- autonomous Git commit
+- mission completion
+- next mission generation
+- runtime audit evidence
+
+Sprint 10.5 formally ends at Objective 10.5.7.
 
 ### Phase 4 — Self-Improving Platform
-- Enhancement lifecycle automation
-- Mission generation from approved enhancements
-- Automated testing and review
-- Automatic ledger updates
-- Continuous roadmap refinement
+
+Status: NEXT
+
+The next programme phase will connect EOS's enhancement and strategic
+management systems to the verified self-build runtime.
+
+Target capabilities include:
+
+- enhancement lifecycle automation
+- conversion of approved enhancements into engineering missions
+- automatic AI workforce assignment
+- automatic Engineering Ledger updates
+- Mission Control synchronization
+- completion-driven enhancement closure
+- provider reliability learning
+- engineering outcome learning
+- failure and recovery learning
+- continuous roadmap refinement
+- governed multi-mission execution
+- progressive reduction of human engineering orchestration
+
+Human governance remains authoritative at defined control boundaries.
+
+## Next Architectural Flow
+
+Enhancement / ECR
+→ Assessment
+→ Governance Approval
+→ Engineering Mission Generation
+→ AI Workforce Assignment
+→ Governed Self-Build Runtime
+→ Verification
+→ Governance
+→ Promotion
+→ Commit
+→ Mission Completion
+→ Engineering Ledger Update
+→ Enhancement Closure
+→ Learning
+→ Roadmap Refinement
 
 ## Success Metrics
+
 - Autonomous Development Index
 - Engineering Maturity Level
 - Human Engineering Load
 - Mission Completion Rate
 - Provider Reliability
-- Review Pass Rate
+- Verification Pass Rate
+- Governance Review Pass Rate
+- Engineering Cycle Time
+- Autonomous Recovery Rate
+- Enhancement Closure Rate
 - Investor Demo Readiness
 - Platform Stability
 
-## Immediate Next Missions
-1. Frontend Audit
-2. Backend Audit
-3. Enterprise Architecture Audit
-4. Mission Control 2.0 Specification
-5. First AI-generated implementation mission
+## Immediate Programme Priority
+
+Formally define the first sprint of the Self-Improving Platform phase.
+
+The first expected capability is:
+
+**Enhancement → Engineering Mission Automation**
+
+This capability should connect approved EOS enhancements to the existing
+governed autonomous engineering runtime without bypassing governance,
+verification, promotion, or commit controls.
+
+The sprint number and detailed objective sequence must be formally defined
+before implementation begins.

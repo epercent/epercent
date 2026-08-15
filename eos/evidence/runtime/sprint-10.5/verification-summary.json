@@ -1,0 +1,60 @@
+{
+  "sprint": "10.5",
+  "name": "Governed Autonomous Self-Build",
+  "status": "FORMALLY_CLOSED",
+  "finalObjective": "10.5.7",
+  "objectiveCount": 7,
+  "objectives": [
+    {
+      "id": "10.5.1",
+      "capability": "Real AI Provider Connection",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.2",
+      "capability": "Governed Engineering Workspace",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.3",
+      "capability": "AI Code Change Generation",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.4",
+      "capability": "Autonomous Verification",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.5",
+      "capability": "Governed Repository Promotion",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.6",
+      "capability": "Governed Autonomous Git Commit",
+      "status": "CLOSED"
+    },
+    {
+      "id": "10.5.7",
+      "capability": "Closed-Loop Self-Build Orchestration",
+      "status": "CLOSED"
+    }
+  ],
+  "capabilities": {
+    "realAIEngineeringProvider": true,
+    "structuredEngineeringPackages": true,
+    "governedEngineeringWorkspace": true,
+    "independentAutonomousVerification": true,
+    "humanGovernanceBoundary": true,
+    "exactPackageResume": true,
+    "governedPromotion": true,
+    "governedAutonomousGitCommit": true,
+    "missionCompletion": true,
+    "nextMissionGeneration": true,
+    "runtimeAuditEvidence": true,
+    "automaticGitPush": false
+  },
+  "architecturalClaim": "EOS can self-build under governance.",
+  "nextProgrammePhase": "Self-Improving Platform"
+}
