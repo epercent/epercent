@@ -1,0 +1,29 @@
+{
+  "objective": "10.5.2",
+  "name": "Governed Engineering Workspace",
+  "status": "VERIFIED",
+  "workspace": {
+    "canonicalRoot": "backend/eos/engineering-workspaces",
+    "sourceSnapshot": "git-archive",
+    "immutableSource": true,
+    "gitMetadataIncluded": false,
+    "canonicalRepositoryWritable": false,
+    "promotionRequired": true,
+    "directCommitAllowed": false
+  },
+  "verification": {
+    "repositoryProvenanceCaptured": "PASS",
+    "workspaceBoundaryEnforced": "PASS",
+    "immutableSourceSnapshotCreated": "PASS",
+    "canonicalSourceSnapshotPresent": "PASS",
+    "gitMetadataExcluded": "PASS",
+    "workspaceManifestCreated": "PASS",
+    "sourceProvenanceVerified": "PASS",
+    "canonicalRepositoryUnchanged": "PASS",
+    "externalWorkspaceRejected": "PASS",
+    "pathTraversalRejected": "PASS",
+    "objective1051Regression": "PASS",
+    "backendBuild": "PASS",
+    "fullRegression": "PASS"
+  }
+}
