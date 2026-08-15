@@ -1,0 +1,51 @@
+{
+  "objective": "10.5.5",
+  "name": "Governed Promotion / Merge",
+  "status": "VERIFIED",
+  "capability": {
+    "autonomousVerificationRequired": true,
+    "explicitGovernanceApprovalRequired": true,
+    "immutableSourceProvenanceRequired": true,
+    "canonicalHeadAlignmentRequired": true,
+    "governedWorkspaceRequired": true,
+    "approvedFileSetOnly": true,
+    "unsafePathsRejected": true,
+    "staleWorkspaceRejected": true,
+    "unrelatedFilesProtected": true,
+    "promotionSimulationSupported": true,
+    "rollbackProtection": true,
+    "promotionExecuted": true,
+    "automaticGitCommit": false
+  },
+  "liveVerification": {
+    "provider": "OpenAI Codex",
+    "model": "gpt-5.5",
+    "missionId": "EOS-LIVE-10.5.5",
+    "packageId": "EOS-LIVE-10.5.5-openai-codex-20260815T000000Z",
+    "generatedFile": "backend/src/live-governed-promotion-proof.js",
+    "verificationVerdict": "PASS",
+    "governanceBlockedWithoutApproval": true,
+    "explicitApproval": "Approved",
+    "promotionStatus": "Files Promoted",
+    "commitExecuted": false,
+    "realEOSRepositoryModified": false,
+    "status": "PASS"
+  },
+  "verification": {
+    "promotionWithoutApprovalRejected": "PASS",
+    "promotionWithoutVerificationRejected": "PASS",
+    "promotionSimulation": "PASS",
+    "approvedFilesOnly": "PASS",
+    "unrelatedFilesProtected": "PASS",
+    "headUnchangedDuringPromotion": "PASS",
+    "staleWorkspaceRejected": "PASS",
+    "unsafePathRejected": "PASS",
+    "objective1054Regression": "PASS",
+    "objective1053Regression": "PASS",
+    "objective1052Regression": "PASS",
+    "objective1051Regression": "PASS",
+    "backendBuild": "PASS",
+    "fullRegression": "PASS",
+    "liveGenerateVerifyApprovePromote": "PASS"
+  }
+}
