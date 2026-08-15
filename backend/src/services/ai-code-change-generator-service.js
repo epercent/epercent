@@ -13,7 +13,32 @@ function buildEngineeringGenerationMission(missionPackage) {
       workspacePolicy: 'Governed Workspace Only',
       canonicalRepositoryWriteAllowed: false,
       promotionAllowed: false,
-      commitAllowed: false
+      commitAllowed: false,
+
+      verificationPolicy: {
+        executionLocation:
+          'Governed Workspace Only',
+
+        gitMetadataAvailable:
+          false,
+
+        canonicalRepositoryInspectionAllowed:
+          false,
+
+        gitCommandsAllowed:
+          false,
+
+        externalFilesystemWritesAllowed:
+          false,
+
+        requirements: [
+          'Every declared verification command must run successfully from the governed workspace root.',
+          'Verification commands must not use git or depend on .git metadata.',
+          'Verification commands must not inspect canonical repository status.',
+          'Verification commands must validate generated code, files, syntax, behavior, or deterministic workspace-local state.',
+          'Prefer node --check, project test commands, and direct file-content assertions.'
+        ]
+      }
     }
   }
 }
