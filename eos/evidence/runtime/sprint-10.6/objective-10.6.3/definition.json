@@ -1,0 +1,102 @@
+{
+  "sprint": "10.6",
+  "objective": "10.6.3",
+  "name": "Governed Enhancement-to-Engineering Orchestration",
+  "status": "DEFINED",
+  "programme": "EOS Enterprise Operating System",
+  "purpose": "Compose Objective 10.6.2 eligibility assessment with Objective 10.6.1 Engineering Mission generation through one deterministic governed orchestration layer.",
+  "dependencies": {
+    "assessment": {
+      "objective": "10.6.2",
+      "service": "backend/src/services/enhancement-engineering-eligibility-service.js",
+      "function": "assessEnhancementEngineeringEligibility"
+    },
+    "missionBridge": {
+      "objective": "10.6.1",
+      "service": "backend/src/services/mission-generator-service.js",
+      "function": "generateEngineeringMissionFromEnhancementEcr"
+    }
+  },
+  "canonicalFlow": [
+    "Enhancement/ECR",
+    "Objective 10.6.2 Eligibility Assessment",
+    "Decision Routing",
+    "Objective 10.6.1 Engineering Mission Bridge when ELIGIBLE",
+    "Canonical Engineering Mission"
+  ],
+  "decisions": {
+    "ELIGIBLE": {
+      "missionGenerated": true,
+      "nextStep": "Engineering Mission Ready for Autonomous Engineering Runtime"
+    },
+    "INELIGIBLE": {
+      "missionGenerated": false,
+      "nextStep": "Enhancement Refinement or Rejection"
+    },
+    "BLOCKED": {
+      "missionGenerated": false,
+      "nextStep": "Blocker Resolution"
+    },
+    "GOVERNANCE_REVIEW_REQUIRED": {
+      "missionGenerated": false,
+      "nextStep": "Human Governance Review"
+    }
+  },
+  "canonicalResultFields": [
+    "orchestrationId",
+    "orchestrationStatus",
+    "sourceIdentity",
+    "sourceType",
+    "assessment",
+    "eligibilityDecision",
+    "route",
+    "engineeringMission",
+    "missionGenerated",
+    "provenance",
+    "nextStep"
+  ],
+  "deterministicIdentityExample": {
+    "source": "ECR-10-6-3",
+    "orchestration": "EOS-ENG-ORCH-ECR-10-6-3"
+  },
+  "immutability": [
+    "source",
+    "assessment",
+    "engineeringMission"
+  ],
+  "sideEffectsForbidden": [
+    "external provider dispatch",
+    "AI workforce assignment",
+    "engineering workspace creation",
+    "repository promotion",
+    "Git commit",
+    "Git push",
+    "deployment",
+    "Enhancement closure",
+    "mission completion"
+  ],
+  "compatibilityRequirements": [
+    "Preserve Objective 10.6.2 assessment semantics",
+    "Preserve Objective 10.6.1 bridge semantics",
+    "Preserve legacy generateEngineeringMissions behavior",
+    "Preserve ESM module mode"
+  ],
+  "preferredImplementation": {
+    "service": "backend/src/services/enhancement-engineering-orchestration-service.js",
+    "test": "tests/enhancement-engineering-orchestration.test.js"
+  },
+  "requiredBehavioralTests": 28,
+  "lifecycle": [
+    "define",
+    "implement",
+    "test",
+    "verify",
+    "govern",
+    "promote",
+    "regression",
+    "build",
+    "commit",
+    "close"
+  ],
+  "nextStep": "Commit Objective 10.6.3 DEFINE checkpoint before implementation."
+}
