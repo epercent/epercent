@@ -1,0 +1,49 @@
+{
+  "programme": "EOS — Enterprise Operating System",
+  "sprint": "10.6",
+  "objective": "10.6.5",
+  "title": "Engineering Ledger Lifecycle Synchronization",
+  "stage": "DEFINE",
+  "status": "DEFINED",
+  "boundary": {
+    "input": "Canonical Engineering Mission lifecycle state",
+    "output": "Canonical Engineering Ledger synchronization result",
+    "executionAuthorized": false,
+    "enhancementClosureAuthorized": false,
+    "missionControlSynchronizationAuthorized": false
+  },
+  "dependencies": [
+    "10.6.1",
+    "10.6.2",
+    "10.6.3",
+    "10.6.4"
+  ],
+  "requiredProperties": [
+    "deterministic",
+    "idempotent",
+    "immutable-inputs",
+    "provenance-preserving",
+    "governance-preserving",
+    "existing-ledger-reuse"
+  ],
+  "prohibited": [
+    "parallel-engineering-ledger",
+    "parallel-engineering-runtime",
+    "mission-execution",
+    "provider-dispatch",
+    "workspace-creation",
+    "repository-promotion",
+    "git-commit",
+    "git-push",
+    "enhancement-closure",
+    "mission-control-synchronization"
+  ],
+  "lifecycle": [
+    "DEFINE",
+    "IMPLEMENT",
+    "TEST",
+    "VERIFY",
+    "CLOSE"
+  ],
+  "nextObjective": "10.6.6"
+}
