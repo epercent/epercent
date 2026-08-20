@@ -83,21 +83,25 @@ Enhancement Assessment and Governance Eligibility
 
 ### Objective 10.6.3
 
-Automatic AI Workforce Assignment
+Enhancement Engineering Orchestration
 
 ### Objective 10.6.4
 
-Engineering Ledger Lifecycle Synchronization
+Automatic AI Workforce Assignment
 
 ### Objective 10.6.5
 
-Mission Control Self-Improvement Synchronization
+Engineering Ledger Lifecycle Synchronization
 
 ### Objective 10.6.6
 
-Completion-Driven Enhancement Closure
+Mission Control Self-Improvement Synchronization
 
 ### Objective 10.6.7
+
+Completion-Driven Enhancement Closure
+
+### Objective 10.6.8
 
 Governed Enhancement → Self-Build Closed Loop
 
@@ -146,6 +150,23 @@ autonomous engineering system.
 
 Human authority remains at defined governance boundaries.
 
+## Roadmap Reconciliation
+
+Following formal closure of Objective 10.6.3, the Sprint 10.6 roadmap
+was reconciled to the capability actually implemented and verified.
+
+Objective 10.6.3 is canonically defined as Enhancement Engineering
+Orchestration, composing the closed Objective 10.6.2 eligibility
+assessment with the closed Objective 10.6.1 Engineering Mission bridge.
+
+The previously planned Automatic AI Workforce Assignment capability
+therefore moves to Objective 10.6.4. Subsequent planned objectives are
+renumbered sequentially through Objective 10.6.8.
+
+This reconciliation changes roadmap numbering and documentation only.
+It does not modify the closed runtime implementation of Objectives
+10.6.1, 10.6.2 or 10.6.3.
+
 ## Current Objective
 
-Objective 10.6.1 — Canonical Enhancement → Engineering Mission Bridge
+Objective 10.6.4 — Automatic AI Workforce Assignment
