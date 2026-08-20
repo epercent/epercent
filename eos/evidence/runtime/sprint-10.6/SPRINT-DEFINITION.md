@@ -169,4 +169,4 @@ It does not modify the closed runtime implementation of Objectives
 
 ## Current Objective
 
-Objective 10.6.7 — Completion-Driven Enhancement Closure
+Objective 10.6.8 — Governed Enhancement → Self-Build Closed Loop

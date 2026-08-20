@@ -1,0 +1,63 @@
+{
+  "objectiveId": "10.6.8",
+  "canonicalId": "EOS-10.6.8",
+  "title": "Governed Enhancement → Self-Build Closed Loop",
+  "stage": "DEFINE",
+  "purpose": "Compose the canonical Enhancement/ECR engineering lifecycle into one deterministic governed self-build closed loop without creating a second autonomous engineering runtime.",
+  "architecture": {
+    "reuseExistingContracts": true,
+    "createSecondAutonomousEngineeringRuntime": false,
+    "preserveProvenance": true,
+    "deterministicIdentityRequired": true,
+    "idempotencyRequired": true,
+    "immutableBoundariesRequired": true,
+    "automaticContinuationWithoutGovernance": false
+  },
+  "upstreamObjectives": [
+    "10.6.1",
+    "10.6.2",
+    "10.6.3",
+    "10.6.4",
+    "10.6.5",
+    "10.6.6",
+    "10.6.7"
+  ],
+  "canonicalFlow": [
+    "ENHANCEMENT_OR_ECR",
+    "ENGINEERING_ELIGIBILITY",
+    "ENGINEERING_MISSION",
+    "ENGINEERING_ORCHESTRATION",
+    "AI_WORKFORCE_ASSIGNMENT",
+    "GOVERNED_AUTONOMOUS_ENGINEERING",
+    "ENGINEERING_LEDGER_SYNCHRONIZATION",
+    "MISSION_CONTROL_SYNCHRONIZATION",
+    "VERIFIED_ENGINEERING_COMPLETION",
+    "ENHANCEMENT_ECR_CLOSURE",
+    "GOVERNED_CONTINUATION_DECISION",
+    "NEXT_ENGINEERING_MISSION_IF_AUTHORIZED"
+  ],
+  "existingArchitecture": {
+    "protectedTest": "tests/closed-loop-self-build-orchestration.test.js",
+    "reuseRequired": true
+  },
+  "forbiddenIndependentEffects": [
+    "governance-approval-manufacture",
+    "parallel-provider-dispatch",
+    "parallel-engineering-execution",
+    "parallel-repository-promotion",
+    "parallel-git-commit",
+    "parallel-git-push",
+    "fabricated-completion-evidence",
+    "unauthorized-enhancement-closure",
+    "unauthorized-next-mission-generation"
+  ],
+  "definitionExitCriteria": [
+    "objective-definition-written",
+    "closed-loop-contract-written",
+    "machine-readable-definition-written",
+    "current-objective-reconciled",
+    "no-runtime-change",
+    "no-test-change",
+    "exact-define-scope-verified"
+  ]
+}
