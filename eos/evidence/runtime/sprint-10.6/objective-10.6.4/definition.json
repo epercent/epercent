@@ -1,0 +1,86 @@
+{
+  "schema": "EOS Sprint Objective Definition",
+  "schemaVersion": "1.0.0",
+  "programme": "EOS — Enterprise Operating System",
+  "sprint": "10.6",
+  "objectiveId": "10.6.4",
+  "name": "Automatic AI Workforce Assignment",
+  "phase": "Self-Improving Platform",
+  "status": "DEFINED",
+  "implementationStarted": false,
+  "dependsOn": [
+    "10.6.1",
+    "10.6.2",
+    "10.6.3"
+  ],
+  "purpose": "Deterministically assign one canonical Engineering Mission to the appropriate existing EOS AI Workforce entity without executing the mission.",
+  "input": {
+    "type": "Canonical Engineering Mission",
+    "cardinality": 1
+  },
+  "output": {
+    "type": "AI Workforce Assignment",
+    "cardinality": 1,
+    "requiredSemanticFields": [
+      "assignmentId",
+      "assignmentStatus",
+      "engineeringMissionId",
+      "assignedOffice",
+      "assignedWorkforce",
+      "assignedAgentOrCanonicalWorkforceIdentity",
+      "requiredCapabilities",
+      "matchedCapabilities",
+      "unmatchedCapabilities",
+      "assignmentReasons",
+      "governanceState",
+      "blockingConditions",
+      "provenance",
+      "nextStep"
+    ]
+  },
+  "decisions": [
+    "ASSIGNED",
+    "UNASSIGNABLE",
+    "BLOCKED",
+    "GOVERNANCE_REVIEW_REQUIRED"
+  ],
+  "principles": {
+    "reuseExistingWorkforceArchitecture": true,
+    "reuseCanonicalEngineeringMission": true,
+    "deterministicAssignment": true,
+    "capabilityDrivenMatching": true,
+    "assignmentIsNotExecution": true,
+    "preserveMissionImmutability": true,
+    "preserveWorkforceStateImmutability": true,
+    "preserveProvenance": true
+  },
+  "prohibited": [
+    "Engineering Mission execution",
+    "external provider dispatch",
+    "engineering workspace creation",
+    "repository promotion",
+    "Git commit",
+    "Git push",
+    "Engineering Mission closure",
+    "Enhancement/ECR closure",
+    "Objective 10.6.1 mission reconstruction",
+    "Objective 10.6.2 eligibility reimplementation",
+    "second autonomous engineering runtime"
+  ],
+  "requiredRegressionProtection": [
+    "10.6.3",
+    "10.6.2",
+    "10.6.1"
+  ],
+  "requiredLifecycle": [
+    "DEFINE",
+    "IMPLEMENT",
+    "TEST",
+    "VERIFY",
+    "CLOSE"
+  ],
+  "nextObjective": {
+    "objectiveId": "10.6.5",
+    "name": "Engineering Ledger Lifecycle Synchronization"
+  }
+}
