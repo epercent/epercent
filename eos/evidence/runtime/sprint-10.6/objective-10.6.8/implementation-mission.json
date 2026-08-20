@@ -1,0 +1,80 @@
+{
+  "missionId": "EOS-10.6.8-IMPLEMENT-001",
+  "objectiveId": "10.6.8",
+  "title": "Governed Enhancement → Self-Build Closed Loop",
+  "missionType": "GOVERNED_ENGINEERING_INTEGRATION",
+  "status": "DEFINED",
+  "architectureDecision": {
+    "strategy": "THIN_GOVERNED_ORCHESTRATOR",
+    "createSecondAutonomousRuntime": false,
+    "canonicalRuntime": "backend/src/services/autonomous-engineering-runtime-service.js",
+    "canonicalRuntimeEntrypoint": "runAutonomousEngineeringRuntime",
+    "runtimeGenerateNextMission": false,
+    "legacyMissionGeneratorIsCanonicalContinuationAuthority": false,
+    "legacyClosedLoopBehaviorMustRemainUnchanged": true,
+    "continuationRequiresIndependentEnhancementEcrAuthorization": true,
+    "continuationReusesEnhancementEngineeringPipeline": true
+  },
+  "preferredImplementationFiles": [
+    "backend/src/services/governed-enhancement-self-build-loop-service.js"
+  ],
+  "preferredTestFiles": [
+    "tests/governed-enhancement-self-build-loop.test.js"
+  ],
+  "reusedAuthorities": [
+    "enhancement-engineering-eligibility",
+    "enhancement-engineering-orchestration",
+    "ai-workforce-assignment",
+    "autonomous-engineering-runtime",
+    "engineering-ledger-lifecycle-synchronization",
+    "mission-control-self-improvement-synchronization",
+    "mission-completion",
+    "enhancement-completion-closure"
+  ],
+  "continuationRules": {
+    "closureAutomaticallyAuthorizesNextMission": false,
+    "continuationSourceRequired": true,
+    "continuationMustBeGoverned": true,
+    "continuationMustBeEligible": true,
+    "exactlyOneNextMissionWhenAuthorized": true,
+    "deterministicNextMissionRequired": true
+  },
+  "excludedCanonicalIdentityMaterial": [
+    "Date.now()",
+    "new Date()",
+    "Math.random()",
+    "runtime.runId",
+    "runtime.startedAt",
+    "runtime.completedAt",
+    "runtimeEvidence.filePath",
+    "completion.completedAt",
+    "provider response timing"
+  ],
+  "protectedTests": [
+    "tests/enhancement-engineering-mission-bridge.test.js",
+    "tests/enhancement-engineering-eligibility.test.js",
+    "tests/enhancement-engineering-orchestration.test.js",
+    "tests/ai-workforce-assignment.test.js",
+    "tests/engineering-ledger-lifecycle-synchronization.test.js",
+    "tests/mission-control-self-improvement-synchronization.test.js",
+    "tests/enhancement-completion-closure.test.js",
+    "tests/closed-loop-self-build-orchestration.test.js",
+    "tests/governed-autonomous-git-commit.test.js"
+  ],
+  "prohibitedIndependentEffects": [
+    "parallel-autonomous-runtime",
+    "direct-provider-dispatch",
+    "direct-code-generation",
+    "direct-verification",
+    "governance-approval-manufacture",
+    "direct-repository-promotion",
+    "direct-git-commit",
+    "direct-git-push",
+    "fabricated-mission-completion",
+    "fabricated-enhancement-closure",
+    "unauthorized-next-mission-generation"
+  ],
+  "promotionAuthorized": false,
+  "commitAuthorized": false,
+  "pushAuthorized": false
+}
