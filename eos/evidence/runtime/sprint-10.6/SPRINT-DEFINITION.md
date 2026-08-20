@@ -169,4 +169,4 @@ It does not modify the closed runtime implementation of Objectives
 
 ## Current Objective
 
-Objective 10.6.4 — Automatic AI Workforce Assignment
+Objective 10.6.6 — Mission Control Self-Improvement Synchronization
