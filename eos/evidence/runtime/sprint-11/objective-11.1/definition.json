@@ -1,0 +1,43 @@
+{
+  "sprint": "11",
+  "objective": "11.1",
+  "title": "Governance Control Plane Canonical Architecture & Authority Boundary",
+  "stage": "DEFINE",
+  "status": "DEFINED",
+  "implementationAuthorized": false,
+  "authorityHierarchy": [
+    "Human / Enterprise Authority",
+    "Enterprise Control",
+    "AEAF",
+    "Mission Control",
+    "EOS Runtime / iiAgents / Governed Self-Build",
+    "Engineering Ledger / Self-Evolution Register",
+    "Recovery / Rollback"
+  ],
+  "aeafLevels": {
+    "A0": "Observe",
+    "A1": "Assisted",
+    "A2": "Governed Autonomous",
+    "A3": "Enterprise Autonomous",
+    "A4": "Swarm Autonomous"
+  },
+  "higherAutonomyGate": {
+    "A3": "PROHIBITED_UNTIL_OBJECTIVE_11_8_CLOSED",
+    "A4": "PROHIBITED_UNTIL_OBJECTIVE_11_8_CLOSED"
+  },
+  "architecturalConstraints": {
+    "humanAuthoritySupreme": true,
+    "enterpriseControlIsAuthorityLayer": true,
+    "missionControlIsSupervisionLayer": true,
+    "domainScopedAutonomyRequired": true,
+    "singleAutonomousEngineeringRuntimeRequired": true,
+    "duplicateRuntimeProhibited": true,
+    "reuseSprint10xRecovery": true,
+    "reuseSprint106SelfBuild": true,
+    "selfEvolutionRegisterRequired": true,
+    "recursiveAuthorityEscalationProhibited": true
+  },
+  "implementationScope": [],
+  "runtimeChangesAuthorized": false,
+  "testChangesAuthorized": false
+}
