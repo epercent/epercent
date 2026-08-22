@@ -17,6 +17,8 @@
     "eos:backup:status": "node scripts/eos-backup-status-check.js",
     "eos:drive:status": "node scripts/eos-drive-status.js",
     "eos:drive:test": "node scripts/eos-drive-test.js",
+    "eos:bridge:run": "bin/eos-run",
+    "eos:bridge:status": "node scripts/eos-build-intelligence-status.js",
     "eos:git:status": "node scripts/eos-git-status.js",
     "eos:release": "node scripts/eos-release.js",
     "eos:tag": "node scripts/eos-tag.js",
