@@ -19,6 +19,7 @@
     "eos:drive:test": "node scripts/eos-drive-test.js",
     "eos:bridge:run": "bin/eos-run",
     "eos:bridge:status": "node scripts/eos-build-intelligence-status.js",
+    "eos:mission:pull": "bin/eos-mission pull",
     "eos:git:status": "node scripts/eos-git-status.js",
     "eos:release": "node scripts/eos-release.js",
     "eos:tag": "node scripts/eos-tag.js",
