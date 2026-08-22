@@ -171,8 +171,13 @@ const authorizedInbox = {
 };
 
 await mkdir(localAuthorizationDirectory, { recursive: true });
+
+const authorizedInboxFile = join(
+  localAuthorizationDirectory,
+  `${missionId}-${authorizationId}-inbox.json`
+);
 await writeFile(
-  localInbox,
+  authorizedInboxFile,
   `${JSON.stringify(authorizedInbox, null, 2)}\n`,
   'utf8'
 );
@@ -198,7 +203,7 @@ await writeFile(
 
 const inboxUpload = run('rclone', [
   'copyto',
-  localInbox,
+  authorizedInboxFile,
   remoteInbox
 ]);
 
