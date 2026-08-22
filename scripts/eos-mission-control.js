@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 import { rootDir } from './eos-common.js';
+import { printOperatorExplanationSafely } from './eos-operator-narration.js';
 
 const remoteInbox =
   process.env.EOS_MISSION_REMOTE ??
@@ -232,6 +233,12 @@ async function pullAndValidate() {
   console.log(`Human authorization: ${report.humanAuthorized ? 'YES' : 'NO'}`);
   console.log(`Executable now: ${report.executableNow ? 'YES' : 'NO'}`);
   console.log(`Mission SHA-256: ${report.missionDigest ?? 'None'}`);
+
+  printOperatorExplanationSafely({
+    phase: 'MISSION_' + report.state,
+    inbox,
+    validation: report
+  });
 
   if (!report.schemaValid || !branchMatches || !commitMatches || !clean) {
     process.exit(1);

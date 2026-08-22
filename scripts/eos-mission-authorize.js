@@ -6,6 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { createInterface } from 'node:readline/promises';
 
 import { rootDir } from './eos-common.js';
+import { printOperatorExplanationSafely } from './eos-operator-narration.js';
 
 const missionId = process.argv[2];
 
@@ -114,12 +115,23 @@ if (inbox.authorization !== null) {
 }
 
 if (refusalReasons.length > 0) {
+  printOperatorExplanationSafely(
+    { phase: 'AUTHORIZATION_REFUSED', inbox, validation },
+    process.stderr,
+    process.stderr
+  );
   console.error('Authorization refused:');
   for (const reason of refusalReasons) {
     console.error(`- ${reason}`);
   }
   process.exit(77);
 }
+
+printOperatorExplanationSafely({
+  phase: 'AUTHORIZATION_REQUIRED',
+  inbox,
+  validation
+});
 
 console.log();
 console.log('Human Authorization Required');
@@ -147,6 +159,11 @@ const response = await prompt.question(
 prompt.close();
 
 if (response.trim() !== requiredPhrase) {
+  printOperatorExplanationSafely(
+    { phase: 'AUTHORIZATION_CANCELLED', inbox, validation },
+    process.stderr,
+    process.stderr
+  );
   console.error('Authorization cancelled: confirmation phrase did not match.');
   process.exit(77);
 }
@@ -218,6 +235,12 @@ if (inboxUpload.status !== 0 || authorizationUpload.status !== 0) {
   console.error(inboxUpload.stderr || authorizationUpload.stderr);
   process.exit(74);
 }
+
+printOperatorExplanationSafely({
+  phase: 'AUTHORIZATION_RECORDED',
+  inbox: authorizedInbox,
+  validation: { ...validation, executableNow: true }
+});
 
 console.log('Authorization: RECORDED');
 console.log(`Authorization ID: ${authorizationId}`);

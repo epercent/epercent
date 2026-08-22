@@ -91,3 +91,20 @@ export function printOperatorExplanation(input, stream = process.stdout) {
   stream.write(formatOperatorExplanation(explanation) + '\n');
   return explanation;
 }
+
+
+export function printOperatorExplanationSafely(
+  input,
+  stream = process.stdout,
+  errorStream = process.stderr
+) {
+  try {
+    return printOperatorExplanation(input, stream);
+  } catch (error) {
+    const message = redactOperatorText(
+      'Operator explanation unavailable: ' + error.message
+    );
+    errorStream.write(message + '\n');
+    return null;
+  }
+}
