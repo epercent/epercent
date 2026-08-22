@@ -1,0 +1,40 @@
+{
+  "sprint": "11",
+  "objective": "11.1",
+  "missionType": "governed-implementation",
+  "capability": "Governance Control Plane Canonical Architecture",
+  "implementationBoundary": "architecture-only",
+  "preferredRuntimeFile": "backend/src/services/governance-control-plane-architecture-service.js",
+  "preferredTestFile": "tests/governance-control-plane-architecture.test.js",
+  "authority": {
+    "humanAuthoritySupreme": true,
+    "enterpriseControlAuthorityLayer": true,
+    "aeafPolicyLayer": true,
+    "missionControlSupervisionLayer": true
+  },
+  "safety": {
+    "a3Gated": true,
+    "a4Gated": true,
+    "secondAutonomousRuntimeProhibited": true,
+    "recursiveAuthorityEscalationProhibited": true,
+    "recoveryAuthorityPreserved": true
+  },
+  "reservedCapabilities": [
+    "AEAF runtime behavior",
+    "Self-Evolution Register runtime behavior",
+    "Enterprise Control command execution",
+    "A3 activation",
+    "A4 activation"
+  ],
+  "prohibitedChanges": [
+    "second autonomous runtime",
+    "autonomous engineering runtime semantic change",
+    "Sprint 10.6 self-build loop semantic change",
+    "AEAF decision implementation",
+    "Self-Evolution Register implementation",
+    "freeze/suspend/override endpoint implementation",
+    "recursive authority escalation"
+  ],
+  "deterministic": true,
+  "immutable": true
+}
