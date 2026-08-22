@@ -10,6 +10,10 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 import { rootDir } from './eos-common.js';
+import {
+  parseGitPorcelainPaths,
+  pathAllowed
+} from './eos-git-status-paths.js';
 
 const remoteRoot =
   process.env.EOS_BRIDGE_REMOTE ??
@@ -68,6 +72,11 @@ function git(...args) {
   return result.status === 0 ? result.stdout.trim() : 'unavailable';
 }
 
+function gitPorcelainStatus() {
+  const result = run('git', ['status', '--porcelain']);
+  return result.status === 0 ? result.stdout : '';
+}
+
 function upload(localFile, remoteFile) {
   return run('rclone', ['copyto', localFile, remoteFile]);
 }
@@ -81,19 +90,9 @@ function changedPathsSince(requiredCommit) {
     .split(/\r?\n/)
     .filter(Boolean);
 
-  const working = git('status', '--porcelain')
-    .split(/\r?\n/)
-    .filter(Boolean)
-    .map((line) => line.slice(3))
-    .map((path) => path.includes(' -> ') ? path.split(' -> ')[1] : path);
+  const working = parseGitPorcelainPaths(gitPorcelainStatus());
 
   return [...new Set([...committed, ...working])].sort();
-}
-
-function pathAllowed(path, allowedPaths) {
-  return allowedPaths.some(
-    (allowed) => path === allowed || path.startsWith(`${allowed}/`)
-  );
 }
 
 await mkdir(localExecutionDirectory, { recursive: true });
