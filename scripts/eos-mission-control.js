@@ -201,6 +201,7 @@ async function pullAndValidate() {
     executionPermitted: inbox.mission?.executionPermitted === true,
     humanAuthorized: inbox.authorization !== null,
     executableNow:
+      inbox.state === 'AUTHORIZED' &&
       validation.errors.length === 0 &&
       branchMatches &&
       commitMatches &&
