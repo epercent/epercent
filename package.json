@@ -42,7 +42,8 @@
     "eos:recovery:promote": "node scripts/runtime/eos-recovery-promoter.js",
     "eos:recovery:promoter:test": "node tests/recovery-promoter.test.js",
     "eos:mission:watch": "bin/eos-watch",
-    "eos:mission:watch:once": "bin/eos-watch --once"
+    "eos:mission:watch:once": "bin/eos-watch --once",
+    "eos:operator-narration:test": "node tests/operator-narration-foundation.test.js"
   },
   "engines": {
     "node": ">=20"
