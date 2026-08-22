@@ -21,6 +21,7 @@
     "eos:bridge:status": "node scripts/eos-build-intelligence-status.js",
     "eos:mission:pull": "bin/eos-mission pull",
     "eos:mission:authorize": "bin/eos-authorize",
+    "eos:mission:execute": "bin/eos-execute",
     "eos:git:status": "node scripts/eos-git-status.js",
     "eos:release": "node scripts/eos-release.js",
     "eos:tag": "node scripts/eos-tag.js",

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -u
+EOS_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec node "$EOS_ROOT/scripts/eos-mission-execute.js" "$@"
