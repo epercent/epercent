@@ -40,7 +40,9 @@
     "eos:recovery:authorize": "node scripts/runtime/eos-recovery-authorization.js",
     "eos:recovery:authorization:test": "node tests/recovery-authorization.test.js",
     "eos:recovery:promote": "node scripts/runtime/eos-recovery-promoter.js",
-    "eos:recovery:promoter:test": "node tests/recovery-promoter.test.js"
+    "eos:recovery:promoter:test": "node tests/recovery-promoter.test.js",
+    "eos:mission:watch": "bin/eos-watch",
+    "eos:mission:watch:once": "bin/eos-watch --once"
   },
   "engines": {
     "node": ">=20"
