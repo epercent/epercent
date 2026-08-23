@@ -17,23 +17,17 @@ func privateKey() throws -> SecKey {
        let key = item as! SecKey? { return key }
 
     var error: Unmanaged<CFError>?
-    let access = SecAccessControlCreateWithFlags(
-        nil,
-        kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
-        [.privateKeyUsage, .userPresence],
-        &error
-    )
-    guard let access else { throw SignerError.keyCreation }
     let attributes: [String: Any] = [
         kSecAttrKeyType as String: kSecAttrKeyTypeECSECPrimeRandom,
         kSecAttrKeySizeInBits as String: 256,
         kSecPrivateKeyAttrs as String: [
             kSecAttrIsPermanent as String: true,
             kSecAttrApplicationTag as String: tag,
-            kSecAttrAccessControl as String: access
+            kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
         ]
     ]
     guard let key = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
+        if let error { FileHandle.standardError.write(Data((error.takeRetainedValue().localizedDescription + "\n").utf8)) }
         throw SignerError.keyCreation
     }
     return key
