@@ -43,7 +43,10 @@
     "eos:recovery:promoter:test": "node tests/recovery-promoter.test.js",
     "eos:mission:watch": "bin/eos-watch",
     "eos:mission:watch:once": "bin/eos-watch --once",
-    "eos:operator-narration:test": "node tests/operator-narration-foundation.test.js"
+    "eos:operator-narration:test": "node tests/operator-narration-foundation.test.js",
+    "eos:control-bridge:status": "bin/eos-bridge-control status",
+    "eos:control-bridge:console": "bin/eos-bridge-control console",
+    "eos:control-bridge:test": "node --test tests/bridge/*.test.js"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>ai.epercent.eos.bridge-watchdog</string>
+  <key>ProgramArguments</key><array>
+    <string>__EOS_NODE__</string><string>__EOS_ROOT__/scripts/bridge/bridge-control-cli.js</string><string>watchdog</string>
+  </array>
+  <key>WorkingDirectory</key><string>__EOS_ROOT__</string>
+  <key>RunAtLoad</key><false/>
+  <key>StartInterval</key><integer>30</integer>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>__EOS_STATE__/logs/watchdog.log</string>
+  <key>StandardErrorPath</key><string>__EOS_STATE__/logs/watchdog-error.log</string>
+</dict></plist>
