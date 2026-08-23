@@ -73,7 +73,7 @@ function git(...args) {
 }
 
 function gitPorcelainStatus() {
-  const result = run('git', ['status', '--porcelain']);
+  const result = run('git', ['status', '--porcelain', '--untracked-files=all']);
   return result.status === 0 ? result.stdout : '';
 }
 
