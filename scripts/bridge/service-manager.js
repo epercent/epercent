@@ -7,11 +7,12 @@ const labels = [
   'ai.epercent.eos.bridge-watchdog'
 ];
 
-export async function renderLaunchAgent({ template, eosRoot, nodePath, stateDir }) {
+export async function renderLaunchAgent({ template, eosRoot, nodePath, stateDir, pathValue = '/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' }) {
   return (await readFile(template, 'utf8'))
     .replaceAll('__EOS_ROOT__', eosRoot)
     .replaceAll('__EOS_NODE__', nodePath)
-    .replaceAll('__EOS_STATE__', stateDir);
+    .replaceAll('__EOS_STATE__', stateDir)
+    .replaceAll('__EOS_PATH__', pathValue);
 }
 
 export async function installDisabled(options) {
@@ -23,7 +24,8 @@ export async function installDisabled(options) {
     const target = join(options.launchAgentsDir, label + '.plist');
     const content = await renderLaunchAgent({
       template: source, eosRoot: options.eosRoot,
-      nodePath: options.nodePath, stateDir: options.stateDir
+      nodePath: options.nodePath, stateDir: options.stateDir,
+      pathValue: options.pathValue
     });
     await writeFile(target, content, { mode: 0o600, flag: 'wx' });
     installed.push(target);
