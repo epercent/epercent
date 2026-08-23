@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { generateKeyPairSync, sign } from 'node:crypto';
+import { createHash, generateKeyPairSync, sign } from 'node:crypto';
 import test from 'node:test';
 
 import {
@@ -20,7 +20,7 @@ function signedFixture() {
     schemaVersion: '1.0.0', missionId: 'EOS-TEST-001', missionDigest: 'a'.repeat(64),
     generation: 14, nonce: 'nonce-001', decision: 'APPROVE',
     issuedAt: '2026-08-22T21:00:00.000Z', expiresAt: '2026-08-22T21:05:00.000Z',
-    keyFingerprint: sha256(publicKey.export({ type: 'spki', format: 'der' }))
+    keyFingerprint: createHash('sha256').update(publicKey.export({ type: 'spki', format: 'der' })).digest('hex')
   };
   const payload = Buffer.from(JSON.stringify(canonicalize(authorizationPayload(receipt))));
   receipt.signature = sign('sha256', payload, privateKey).toString('base64');

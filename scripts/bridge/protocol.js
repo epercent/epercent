@@ -14,7 +14,12 @@ export function canonicalize(value) {
 }
 
 export function sha256(value) {
-  const bytes = typeof value === 'string' ? value : JSON.stringify(canonicalize(value));
+  const bytes =
+    typeof value === 'string' ||
+    Buffer.isBuffer(value) ||
+    value instanceof Uint8Array
+      ? value
+      : JSON.stringify(canonicalize(value));
   return createHash('sha256').update(bytes).digest('hex');
 }
 
