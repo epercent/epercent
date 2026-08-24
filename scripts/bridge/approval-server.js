@@ -12,16 +12,26 @@ function htmlEscape(value) {
 export function approvalPage(model, csrfToken) {
   const mission = model.mission || {};
   const paths = (mission.allowedPaths || []).map((path) => '<li>' + htmlEscape(path) + '</li>').join('');
-  return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">' +
+  const history = (model.history || []).slice().reverse().map((event) =>
+    '<tr><td>' + htmlEscape(event.at) + '</td><td>' + htmlEscape(event.type) +
+    '</td><td>' + htmlEscape(event.missionId) + '</td><td>' + htmlEscape(event.outcome) + '</td></tr>'
+  ).join('');
+  const warning = model.warning ? '<p class="danger"><b>Attention:</b> ' + htmlEscape(model.warning) + '</p>' : '';
+  const reset = ['FROZEN', 'QUARANTINED', 'DEGRADED'].includes(model.state)
+    ? '<button name="decision" value="RESET">Governed recovery reset</button>' : '';
+  return '<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="5"><meta name="viewport" content="width=device-width">' +
     '<title>eOS Enterprise Control</title><style>body{font:16px system-ui;max-width:900px;margin:40px auto;padding:0 20px}' +
     'code{word-break:break-all}button{font-size:18px;padding:12px 22px;margin-right:10px}.danger{background:#7a0019;color:white}</style></head><body>' +
-    '<h1>eOS Enterprise Control</h1><h2>' + htmlEscape(mission.title || 'No mission awaiting approval') + '</h2>' +
+    '<h1>eOS Enterprise Control</h1><p><b>Bridge state:</b> ' + htmlEscape(model.state) + '</p>' + warning +
+    '<h2>' + htmlEscape(mission.title || 'No mission awaiting approval') + '</h2>' +
     '<p><b>Mission:</b> ' + htmlEscape(mission.missionId) + '</p><p><b>Digest:</b> <code>' + htmlEscape(model.missionDigest) + '</code></p>' +
     '<p><b>Branch:</b> ' + htmlEscape(mission.requiredBranch) + '</p><p><b>Commit:</b> <code>' + htmlEscape(mission.requiredCommit) + '</code></p>' +
     '<p><b>Allowed paths:</b></p><ul>' + paths + '</ul>' +
     '<form method="post" action="/decision"><input type="hidden" name="csrf" value="' + htmlEscape(csrfToken) + '">' +
     '<button name="decision" value="APPROVE">Approve exact digest</button>' +
-    '<button class="danger" name="decision" value="REJECT">Reject</button></form></body></html>';
+    '<button class="danger" name="decision" value="REJECT">Reject</button>' + reset + '</form>' +
+    '<h2>Approval and execution history</h2><table><thead><tr><th>Time</th><th>Event</th><th>Mission</th><th>Outcome</th></tr></thead><tbody>' +
+    history + '</tbody></table></body></html>';
 }
 
 function parseForm(body) {
@@ -50,7 +60,7 @@ export function createApprovalServer({ port = 4767, getModel, decide }) {
         }
         const form = parseForm(body);
         if (form.csrf !== csrfToken) throw new Error('invalid CSRF token');
-        if (!['APPROVE', 'REJECT'].includes(form.decision)) throw new Error('invalid decision');
+        if (!['APPROVE', 'REJECT', 'RESET'].includes(form.decision)) throw new Error('invalid decision');
         await decide({ decision: form.decision, requestId: randomUUID() });
         response.statusCode = 303;
         response.setHeader('Location', '/');

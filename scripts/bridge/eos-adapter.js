@@ -7,6 +7,9 @@ export class EOSRepositoryAdapter {
     this.root = root;
     this.run = run;
     this.control = join(root, '.eos', 'control');
+    this.remoteInbox =
+      process.env.EOS_MISSION_REMOTE ??
+      'eos-drive:eOS Build Intelligence Bridge/Control/Inbox/EOS-MISSION-INBOX.json';
   }
 
   command(executable, args, options = {}) {
@@ -36,8 +39,23 @@ export class EOSRepositoryAdapter {
 
   execute() {
     const result = this.command('bin/eos-execute', [], { stdio: 'inherit' });
-    if (result.status !== 0) throw new Error('governed executor failed');
     return result;
+  }
+
+  async synchronizeTerminalInbox({ generation, missionId, missionDigest }) {
+    const localFile = join(this.control, 'EOS-MISSION-INBOX.json');
+    const inbox = JSON.parse(await readFile(localFile, 'utf8'));
+    const errors = [];
+    if (inbox.generation !== generation) errors.push('generation mismatch');
+    if (inbox.mission?.missionId !== missionId) errors.push('mission ID mismatch');
+    if (inbox.execution?.missionDigest !== missionDigest) errors.push('mission digest mismatch');
+    if (!['COMPLETED', 'QUARANTINED'].includes(inbox.state)) errors.push('local inbox is not terminal');
+    if (inbox.execution?.status !== 'FINISHED') errors.push('execution is not finished');
+    if (!inbox.execution?.executionId) errors.push('execution ID missing');
+    if (errors.length) throw new Error('terminal receipt refused: ' + errors.join(', '));
+    const upload = this.command('rclone', ['copyto', localFile, this.remoteInbox]);
+    if (upload.status !== 0) throw new Error('terminal receipt synchronization failed');
+    return inbox;
   }
 
   gitState() {
