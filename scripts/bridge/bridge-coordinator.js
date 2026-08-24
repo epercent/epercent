@@ -14,6 +14,7 @@ export class BridgeCoordinator {
     this.root = options.root;
     this.stateDir = options.stateDir;
     this.intervalMs = options.intervalMs ?? 5000;
+    this.executionTimeoutMs = options.executionTimeoutMs ?? 20 * 60_000;
     this.adapter = options.adapter ?? new EOSRepositoryAdapter({ root: this.root });
     this.signer = options.signer ?? new MacOSReceiptSigner({ helperPath: options.signerPath });
     this.core = options.core ?? new CoordinatorCore();
@@ -30,9 +31,9 @@ export class BridgeCoordinator {
     catch (error) { if (error.code === 'ENOENT') return false; throw error; }
   }
 
-  async heartbeat() {
+  async heartbeat(extra = {}) {
     await writeFile(join(this.stateDir, 'heartbeat.json'), JSON.stringify({
-      pid: process.pid, state: this.core.state, at: new Date().toISOString()
+      pid: process.pid, state: this.core.state, at: new Date().toISOString(), ...extra
     }) + '\n', { mode: 0o600 });
   }
 
@@ -89,8 +90,20 @@ export class BridgeCoordinator {
       this.core.freeze('authorization state disagreement'); throw new Error('authorization did not become executable');
     }
     this.core.transition('EXECUTING'); await this.publish();
-    this.adapter.execute();
-    this.core.transition('COMPLETED'); await this.publish();
+    await this.heartbeat({
+      executionDeadline: new Date(Date.now() + this.executionTimeoutMs).toISOString()
+    });
+    try {
+      this.adapter.execute();
+      this.core.transition('COMPLETED');
+      await this.publish();
+    } catch (error) {
+      this.core.transition('QUARANTINED');
+      await this.publish().catch(() => {});
+      throw error;
+    } finally {
+      await this.heartbeat();
+    }
   }
 
   async model() {
