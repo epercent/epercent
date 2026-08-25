@@ -12,7 +12,7 @@ function htmlEscape(value) {
 export function approvalPage(model, csrfToken) {
   const mission = model.mission || {};
   const paths = (mission.allowedPaths || []).map((path) => '<li>' + htmlEscape(path) + '</li>').join('');
-  const history = (model.history || []).slice().reverse().map((event) =>
+  const history = (model.history || []).slice(-10).reverse().map((event) =>
     '<tr><td>' + htmlEscape(event.at) + '</td><td>' + htmlEscape(event.type) +
     '</td><td>' + htmlEscape(event.missionId) + '</td><td>' + htmlEscape(event.outcome) + '</td></tr>'
   ).join('');

@@ -27,6 +27,7 @@ export class BridgeCoordinator {
     this.running = false;
     this.historyFile = join(this.stateDir, 'EOS-BRIDGE-ACTIVITY-HISTORY.json');
     this.history = [];
+    this.historyWrite = Promise.resolve();
     this.lastError = null;
   }
 
@@ -47,16 +48,20 @@ export class BridgeCoordinator {
   }
 
   async record(type, values = {}) {
-    this.history = appendHistory(this.history, historyEvent({
-      type, generation: values.generation ?? this.current?.inbox?.generation,
-      missionId: values.missionId ?? this.current?.inbox?.mission?.missionId,
-      missionDigest: values.missionDigest ?? this.current?.missionDigest,
-      actor: values.actor, outcome: values.outcome, evidenceId: values.evidenceId,
-      at: new Date().toISOString()
-    }));
-    const temporary = this.historyFile + '.tmp';
-    await writeFile(temporary, JSON.stringify({ schemaVersion: '1.0.0', events: this.history }, null, 2) + '\n', { mode: 0o600 });
-    await rename(temporary, this.historyFile);
+    const operation = this.historyWrite.then(async () => {
+      this.history = appendHistory(this.history, historyEvent({
+        type, generation: values.generation ?? this.current?.inbox?.generation,
+        missionId: values.missionId ?? this.current?.inbox?.mission?.missionId,
+        missionDigest: values.missionDigest ?? this.current?.missionDigest,
+        actor: values.actor, outcome: values.outcome, evidenceId: values.evidenceId,
+        at: new Date().toISOString()
+      }));
+      const temporary = this.historyFile + '.tmp-' + process.pid + '-' + randomBytes(8).toString('hex');
+      await writeFile(temporary, JSON.stringify({ schemaVersion: '1.0.0', events: this.history }, null, 2) + '\n', { mode: 0o600 });
+      await rename(temporary, this.historyFile);
+    });
+    this.historyWrite = operation.catch(() => {});
+    return operation;
   }
 
   async cycle() {

@@ -7,6 +7,7 @@ import test from 'node:test';
 import { EOSRepositoryAdapter } from '../../scripts/bridge/eos-adapter.js';
 import { appendHistory, historyEvent } from '../../scripts/bridge/activity-history.js';
 import { approvalPage } from '../../scripts/bridge/approval-server.js';
+import { BridgeCoordinator } from '../../scripts/bridge/bridge-coordinator.js';
 
 test('terminal inbox synchronization refuses identity mismatches and uploads exact terminal evidence', async () => {
   const root = await mkdtemp(join(tmpdir(), 'eos-terminal-sync-'));
@@ -32,4 +33,39 @@ test('history is bounded and Enterprise Control auto-refreshes with warnings and
   assert.match(html, /receipt mismatch/);
   assert.match(html, /Governed recovery reset/);
   assert.match(html, /Approval and execution history/);
+});
+
+test('Enterprise Control displays only the ten most recent history events', () => {
+  const history = Array.from({ length: 12 }, (_, index) => historyEvent({
+    type: 'EVENT_' + index,
+    generation: index,
+    missionId: 'M' + index,
+    missionDigest: 'd' + index,
+    outcome: 'RECORDED',
+    at: '2026-08-24T17:00:' + String(index).padStart(2, '0') + 'Z'
+  }));
+  const html = approvalPage({ state: 'IDLE', mission: null, missionDigest: null, history }, 'csrf');
+  assert.doesNotMatch(html, /EVENT_0</);
+  assert.doesNotMatch(html, /EVENT_1</);
+  assert.match(html, /EVENT_2</);
+  assert.match(html, /EVENT_11</);
+});
+
+test('concurrent history records are serialized without losing evidence', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'eos-history-concurrency-'));
+  try {
+    const coordinator = new BridgeCoordinator({
+      root,
+      stateDir: root,
+      adapter: { gitState: () => ({ branch: 'feature/test', headCommit: 'a'.repeat(40), status: '' }) },
+      telemetry: { publish: async (value) => value },
+      signer: {}
+    });
+    await Promise.all(Array.from({ length: 12 }, (_, index) =>
+      coordinator.record('CONCURRENT_' + index, { generation: index, outcome: 'RECORDED' })
+    ));
+    const persisted = JSON.parse(await readFile(join(root, 'EOS-BRIDGE-ACTIVITY-HISTORY.json'), 'utf8'));
+    assert.equal(persisted.events.length, 12);
+    assert.equal(new Set(persisted.events.map((event) => event.type)).size, 12);
+  } finally { await rm(root, { recursive: true, force: true }); }
 });
