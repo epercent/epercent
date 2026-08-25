@@ -5,10 +5,11 @@ import { join } from 'node:path';
 import { createApprovalServer } from './approval-server.js';
 import { CoordinatorCore } from './coordinator-core.js';
 import { EOSRepositoryAdapter } from './eos-adapter.js';
-import { missionDigest } from './protocol.js';
+import { assertFullCommitSha, classifyBridgeFailure, missionDigest } from './protocol.js';
 import { MacOSReceiptSigner } from './receipt-signer.js';
 import { TelemetryPublisher } from './telemetry-publisher.js';
 import { appendHistory, historyEvent } from './activity-history.js';
+import { ApprovalLeaseStore } from './approval-lease.js';
 
 export class BridgeCoordinator {
   constructor(options) {
@@ -29,6 +30,9 @@ export class BridgeCoordinator {
     this.history = [];
     this.historyWrite = Promise.resolve();
     this.lastError = null;
+    this.autoRecoveryAttempts = 0;
+    this.maxAutoRecoveryAttempts = options.maxAutoRecoveryAttempts ?? 2;
+    this.approvalLease = options.approvalLease ?? new ApprovalLeaseStore({ stateDir: this.stateDir });
   }
 
   async frozen() {
@@ -72,6 +76,9 @@ export class BridgeCoordinator {
     }
     const { inbox, validation } = await this.adapter.validate();
     const mission = inbox.mission;
+    const git = this.adapter.gitState();
+    assertFullCommitSha(git.headCommit, 'repository HEAD');
+    if (mission) assertFullCommitSha(mission.requiredCommit, 'mission required commit');
     const digest = mission ? missionDigest(mission) : null;
     if (validation.missionDigest && validation.missionDigest !== digest) {
       this.core.transition('QUARANTINED'); throw new Error('canonical digest disagreement');
@@ -83,12 +90,55 @@ export class BridgeCoordinator {
       };
       if (this.core.state === 'VALIDATING') this.core.transition('AWAITING_APPROVAL');
     } else if (inbox.state === 'AUTHORIZED' && validation.executableNow === true) {
+      const lease = await this.approvalLease.load();
+      const recovered = this.approvalLease.verify(lease, {
+        inbox, validation, branch: git.branch, commit: git.headCommit
+      });
+      if (!recovered.valid) {
+        if (this.core.state === 'VALIDATING') this.core.transition('AWAITING_APPROVAL');
+        throw new Error('remote authorization without durable local receipt refused: ' + recovered.errors.join(', '));
+      }
+      this.current = {
+        inbox, validation, missionDigest: digest, nonce: lease.receipt.nonce
+      };
       if (this.core.state === 'VALIDATING') this.core.transition('AWAITING_APPROVAL');
-      throw new Error('remote authorization without locally verified receipt refused');
+      const approval = this.core.approve(lease.receipt, {
+        missionId: lease.receipt.missionId,
+        missionDigest: lease.receipt.missionDigest,
+        generation: lease.receipt.generation,
+        nonce: lease.receipt.nonce,
+        now: new Date().toISOString(),
+        publicKeyPem: lease.publicKeyPem
+      });
+      if (!approval.valid) throw new Error('durable approval recovery failed: ' + approval.errors.join(', '));
+      await this.record('APPROVAL_RECOVERED', { actor: 'bridge', outcome: 'VERIFIED' });
+      await this.executeCurrent();
+      return;
     } else if (this.core.state === 'VALIDATING') {
       this.core.transition('IDLE');
     }
     await this.publish();
+    this.autoRecoveryAttempts = 0;
+  }
+
+  async handleCycleFailure(error) {
+    this.lastError = error.message;
+    const failure = classifyBridgeFailure(error);
+    await this.record('ERROR', { outcome: failure.kind }).catch(() => {});
+    if (failure.recoverable && this.core.state !== 'EXECUTING' &&
+        this.autoRecoveryAttempts < this.maxAutoRecoveryAttempts && !(await this.frozen())) {
+      this.autoRecoveryAttempts += 1;
+      this.core = new CoordinatorCore();
+      this.current = null;
+      await this.record('AUTO_RECOVERY', {
+        actor: 'bridge', outcome: 'ATTEMPT_' + this.autoRecoveryAttempts
+      }).catch(() => {});
+    } else if (failure.kind === 'PROTECTED') {
+      this.core.freeze('protected failure: ' + failure.message);
+    } else {
+      this.core.registerFailure(failure.message);
+    }
+    await this.publish().catch(() => {});
   }
 
   async decide({ decision }) {
@@ -109,6 +159,7 @@ export class BridgeCoordinator {
       this.core.transition('REJECTED');
       await this.record('REJECTED', { actor: 'operator', outcome: 'RECORDED' });
       await this.publish();
+      await this.approvalLease.clear();
       return;
     }
     const now = new Date();
@@ -120,7 +171,10 @@ export class BridgeCoordinator {
       nonce: this.current.nonce,
       decision: 'APPROVE',
       issuedAt: now.toISOString(),
-      expiresAt: new Date(now.getTime() + 5 * 60_000).toISOString()
+      expiresAt: new Date(now.getTime() + Math.max(
+        this.executionTimeoutMs + 5 * 60_000,
+        20 * 60_000
+      )).toISOString()
     });
     const result = this.core.approve(receipt, {
       missionId: receipt.missionId, missionDigest: receipt.missionDigest,
@@ -128,13 +182,23 @@ export class BridgeCoordinator {
       now: new Date().toISOString(), publicKeyPem
     });
     if (!result.valid) throw new Error('local receipt verification failed: ' + result.errors.join(', '));
+    const git = this.adapter.gitState();
+    await this.approvalLease.save({
+      receipt, publicKeyPem, branch: git.branch, commit: git.headCommit
+    });
     await this.record('APPROVED', { actor: 'operator', outcome: 'RECORDED' });
     this.adapter.authorize(receipt.missionId);
     const afterAuthorization = await this.adapter.validate();
     if (afterAuthorization.inbox.state !== 'AUTHORIZED' || afterAuthorization.validation.executableNow !== true) {
       this.core.freeze('authorization state disagreement'); throw new Error('authorization did not become executable');
     }
-    this.core.transition('EXECUTING'); await this.publish();
+    await this.executeCurrent();
+  }
+
+  async executeCurrent() {
+    if (this.core.state === 'APPROVED') this.core.transition('EXECUTING');
+    if (this.core.state !== 'EXECUTING') throw new Error('execution requires an approved durable lease');
+    await this.publish();
     await this.heartbeat({
       executionDeadline: new Date(Date.now() + this.executionTimeoutMs).toISOString()
     });
@@ -171,8 +235,10 @@ export class BridgeCoordinator {
         evidenceId: terminal.execution?.executionId
       });
       await this.publish();
+      await this.approvalLease.clear();
     } catch (error) {
-      this.core.transition('QUARANTINED');
+      this.lastError = error.message;
+      if (this.core.state === 'EXECUTING') this.core.transition('QUARANTINED');
       await this.publish().catch(() => {});
       throw error;
     } finally {
@@ -181,12 +247,27 @@ export class BridgeCoordinator {
   }
 
   async model() {
+    const git = this.adapter.gitState();
+    const mission = this.current?.inbox?.mission ?? null;
+    const execution = this.current?.inbox?.execution ?? null;
     return {
       state: this.core.state,
-      mission: this.current?.inbox?.mission ?? null,
+      mission,
+      generation: this.current?.inbox?.generation ?? null,
       missionDigest: this.current?.missionDigest ?? null,
       warning: this.lastError,
-      history: this.history
+      history: this.history,
+      branch: git.branch,
+      headCommit: git.headCommit,
+      repositoryClean: !git.status,
+      commandSummary: mission?.command ? [mission.command.executable, ...(mission.command.arguments ?? [])].join(' ') : null,
+      risk: mission?.allowedPaths?.length ? 'MUTATING' : 'READ_ONLY',
+      executionStatus: execution?.status ?? (this.core.state === 'EXECUTING' ? 'running' : 'not started'),
+      policyStatus: execution?.policyPassed === true ? 'passed' : execution?.policyPassed === false ? 'failed' : 'pending',
+      testStatus: execution?.outcome === 'PASSED' ? 'passed' : 'pending',
+      recoveryStatus: this.autoRecoveryAttempts
+        ? 'automatic recovery attempt ' + this.autoRecoveryAttempts + ' of ' + this.maxAutoRecoveryAttempts
+        : 'monitoring'
     };
   }
 
@@ -212,10 +293,7 @@ export class BridgeCoordinator {
     while (this.running) {
       try { await this.cycle(); this.core.failures = 0; }
       catch (error) {
-        this.lastError = error.message;
-        await this.record('ERROR', { outcome: 'REFUSED' }).catch(() => {});
-        this.core.registerFailure(error.message);
-        await this.publish().catch(() => {});
+        await this.handleCycleFailure(error);
       }
       await this.heartbeat();
       await new Promise((resolve) => setTimeout(resolve, this.intervalMs));

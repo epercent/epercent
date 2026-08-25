@@ -15,9 +15,7 @@ export function canonicalize(value) {
 
 export function sha256(value) {
   const bytes =
-    typeof value === 'string' ||
-    Buffer.isBuffer(value) ||
-    value instanceof Uint8Array
+    typeof value === 'string' || Buffer.isBuffer(value) || ArrayBuffer.isView(value)
       ? value
       : JSON.stringify(canonicalize(value));
   return createHash('sha256').update(bytes).digest('hex');
@@ -25,6 +23,23 @@ export function sha256(value) {
 
 export function missionDigest(mission) {
   return sha256(mission);
+}
+
+export function assertFullCommitSha(value, label = 'commit') {
+  if (!/^[0-9a-f]{40}$/.test(String(value ?? ''))) {
+    throw new Error(label + ' must be an exact 40-character lowercase Git SHA');
+  }
+  return value;
+}
+
+export function classifyBridgeFailure(error) {
+  const message = String(error?.message ?? error ?? 'unknown failure');
+  const protectedFailure = /digest|signature|fingerprint|authorization|policy|changed repository|required commit|repository HEAD|replay|nonce/i.test(message);
+  return Object.freeze({
+    kind: protectedFailure ? 'PROTECTED' : 'OPERATIONAL',
+    recoverable: !protectedFailure,
+    message
+  });
 }
 
 export function authorizationPayload(receipt) {
