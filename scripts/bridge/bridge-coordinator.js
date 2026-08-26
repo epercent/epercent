@@ -11,6 +11,7 @@ import { TelemetryPublisher } from './telemetry-publisher.js';
 import { appendHistory, historyEvent } from './activity-history.js';
 import { ApprovalLeaseStore } from './approval-lease.js';
 import { evaluateMissionPreflight } from './mission-preflight.js';
+import { executionHealthGate, recoveryDisposition } from './bridge-health.js';
 
 export class BridgeCoordinator {
   constructor(options) {
@@ -71,7 +72,7 @@ export class BridgeCoordinator {
 
   async cycle() {
     if (await this.frozen()) { this.core.freeze('local freeze file'); await this.publish(); return; }
-    if (this.core.state === 'IDLE' || this.core.state === 'COMPLETED' || this.core.state === 'REJECTED') {
+    if (['IDLE', 'COMPLETED', 'REJECTED', 'DEGRADED'].includes(this.core.state)) {
       if (this.core.state !== 'IDLE') this.core.transition('IDLE');
       this.core.transition('VALIDATING');
     }
@@ -141,19 +142,30 @@ export class BridgeCoordinator {
   async handleCycleFailure(error) {
     this.lastError = error.message;
     const failure = classifyBridgeFailure(error);
+    const disposition = recoveryDisposition({
+      failure,
+      attempts: this.autoRecoveryAttempts,
+      maximumAttempts: this.maxAutoRecoveryAttempts
+    });
     await this.record('ERROR', { outcome: failure.kind }).catch(() => {});
-    if (failure.recoverable && this.core.state !== 'EXECUTING' &&
-        this.autoRecoveryAttempts < this.maxAutoRecoveryAttempts && !(await this.frozen())) {
+    if (disposition.retry && this.core.state !== 'EXECUTING' && !(await this.frozen())) {
       this.autoRecoveryAttempts += 1;
       this.core = new CoordinatorCore();
       this.current = null;
       await this.record('AUTO_RECOVERY', {
         actor: 'bridge', outcome: 'ATTEMPT_' + this.autoRecoveryAttempts
       }).catch(() => {});
-    } else if (failure.kind === 'PROTECTED') {
+    } else if (disposition.freeze) {
       this.core.freeze('protected failure: ' + failure.message);
     } else {
-      this.core.registerFailure(failure.message);
+      // Exhausted operational recovery remains observable and retryable. It
+      // must never consume the security circuit breaker or freeze approvals.
+      this.core = new CoordinatorCore();
+      this.core.transition('VALIDATING');
+      this.core.transition('DEGRADED');
+      await this.record('RECOVERY_EXHAUSTED', {
+        actor: 'bridge', outcome: 'DEGRADED_OPERATIONAL'
+      }).catch(() => {});
     }
     await this.publish().catch(() => {});
   }
@@ -209,12 +221,27 @@ export class BridgeCoordinator {
     if (afterAuthorization.inbox.state !== 'AUTHORIZED' || afterAuthorization.validation.executableNow !== true) {
       this.core.freeze('authorization state disagreement'); throw new Error('authorization did not become executable');
     }
+    this.current.inbox = afterAuthorization.inbox;
+    this.current.validation = afterAuthorization.validation;
     await this.executeCurrent();
   }
 
   async executeCurrent() {
     if (this.core.state === 'APPROVED') this.core.transition('EXECUTING');
     if (this.core.state !== 'EXECUTING') throw new Error('execution requires an approved durable lease');
+    const git = this.adapter.gitState();
+    const gate = executionHealthGate({
+      repositoryClean: !git.status,
+      requiredBranch: git.branch === this.current.inbox.mission.requiredBranch,
+      requiredCommit: git.headCommit === this.current.inbox.mission.requiredCommit,
+      canonicalAuthorization: this.current.inbox.state === 'AUTHORIZED',
+      canonicalExecutable: this.current.validation.executableNow === true,
+      artifactPreflight: this.current.preflight?.valid !== false
+    });
+    if (!gate.healthy) {
+      this.core.transition('DEGRADED');
+      throw new Error('execution health gate refused: ' + gate.failures.join(', '));
+    }
     await this.publish();
     await this.heartbeat({
       executionDeadline: new Date(Date.now() + this.executionTimeoutMs).toISOString()
@@ -258,6 +285,7 @@ export class BridgeCoordinator {
       } else {
         this.core.transition('COMPLETED');
       }
+      this.current.inbox = terminal;
       await this.record('EXECUTION_FINISHED', {
         outcome: terminal.execution?.outcome ?? (executionRun.status === 0 ? 'PASSED' : 'FAILED'),
         evidenceId: terminal.execution?.executionId
@@ -293,6 +321,8 @@ export class BridgeCoordinator {
       executionStatus: execution?.status ?? (this.core.state === 'EXECUTING' ? 'running' : 'not started'),
       policyStatus: execution?.policyPassed === true ? 'passed' : execution?.policyPassed === false ? 'failed' : 'pending',
       testStatus: execution?.outcome === 'PASSED' ? 'passed' : 'pending',
+      executionOutcome: execution?.outcome ?? null,
+      lifecycleStatus: this.core.state,
       recoveryStatus: this.autoRecoveryAttempts
         ? 'automatic recovery attempt ' + this.autoRecoveryAttempts + ' of ' + this.maxAutoRecoveryAttempts
         : 'monitoring'
