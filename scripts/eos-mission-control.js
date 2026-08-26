@@ -179,10 +179,22 @@ async function pullAndValidate() {
   const commit = git('rev-parse', 'HEAD');
   const clean = git('status', '--short') === '';
 
+  const terminalStates = new Set([
+    'COMPLETED',
+    'REJECTED',
+    'QUARANTINED'
+  ]);
+
+  const provenanceBindingRequired =
+    inbox.state !== 'EMPTY' && !terminalStates.has(inbox.state);
+
   const branchMatches =
-    inbox.state === 'EMPTY' || inbox.mission?.requiredBranch === branch;
+    !provenanceBindingRequired ||
+    inbox.mission?.requiredBranch === branch;
+
   const commitMatches =
-    inbox.state === 'EMPTY' || inbox.mission?.requiredCommit === commit;
+    !provenanceBindingRequired ||
+    inbox.mission?.requiredCommit === commit;
 
   const report = {
     schemaVersion: '1.0.0',
@@ -240,7 +252,15 @@ async function pullAndValidate() {
     validation: report
   });
 
-  if (!report.schemaValid || !branchMatches || !commitMatches || !clean) {
+  const repositoryStateValid =
+    !provenanceBindingRequired || clean;
+
+  if (
+    !report.schemaValid ||
+    !branchMatches ||
+    !commitMatches ||
+    !repositoryStateValid
+  ) {
     process.exit(1);
   }
 }
