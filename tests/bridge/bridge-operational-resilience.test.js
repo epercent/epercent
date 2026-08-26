@@ -67,3 +67,22 @@ test('Enterprise Control separates lifecycle completion from execution outcome',
   assert.match(source, /Lifecycle \/ outcome/);
   assert.match(source, /executionOutcome/);
 });
+
+
+test('watchdog stale heartbeat is operational and never directly requests protected freeze', async () => {
+  const { mkdtemp, readFile, rm, writeFile } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { freezeOnStale } = await import('../../scripts/bridge/bridge-watchdog.js');
+  const directory = await mkdtemp(join(tmpdir(), 'eos-watchdog-operational-'));
+  try {
+    await writeFile(join(directory, 'heartbeat.json'), JSON.stringify({ state: 'IDLE', at: '2026-08-22T21:00:00.000Z' }));
+    const result = await freezeOnStale({ stateDir: directory, now: Date.parse('2026-08-22T21:01:00.000Z'), staleMs: 45000 });
+    assert.equal(result.healthy, false);
+    assert.equal(result.operationalFailure, true);
+    assert.equal(result.freezeRequested, false);
+    await assert.rejects(readFile(join(directory, 'FROZEN'), 'utf8'), { code: 'ENOENT' });
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});

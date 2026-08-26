@@ -70,13 +70,17 @@ test('rejection never calls authorize or execute', async () => {
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('watchdog freezes stale heartbeat but accepts current heartbeat', async () => {
+test('watchdog reports stale heartbeat as operational failure without persistent freeze', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'eos-watchdog-'));
   try {
     await writeFile(join(directory, 'heartbeat.json'), JSON.stringify({ at: '2026-08-22T21:00:00.000Z' }));
     assert.equal((await inspectHeartbeat({ stateDir: directory, now: Date.parse('2026-08-22T21:00:10.000Z') })).healthy, true);
     assert.equal((await freezeOnStale({ stateDir: directory, now: Date.parse('2026-08-22T21:02:00.000Z') })).healthy, false);
-    assert.match(await readFile(join(directory, 'FROZEN'), 'utf8'), /stale heartbeat/);
+    const stale = await freezeOnStale({ stateDir: directory, now: Date.parse('2026-08-22T21:01:00.000Z') });
+    assert.equal(stale.healthy, false);
+    assert.equal(stale.operationalFailure, true);
+    assert.equal(stale.freezeRequested, false);
+    await assert.rejects(readFile(join(directory, 'FROZEN'), 'utf8'), { code: 'ENOENT' });
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
