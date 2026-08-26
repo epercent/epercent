@@ -10,6 +10,7 @@ import { MacOSReceiptSigner } from './receipt-signer.js';
 import { TelemetryPublisher } from './telemetry-publisher.js';
 import { appendHistory, historyEvent } from './activity-history.js';
 import { ApprovalLeaseStore } from './approval-lease.js';
+import { evaluateMissionPreflight } from './mission-preflight.js';
 
 export class BridgeCoordinator {
   constructor(options) {
@@ -84,8 +85,24 @@ export class BridgeCoordinator {
       this.core.transition('QUARANTINED'); throw new Error('canonical digest disagreement');
     }
     if (inbox.state === 'PROPOSED' && validation.executableNow === false) {
+      const inputs = typeof this.adapter.preflightInputs === 'function'
+        ? await this.adapter.preflightInputs(mission)
+        : { replayEntries: [], refusalEntries: [], artifactMetadata: {
+            ID: mission?.artifact?.driveFileId, Size: 1, IsDir: false
+          } };
+      const preflight = evaluateMissionPreflight({
+        mission, missionDigest: digest, validation, git, ...inputs
+      });
+      if (!preflight.valid) {
+        this.current = { inbox, validation, missionDigest: digest, nonce: null, preflight };
+        if (this.core.state === 'VALIDATING') this.core.transition('IDLE');
+        this.lastError = 'Approval unavailable: ' + preflight.errors.join(', ');
+        await this.record('PREFLIGHT_REFUSED', { actor: 'bridge', outcome: 'REFUSED' });
+        await this.publish();
+        return;
+      }
       this.current = {
-        inbox, validation, missionDigest: digest,
+        inbox, validation, missionDigest: digest, preflight,
         nonce: randomBytes(32).toString('hex')
       };
       if (this.core.state === 'VALIDATING') this.core.transition('AWAITING_APPROVAL');
@@ -209,7 +226,8 @@ export class BridgeCoordinator {
         terminal = await this.adapter.synchronizeTerminalInbox({
           generation: this.current.inbox.generation,
           missionId: this.current.inbox.mission.missionId,
-          missionDigest: this.current.missionDigest
+          missionDigest: this.current.missionDigest,
+          executionRun
         });
       } else {
         // Dependency-injected legacy test adapters predate terminal receipt
@@ -225,7 +243,17 @@ export class BridgeCoordinator {
           }
         };
       }
-      if (terminal.state === 'QUARANTINED') {
+      if (terminal.state === 'REFUSED_BEFORE_CLAIM') {
+        await this.record('EXECUTION_REFUSED_BEFORE_CLAIM', {
+          outcome: 'REFUSED', evidenceId: null
+        });
+        await this.approvalLease.clear();
+        this.core = new CoordinatorCore();
+        this.current = null;
+        this.lastError = 'Execution refused before claim; this mission identity is durably blocked from retry.';
+        await this.publish();
+        return;
+      } else if (terminal.state === 'QUARANTINED') {
         this.core.transition('QUARANTINED');
       } else {
         this.core.transition('COMPLETED');
